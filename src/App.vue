@@ -2,28 +2,21 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <buttonCounter/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import buttonCounter from './components/button-counter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    buttonCounter
   }
 }
-
-import button-counter from './components/button-counter.vue'
-
-export default {
-  name: 'app',
-  components: {
-    button-counter
-  }
-}
-
 </script>
 
 <style>
