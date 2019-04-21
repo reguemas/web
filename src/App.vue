@@ -15,6 +15,15 @@ export default {
   }
 }
 
+import button-counter from './components/button-counter.vue'
+
+export default {
+  name: 'app',
+  components: {
+    button-counter
+  }
+}
+
 </script>
 
 <style>
