@@ -8,7 +8,7 @@ import buttonCounter from '../components/button-counter.vue'
 // We'll talk about nested routes later.
 
 const routes = [
-    { path: '/HelloWorld', component: HelloWorld },
+    { path: '/HelloWorld', component: HelloWorld, props: {msg: 'Hello'} },
     { path: '/button-counter', component: buttonCounter }
 ]
 
