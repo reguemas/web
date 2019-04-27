@@ -91,12 +91,12 @@
       <!-- Text slides with image -->
       <b-carousel-slide
         caption="Descobriràs el Nostre Entorn"
-        text="LA Castellassa de Can Torres en una Sortida pel Parc Natural de Sant Llorenç"
+        text="La Castellassa de Can Torres en una Sortida pel Parc Natural de Sant Llorenç"
         img-src="./assets/carousel/slide 1 340.jpg"
       ></b-carousel-slide>
 
       <!-- Slides with custom text -->
-      <b-carousel-slide img-src="./assets/carousel/slide 2 340.jpg">
+      <b-carousel-slide img-src="./public/slide_2_340.jpg">
         <h1>Hello world!</h1>
       </b-carousel-slide>
 
