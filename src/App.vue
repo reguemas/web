@@ -79,6 +79,7 @@
       id="carousel-1"
       v-model="slide"
       :interval="5000"
+      fade
       controls
       indicators
       background="#ababab"
@@ -89,38 +90,62 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="Descobriràs el Nostre Entorn"
-        text="La Castellassa de Can Torres en una Sortida pel Parc Natural de Sant Llorenç"
-        img-src="./assets/carousel/slide 1 340.jpg"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="./public/slide_2_340.jpg">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <img
           slot="img"
           class="d-block img-fluid w-100"
-          src="https://picsum.photos/1024/480/?image=55"
+          src="slide 1 340.jpg"
           alt="image slot"
         >
+        <h1>Descobriràs el Nostre Entorn</h1>
       </b-carousel-slide>
 
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
+      <!-- Slides with custom text -->
+      <b-carousel-slide>
+        <img
+          slot="img"
+          class="d-block img-fluid w-100"
+          src="slide 2 340.jpg"
+          alt="image slot"
+        >
+        <h1>Compartiràs l'Alegria del Cim</h1>
       </b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide>
+        <img
+          slot="img"
+          class="d-block img-fluid w-100"
+          src="slide 3 340.jpg"
+          alt="image slot"
+        >
+        <h1>Descobriràs Nous Móns</h1>
+      </b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide>
+        <img
+          slot="img"
+          class="d-block img-fluid w-100"
+          src="slide 4 340.jpg"
+          alt="image slot"
+        >
+        <h1>Faràs Nous Amics</h1>
+      </b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide>
+        <img
+          slot="img"
+          class="d-block img-fluid w-100"
+          src="slide 5 340.jpg"
+          alt="image slot"
+        >
+        <h1>Disfrutaràs de la Muntanya</h1>
+      </b-carousel-slide>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
     </b-carousel>
   </div>
 </template>
