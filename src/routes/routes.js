@@ -1,4 +1,4 @@
-import HelloWorld from '../components/HelloWorld.vue'
+
 import buttonCounter from '../components/button-counter.vue'
 
 // 2. Define some routes
@@ -8,7 +8,6 @@ import buttonCounter from '../components/button-counter.vue'
 // We'll talk about nested routes later.
 
 const routes = [
-    { path: '/HelloWorld', component: HelloWorld, props: {msg: 'Hello'} },
     { path: '/button-counter', component: buttonCounter }
 ]
 

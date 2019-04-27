@@ -10,7 +10,7 @@
       </b-navbar>
       <b-navbar sticky toggleable="lg" type="dark" variant="danger" class="p-3 d-flex">
         <b-navbar-brand href="#">
-          <img src="./assets/CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa">
+          <b-img src="CET_Esquerra-transparent-blanc.png" fluid-grow alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
         
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -74,6 +74,10 @@
       
       </b-navbar>
     <router-view/>
+
+    <b-jumbotron header="Centre Excursionista Terrrassa" lead="Gaudiràs Grans Moments Amb Nosaltres">
+      <b-button variant="primary" size="lg" href="#">Fes-te Soci!</b-button>
+    </b-jumbotron>
 
     <b-carousel
       id="carousel-1"
@@ -147,10 +151,13 @@
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
     </b-carousel>
+    
   </div>
 </template>
 
 <script>
+import HelloWorld from '../components/HelloWorld.vue'
+
 export default {
   name: 'app',
   data() {
@@ -167,6 +174,10 @@ export default {
       this.sliding = false
     }
   }
+  components: {
+    HelloWorld,
+  },
+
 }
 
 
