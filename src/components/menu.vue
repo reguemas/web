@@ -1,7 +1,7 @@
 <template>
   <div>
-      <b-navbar variant="black" small>
-        <b-list-group horizontal class="mr-auto">
+      <b-navbar variant="darkMenu" small>
+        <b-list-group horizontal class="mr-auto ml-5">
           <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Pere, 10 - Terrassa</b-list-group-item>
           <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-3 mr-2">centre@ce-terrassa.cat</b-list-group-item>
@@ -15,14 +15,14 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar toggleable="lg" type="dark" class="p-3 d-flex gradient">
-        <b-navbar-brand href="#">
+      <b-navbar variant="lightMenu" toggleable="lg" class="p-3 d-flex">
+        <b-navbar-brand href="#" class="ml-5">
           <b-img src="CET_Esquerra-transparent-blanc.png" fluid-grow alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
         
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="d-flex ml-auto"> 
+          <b-navbar-nav class="d-flex mr-auto"> 
             <b-nav-item-dropdown text="El CET" right>
               <b-dropdown-item href="#">Què hi Trobaràs</b-dropdown-item>
               <b-dropdown-item href="#">Fes-te Soci</b-dropdown-item>
@@ -72,11 +72,12 @@
               <router-link to="/button-counter">Galeries</router-link>
             </b-nav-item>
 
-            <b-button variant="info" class="ml-5 mr-5">
+          </b-navbar-nav>     
+            
+            <b-button variant="success" size="lg" class="d-flex mr-5">
               <router-link to="/button-counter">Fes-te Soci</router-link>
-            </b-button>
+            </b-button>  
 
-          </b-navbar-nav>           
         </b-collapse>
       
       </b-navbar>
@@ -105,12 +106,19 @@ export default {
   width: auto !important;
 }
 
-.bg-black {
-  background-color: black;
+.bg-darkMenu {
+  background-color:#103440;
 }
 
-.gradient{
-  background-image: linear-gradient(black, transparent) !important;
+.bg-lightMenu{
+  background-color: #655377 !important;
 }
+
+.nav-item{
+  font-family:"QuickSand-Bold";
+  font-size: 1.75rem;
+
+}
+
 
 </style>

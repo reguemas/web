@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import routes from './routes/routes'
 import PortalVue from 'portal-vue'
+import './css/main.css'
 
 Vue.config.productionTip = false
 

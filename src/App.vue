@@ -11,7 +11,7 @@
       indicators
       background="#ababab"
       img-width="1024"
-      img-height="340"
+      img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
@@ -20,7 +20,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="d-block w-100"
           src="slide 1 340.jpg"
           alt="image slot"
         >
@@ -31,7 +31,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="d-block w-100"
           src="slide 2 340.jpg"
           alt="image slot"
         >
@@ -42,7 +42,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="d-block w-100"
           src="slide 3 340.jpg"
           alt="image slot"
         >
@@ -53,7 +53,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="d-block w-100"
           src="slide 4 340.jpg"
           alt="image slot"
         >
@@ -64,7 +64,7 @@
       <b-carousel-slide>
         <img
           slot="img"
-          class="d-block img-fluid w-100"
+          class="d-block w-100"
           src="slide 5 340.jpg"
           alt="image slot"
         >
@@ -113,9 +113,5 @@ export default {
 </script>
 
 <style>
-  #carousel-1{
-    margin-top:-130px;
-    z-index:-100;
-  }
 
 </style>
