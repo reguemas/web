@@ -9,7 +9,7 @@ import buttonCounter from '../components/button-counter.vue'
 
 const routes = [
     //{ path: '/', component: Home }
-    { path: '/button-counter', component: buttonCounter }
+    //{ path: '/button-counter', component: buttonCounter }
 ]
 
 export default routes
