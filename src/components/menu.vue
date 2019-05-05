@@ -39,7 +39,7 @@
           <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
       </b-navbar-brand>
 
-      <b-collapse id="nav-collapse" is-nav class="justify-content-around">
+      <b-collapse id="nav-collapse" is-nav class="justify-content-end">
         
         <b-navbar-nav class="w-75 justify-content-end"> 
           <b-nav-item-dropdown text="El CET" left>
@@ -86,14 +86,14 @@
             <b-dropdown-item href="#">CET.DOC</b-dropdown-item>
             <b-dropdown-item href="#">Topografia Avencs i Coves</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item class="ml-5">
+          <b-nav-item class="ml-5 mr-5">
             <router-link to="#">Galeries</router-link>
           </b-nav-item>
 
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button variant="primary" size="lg" class="p-3 mr-5 d-none d-xl-flex">
+      <b-button variant="primary" size="lg" class="px-4 py-3 mx-5 d-none d-xl-flex">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -132,6 +132,16 @@ export default {
 .nav-item{
   font-family:"QuickSand-Bold";
   font-size: 1.75rem;
+}
+
+button a{
+  color:cyan;
+  text-decoration: none;
+}
+
+button a:hover{
+  color:#103440;
+  font-weight:700;
 }
 
 
