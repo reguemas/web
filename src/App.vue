@@ -5,14 +5,14 @@
     <b-container fluid class="p-0">
       <b-row class="m-0">
         <b-col cols="2" class="p-0">
-          <h3 class="ml-5 text-white">Això trobaràs al:</h3>
+          <h3 class="ml-5 text-white">Això faràs al:</h3>
           <div class="transperencia"></div>
           <!-- <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa" href="#" class="mt-0 ml-5"></b-img> -->
         </b-col>
         <b-col cols="10" class="p-0 position-relative">
           <!-- <div class="p-2 bg-success text-white">2 de 3</div> -->
           <homeSlider/>
-          <b-jumbotron header="CENTRE EXCURSIONISTA DE TERRASSA" lead="Vine a Coneixer Tot el què Oferim" fluid class="d-none d-lg-flex w-50">
+          <b-jumbotron header="CENTRE EXCURSIONISTA DE TERRASSA" lead="Vine a Coneixer-ho" fluid class="d-none d-lg-flex w-50">
             <b-button variant="primary" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
           </b-jumbotron>
           
