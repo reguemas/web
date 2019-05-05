@@ -59,12 +59,6 @@ export default {
     margin-top:15%;
   }
 
-/*   .jumbotron h1{
-    font-size:5.5rem !important;
-    font-weight:400 !important;
-    line-height: 1.2 !important;
-  } */
-
   .lead{
     font-size:1.5rem !important;
     font-weight:500 !important;

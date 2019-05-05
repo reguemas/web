@@ -93,7 +93,7 @@
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button variant="primary" size="lg" class="px-4 py-3 mx-5 d-none d-xl-flex">
+      <b-button size="lg" class="px-5 py-3 mx-5 d-none d-xl-flex bg-blau">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -129,6 +129,11 @@ export default {
   background-color: #655377 !important;
 }
 
+.bg-blau{
+  background-color:ef9aaa;
+
+}
+
 .nav-item{
   font-family:"QuickSand-Bold";
   font-size: 1.75rem;
@@ -136,12 +141,14 @@ export default {
 
 button a{
   color:cyan;
+  
+  font-weight:900 !important;
   text-decoration: none;
 }
 
 button a:hover{
   color:#103440;
-  font-weight:700;
+  font-weight:900;
 }
 
 
