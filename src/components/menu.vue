@@ -1,8 +1,8 @@
 <template>
   <div>
-      <b-navbar variant="darkMenu" small class="">
+      <b-navbar variant="darkMenu" small class="d-none d-lg-flex">
         <b-list-group horizontal class="mr-auto ml-5">
-          <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Pere, 10 - Terrassa</b-list-group-item>
+          <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
           <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-3 mr-2">centre@ce-terrassa.cat</b-list-group-item>
         </b-list-group>
@@ -15,16 +15,33 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar variant="lightMenu" toggleable="lg" class="w-100">
+      <b-navbar variant="darkMenu" small class="d-none d-sm-flex d-lg-none">
+        <b-list-group horizontal class="mr-auto ml-1">
+        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="ml-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="ml-2"></b-list-group-item>
+        </b-list-group>
+      </b-navbar>
+
+      <b-navbar variant="lightMenu" small toggleable="md" class="mt-5 mb-3 py-4">
         
-        <b-navbar-brand href="#" class="ml-5 mr-0">
-          <b-img src="CET_Esquerra-transparent-blanc.png" fluid-grow alt="Logo Centre Excursionista Terrassa"></b-img>
+        <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none d-md-flex">
+          <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
         
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="nav-collapse" class="ml-1"></b-navbar-toggle>
+
+      <b-navbar-brand href="#" fluid-grow class="d-md-none mr-0">
+          <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+      </b-navbar-brand>
+
       <b-collapse id="nav-collapse" is-nav class="justify-content-around">
         
-        <b-navbar-nav class="w-75 justify-content-around"> 
+        <b-navbar-nav class="w-75 justify-content-end"> 
           <b-nav-item-dropdown text="El CET" left>
             <b-dropdown-item href="#">Què hi Trobaràs</b-dropdown-item>
             <b-dropdown-item href="#">Fes-te Soci</b-dropdown-item>
@@ -32,7 +49,7 @@
             <b-dropdown-item href="#">Llicències Federatives</b-dropdown-item>
             <b-dropdown-item href="#">Històric d'Activitats</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item-dropdown text="Activitats" left>
+          <b-nav-item-dropdown text="Activitats" left class="ml-5">
             <b-dropdown-header class="dropdown-header-label">
               Activitats Esportives
             </b-dropdown-header>
@@ -62,22 +79,23 @@
               <b-dropdown-item href="#">CET de Viatges</b-dropdown-item>
               <b-dropdown-item href="#">Altres Activitats</b-dropdown-item>
             </b-nav-item-dropdown>
-          <b-nav-item-dropdown type="dark" text="Publicacions" left>
+          <b-nav-item-dropdown type="dark" text="Publicacions" left class="ml-5">
             <b-dropdown-item href="#">El Full</b-dropdown-item>
             <b-dropdown-item href="#">Arxiu</b-dropdown-item>
             <b-dropdown-item href="#">Butlletí</b-dropdown-item>
             <b-dropdown-item href="#">CET.DOC</b-dropdown-item>
             <b-dropdown-item href="#">Topografia Avencs i Coves</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item class="mr-5">
+          <b-nav-item class="ml-5">
             <router-link to="#">Galeries</router-link>
           </b-nav-item>
+
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button variant="success" size="lg" class="d-flex mr-5">
-        <router-link to="#">Fes-te Soci</router-link>
-      </b-button> 
+      <b-button variant="primary" size="lg" class="p-3 mr-5 d-none d-xl-flex">
+        <router-link to="#">Fer-se Soci</router-link>
+      </b-button>
     </b-navbar>
     <router-view/>
   </div>
@@ -114,7 +132,6 @@ export default {
 .nav-item{
   font-family:"QuickSand-Bold";
   font-size: 1.75rem;
-
 }
 
 

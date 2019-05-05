@@ -1,5 +1,5 @@
 
-import buttonCounter from '../components/button-counter.vue'
+//import buttonCounter from '../components/button-counter.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
