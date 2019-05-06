@@ -27,7 +27,7 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar variant="lightMenu" small toggleable="md" class="mt-5 mb-3 py-4">
+      <b-navbar variant="lightMenu" small toggleable="md" class="mt-3 mb-3 py-4">
         
         <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none d-md-flex">
           <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
@@ -130,7 +130,7 @@ export default {
 }
 
 .bg-blau{
-  background-color:ef9aaa;
+  background-color:#ef9aaa;
 
 }
 
@@ -140,9 +140,8 @@ export default {
 }
 
 button a{
-  color:cyan;
-  
-  font-weight:900 !important;
+  color:rgb(249,237,194);
+  font-family:"QuickSand-Bold" !important;
   text-decoration: none;
 }
 

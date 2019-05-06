@@ -13,7 +13,7 @@
           <!-- <div class="p-2 bg-success text-white">2 de 3</div> -->
           <homeSlider/>
           <b-jumbotron header="CENTRE EXCURSIONISTA DE TERRASSA" lead="Vine a Coneixer-ho" fluid class="d-none d-lg-flex w-50">
-            <b-button variant="primary" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
+            <b-button variant="success" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
           </b-jumbotron>
           
         </b-col>
@@ -57,6 +57,7 @@ export default {
     height:70%;
     width:275%;
     margin-top:15%;
+    border-radius:0% 50% 50% 0%;
   }
 
   .lead{
