@@ -53,7 +53,7 @@ export default {
   }
 
   .transperencia{
-    background-color: rgba(54,54,54,0.6);
+    background-color: rgba(28,28,28,0.7);
     height:70%;
     width:275%;
     margin-top:15%;
