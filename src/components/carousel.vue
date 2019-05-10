@@ -99,7 +99,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  
   #carousel-1{
     z-index:-1;
   }
+
+
+
 </style>

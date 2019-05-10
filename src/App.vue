@@ -2,10 +2,10 @@
   <div>
     <navMenu/>
 
-    <b-container fluid class="p-0">
+    <b-container fluid class="p-0 mb-5">
       <b-row class="m-0">
         <b-col cols="2" class="p-0">
-          <h3 class="ml-5 text-white">Això faràs al:</h3>
+          <h3 class="ml-5 textVerdClar">Això faràs al:</h3>
           <div class="transperencia"></div>
           <!-- <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa" href="#" class="mt-0 ml-5"></b-img> -->
         </b-col>
@@ -15,6 +15,32 @@
           <b-jumbotron header="CENTRE EXCURSIONISTA DE TERRASSA" lead="Vine a Coneixer-ho" fluid class="d-none d-lg-flex w-50">
             <b-button variant="success" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
           </b-jumbotron>
+          
+        </b-col>
+      </b-row>
+    </b-container>
+
+    <b-container fluid class="p-0">
+      <b-row class="m-0">
+        <b-col cols="2" class="p-0">
+
+        </b-col>
+        <b-col cols="10" class="p-0 position-relative">
+          <b-card
+            title="Card Title"
+            img-src="https://picsum.photos/600/300/?image=25"
+            img-alt="Image"
+            img-top
+            tag="article"
+            style="max-width: 20rem;"
+            class="my-5 mx-3"
+          >
+            <b-card-text>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </b-card-text>
+
+            <b-button href="#" size="lg" variant="success">Go somewhere</b-button>
+          </b-card>
           
         </b-col>
       </b-row>
@@ -70,6 +96,14 @@ export default {
   .jumbotron a:hover{
     color:#103440;
     font-weight:700;
+  }
+
+  .textVerdClar{
+    color:cyan;
+  }
+
+  #cards{
+    background-color:rgb(13,189,151);
   }
 
 </style>

@@ -15,7 +15,7 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar variant="darkMenu" small class="d-none d-sm-flex d-lg-none">
+      <b-navbar small class="d-none d-sm-flex d-lg-none">
         <b-list-group horizontal class="mr-auto ml-1">
         <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-2"></b-list-group-item>
         <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-2"></b-list-group-item>
@@ -27,7 +27,7 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar variant="lightMenu" small toggleable="md" class="mt-3 mb-3 py-4">
+      <b-navbar small toggleable="md" class="mt-3 mb-3 py-4">
         
         <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none d-md-flex">
           <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
@@ -79,7 +79,7 @@
               <b-dropdown-item href="#">CET de Viatges</b-dropdown-item>
               <b-dropdown-item href="#">Altres Activitats</b-dropdown-item>
             </b-nav-item-dropdown>
-          <b-nav-item-dropdown type="dark" text="Publicacions" left class="ml-5">
+          <b-nav-item-dropdown text="Publicacions" left class="ml-5 textCyan">
             <b-dropdown-item href="#">El Full</b-dropdown-item>
             <b-dropdown-item href="#">Arxiu</b-dropdown-item>
             <b-dropdown-item href="#">Butlletí</b-dropdown-item>
@@ -93,7 +93,7 @@
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button size="lg" class="px-5 py-3 mx-5 d-none d-xl-flex bg-blau">
+      <b-button size="lg" variant="success" class="px-5 py-3 mx-5 d-none d-xl-flex">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -114,7 +114,7 @@ export default {
   background: none !important;
   border: none !important;
   padding:0 0.25rem !important;
-  color:dimgrey;
+  color:rgb(161, 161, 161);
 }
 
 .list-group-item-action{
@@ -126,22 +126,19 @@ export default {
 }
 
 .bg-lightMenu{
-  background-color: #655377 !important;
-}
-
-.bg-blau{
-  background-color:#ef9aaa;
-
+  background-color:#655377 !important;
 }
 
 .nav-item{
-  font-family:"QuickSand-Bold";
-  font-size: 1.75rem;
+  font-family:"QuickSand";
+  font-size: 1.5rem;
+  font-weight:600;
 }
 
 button a{
-  color:rgb(249,237,194);
-  font-family:"QuickSand-Bold" !important;
+  color:cyan;
+  font-family:"QuickSand" !important;
+  font-weight:600;
   text-decoration: none;
 }
 
@@ -150,5 +147,13 @@ button a:hover{
   font-weight:900;
 }
 
+.nav-item a{
+  color:rgba(0,0,0,0.5) !important;
+}
+
+.nav-item a:hover, a:focus{
+  color:rgba(0,0,0,0.7) !important;
+  text-decoration: none;
+}
 
 </style>
