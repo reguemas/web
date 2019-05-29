@@ -6,7 +6,7 @@
       img-alt="Image"
     >
       <div class="descripcio">
-        <h4 class="titol">Pico Coronas. Pirineu Aragonès.</h4>
+        <h3 class="titol mb-4">Pico Coronas. Pirineu Aragonès.</h3>
         <b-card-text class="tipusActivitat">Alpinisme</b-card-text>
         <b-list-group horizontal>
           <b-list-group-item class="textDades">
@@ -35,43 +35,33 @@ export default {
   }
 
   .card img{
-    background-color:azure;
-    padding:10px 10px 75px 10px;
     border-radius:none;
     border:1px solid #BFBFBF;
-    height: 22rem;
-    width: 20rem;
+    height: 25rem;
+    width: 25rem;
   }
 
   .card :hover{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     color: cyan !important;
     text-decoration:none;
     cursor: pointer;
   }
 
   .titol{
-    font-family:"QuickSand";
-    color:black;
-    position:absolute;
-    bottom:0px;
+    color:cyan;
+    font-size:2rem;
+    text-align: center;
   }
-
+ 
   .descripcio{
     display:flex;
     flex-flow: column;
-    margin-top:65%;
+    justify-content:center;
+    padding: 30px 30px;
+    margin-top:55px;
+    background-color: rgba(0, 0, 0, 0.4) !important;
   }
-
-  .descripcio :hover{
-    background-color:transparent !important;
-    color:cyan !important;
-  }
-
-/*   .data,.seccio{
-    display:inline-flex;
-    color:cyan;
-  } */
 
   .textDades,.tipusActivitat{
     background: none !important;

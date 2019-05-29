@@ -27,13 +27,13 @@
         </b-col>
 
         <b-col cols="10" class="p-0 position-relative activitats">
-          <h2 class="my-4 mx-5">Activitats Esportives</h2>
-          <b-card-group deck class="mx-5 justify-content-between">
+          <h2 class="my-5 ml-5">Activitats Esportives</h2>
+          <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
-            <card/>
-            <card/>
-            <card/>
-          </b-card-group>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+          </b-list-group>
         </b-col>
       </b-row>
 
@@ -41,13 +41,13 @@
         <b-col cols="2" class="p-0 calendar">
         </b-col>
         <b-col cols="10" class="p-0 position-relative activitats">
-          <h2 class="my-4 mx-5">Activitats Culturals</h2>
-          <b-card-group deck class="mx-5 justify-content-between">
+          <h2 class="my-5 mx-5">Activitats Culturals</h2>
+          <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
-            <card/>
-            <card/>
-            <card/>
-          </b-card-group>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+          </b-list-group>
         </b-col>
       </b-row>
 
@@ -55,13 +55,13 @@
         <b-col cols="2" class="p-0 calendar">
         </b-col>
         <b-col cols="10" class="p-0 position-relative activitats">
-          <h2 class="my-4 mx-5">Activitats Socials</h2>
-          <b-card-group deck class="mx-5 justify-content-between">
+          <h2 class="my-5 mx-5">Activitats Socials</h2>
+          <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
-            <card/>
-            <card/>
-            <card class="mb-5"/>
-          </b-card-group>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+            <card class="ml-3 mb-5"/>
+          </b-list-group>
         </b-col>
       </b-row>
   </div>

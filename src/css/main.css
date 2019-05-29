@@ -18,6 +18,11 @@
     font-family: "AveriaSerif-Bold";
 }
 
+@font-face{
+    src: url("../fonts/AveriaSerifLibre-Bold.woff2");
+    font-family: "AveriaSerif-Bold";
+}
+
 body {
     font-family: "AveriaSerif";
     background-color: #a1bd9f;
