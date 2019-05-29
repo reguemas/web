@@ -132,7 +132,7 @@ export default {
 .nav-item{
   font-family:"QuickSand";
   font-size: 1.5rem;
-  font-weight:600;
+  font-weight:bold !important;
 }
 
 button a{

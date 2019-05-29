@@ -98,12 +98,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   
   #carousel-1{
     z-index:-1;
   }
 
-
-
+  .carousel h1{
+    margin-bottom:1% !important;
+  }
+  
 </style>
