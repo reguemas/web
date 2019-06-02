@@ -1,6 +1,6 @@
 <template>
   <div>
-      <b-navbar variant="darkMenu" v-if="window.screen.width > 992">
+      <b-navbar id="socialMenu" variant="darkMenu">
         <b-list-group horizontal class="mr-auto ml-5">
           <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
           <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
@@ -27,7 +27,7 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar small toggleable="md" class="mt-3 mb-3 py-4">
+      <b-navbar small toggleable="md" class="my-2 p-0">
         
         <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none d-md-flex">
           <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
@@ -109,6 +109,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 992px) {
+  #socialMenu {
+    display: none;
+  }
+}
 
 .list-group-item{
   background: none !important;
