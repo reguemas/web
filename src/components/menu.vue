@@ -1,6 +1,6 @@
 <template>
   <div>
-      <b-navbar variant="darkMenu" small class="d-none d-lg-flex">
+      <b-navbar variant="darkMenu" v-if="window.screen.width > 992">
         <b-list-group horizontal class="mr-auto ml-5">
           <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
           <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>

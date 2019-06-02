@@ -37,8 +37,8 @@ export default {
   .card img{
     border-radius:none;
     border:1px solid #BFBFBF;
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
   }
 
   .card :hover{

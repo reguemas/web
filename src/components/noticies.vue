@@ -1,13 +1,13 @@
 <template>
     <div>
       <b-row class="m-0 filters noticies justify-content-center">
-        <h2 class="m-5">Noticies del CET</h2>
-        <b-card-group class="mb-5">
-          <card/>
-          <card class="ml-3"/>
-          <card class="ml-3"/>
-          <card class="ml-3"/>
-        </b-card-group>
+        <h2 class="m-5">Imnatges de Sortides del CET</h2>
+          <b-list-group horizontal>
+            <card/>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+            <card class="ml-3"/>
+          </b-list-group>
       </b-row>
     </div>
 </template>

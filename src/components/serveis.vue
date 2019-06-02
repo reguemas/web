@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import card from './card.vue'
 
 export default {
   name: 'serveis',

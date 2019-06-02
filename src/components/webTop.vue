@@ -58,30 +58,6 @@ export default {
     border-radius:0% 200px 200px 0%;
   }
 
-  .verd{
-    background-color: rgb(65, 145, 45);
-    height:10%;
-    width:150%;
-    margin-top:20%;
-    margin-left:45%;
-  }
-
-  .vermell{
-    background-color: rgb(252, 73, 73);
-    height:10%;
-    width:275%;
-    margin-top:15%;
-    margin-left:45%;
-  }
-
-    .blau{
-    background-color: rgb(12, 169, 241);
-    height:10%;
-    width:185%;
-    margin-top:15%;
-    margin-left:45%;
-  }
-
   .bottom-row{
     position: absolute;
     bottom:0;
@@ -103,6 +79,30 @@ export default {
   .jumbotron a:hover{
     color:#103440;
     font-weight:700;
+  }
+
+    .verd{
+    background-color: rgb(65, 145, 45);
+    height:10%;
+    width:150%;
+    margin-top:20%;
+    margin-left:45%;
+  }
+
+  .vermell{
+    background-color: rgb(252, 73, 73);
+    height:10%;
+    width:275%;
+    margin-top:15%;
+    margin-left:45%;
+  }
+
+    .blau{
+    background-color: rgb(12, 169, 241);
+    height:10%;
+    width:185%;
+    margin-top:15%;
+    margin-left:45%;
   }
 
 </style>

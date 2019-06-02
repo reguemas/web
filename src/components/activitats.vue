@@ -1,7 +1,7 @@
 <template>
     <div>
       <b-row class="m-0 filters">
-        <b-col cols="2" class="p-0 calendar">
+        <b-col cols="3" class="p-0 calendar">
           <b-form inline class="mt-4 justify-content-center">
             <!-- <label class="mr-sm-3" for="Inline-Filters">Aquí Farem</label> -->
             <b-form-select
@@ -26,7 +26,7 @@
           <v-calendar is-dark class="mt-5 d-flex mx-auto"></v-calendar>
         </b-col>
 
-        <b-col cols="10" class="p-0 position-relative activitats">
+        <b-col cols="9" class="p-0 position-relative activitats">
           <h2 class="my-5 ml-5">Activitats Esportives</h2>
           <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
@@ -38,9 +38,9 @@
       </b-row>
 
     <b-row class="m-0 filters">
-        <b-col cols="2" class="p-0 calendar">
+        <b-col cols="3" class="p-0 calendar">
         </b-col>
-        <b-col cols="10" class="p-0 position-relative activitats">
+        <b-col cols="9" class="p-0 position-relative activitats">
           <h2 class="my-5 mx-5">Activitats Culturals</h2>
           <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
@@ -52,9 +52,9 @@
       </b-row>
 
       <b-row class="m-0 filters">
-        <b-col cols="2" class="p-0 calendar">
+        <b-col cols="3" class="p-0 calendar">
         </b-col>
-        <b-col cols="10" class="p-0 position-relative activitats">
+        <b-col cols="9" class="p-0 position-relative activitats">
           <h2 class="my-5 mx-5">Activitats Socials</h2>
           <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
