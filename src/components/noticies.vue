@@ -1,8 +1,8 @@
 <template>
     <div>
-      <b-row class="m-0 filters noticies justify-content-center">
-        <h2 class="m-5">Imnatges de Sortides del CET</h2>
-          <b-list-group horizontal>
+      <b-row class="p-0 m-0 noticies">
+        <h2 class="my-5">Imnatges de Sortides del CET</h2>
+          <b-list-group horizontal class="overflow-hidden">
             <card/>
             <card class="ml-3"/>
             <card class="ml-3"/>

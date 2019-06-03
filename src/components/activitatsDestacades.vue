@@ -31,7 +31,7 @@ export default {
 <style>
 
     .destacades{
-        background-color: #ffcc66;
+      background-color: #ffcc66;
     }
 
 </style>

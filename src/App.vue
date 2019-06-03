@@ -1,14 +1,15 @@
 <template>
   <div>
-    <navMenu/>
-
+    
     <b-container fluid class="p-0">
 
-      <webTop/>
+      <navMenu/>
+
+<!--       <webTop/>
 
       <activitats/>
 
-      <activitatPromocionada/>
+       <activitatPromocionada/>
 
       <activitatsDestacades/>
 
@@ -22,7 +23,7 @@
 
       <colaboradorsWebAmigues/>
 
-      <peuWeb/>
+      <peuWeb/> -->
 
     </b-container>
   </div>
@@ -31,7 +32,6 @@
 <script>
 import navMenu from './components/menu.vue'
 import webTop from './components/webTop.vue'
-import card from './components/card.vue'
 import activitats from './components/activitats.vue'
 import activitatPromocionada from './components/activitatPromocionada.vue'
 import activitatsDestacades from './components/activitatsDestacades.vue'
@@ -46,7 +46,6 @@ export default {
   components: {
     navMenu,
     webTop,
-    card,
     activitats,
     activitatPromocionada,
     activitatsDestacades,

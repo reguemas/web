@@ -1,13 +1,13 @@
 <template>
   <div>
-      <b-navbar id="socialMenu" variant="darkMenu">
-        <b-list-group horizontal class="mr-auto ml-5">
+      <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
+        <b-list-group horizontal class="mr-auto ml-4">
           <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
           <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-3 mr-2">centre@ce-terrassa.cat</b-list-group-item>
         </b-list-group>
 
-        <b-list-group horizontal class="ml-auto mr-5">
+        <b-list-group horizontal class="ml-auto mr-4">
           <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
@@ -15,33 +15,34 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar small class="d-none d-sm-flex d-lg-none">
-        <b-list-group horizontal class="mr-auto ml-1">
-        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="ml-2"></b-list-group-item>
-        <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="ml-2"></b-list-group-item>
+      <b-navbar id="socialMenu" variant="darkMenu" class="d-none">
+        <b-navbar-brand href="#" fluid-grow class="ml-4 mr-auto">
+          <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+        </b-navbar-brand>
+        <b-list-group horizontal class="ml-auto mr-4">
+          <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
         </b-list-group>
       </b-navbar>
 
-      <b-navbar small toggleable="md" class="my-2 p-0">
+      <b-navbar small toggleable="md" class="p-0">
         
-        <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none d-md-flex">
+        <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none">
           <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
-        
-      <b-navbar-toggle target="nav-collapse" class="ml-1"></b-navbar-toggle>
 
-      <b-navbar-brand href="#" fluid-grow class="d-md-none mr-0">
-          <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+      <b-navbar-toggle target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
+
+      <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-3 ml-auto d-none">
+        <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
       </b-navbar-brand>
 
-      <b-collapse id="nav-collapse" is-nav class="justify-content-end">
+      <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-end">
         
-        <b-navbar-nav class="w-75 justify-content-end"> 
+        <b-navbar-nav> 
           <b-nav-item-dropdown text="El CET" left>
             <b-dropdown-item href="#">Què hi Trobaràs</b-dropdown-item>
             <b-dropdown-item href="#">Fes-te Soci</b-dropdown-item>
@@ -93,7 +94,7 @@
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button size="lg" variant="success" class="px-5 py-3 mx-5 d-none d-xl-flex">
+      <b-button id="altaSoci" size="lg" variant="success" class="mr-5 d-flex">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -109,11 +110,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media (max-width: 992px) {
-  #socialMenu {
-    display: none;
-  }
-}
+
+/* Menu Contacte i Xarxes Social */
 
 .list-group-item{
   background: none !important;
@@ -134,22 +132,24 @@ export default {
   background-color:#655377 !important;
 }
 
+@media (max-width: 1024px) {
+  #contactMenu {
+    display: none !important;
+  }
+}
+
+@media (min-width: 468px) and (max-width: 1024px) {
+  #socialMenu {
+    display: flex !important;
+  }
+}
+
+/* Menu Navegació */
+
 .nav-item{
   font-family:"QuickSand";
   font-size: 1.5rem;
   font-weight:bold !important;
-}
-
-button a{
-  color:cyan;
-  font-family:"QuickSand" !important;
-  font-weight:600;
-  text-decoration: none;
-}
-
-button a:hover{
-  color:#103440;
-  font-weight:900;
 }
 
 .nav-item a{
@@ -159,6 +159,49 @@ button a:hover{
 .nav-item a:hover, a:focus{
   color:rgba(0,0,0,0.7) !important;
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .nav-item {
+    font-size: 1.2rem !important;
+    margin:0 30px 0 0 !important;
+  }
+}
+
+/* Logo CET */
+
+@media (max-width: 468px) {
+  #logoCET {
+    display: flex !important;
+    background-color:#103440;
+  }
+}
+
+/* Botó Fer-se Soci */
+
+#altaSoci a{
+  color:cyan;
+  font-family:"QuickSand" !important;
+  font-weight:600;
+  text-decoration: none;
+}
+
+#altaSoci a:hover{
+  color:#103440;
+  font-weight:900;
+}
+
+@media (max-width: 1024px) {
+  #altaSoci {
+    margin-left: 0 !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #altaSoci {
+    display: none !important;
+  }
 }
 
 </style>

@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import navMenu from './menu.vue'
 import homeSlider from './carousel.vue'
 
 export default {
