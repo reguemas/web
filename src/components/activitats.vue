@@ -27,7 +27,7 @@
         </b-col>
 
         <b-col cols="9" class="p-0 position-relative activitats">
-          <h2 class="my-5 ml-5">Activitats Esportives</h2>
+          <h3 class="my-4 ml-5">Activitats Esportives</h3>
           <b-list-group horizontal class="ml-5 overflow-hidden">
             <card/>
             <card class="ml-3"/>

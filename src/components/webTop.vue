@@ -1,8 +1,12 @@
 <template>
     <div>
-      <b-row class="m-0">
+      <b-row id="homeSlider" class="m-0">
         <b-col cols="2" class="p-0">
-          <h3 class="ml-5 textCyan">EN EL</h3>
+          <b-navbar-brand href="#" fluid-grow id="logoBrand" class="ml-5 d-flex">
+            <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+            <h2 class="ml-5 mt-3 textCyan">Al</h2>
+          </b-navbar-brand>
+          
           <div class="transperencia"></div>
 <!--           <div class="verd"></div>
           <div class="vermell"></div>
@@ -13,8 +17,8 @@
         <b-col cols="10" class="p-0 position-relative">
           <!-- <div class="p-2 bg-success text-white">2 de 3</div> -->
           <homeSlider/>
-          <b-jumbotron header="CENTRE EXCURSIONISTA TERRASSA" lead="Vine a Coneixer-ho!" fluid class="d-none d-lg-flex w-50 textCyan">
-            <b-button variant="success" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
+          <b-jumbotron header="CENTRE EXCURSIONISTA TERRASSA" lead="Vine a Coneixer-ho!" fluid class="textCyan w-50">
+            <b-button id="jumbotronButton" variant="success" size="lg" href="#" class="my-2">Mira els Avantatges!</b-button>
           </b-jumbotron>
         </b-col>
       </b-row>
@@ -36,24 +40,35 @@ export default {
 
 <style>
 
+  #logoBrand{
+    margin-top:-90px;
+  }
+
   .jumbotron{
     background-color: transparent !important;
     position:absolute;
-    top:-3%;
+    top:-10%;
     left:-11%;
     padding-top:0;
     color: rgb(13,189,151);
   }
 
   .jumbotron h1{
-    font-size: 6rem !important;
+    font-size: 4.5rem !important;
+  }
+
+  .btn{
+    font-family:"QuickSand";
+    font-size: 1.5rem;
+    font-weight:bold !important;
+    letter-spacing: 1px;
   }
 
   .transperencia{
     background-color: rgba(54,54,54,0.5);
-    height:65%;
-    width:320%;
-    margin-top:32%;
+    height:62%;
+    width:275%;
+    margin-top:21%;
     border-radius:0% 200px 200px 0%;
   }
 
@@ -65,22 +80,18 @@ export default {
   }
 
   .lead{
-    font-size:1.5rem !important;
+    font-size:1.3rem !important;
     font-weight:500 !important;
     color:cyan;
     letter-spacing: 2px;
   }
 
-  .carousel-caption{
-    margin-bottom:-2% !important;
-  }
-  
   .jumbotron a:hover{
     color:#103440;
     font-weight:700;
   }
 
-    .verd{
+  .verd{
     background-color: rgb(65, 145, 45);
     height:10%;
     width:150%;
@@ -96,7 +107,7 @@ export default {
     margin-left:45%;
   }
 
-    .blau{
+  .blau{
     background-color: rgb(12, 169, 241);
     height:10%;
     width:185%;

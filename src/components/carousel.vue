@@ -105,7 +105,13 @@ export default {
   }
 
   .carousel h1{
-    margin-bottom:1% !important;
+    margin-bottom:-2% !important;
+    font-size:1.5rem;
   }
   
+  #carousel-1 img{
+    height:100% !important;
+    width:auto !important;
+  }
+
 </style>
