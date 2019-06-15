@@ -28,21 +28,23 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar small toggleable="md" class="p-0">
+      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0">
         
         <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none">
           <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
+      <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
-      <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-3 ml-auto d-none">
+      <h2 class="m-auto textCyan displayMobile">CET</h2>
+
+      <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-4">
         <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
       </b-navbar-brand>
 
       <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-end">
         
-        <b-navbar-nav> 
+        <b-navbar-nav class="ml-4"> 
           <b-nav-item-dropdown text="El CET" left>
             <b-dropdown-item href="#">Què hi Trobaràs</b-dropdown-item>
             <b-dropdown-item href="#">Fes-te Soci</b-dropdown-item>
@@ -90,11 +92,28 @@
           <b-nav-item class="ml-5 mr-5">
             <router-link to="#">Galeries</router-link>
           </b-nav-item>
+          <b-button size="lg" variant="success" class="mt-4 mx-auto displayMobile">
+            <router-link to="#">Fer-se Soci</router-link>
+          </b-button>
+
+          <b-list-group horizontal class="mx-auto mt-4 displayMobile">
+            <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+            <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+            <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+            <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+            <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+          </b-list-group>
+
+          <b-list-group class="mx-auto mt-3 displayMobile">
+            <b-list-group-item class="mt-3"><img src="../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+            <b-list-group-item class="mt-3"><img src="../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
+          </b-list-group>
+  
 
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button id="altaSoci" size="lg" variant="success" class="mr-5 d-flex">
+      <b-button id="altaSoci" size="lg" variant="success" class="mr-5">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -125,7 +144,7 @@ export default {
 }
 
 .bg-darkMenu {
-  background-color:#103440;
+  background-color:#2e3e4e;
 }
 
 .bg-lightMenu{
@@ -138,9 +157,15 @@ export default {
   }
 }
 
-@media (min-width: 468px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   #socialMenu {
     display: flex !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #menuNav {
+    background-color:#103440;
   }
 }
 
@@ -153,12 +178,16 @@ export default {
 }
 
 .nav-item a{
-  color:rgba(0,0,0,0.5) !important;
+  color:rgba(255,255,255,0.5) !important;
 }
 
 .nav-item a:hover, a:focus{
-  color:rgba(0,0,0,0.7) !important;
+  color:rgba(255,255,255,0.7) !important;
   text-decoration: none;
+}
+
+.navbar-toggler {
+  border-style: none;
 }
 
 @media (max-width: 1024px) {
@@ -170,10 +199,9 @@ export default {
 
 /* Logo CET */
 
-@media (max-width: 468px) {
-  #logoCET {
-    display: flex !important;
-    background-color:#103440;
+@media (min-width: 768px) {
+  #logoCET img{
+    display: none !important;
   }
 }
 
@@ -191,17 +219,31 @@ export default {
   font-weight:900;
 }
 
+.altaSociSocialMobile a{
+  color:cyan;
+  font-family:"QuickSand" !important;
+  font-weight:900;
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
   #altaSoci {
     margin-left: 0 !important;
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #altaSoci {
     display: none !important;
   }
 }
+
+@media (min-width: 768px) {
+  .displayMobile {
+    display: none !important;
+  }
+}
+
 
 </style>

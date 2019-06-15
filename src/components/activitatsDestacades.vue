@@ -1,6 +1,6 @@
 <template>
     <div>
-      <b-row class="m-0 filters destacades justify-content-center">
+      <b-row no-gutters align-v="center" class="m-0 filters destacades justify-content-center">
         <h2 class="m-5">Activitats destacades</h2>
         <b-card-group class="mb-5 justify-content-center">
           <card class="mb-3"/>

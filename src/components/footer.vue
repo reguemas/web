@@ -1,6 +1,6 @@
 <template>
     <div>
-      <b-row class="m-0 footer justify-content-center align-items-center">
+      <b-row no-gutters align-v="center" align-h="center" class="footer">
         <h1>Footer</h1>
       </b-row>
     </div>
