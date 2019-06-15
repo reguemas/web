@@ -36,7 +36,7 @@
 
       <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
-      <h2 class="m-auto textCyan displayMobile">CET</h2>
+      <h2 class="my-auto textCyan displayMobile">CET</h2>
 
       <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-4">
         <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
@@ -92,7 +92,7 @@
           <b-nav-item class="ml-5 mr-5">
             <router-link to="#">Galeries</router-link>
           </b-nav-item>
-          <b-button size="lg" variant="success" class="mt-4 mx-auto displayMobile">
+          <b-button size="lg" variant="success" class="mt-5 mx-auto displayMobile altaSociSocialMobile">
             <router-link to="#">Fer-se Soci</router-link>
           </b-button>
 
@@ -104,7 +104,7 @@
             <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
           </b-list-group>
 
-          <b-list-group class="mx-auto mt-3 displayMobile">
+          <b-list-group class="mt-3 displayMobile">
             <b-list-group-item class="mt-3"><img src="../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
             <b-list-group-item class="mt-3"><img src="../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
           </b-list-group>
@@ -244,6 +244,5 @@ export default {
     display: none !important;
   }
 }
-
 
 </style>
