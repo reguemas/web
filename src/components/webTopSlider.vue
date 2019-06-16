@@ -110,8 +110,15 @@ export default {
   }
   
   #carousel-1 img{
-    height:100% !important;
+    height:400px !important;
     width:auto !important;
+  }
+
+  @media (min-width: 768px) {
+    #carousel-1 img {
+      height:500px !important;
+      width:auto !important;
+    }
   }
 
 </style>

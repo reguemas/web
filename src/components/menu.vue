@@ -20,6 +20,8 @@
           <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
         <b-list-group horizontal class="ml-auto mr-4">
+          <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+          <b-list-group-item class="mr-2"><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
           <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
@@ -29,10 +31,6 @@
       </b-navbar>
 
       <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0">
-        
-        <b-navbar-brand href="#" fluid-grow class="ml-5 mr-0 d-none">
-          <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
-        </b-navbar-brand>
 
       <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
@@ -51,6 +49,7 @@
             <b-dropdown-item href="#">La Seu Social</b-dropdown-item>
             <b-dropdown-item href="#">Llicències Federatives</b-dropdown-item>
             <b-dropdown-item href="#">Històric d'Activitats</b-dropdown-item>
+            <b-dropdown-item href="#">Contacte</b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item-dropdown text="Activitats" left class="ml-5">
             <b-dropdown-header class="dropdown-header-label">
@@ -113,7 +112,7 @@
         </b-navbar-nav>
       </b-collapse> 
 
-      <b-button id="altaSoci" size="lg" variant="success" class="mr-5">
+      <b-button id="altaSoci" size="lg" variant="success" class="mr-5 d-none">
         <router-link to="#">Fer-se Soci</router-link>
       </b-button>
     </b-navbar>
@@ -151,13 +150,13 @@ export default {
   background-color:#655377 !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   #contactMenu {
     display: none !important;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 992px) {
   #socialMenu {
     display: flex !important;
   }
@@ -190,7 +189,7 @@ export default {
   border-style: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .nav-item {
     font-size: 1.2rem !important;
     margin:0 30px 0 0 !important;
@@ -226,16 +225,16 @@ export default {
   text-decoration: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   #altaSoci {
     margin-left: 0 !important;
     font-size: 0.9rem !important;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   #altaSoci {
-    display: none !important;
+    display: flex !important;
   }
 }
 
