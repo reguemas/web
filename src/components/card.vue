@@ -33,6 +33,13 @@ export default {
   .card{
     border:none !important;
   }
+    
+
+  .card h3{
+    font-family: Quicksand-bold;
+    color:cyan;
+    font-size:1.75rem;
+  }
 
   .card img{
     border-radius:none;
@@ -58,16 +65,14 @@ export default {
     display:flex;
     flex-flow: column;
     justify-content:center;
-    padding: 30px 30px;
-    margin-top:55px;
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    /* background-color:rgba(0, 0, 0, 0.2) !important; */
   }
 
   .textDades,.tipusActivitat{
     background: none !important;
     border:none !important;
     padding:0 !important;
-    color:cyan;
+    color:red;
   }
 
   .tipusActivitat :hover{
