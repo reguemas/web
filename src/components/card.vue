@@ -1,87 +1,105 @@
 <template>
-  <div>
-    <b-card
-      overlay
-      img-src="https://picsum.photos/400/400/?image=41"
-      img-alt="Image"
-    >
-      <div class="descripcio">
-        <h3 class="titol mb-4">Pico Coronas. Pirineu Aragonès.</h3>
-        <b-card-text class="tipusActivitat">Alpinisme</b-card-text>
-        <b-list-group horizontal>
-          <b-list-group-item class="textDades">
-            <b-card-text class="seccio">SAM</b-card-text>
-          </b-list-group-item>
-          <b-list-group-item class="textDades ml-auto">
-            <b-card-text class="data">03/07/2019</b-card-text>
-          </b-list-group-item>
-        </b-list-group>
+  <div class="cardBody">
+    <a href="#" class="cardImg">     
+      <div class="cardTitle">
+          <h3 class="titol">Pico Coronas. Pirineu Aragonès.</h3>
+          <div class="tipusActivitat">SAM - Alpinisme</div>
+          <div class="data">03/07/2019</div>
       </div>
-    </b-card>
+<!--       <div class="cardInfo">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+      </div> -->
+    <div class="color-overlay"></div>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
   name: 'card',
+
+  data(){
+    return {
+      hover:false
+    };
+  }
 }
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  .card{
-    border:none !important;
-  }
-    
-
-  .card h3{
-    font-family: Quicksand-bold;
-    color:cyan;
-    font-size:1.75rem;
+  * {
+    margin: 0;
+    padding: 0;
   }
 
-  .card img{
-    border-radius:none;
-    border:1px solid #BFBFBF;
-    height: 20rem;
-    width: 20rem;
+  .cardBody{
+    width: 300px;
+    height: 300px;
+    overflow:hidden;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    text-align:center;
   }
 
-  .card :hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: cyan !important;
-    text-decoration:none;
-    cursor: pointer;
-  }
-
-  .titol{
-    color:cyan;
-    font-size:2rem;
-    text-align: center;
-  }
- 
-  .descripcio{
+  .cardImg {
+    background-image: url(../assets/bg-card.jpg);
+    width: 100%;
+    height: 100%;
+    text-decoration:none !important;
     display:flex;
-    flex-flow: column;
-    justify-content:center;
-    /* background-color:rgba(0, 0, 0, 0.2) !important; */
   }
 
-  .textDades,.tipusActivitat{
-    background: none !important;
-    border:none !important;
-    padding:0 !important;
-    color:red;
+  .cardImg :hover {
+    background: rgba(84,104,110,0.8);
+    text-decoration:none !important;
   }
 
-  .tipusActivitat :hover{
-    background-color:transparent !important;
-    color:cyan !important;
+  a :hover {
+    text-decoration:none !important;
+  }
+
+  .color-overlay{
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.0) 0%,
+      rgba(0, 0, 0, 0.45) 25%,
+      rgba(0, 0, 0, 0.45) 75%,
+      rgba(0, 0, 0, 0.0) 100%
+    );
+    transition: background .3s cubic-brezier (.33,.66,.66,1);
+  }
+
+  .cardTitle{
+    padding:15px;
+    height:100%;
+    width:100%;
+  }
+
+  .cardTitle :hover {
+    background:transparent;
+  }
+
+  .titol {
+    font-family: Quicksand;
+    color:cyan;
+    font-size:1.5rem;
   }
 
   .tipusActivitat{
-    margin:0;
+    font-family: Quicksand;
+    color:#d0bb57;
+    font-size:1.1rem;
+    border-top: 3px solid yellow;
   }
+
+  .data{
+    font-family: Quicksand;
+    color:#d0bb57;
+    font-size:1.1rem;
+  }
+
 
 </style>
