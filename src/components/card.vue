@@ -5,11 +5,10 @@
           <h3 class="titol">Pico Coronas. Pirineu Aragonès.</h3>
           <div class="tipusActivitat">SAM - Alpinisme</div>
           <div class="data">03/07/2019</div>
+          <div class="cardInfo mt-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+          </div>
       </div>
-<!--       <div class="cardInfo">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-      </div> -->
-    <!-- <div class="color-overlay"></div> -->
     </a>
   </div>
 </template>
@@ -29,10 +28,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
   .cardBody{
     width: 300px;
@@ -40,7 +35,7 @@ export default {
     overflow:hidden;
     border: none !important;
     border-radius: 0 !important;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     text-align:center;
   }
 
@@ -54,8 +49,9 @@ export default {
 
   .cardImg :hover {
     /* background: rgba(84,104,110,0.8); */
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     text-decoration:none !important;
+    opacity:1;
   }
 
   a :hover {
@@ -111,5 +107,10 @@ export default {
     font-size:1.1rem;
   }
 
+  .cardInfo{
+    opacity:0;
+    color:cyan;
+    font-size:1.1rem;
+  }
 
 </style>

@@ -8,16 +8,16 @@
               class="mb-2 mr-sm-3 mb-sm-0"
               :value="null"
               :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
-              id="Inline-Filters"
+              id="filtreActivitat"
             >
               <option slot="first" :value="null">Busca Activitats</option>
             </b-form-select>
 
             <b-form-select
-              class="mb-2 mr-sm-2 mb-sm-0 form-control-lg"
+              class="mb-2 mr-sm-2 mb-sm-0"
               :value="null"
               :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
-              id="inline-form-custom-select-pref"
+              id="filtreMes"
             >
               <option slot="first" :value="null">Quin Mes</option>
             </b-form-select>
@@ -82,17 +82,23 @@ export default {
 
 <style>
 
+  #filtreActivitat,#filtreMes {
+    font-family: Quicksand;
+    font-size:1.2rem;
+    font-weight:900;
+  }
+
+  option {
+    font-family: Quicksand;
+    font-size:1rem;
+  }
+
   #cardsBackground{
     background-color:rgb(13,189,151);
   }
 
   .calendar{
     background-color: rgba(54,54,54,0.3);
-  }
-
-  .filters{
-    font-size:1.5rem !important;
-    font-weight:900 !important;
   }
 
   #buttonFilters{
