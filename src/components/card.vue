@@ -9,7 +9,7 @@
 <!--       <div class="cardInfo">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
       </div> -->
-    <div class="color-overlay"></div>
+    <!-- <div class="color-overlay"></div> -->
     </a>
   </div>
 </template>
@@ -53,7 +53,8 @@ export default {
   }
 
   .cardImg :hover {
-    background: rgba(84,104,110,0.8);
+    /* background: rgba(84,104,110,0.8); */
+    background: rgba(0,0,0,0.7);
     text-decoration:none !important;
   }
 
@@ -61,7 +62,9 @@ export default {
     text-decoration:none !important;
   }
 
-  .color-overlay{
+/*   .color-overlay{
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.0) 0%,
@@ -70,12 +73,19 @@ export default {
       rgba(0, 0, 0, 0.0) 100%
     );
     transition: background .3s cubic-brezier (.33,.66,.66,1);
-  }
+  } */
 
   .cardTitle{
     padding:15px;
     height:100%;
     width:100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 45%,
+      rgba(0, 0, 0, 0.0) 100%
+    );
+    transition: background .3s cubic-brezier (.33,.66,.66,1);
   }
 
   .cardTitle :hover {
