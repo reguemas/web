@@ -111,6 +111,7 @@ export default {
     opacity:0;
     color:cyan;
     font-size:1.1rem;
+    height:100%;
   }
 
 </style>
