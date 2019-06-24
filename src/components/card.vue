@@ -37,6 +37,7 @@ export default {
     border-radius: 0 !important;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     text-align:center;
+    display: block; 
   }
 
   .cardImg {
@@ -44,7 +45,7 @@ export default {
     width: 100%;
     height: 100%;
     text-decoration:none !important;
-    display:flex;
+    display:block;
   }
 
   .cardImg :hover {

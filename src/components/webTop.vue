@@ -10,7 +10,7 @@
           </div>
 
           <div class="transperencia"></div>
-          <h3 class="ml-5 textCyan bottom-row displayNoneMobile">Aquí Trobaràs</h3>
+          <h4 class="ml-4 textCyan bottom-row displayNoneMobile">Aquí Trobaràs</h4>
         </b-col>
 
         <b-col no-gutters cols="0" md="9" xl="10" class="position-relative">
@@ -56,7 +56,7 @@ export default {
     color: rgb(13,189,151);
   }
 
-  @media (min-width:768px) and (max-width: 1200px) {
+  @media (min-width:768px) and (max-width: 1199px) {
     .jumbotron {
       left:-20%;
     }
