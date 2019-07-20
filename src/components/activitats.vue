@@ -61,15 +61,7 @@
         </b-col>
         <b-col cols="12" md="7" xl="9" class="p-0 position-relative activitats">
           <b-row class="m-0">
-          <h3 class="ml-5 my-4">Activitats Esportives</h3>
-          <b-list-group horizontal class="ml-5">
-            <card/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-          </b-list-group>
+            <gallery/>
           </b-row>
           <b-row class="m-0">
             <h3 class="ml-5 my-4">Activitats Culturals</h3>
@@ -100,12 +92,14 @@
 
 <script>
 import card from './card.vue'
+import gallery from './gallery.vue'
 
 export default {
-  name: 'activitats1',
+  name: 'activitats',
 
   components: {
     card,
+    gallery,
   },
 
   data() {
