@@ -2,8 +2,8 @@
   <div>
     <h3 class="ml-5 my-4">Activitats Esportives</h3>
     
-    <button id="botoEsquerra" v-on:click="esquerra">Left</button>
-    <button id="botoDreta" v-on:click="dreta">Right</button>
+    <button id="botoEsquerra" @click="esquerra">Left</button>
+    <button id="botoDreta" @click="dreta">Right</button>
 
     <div id="contenidor">
       <div id="esMou">
@@ -26,19 +26,30 @@
 
 <script>
 
+export default {
+
+  name: 'gallery',
+
   methods:{
 
-    dreta: function () {
-      var element = document.getElementById("esMou");
-      var posicioActual = element.offsetLeft+50;
-      console.log(posicioActual);
-      element.style.transform = "translateX("+posicioActual+"px)";
-      var posicioFinal = element.offsetLeft;
-      console.log(posicioFinal);
+    count:0,
+    posicioActual: 0,
+    posicioFinal: 0,
+
+    dreta: function (count,posicioActual,posicioFinal) {
+      count++;
+      let element = document.getElementById("esMou");
+      posicioActual =+50;
+      posicioFinal = 50*count;
+      console.log("console element",element);
+      console.log("console actual",posicioActual);
+      /* this.element.style.transform = "translateX("+this.posicioActual+"px)"; */
+      console.log("console final",count);
     }
 
   }
 
+}
 
 
 
