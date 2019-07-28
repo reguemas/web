@@ -30,21 +30,24 @@ export default {
 
   name: 'gallery',
 
-  methods:{
+  el:"#esMou",
 
+  data:{
     count:0,
     posicioActual: 0,
-    posicioFinal: 0,
+    posicioFinal: 0
+  },
 
-    dreta: function (count,posicioActual,posicioFinal) {
-      count++;
-      let element = document.getElementById("esMou");
-      posicioActual =+50;
-      posicioFinal = 50*count;
-      console.log("console element",element);
-      console.log("console actual",posicioActual);
+  methods:{
+
+    dreta: function () {
+      this.count++;
+      this.posicioActual =+50;
+      this.posicioFinal = 50*count;
+      console.log("console element",el);
+      console.log("console actual",this.posicioActual);
       /* this.element.style.transform = "translateX("+this.posicioActual+"px)"; */
-      console.log("console final",count);
+      console.log("console final",this.count);
     }
 
   }
