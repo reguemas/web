@@ -1,13 +1,13 @@
 <template>
   <div>
     <h3 class="ml-5 my-4">Activitats Esportives</h3>
-    
-    <button id="botoEsquerra" @click="esquerra">Left</button>
-    <button id="botoDreta" @click="dreta">Right</button>
+      
+<!--       <button id="botoEsquerra" @click="esquerra">Left</button>
+      <button id="botoDreta" @click="dreta">Right</button> -->
 
     <div id="contenidor">
       <div id="esMou">
-        This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+        {{message}} , {{count}}
       </div>
     </div>
 
@@ -32,23 +32,28 @@ export default {
 
   el:"#esMou",
 
-  data:{
-    count:0,
-    posicioActual: 0,
-    posicioFinal: 0
+  data() {
+    return {
+      message:"Hello",
+      count:0
+    };
+
   },
 
   methods:{
 
-    dreta: function () {
-      this.count++;
-      this.posicioActual =+50;
+     dreta: function () {
+      return{
+        data.count++
+      }
+      
+/*       this.posicioActual =+50;
       this.posicioFinal = 50*count;
       console.log("console element",el);
       console.log("console actual",this.posicioActual);
-      /* this.element.style.transform = "translateX("+this.posicioActual+"px)"; */
-      console.log("console final",this.count);
-    }
+      this.element.style.transform = "translateX("+this.posicioActual+"px)";
+      console.log("console final",this.count); */
+    } 
 
   }
 

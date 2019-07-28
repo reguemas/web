@@ -17,7 +17,7 @@
 export default {
   name: 'card',
 
-  data(){
+  data() {
     return {
       hover:false
     };
