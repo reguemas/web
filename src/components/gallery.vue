@@ -2,8 +2,8 @@
   <div>
     <h3 class="ml-5 my-4">Activitats Esportives</h3>
       
-<!--       <button id="botoEsquerra" @click="esquerra">Left</button>
-      <button id="botoDreta" @click="dreta">Right</button> -->
+      <button id="botoEsquerra" @click="esquerra">Left</button>
+      <button id="botoDreta" @click="dreta">Right</button>
 
     <div id="contenidor">
       <div id="esMou">
@@ -30,9 +30,7 @@ export default {
 
   name: 'gallery',
 
-  el:"#esMou",
-
-  data() {
+  data: function () {
     return {
       message:"Hello",
       count:0
@@ -43,9 +41,10 @@ export default {
   methods:{
 
      dreta: function () {
-      return{
-        data.count++
-      }
+      console.log("console",this.count);
+      this.count++;
+      console.log("console+1",this.count);
+
       
 /*       this.posicioActual =+50;
       this.posicioFinal = 50*count;
