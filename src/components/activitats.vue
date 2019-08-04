@@ -60,10 +60,12 @@
           </div>
         </b-col>
         <b-col cols="12" md="7" xl="9" class="p-0 position-relative activitats">
-          <b-row class="m-0">
+          
             <gallery/>
-          </b-row>
-          <b-row class="m-0">
+            <gallery/>
+            <gallery/>
+          
+<!--           <b-row class="m-0">
             <h3 class="ml-5 my-4">Activitats Culturals</h3>
             <b-list-group horizontal class="ml-5">
               <card/>
@@ -84,7 +86,7 @@
             <card class="ml-3"/>
             <card class="ml-3 mb-5"/>
           </b-list-group>
-          </b-row>
+          </b-row> -->
         </b-col>
       </b-row>
   </div>

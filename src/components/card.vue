@@ -1,12 +1,13 @@
 <template>
-  <div class="cardBody">
+  <div class="cardBody" @mouseover = "hover=true" @mouseleave = "hover=false">
     <a href="#" class="cardImg">     
       <div class="cardTitle">
           <h3 class="titol">Pico Coronas. Pirineu Aragonès.</h3>
-          <div class="tipusActivitat">SAM - Alpinisme</div>
-          <div class="data">03/07/2019</div>
-          <div class="cardInfo mt-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+          <div class="activitatInfo">SAM - Alpinisme</div>
+          <div class="activitatInfo">03/07/2019</div>
+          <div class="activitatInfo">Dificultat: Alta</div>
+          <div v-if=hover class="cardInfo mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
       </div>
     </a>
@@ -21,7 +22,8 @@ export default {
     return {
       hover:false
     };
-  }
+  },
+
 }
 
 </script>
@@ -93,23 +95,17 @@ export default {
     font-family: Quicksand;
     color:cyan;
     font-size:1.5rem;
+    padding-bottom:10px;
+    border-bottom: 3px solid yellow;
   }
 
-  .tipusActivitat{
-    font-family: Quicksand;
-    color:#d0bb57;
-    font-size:1.1rem;
-    border-top: 3px solid yellow;
-  }
-
-  .data{
+  .activitatInfo{
     font-family: Quicksand;
     color:#d0bb57;
     font-size:1.1rem;
   }
 
   .cardInfo{
-    opacity:0;
     color:cyan;
     font-size:1.1rem;
     height:100%;

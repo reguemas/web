@@ -105,8 +105,12 @@ export default {
   }
 
   .carousel h1{
-    margin-bottom:-2% !important;
-    font-size:1.5rem;
+    font-family:"Escriptura";
+    letter-spacing: 2px;
+    margin-bottom:-30px !important;
+    white-space:nowrap;
+    font-size:2.5rem;
+    color:#d0bb57;
   }
   
   #carousel-1 img{
@@ -120,5 +124,13 @@ export default {
       width:auto !important;
     }
   }
+
+  @media (max-width: 768px) {
+    .carousel h1{
+      white-space:normal;
+      font-size:2.2rem;
+    }
+  }
+
 
 </style>

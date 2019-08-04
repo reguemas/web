@@ -6,11 +6,11 @@
             <b-navbar-brand href="#" fluid-grow id="logoBrand" class="ml-5 d-inline">
               <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
             </b-navbar-brand>
-            <h2 class="ml-4 mt-3 textCyan d-inline">Al</h2>
+            <h2 class="ml-4 mt-3 textCyan d-inline escripturaGran">Al</h2>
           </div>
 
           <div class="transperencia"></div>
-          <h4 class="ml-4 textCyan bottom-row displayNoneMobile">Aquí Trobaràs</h4>
+          <h4 class="ml-4 textCyan bottom-row displayNoneMobile escripturaPetita">Trobaràs</h4>
         </b-col>
 
         <b-col no-gutters cols="0" md="9" xl="10" class="position-relative">
@@ -104,10 +104,12 @@ export default {
   }
 
   .lead{
-    font-size:1.3rem !important;
-    font-weight:500 !important;
-    color:cyan;
+    font-family:"Escriptura";
     letter-spacing: 2px;
+    font-size:2.5rem !important;
+    font-weight:500 !important;
+    color:#cfc8b5;
+    margin-bottom:0 !important;
   }
 
   .jumbotron a:hover{
@@ -144,6 +146,18 @@ export default {
     .displayNoneMobile {
       display: none !important;
     }
+  }
+
+  .escripturaGran{
+    font-family:"Escriptura";
+    letter-spacing: 2px;
+    font-size:4rem;
+  }
+
+  .escripturaPetita{
+    font-family:"Escriptura";
+    letter-spacing: 2px;
+    font-size:3rem;
   }
 
 </style>
