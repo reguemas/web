@@ -1,7 +1,7 @@
 <template>
-  <b-row id="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
+  <b-row ref="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
     <h3 class="ml-3 my-4">Activitats Esportives</h3>
-      <b-list-group horizontal id="esMou" class="ml-3">
+      <b-list-group horizontal ref="esMou" class="ml-3 esMou">
         <card/> 
         <card class="ml-3"/>
         <div id="primer" class="ml-3"></div>
@@ -15,8 +15,8 @@
         <card class="ml-3"/>
       </b-list-group>
       <div v-if="controlsVisibilitat">
-        <button id="botoAnterior" v-if=botoAnteriorVisibilitat @click="anterior">&lsaquo;</button>
-        <button id="botoSeguent" v-if=botoSeguentVisibilitat @click="seguent">&rsaquo;</button>
+        <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="anterior" ref="anterior">&lsaquo;</button>
+        <button class="botoSeguent" v-if=botoSeguentVisibilitat @click="seguent" ref="seguent">&rsaquo;</button>
       </div>
   </b-row>
 </template>
@@ -47,8 +47,8 @@ export default {
   methods:{
 
     anterior: function () {
-      let element = document.getElementById("esMou");
-      let ampladaPantalla = document.getElementById("mascaraGaleria").offsetWidth;
+      let element = this.$refs.esMou;
+      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
       let numCardsVisibles = (ampladaPantalla - 48)/316;
       let distanciaMoure = (numCardsVisibles.toFixed()-1)*300;
       if (distanciaMoure == 0) {
@@ -63,8 +63,9 @@ export default {
     },
 
     seguent: function() {
-      let element = document.getElementById("esMou");
-      let ampladaPantalla = document.getElementById("mascaraGaleria").offsetWidth;
+      console.log("console",event.target.className);
+      let element = this.$refs.esMou;
+      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
       let numCardsVisibles = (ampladaPantalla - 48)/316;
       let longitudGaleria = element.childNodes.length;
       let numClickFinalGaleria = longitudGaleria/numCardsVisibles.toFixed();
@@ -89,11 +90,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
-  #esMou{
+  .esMou{
     transition: transform 1s ease-in-out;
   }
 
-  #botoAnterior{
+  .botoAnterior{
     position: absolute;
     left:0;
     margin-top:-188px;
@@ -108,7 +109,7 @@ export default {
     border-radius: 50%;
   }
 
-  #botoSeguent{
+  .botoSeguent{
     position: absolute;
     right:0;
     margin-top:-188px;
