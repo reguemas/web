@@ -1,7 +1,7 @@
 <template>
   <div class="cardBody" @mouseover = "hover=true" @mouseleave = "hover=false">
     <a href="#" class="cardImg">     
-      <div class="cardTitle">
+      <div class="cardTitle" ref="cardBackgroundMobile">
           <h3 class="titol">Pico Coronas. Pirineu Aragonès.</h3>
           <div class="activitatInfo">SAM - Alpinisme</div>
           <div class="activitatInfo">03/07/2019</div>
@@ -22,6 +22,20 @@ export default {
     return {
       hover:false
     };
+  },
+
+  mounted() {
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      this.hover=true;
+      this.$refs.cardBackgroundMobile.style.background="rgba(0,0,0,0.6)"
+    }
+    
   },
 
 }
@@ -51,10 +65,8 @@ export default {
   }
 
   .cardImg :hover {
-    /* background: rgba(84,104,110,0.8); */
     background: rgba(0,0,0,0.8);
     text-decoration:none !important;
-    opacity:1;
   }
 
   a :hover {
@@ -84,7 +96,6 @@ export default {
       rgba(0, 0, 0, 0.6) 45%,
       rgba(0, 0, 0, 0.0) 100%
     );
-    transition: background .3s cubic-brezier (.33,.66,.66,1);
   }
 
   .cardTitle :hover {

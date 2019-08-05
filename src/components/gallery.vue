@@ -15,8 +15,8 @@
         <card class="ml-3"/>
       </b-list-group>
       <div v-if="controlsVisibilitat">
-        <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="anterior" ref="anterior">&lsaquo;</button>
-        <button class="botoSeguent" v-if=botoSeguentVisibilitat @click="seguent" ref="seguent">&rsaquo;</button>
+        <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="movimentCarousel" ref="anterior">&lsaquo;</button>
+        <button class="botoSeguent" v-if=botoSeguentVisibilitat @click="movimentCarousel" ref="seguent">&rsaquo;</button>
       </div>
   </b-row>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
 
 
-  data: function () {
+  data() {
     return {
       count:0,
       botoAnteriorVisibilitat:false,
@@ -44,44 +44,48 @@ export default {
 
   },
 
+  mounted() {
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      this.controlsVisibilitat=true;
+    }
+  },
+
   methods:{
 
-    anterior: function () {
+    movimentCarousel: function() {
       let element = this.$refs.esMou;
       let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
       let numCardsVisibles = (ampladaPantalla - 48)/316;
       let distanciaMoure = (numCardsVisibles.toFixed()-1)*300;
-      if (distanciaMoure == 0) {
-          distanciaMoure = 316;
-      }
-      this.count++;
-      element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
-      this.botoSeguentVisibilitat=true;
-      if (this.count==0) {
-        this.botoAnteriorVisibilitat=false;
-      }
-    },
-
-    seguent: function() {
-      console.log("console",event.target.className);
-      let element = this.$refs.esMou;
-      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = (ampladaPantalla - 48)/316;
       let longitudGaleria = element.childNodes.length;
       let numClickFinalGaleria = longitudGaleria/numCardsVisibles.toFixed();
-      let distanciaMoure = (numCardsVisibles.toFixed()-1)*300; 
-      
       if (distanciaMoure == 0) {
-          distanciaMoure = 316;
+        distanciaMoure = 316;
       }
-      this.count--;
-      element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
-      this.botoAnteriorVisibilitat=true;
-      if (this.count == -numClickFinalGaleria.toFixed()) {
-          this.botoSeguentVisibilitat=false;
+      if (event.target.className==="botoAnterior") {
+        this.count++;
+        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
+        this.botoSeguentVisibilitat=true;
+        if (this.count==0) {
+          this.botoAnteriorVisibilitat=false;
+        }
+      } else if (event.target.className==="botoSeguent") {
+        this.count--;
+        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
+        this.botoAnteriorVisibilitat=true;
+        if (this.count == -numClickFinalGaleria.toFixed()) {
+            this.botoSeguentVisibilitat=false;
+        }
       }
-    }
-  }
+    },
+    
+  },
 
 }
 
@@ -97,31 +101,37 @@ export default {
   .botoAnterior{
     position: absolute;
     left:0;
-    margin-top:-188px;
-    background-color:rgb(51,51,51);
+    margin-top:-300px;
     border:none !important;
     color:white;
     font-size: 50px;
-    line-height: 75px;
+    line-height: 300px;
     text-align:center;
     width:75px;
     padding: 0 !important;
-    border-radius: 50%;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.0) 100%
+    );
   }
 
   .botoSeguent{
     position: absolute;
     right:0;
-    margin-top:-188px;
-    background-color:rgb(51,51,51);
+    margin-top:-300px;
     border:none !important;
     color:white;
     font-size: 50px;
-    line-height: 75px;
+    line-height: 300px;
     text-align:center;
     width:75px;
     padding: 0 !important;
-    border-radius: 50%;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.0) 100%
+    );
   }
 
   #primer{
