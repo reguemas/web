@@ -1,13 +1,13 @@
 <template>
   <div class="cardBody" @mouseover = "hover=true" @mouseleave = "hover=false">
-    <a href="#" class="cardImg">     
+    <a class="cardImg" ref="urlActivitat">     
       <div class="cardTitle" ref="cardBackgroundMobile">
-          <h3 class="titol">Pico Coronas. Pirineu Aragonès.</h3>
-          <div class="activitatInfo">SAM - Alpinisme</div>
-          <div class="activitatInfo">03/07/2019</div>
-          <div class="activitatInfo">Dificultat: Alta</div>
-          <div v-if=hover class="cardInfo mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h3 class="titol">{{ activitat.title }}</h3>
+          <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
+          <div class="activitatInfo">{{ activitat.dataInici }}</div>
+          <div class="activitatInfo">Dificultat: {{ activitat.dificultat }}</div>
+          <div v-if=hover class="cardInfo mt-3">
+            {{ activitat.descripcio }}
           </div>
       </div>
     </a>
@@ -15,12 +15,22 @@
 </template>
 
 <script>
+/* import activitatsCalendari from "./json/activitat.json"; */
+
 export default {
   name: 'card',
 
+   props:{ 
+    activitat: {
+      type: Object,
+      required: true
+    }
+  },
+
   data() {
     return {
-      hover:false
+      hover:false,
+      /* activitat: activitatsCalendari  */
     };
   },
 
@@ -35,7 +45,10 @@ export default {
       this.hover=true;
       this.$refs.cardBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
-    
+
+    this.$refs.urlActivitat.setAttribute("href",activitat.url);
+    this.$refs.urlActivitat.style.background = "url(" + activitat.imatge + ")";
+
   },
 
 }
@@ -57,7 +70,6 @@ export default {
   }
 
   .cardImg {
-    background-image: url(../assets/bg-card.jpg);
     width: 100%;
     height: 100%;
     text-decoration:none !important;
@@ -72,19 +84,6 @@ export default {
   a :hover {
     text-decoration:none !important;
   }
-
-/*   .color-overlay{
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.45) 25%,
-      rgba(0, 0, 0, 0.45) 75%,
-      rgba(0, 0, 0, 0.0) 100%
-    );
-    transition: background .3s cubic-brezier (.33,.66,.66,1);
-  } */
 
   .cardTitle{
     padding:15px;
@@ -105,7 +104,7 @@ export default {
   .titol {
     font-family: Quicksand;
     color:cyan;
-    font-size:1.5rem;
+    font-size:1.3rem;
     padding-bottom:10px;
     border-bottom: 3px solid yellow;
   }
@@ -118,7 +117,7 @@ export default {
 
   .cardInfo{
     color:cyan;
-    font-size:1.1rem;
+    font-size:1rem;
     height:100%;
   }
 

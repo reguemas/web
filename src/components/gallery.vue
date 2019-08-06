@@ -1,18 +1,8 @@
 <template>
   <b-row ref="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
     <h3 class="ml-3 my-4">Activitats Esportives</h3>
-      <b-list-group horizontal ref="esMou" class="ml-3 esMou">
-        <card/> 
-        <card class="ml-3"/>
-        <div id="primer" class="ml-3"></div>
-        <div id="segon" class="ml-3"></div>
-        <div id="tercer" class="ml-3"></div>
-        <div id="quart" class="ml-3"></div>
-        <div id="cinque" class="ml-3"></div>
-        <div id="sise" class="ml-3"></div>
-        <div id="sete" class="ml-3"></div>
-        <div id="vuite" class="ml-3"></div>
-        <card class="ml-3"/>
+      <b-list-group horizontal ref="esMou" class="ml-3 esMou" v-bind:key="activitat" v-for="activitat in activitatsCalendari">
+        <card/>
       </b-list-group>
       <div v-if="controlsVisibilitat">
         <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="movimentCarousel" ref="anterior">&lsaquo;</button>
@@ -24,6 +14,7 @@
 <script>
 
 import card from './card.vue'
+import carouselActivitats from './json/carousel.json'
 
 export default {
 
@@ -40,6 +31,7 @@ export default {
       botoAnteriorVisibilitat:false,
       botoSeguentVisibilitat:true,
       controlsVisibilitat:false,
+      carouselActivitats: activitatsCalendari
     };
 
   },

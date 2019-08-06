@@ -1,0 +1,94 @@
+
+{
+    "Esportives":[
+        {
+            "title": "PIC DE CORONES. PIRINEU ARAGONÈS",
+            "dataInici": "03/09/2019",
+            "dataFinal": "05/09/2019",
+            "seccio": "SAM",
+            "modalitat": "Alpinisme",
+            "descripcio": "Ascensió a un dels cims més alts del Pirineu, amb execelent perspectiva dels seus germans grans Aneto i Maladeta",
+            "dificultat": "Alta",
+            "url": "#",
+            "imatge": "/img/bg-card.5ea22097.jpg"        
+        },
+        {
+            "title": "PASSEJADES PEL PARC · LA BAUMA GRAN DE SANANA",
+            "dataInici": "04/09/2019",
+            "dataFinal": "04/09/2019",
+            "seccio": "Senderisme",
+            "modalitat": "Senderisme",
+            "descripcio": "La Bauma Gran de Sanana, es troba al terme municipal de Vacarisses prop de la masia de Sanana. Les primeres referències que tenim son d’una nota de l’Alcaldia de Vacarisses de 1850 publicades al llibre Pàgines Vacarissanes, un recull de les col·laboracions mensuals que el botànic Terrassenc Àngel Hernández va escriure per el butlletí Vacarisses, Balcó de Montserrat.",
+            "dificultat": "Fàcil",
+            "url": "http://ce-terrassa.cat/senderisme-%c2%b7-passejades-pel-parc-%c2%b7-la-bauma-gran-de-sanana/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/Passejades-setembreBAUMA-GRAN-DE-SANANA-Foto-Enric-Prat-150x150.jpg"        
+        },
+        {
+            "title": "PIC DE MONESTERO",
+            "dataInici": "07/09/2019",
+            "dataFinal": "08/09/2019",
+            "seccio": "CETCIMS",
+            "modalitat": "Alpinisme",
+            "descripcio": "Ascensió al Pic de Monestero (2.881 m) des de Sant Maurici per la Valleta Seca i descens per la Coma dels estanys escondits, refugi Josep Ma Blanc, estanys de Trescuro i Espot.",
+            "dificultat": "Mitja",
+            "url": "http://ce-terrassa.cat/cetcims-%c2%b7-pic-de-monestero/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/08/FMS080629-_DSC4650-150x150.jpg"        
+        },
+        {
+            "title": "OBSERVACIÓ DE LA MIGRACIÓ D’OCELLS AL PIRINEU DE GIRONA",
+            "dataInici": "07/09/2019",
+            "dataFinal": "07/09/2019",
+            "seccio": "Ciencies Naturals",
+            "modalitat": "Ornitologia",
+            "descripcio": "Sortida i observació de la migració d'ocells al Pirineu de Girona. Coll d'Ares i Fabert.",
+            "dificultat": "Mitja",
+            "url": "http://ce-terrassa.cat/ornitologia-%c2%b7-sortida-i-observacio-de-la-migracio-docells-al-pirineu-de-girona-coll-dares-i-fabert/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/FMS041030-DSC_8823-Editar-150x150.jpg"        
+        },
+        {
+            "title": "BERENAR/SOPAR A LA PASTORA",
+            "dataInici": "13/09/2019",
+            "dataFinal": "13/09/2019",
+            "seccio": "Marxa Nòrdica",
+            "modalitat": "",
+            "descripcio": "Aquest any començarem el curs escalfant motors el divendres 13 de setembre.  Sortirem de Les Pedritxes on començarem el recorregut pel camí de Matadepera-Rellinars.",
+            "dificultat": "Baixa-Mitja",
+            "url": "http://ce-terrassa.cat/marxa-nordica-%c2%b7-sortida-inici-temporada-berenar-sopar-a-la-pastora/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/MN-setembre-150x150.jpg"        
+        },
+        {
+            "title": "TORRE D’EINA I CAMBRE D’ASE",
+            "dataInici": "15/09/2019",
+            "dataFinal": "15/09/2019",
+            "seccio": "SAM",
+            "modalitat": "Col·lectives",
+            "descripcio": "Col·lectives d'Alta Muntanya a la Torre d’Eina i Cambre d’Ase (Opcional) per la Vall de l'Orri de Planès.",
+            "dificultat": "Mitja",
+            "url": "http://ce-terrassa.cat/col%c2%b7lectives-dalta-muntanya-%c2%b7-torre-deina-i-cambres-dase-opcional-per-la-vall-de-lorri-de-planes/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/FMS090923-_7007642-150x150.jpg"        
+        },
+        {
+            "title": "LES TINES DEL BAGES – LLOBREGAT",
+            "dataInici": "15/09/2019",
+            "dataFinal": "15/09/2019",
+            "seccio": "BICICET",
+            "modalitat": "BTT",
+            "descripcio": "La ruta que proposem és un petit recorregut d’una època d’esplendor de les vinyes del Llobregat en aquesta comarca.",
+            "dificultat": "Baixa-Mitja",
+            "url": "http://ce-terrassa.cat/bici-de-temporada-%c2%b7-les-tines-del-bages-llobregat/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/BTT-IMG_20190615_120806-2-150x150.jpg"        
+        },
+        {
+            "title": "MARXA NÒRDICA · 10a PROVA 2019",
+            "dataInici": "21/09/2019",
+            "dataFinal": "21/09/2019",
+            "seccio": "Marxa Nòrdica",
+            "modalitat": "",
+            "descripcio": "10a PROVA 2019 – CIRCUIT CATALÀ DE MARXA NÒRDICA DE LA FEEC · ENTORNS DE TERRASSA",
+            "dificultat": "Baixa",
+            "url": "http://ce-terrassa.cat/marxa-nordica-%c2%b7-10a-prova-2019-circuit-catala-de-marxa-nordica-de-la-feec-%c2%b7-entorns-de-terrassa/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2019/07/MN30260181377_2000d3d96d_k-150x150.jpg"        
+        }
+        
+    ]
+}
