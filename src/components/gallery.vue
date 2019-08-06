@@ -1,7 +1,7 @@
 <template>
   <b-row ref="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
     <h3 class="ml-3 my-4">Activitats Esportives</h3>
-      <b-list-group horizontal ref="esMou" class="ml-3 esMou" v-bind:key="activitat" v-for="activitat in activitatsCalendari">
+      <b-list-group horizontal ref="esMou" class="ml-3 esMou" :key="index" v-for="(activitat,index) in carouselActivitats">
         <card/>
       </b-list-group>
       <div v-if="controlsVisibilitat">
@@ -23,7 +23,6 @@ export default {
   components: {
     card,
   },
-
 
   data() {
     return {
