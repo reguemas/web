@@ -2,7 +2,7 @@
   <b-row ref="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
     <h3 class="ml-3 my-4">Activitats Esportives</h3>
       <b-list-group horizontal ref="esMou" class="ml-3 esMou" :key="index" v-for="(activitat,index) in carouselActivitats">
-        <card/>
+        <card activitat="activitat"/>
       </b-list-group>
       <div v-if="controlsVisibilitat">
         <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="movimentCarousel" ref="anterior">&lsaquo;</button>
@@ -30,7 +30,7 @@ export default {
       botoAnteriorVisibilitat:false,
       botoSeguentVisibilitat:true,
       controlsVisibilitat:false,
-      carouselActivitats: activitatsCalendari
+      activitatsCalendari: carouselActivitats
     };
 
   },

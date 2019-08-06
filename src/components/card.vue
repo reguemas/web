@@ -20,12 +20,7 @@
 export default {
   name: 'card',
 
-   props:{ 
-    activitat: {
-      type: Object,
-      required: true
-    }
-  },
+  props:["activitat"],
 
   data() {
     return {
