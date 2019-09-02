@@ -9,6 +9,10 @@
 
       <activitats/>
 
+      <div>Activitats{{this.infoActivitats}}</div>
+
+      <div>Calendari{{this.infoCalendari}}</div>
+
       <!-- <activitatPromocionada/>
 
       <activitatsDestacades/>
@@ -30,6 +34,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import navMenu from './components/menu.vue'
 import webTop from './components/webTop.vue'
 import activitats from './components/activitats.vue'
@@ -53,6 +58,19 @@ export default {
     serveis,
     colaboradorsWebAmigues,
     peuWeb,
+  },
+
+  mounted(){
+    axios.all ([
+      axios.get('http://localhost/api/apiActivitats.php'),
+      axios.get('http://localhost/api/apiCalendari.php')
+      ])
+      .then(axios.spread((activitatsResposta,calendariResposta)=>{
+        this.infoActivitats = activitatsResposta.data.response;
+        this.infoCalendari = calendariResposta.data.response;
+      }));
+      console.log(JSON.stringify(this.infoActivitats));
+      console.log(JSON.stringify(this.infoActivitats));
   }
 }
 

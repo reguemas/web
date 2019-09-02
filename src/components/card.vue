@@ -5,7 +5,7 @@
           <h3 class="titol">{{ activitat.title }}</h3>
           <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
           <div class="activitatInfo">{{ activitat.dataInici }}</div>
-          <div class="activitatInfo">Dificultat: {{ activitat.dificultat }}</div>
+          <div class="activitatInfo" v-if=dificultat>Dificultat: {{ activitat.dificultat }}</div>
           <div v-if=hover class="cardInfo mt-3">
             {{ activitat.descripcio }}
           </div>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-/* import activitatsCalendari from "./json/activitat.json"; */
 
 export default {
   name: 'card',
@@ -25,8 +24,15 @@ export default {
   data() {
     return {
       hover:false,
-      /* activitat: activitatsCalendari  */
     };
+  },
+
+  created() {
+    if(this.activitat.dificultat==0) {
+      return this.dificultat=false;
+    } else {
+      return this.dificultat=true;
+    }
   },
 
   mounted() {
@@ -41,8 +47,10 @@ export default {
       this.$refs.cardBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
 
-    this.$refs.urlActivitat.setAttribute("href",activitat.url);
-    this.$refs.urlActivitat.style.background = "url(" + activitat.imatge + ")";
+    this.$refs.urlActivitat.setAttribute("href",this.activitat.url);
+    this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
+    this.$refs.urlActivitat.style.backgroundSize = "300px 300px";
+
 
   },
 
@@ -65,8 +73,8 @@ export default {
   }
 
   .cardImg {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     text-decoration:none !important;
     display:block;
   }

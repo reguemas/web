@@ -1,8 +1,8 @@
 <template>
   <b-row ref="mascaraGaleria" class="m-0" @mouseover = "controlsVisibilitat=true" @mouseleave = "controlsVisibilitat=false">
-    <h3 class="ml-3 my-4">Activitats Esportives</h3>
-      <b-list-group horizontal ref="esMou" class="ml-3 esMou" :key="index" v-for="(activitat,index) in carouselActivitats">
-        <card activitat="activitat"/>
+    <h3 class="ml-3 my-4">Activitats {{titolGaleria}}</h3>
+      <b-list-group horizontal ref="esMou" class="esMou">
+        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(activitat,index) in activitatsCarousel"><card :activitat="activitat"/></b-list-group-item>
       </b-list-group>
       <div v-if="controlsVisibilitat">
         <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="movimentCarousel" ref="anterior">&lsaquo;</button>
@@ -14,11 +14,12 @@
 <script>
 
 import card from './card.vue'
-import carouselActivitats from './json/carousel.json'
 
 export default {
 
   name: 'gallery',
+
+  props:["activitatsCarousel","titolGaleria"],
 
   components: {
     card,
@@ -30,7 +31,6 @@ export default {
       botoAnteriorVisibilitat:false,
       botoSeguentVisibilitat:true,
       controlsVisibilitat:false,
-      activitatsCalendari: carouselActivitats
     };
 
   },
@@ -89,6 +89,10 @@ export default {
     transition: transform 1s ease-in-out;
   }
 
+  .list-group-item{
+    border:none !important;
+  }
+
   .botoAnterior{
     position: absolute;
     left:0;
@@ -102,7 +106,8 @@ export default {
     padding: 0 !important;
     background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
       rgba(0, 0, 0, 0.0) 100%
     );
   }
@@ -120,7 +125,8 @@ export default {
     padding: 0 !important;
     background: linear-gradient(
       to left,
-      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
       rgba(0, 0, 0, 0.0) 100%
     );
   }
