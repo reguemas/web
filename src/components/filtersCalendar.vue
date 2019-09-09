@@ -57,7 +57,7 @@
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
 <!--       <div>{{this.attrs[0].dates}}</div> -->
-      <div>{{this.datesCalendari}}</div>
+      <div>{{this.datesAgenda}}</div>
       <!-- <card class= "mt-4 mx-auto"/> -->
     </div>
   </div>
@@ -93,12 +93,14 @@ export default {
   },
  
   mounted(){
-    for (var i=0; i<this.calendari.lenght; i++){
-      this.datesCalendari[
-        {start: new Date(this.calendari.dataInici), end: new Date (this.calendari.dataFinal)}
+    console.log("1",this.calendari);
+    for (var i=0; i<this.calendari.length; i++){
+      this.datesAgenda.push()[
+        {start: new Date(this.calendari.dataInici[i]), end: new Date (this.calendari[i].dataFinal)}
       ]
     }
-    console.log(strigify(this.datesCalendari));
+    console.log("2",this.datesAgenda);
+    debugger;
   }
 }
 
