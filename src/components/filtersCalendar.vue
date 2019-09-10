@@ -42,22 +42,14 @@
         >
           <option slot="first" :value="null">Busca Activitats</option>
         </b-form-select>
-
-        <b-form-select
-          class="mt-3"
-          :value="null"
-          :options="{ '1': 'Gener', '2': 'Febrer', '3': 'Març', '4': 'Abril', '5': 'Maig', '6': 'Juny', '7': 'Juliol', '8': 'Agost', '9': 'Setembre', '10': 'Octubre', '11': 'Novembre', '12': 'Desembre' }"
-          id="filtreMes"
-        >
-          <option slot="first" :value="null">Quin Mes</option>
-        </b-form-select>
       </b-form>
 
       <v-calendar is-dark is-expanded class="" :attributes="attrs"></v-calendar>
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
 <!--       <div>{{this.attrs[0].dates}}</div> -->
-      <div>{{this.datesAgenda}}</div>
+      <div>1 {{this.avui}}</div>
+      <div>2 {{this.datesAgenda}}</div>
       <!-- <card class= "mt-4 mx-auto"/> -->
     </div>
   </div>
@@ -77,30 +69,24 @@ export default {
   data() {
     return {
       myToggle: false,
+      calendari:datesCalendari,
+      datesAgenda:[{ start: new Date(), span: 1 }],
+      avui:[{ start: new Date(), span: 1 }],
       attrs: [
         {
           key: 'today',
           highlight: true,
-          dates: [
-            { start: new Date(), span: 1 },
-            { start: new Date(2019, 8, 17), span: 5 }, // # of days
-            { start: new Date(2019, 8, 1), end: new Date(2019, 8, 4) }
-          ],
+          dates: this.avui,
         },
       ],
-      calendari:datesCalendari,
     };
   },
  
   mounted(){
-    console.log("1",this.calendari);
     for (var i=0; i<this.calendari.length; i++){
-      this.datesAgenda.push()[
-        {start: new Date(this.calendari.dataInici[i]), end: new Date (this.calendari[i].dataFinal)}
-      ]
+      this.datesAgenda.push({start: new Date(this.calendari[i].dataInici), end: new Date (this.calendari[i].dataFinal)})
     }
-    console.log("2",this.datesAgenda);
-    debugger;
+    console.log("2",this.avui);
   }
 }
 
