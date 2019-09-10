@@ -71,7 +71,7 @@ export default {
       myToggle: false,
       calendari:datesCalendari,
       datesAgenda:[{ start: new Date(), span: 1 }],
-      avui:[{ start: new Date(), span: 1 }],
+      avui:new Date(),
       attrs: [
         {
           key: 'today',
@@ -86,7 +86,6 @@ export default {
     for (var i=0; i<this.calendari.length; i++){
       this.datesAgenda.push({start: new Date(this.calendari[i].dataInici), end: new Date (this.calendari[i].dataFinal)})
     }
-    console.log("2",this.avui);
   }
 }
 
