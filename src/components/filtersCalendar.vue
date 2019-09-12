@@ -13,18 +13,9 @@
         >
           <option slot="first" :value="null">Busca Activitats</option>
         </b-form-select>
-
-        <b-form-select
-          class="mt-3"
-          :value="null"
-          :options="{ '1': 'Gener', '2': 'Febrer', '3': 'Març', '4': 'Abril', '5': 'Maig', '6': 'Juny', '7': 'Juliol', '8': 'Agost', '9': 'Setembre', '10': 'Octubre', '11': 'Novembre', '12': 'Desembre' }"
-          id="filtreMes"
-        >
-          <option slot="first" :value="null">Quin Mes</option>
-        </b-form-select>
       </b-form>
             
-      <v-calendar is-dark is-expanded></v-calendar>
+      <v-calendar is-dark is-expanded :attributes="attrs"></v-calendar>
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
       <card class= "my-4 mx-auto"/>
@@ -47,10 +38,9 @@
       <v-calendar is-dark is-expanded class="" :attributes="attrs"></v-calendar>
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
-<!--       <div>{{this.attrs[0].dates}}</div> -->
-      <div>1 {{this.avui}}</div>
-      <div>2 {{this.datesAgenda}}</div>
-      <!-- <card class= "mt-4 mx-auto"/> -->
+
+      <div>2 {{this.attrs}}</div>
+
     </div>
   </div>
 </template>
@@ -70,22 +60,88 @@ export default {
     return {
       myToggle: false,
       calendari:datesCalendari,
-      datesAgenda:[{ start: new Date(), span: 1 }],
-      avui:new Date(),
+      datesAgendaEsportives:[],
+      datesAgendaCulturals:[],
+      datesAgendaSocials:[],
+      labelPopover:"avui",
       attrs: [
         {
-          key: 'today',
-          highlight: true,
-          dates: this.avui,
+          bar: {
+            color:"red",
+          },
+          popover:{
+            /* label:"avui", */
+            visibility:"hover",
+            isInteractive:true,
+          },
+        },
+        {
+          bar: {
+            color:"green",
+          },
+          popover:{
+            /* label:"avui", */
+            visibility:"hover",
+            isInteractive:true,
+          },
+        },
+        {
+          bar: {
+            color:"blue",
+          },
+          popover:{
+            /* label:"avui", */
+            visibility:"hover",
+            isInteractive:true,
+          },
+        },
+        {
+          highlight: {
+            color:"teal",
+          },
+          popover:{
+            /* label:"avui", */
+            visibility:"hover",
+            isInteractive:true,
+          },
         },
       ],
     };
   },
- 
-  mounted(){
-    for (var i=0; i<this.calendari.length; i++){
-      this.datesAgenda.push({start: new Date(this.calendari[i].dataInici), end: new Date (this.calendari[i].dataFinal)})
+/* 
+computed:{
+  attrs(){
+    return[
+      ..this.datesAgenda.map(datesAgenda=>({
+        dates: datesAgenda.dates,
+        bar: {
+          color:
+        }
+      })),
+    ];
+  },
+}, */
+
+  created(){
+    for (var i=0; i<this.calendari.Esportives.length; i++){
+      this.datesAgendaEsportives.push({start: new Date(this.calendari.Esportives[i].dataInici), span:1})
+      this.attrs[0].popover.label=this.calendari.Esportives[i].title;
     }
+    for (var i=0; i<this.calendari.Culturals.length; i++){
+      this.datesAgendaCulturals.push({start: new Date(this.calendari.Culturals[i].dataInici), span:1})
+      this.attrs[1].popover.label=this.calendari.Culturals[i].title;
+    }
+    for (var i=0; i<this.calendari.Socials.length; i++){
+      this.datesAgendaSocials.push({start: new Date(this.calendari.Socials[i].dataInici), span:1})
+      this.attrs[2].popover.label=this.calendari.Socials[i].title;
+    }
+    this.avui=new Date();
+    this.labelAvui="avui";
+    this.attrs[0].dates=this.datesAgendaEsportives;
+    this.attrs[1].dates=this.datesAgendaCulturals;
+    this.attrs[2].dates=this.datesAgendaSocials;
+    this.attrs[3].dates=this.avui;
+    this.attrs[3].popover.label=this.labelAvui;
   }
 }
 

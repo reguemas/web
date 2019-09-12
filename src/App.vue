@@ -64,13 +64,11 @@ export default {
     axios.all ([
       axios.get('http://localhost/api/apiActivitats.php'),
       axios.get('http://localhost/api/apiCalendari.php')
-      ])
-      .then(axios.spread((activitatsResposta,calendariResposta)=>{
-        this.infoActivitats = activitatsResposta.data.response;
-        this.infoCalendari = calendariResposta.data.response;
-      }));
-      console.log(JSON.stringify(this.infoActivitats));
-      console.log(JSON.stringify(this.infoActivitats));
+    ])
+    .then(axios.spread((activitatsResposta,calendariResposta)=>{
+      this.infoActivitats = activitatsResposta.data.response;
+      this.infoCalendari = calendariResposta.data.response;
+    }));
   }
 }
 
