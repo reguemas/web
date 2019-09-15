@@ -39,7 +39,8 @@
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
 
-      <div>2 {{this.attrs}}</div>
+      <div>1 {{this.attrs}}</div>
+      <div>2 {{this.datesAgendaEsportives}}</div>
 
     </div>
   </div>
@@ -57,91 +58,70 @@ export default {
   },
 
   data() {
-    return {
+/*   const elementsAgenda =[
+    {
+      colorEsportives:"red",
+      colorCulturals:"green",
+      colorSocials:"blue",
+      colorAvui:"teal",
+      visibility:"hover",
+      isInteractive:true,
+    },
+  ]; */
+  return {
       myToggle: false,
       calendari:datesCalendari,
       datesAgendaEsportives:[],
       datesAgendaCulturals:[],
       datesAgendaSocials:[],
       labelPopover:"avui",
-      attrs: [
-        {
+/*       elementsAgenda, */
+    };
+  },
+/*  
+  computed:{
+     attrs(){
+      return[
+        this.datesAgendaEsportives.forEach(datesAgendaEsportives=>({
+          dates: this.datesAgendaEsportives,
           bar: {
             color:"red",
           },
           popover:{
-            /* label:"avui", */
-            visibility:"hover",
-            isInteractive:true,
+            visibility:this.elementsAgenda.visibility,
+            isInteractive:this.elementsAgenda.isInteractive,
+            label:this.elementsAgenda.colorAvui,
           },
-        },
-        {
-          bar: {
-            color:"green",
-          },
-          popover:{
-            /* label:"avui", */
-            visibility:"hover",
-            isInteractive:true,
-          },
-        },
-        {
-          bar: {
-            color:"blue",
-          },
-          popover:{
-            /* label:"avui", */
-            visibility:"hover",
-            isInteractive:true,
-          },
-        },
-        {
-          highlight: {
-            color:"teal",
-          },
-          popover:{
-            /* label:"avui", */
-            visibility:"hover",
-            isInteractive:true,
-          },
-        },
-      ],
-    };
-  },
-/* 
-computed:{
-  attrs(){
-    return[
-      ..this.datesAgenda.map(datesAgenda=>({
-        dates: datesAgenda.dates,
-        bar: {
-          color:
-        }
-      })),
-    ];
-  },
-}, */
+          customData:this.elementsAgenda,
+        })),
+      ];
+    },
+  }, */
 
   created(){
     for (var i=0; i<this.calendari.Esportives.length; i++){
-      this.datesAgendaEsportives.push({start: new Date(this.calendari.Esportives[i].dataInici), span:1})
-      this.attrs[0].popover.label=this.calendari.Esportives[i].title;
+      this.datesAgendaEsportives.push({
+          dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
+          bar: {
+            color:"red",
+          },
+          popover:{
+            visibility:"hover",
+            isInteractive:true,
+            label:"hola",
+          },
+      })
     }
-    for (var i=0; i<this.calendari.Culturals.length; i++){
+/*     for (var i=0; i<this.calendari.Culturals.length; i++){
       this.datesAgendaCulturals.push({start: new Date(this.calendari.Culturals[i].dataInici), span:1})
       this.attrs[1].popover.label=this.calendari.Culturals[i].title;
     }
     for (var i=0; i<this.calendari.Socials.length; i++){
       this.datesAgendaSocials.push({start: new Date(this.calendari.Socials[i].dataInici), span:1})
       this.attrs[2].popover.label=this.calendari.Socials[i].title;
-    }
+    } */
     this.avui=new Date();
-    this.labelAvui="avui";
-    this.attrs[0].dates=this.datesAgendaEsportives;
-    this.attrs[1].dates=this.datesAgendaCulturals;
-    this.attrs[2].dates=this.datesAgendaSocials;
-    this.attrs[3].dates=this.avui;
-    this.attrs[3].popover.label=this.labelAvui;
+    console.log("1",this.elementsAgenda);
   }
 }
 
