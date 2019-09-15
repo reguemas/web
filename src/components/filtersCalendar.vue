@@ -35,13 +35,9 @@
         </b-form-select>
       </b-form>
 
-      <v-calendar is-dark is-expanded class="" :attributes="attrs"></v-calendar>
+      <v-calendar is-dark is-expanded class="" :attributes="datesAgenda"></v-calendar>
       
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
-
-      <div>1 {{this.attrs}}</div>
-      <div>2 {{this.datesAgendaEsportives}}</div>
-
     </div>
   </div>
 </template>
@@ -58,49 +54,21 @@ export default {
   },
 
   data() {
-/*   const elementsAgenda =[
-    {
-      colorEsportives:"red",
-      colorCulturals:"green",
-      colorSocials:"blue",
-      colorAvui:"teal",
-      visibility:"hover",
-      isInteractive:true,
-    },
-  ]; */
   return {
       myToggle: false,
       calendari:datesCalendari,
-      datesAgendaEsportives:[],
-      datesAgendaCulturals:[],
-      datesAgendaSocials:[],
-      labelPopover:"avui",
-/*       elementsAgenda, */
+      datesAgenda:[{
+        dates: new Date(),
+        highlight: {
+          color:"teal",
+        },
+      }],
     };
   },
-/*  
-  computed:{
-     attrs(){
-      return[
-        this.datesAgendaEsportives.forEach(datesAgendaEsportives=>({
-          dates: this.datesAgendaEsportives,
-          bar: {
-            color:"red",
-          },
-          popover:{
-            visibility:this.elementsAgenda.visibility,
-            isInteractive:this.elementsAgenda.isInteractive,
-            label:this.elementsAgenda.colorAvui,
-          },
-          customData:this.elementsAgenda,
-        })),
-      ];
-    },
-  }, */
 
   created(){
     for (var i=0; i<this.calendari.Esportives.length; i++){
-      this.datesAgendaEsportives.push({
+      this.datesAgenda.push({
           dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
           bar: {
             color:"red",
@@ -108,20 +76,38 @@ export default {
           popover:{
             visibility:"hover",
             isInteractive:true,
-            label:"hola",
+            label:this.calendari.Esportives[i].title,
           },
       })
     }
-/*     for (var i=0; i<this.calendari.Culturals.length; i++){
-      this.datesAgendaCulturals.push({start: new Date(this.calendari.Culturals[i].dataInici), span:1})
-      this.attrs[1].popover.label=this.calendari.Culturals[i].title;
+
+    for (var i=0; i<this.calendari.Culturals.length; i++){
+      this.datesAgenda.push({
+          dates: {start: new Date(this.calendari.Culturals[i].dataInici), span:1},
+          bar: {
+            color:"green",
+          },
+          popover:{
+            visibility:"hover",
+            isInteractive:true,
+            label:this.calendari.Culturals[i].title,
+          },
+      })
     }
+
     for (var i=0; i<this.calendari.Socials.length; i++){
-      this.datesAgendaSocials.push({start: new Date(this.calendari.Socials[i].dataInici), span:1})
-      this.attrs[2].popover.label=this.calendari.Socials[i].title;
-    } */
-    this.avui=new Date();
-    console.log("1",this.elementsAgenda);
+      this.datesAgenda.push({
+          dates: {start: new Date(this.calendari.Socials[i].dataInici), span:1},
+          bar: {
+            color:"blue",
+          },
+          popover:{
+            visibility:"hover",
+            isInteractive:true,
+            label:this.calendari.Socials[i].title,
+          },
+      })
+    }
   }
 }
 
