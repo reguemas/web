@@ -39,7 +39,7 @@
         </b-form-select>
       </b-form>
 
-      <v-calendar is-dark is-expanded class="marginLeft" :attributes="datesAgenda">
+      <v-calendar is-dark is-expanded class="marginLeft" :attributes="datesAgenda" :min-date="new Date()">
         <div slot="day-popover" slot-scope="{ attributes }">
           <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
             <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
