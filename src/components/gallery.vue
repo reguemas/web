@@ -52,12 +52,15 @@ export default {
     movimentCarousel: function() {
       let element = this.$refs.esMou;
       let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = (ampladaPantalla - 48)/316;
-      let distanciaMoure = (numCardsVisibles.toFixed()-1)*300;
-      let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = longitudGaleria/numCardsVisibles.toFixed();
+      let numCardsVisibles = Math.round((ampladaPantalla - 48)/316);
+      let distanciaMoure = (Math.round(numCardsVisibles)-1)*300;
       if (distanciaMoure == 0) {
         distanciaMoure = 316;
+      }
+      let longitudGaleria = element.childNodes.length;
+      let numClickFinalGaleria = Math.round(longitudGaleria/numCardsVisibles);
+      if (longitudGaleria % numCardsVisibles==0){
+        numClickFinalGaleria = numClickFinalGaleria-1;
       }
       if (event.target.className==="botoAnterior") {
         this.count++;
@@ -71,11 +74,10 @@ export default {
         element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
         this.botoAnteriorVisibilitat=true;
         if (this.count == -numClickFinalGaleria.toFixed()) {
-            this.botoSeguentVisibilitat=false;
+          this.botoSeguentVisibilitat=false;
         }
       }
     },
-    
   },
 
 }

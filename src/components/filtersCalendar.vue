@@ -14,9 +14,13 @@
           <option slot="first" :value="null">Busca Activitats</option>
         </b-form-select>
       </b-form>
-            
-      <v-calendar is-dark is-expanded :attributes="attrs"></v-calendar>
-      
+      <v-calendar is-dark is-expanded :attributes="datesAgenda">
+        <div slot="day-popover" slot-scope="{ attributes }">
+          <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
+            <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
+          </v-popover-row>
+        </div>
+      </v-calendar>
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
       <card class= "my-4 mx-auto"/>
     </div>
@@ -35,9 +39,14 @@
         </b-form-select>
       </b-form>
 
-      <v-calendar is-dark is-expanded class="" :attributes="datesAgenda"></v-calendar>
-      
-      <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
+      <v-calendar is-dark is-expanded class="marginLeft" :attributes="datesAgenda">
+        <div slot="day-popover" slot-scope="{ attributes }">
+          <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
+            <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
+          </v-popover-row>
+        </div>
+      </v-calendar>
+      <!-- <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4> -->
     </div>
   </div>
 </template>
@@ -55,60 +64,70 @@ export default {
 
   data() {
   return {
-      myToggle: false,
-      calendari:datesCalendari,
-      datesAgenda:[{
-        dates: new Date(),
-        highlight: {
-          color:"teal",
-        },
-      }],
+    myToggle: false,
+    calendari:datesCalendari,
+    datesAgenda:[{
+      dates: new Date(),
+      highlight: {
+        color:"teal",
+      },
+    }],
     };
   },
 
   created(){
     for (var i=0; i<this.calendari.Esportives.length; i++){
       this.datesAgenda.push({
-          dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
-          bar: {
-            color:"red",
-          },
-          popover:{
-            visibility:"hover",
-            isInteractive:true,
-            label:this.calendari.Esportives[i].title,
-          },
+        dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
+        bar: {
+          color:"red",
+        },
+        popover:{
+          visibility:"hover",
+          isInteractive:true,
+          label:this.calendari.Esportives[i].title,
+        },
+        url: this.calendari.Esportives[i].url,
       })
     }
 
-    for (var i=0; i<this.calendari.Culturals.length; i++){
+    for (i=0; i<this.calendari.Culturals.length; i++){
       this.datesAgenda.push({
-          dates: {start: new Date(this.calendari.Culturals[i].dataInici), span:1},
-          bar: {
-            color:"green",
-          },
-          popover:{
-            visibility:"hover",
-            isInteractive:true,
-            label:this.calendari.Culturals[i].title,
-          },
+        dates: {start: new Date(this.calendari.Culturals[i].dataInici), span:1},
+        bar: {
+          color:"green",
+        },
+        popover:{
+          visibility:"hover",
+          isInteractive:true,
+          label:this.calendari.Culturals[i].title,
+        },
+        url: this.calendari.Culturals[i].url,
       })
     }
 
-    for (var i=0; i<this.calendari.Socials.length; i++){
+    for (i=0; i<this.calendari.Socials.length; i++){
       this.datesAgenda.push({
-          dates: {start: new Date(this.calendari.Socials[i].dataInici), span:1},
-          bar: {
-            color:"blue",
-          },
-          popover:{
-            visibility:"hover",
-            isInteractive:true,
-            label:this.calendari.Socials[i].title,
-          },
+        dates: {start: new Date(this.calendari.Socials[i].dataInici), span:1},
+        bar: {
+          color:"blue",
+        },
+        popover:{
+          visibility:"hover",
+          isInteractive:true,
+          label:this.calendari.Socials[i].title,
+        },
+        url: this.calendari.Socials[i].url,
       })
     }
-  }
+  },
+
+  methods:{
+    goToActivitat(attribute){
+      let i = attribute.key;
+      location.href=this.datesAgenda[i].url;
+    },
+  },
 }
 
 </script>
@@ -137,6 +156,10 @@ export default {
     text-align: center;
   }
 
+  .marginLeft{
+    width: 200px !important;
+  }
+
   #buttonFilters{
     margin-top:-5rem;
     z-index:5000 !important;
@@ -145,6 +168,10 @@ export default {
   .activitats{
     background-color:#b1c1d0;
     overflow:hidden;
+  }
+
+  .popoverCalendari{
+    cursor: pointer;
   }
 
 </style>
