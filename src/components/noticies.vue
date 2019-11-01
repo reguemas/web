@@ -1,25 +1,28 @@
 <template>
     <div>
-      <b-row class="p-0 m-0 noticies">
-        <h2 class="my-5">Imnatges de Sortides del CET</h2>
-          <b-list-group horizontal class="overflow-hidden">
-            <card/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-            <card class="ml-3"/>
-          </b-list-group>
+      <b-row no-gutters align-v="center" class="m-0 pb-4 filters justify-content-center">
+          <galleryNoticies :activitatsCarousel="activitatsCarousel.Noticies" :titolGaleria="keys[0]"/>
       </b-row>
     </div>
 </template>
 
 <script>
-import card from './card.vue'
+import galleryNoticies from './galleryNoticies.vue'
+import totesActivitats from './json/noticies.json'
 
 export default {
   name: 'noticies',
 
-    components: {
-    card,
+  components: {
+    galleryNoticies
+  },
+
+  data() {
+    return {
+      myToggle: false,
+      activitatsCarousel: totesActivitats,
+      keys: Object.keys(totesActivitats),
+    }
   }
 }
 
@@ -27,8 +30,5 @@ export default {
 
 <style>
 
-  .noticies{
-    background-color: rgb(204, 219, 171);
-  }
 
 </style>

@@ -1,14 +1,13 @@
 <template>
     <b-container fluid class="p-0">
       <b-row no-gutters>
-        <b-col no-gutters cols="12" md="3" xl="2">
+        <b-col no-gutters cols="12" md="3" xl="2" class="portada">
           <div id="logoBrand" class="displayNoneMobile">
             <b-navbar-brand href="#" fluid-grow id="logoBrand" class="ml-5 d-inline">
               <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
             </b-navbar-brand>
             <h2 class="ml-4 mt-3 textCyan d-inline escripturaGran">Al</h2>
           </div>
-
           <div class="transperencia"></div>
           <h4 class="ml-4 textCyan bottom-row displayNoneMobile escripturaPetita">Trobaràs</h4>
         </b-col>
@@ -19,7 +18,6 @@
             <b-button id="jumbotronButton" variant="success" size="lg" href="#" class="my-2">Mira els Avantatges!</b-button>
           </b-jumbotron>
         </b-col>
-
       </b-row>
     </b-container>
 </template>
@@ -40,6 +38,11 @@ export default {
 </script>
 
 <style>
+  /* fons portada */
+
+  .portada{
+    background-color: #a1bd9f !important;
+  }
 
   /* Logo de marca */
 

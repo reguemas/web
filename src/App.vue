@@ -1,52 +1,48 @@
 <template>
   <div>
-    
     <b-container fluid class="p-0">
+      <navMenu />
 
-      <navMenu/>
+      <webTop />
 
-      <webTop/>
+      <activitats />
 
-      <activitats/>
+      <activitatPromocionada />
 
-      <div>Activitats{{this.infoActivitats}}</div>
+      <activitatsDestacades />
 
-      <div>Calendari{{this.infoCalendari}}</div>
+      <!--  <activitatPromocionada />
 
-      <!-- <activitatPromocionada/>
+     <noticies />
 
-      <activitatsDestacades/>
+      <activitatPromocionada />
 
-      <activitatPromocionada/>
+      <serveis /> -->
 
-      <noticies/>
+      <activitatPromocionada />
 
-      <activitatPromocionada/>
+      <colaboradorsWebAmigues />
 
-      <serveis/>
-
-      <colaboradorsWebAmigues/>
-
-      <peuWeb/> -->
+      <peuWeb/>
 
     </b-container>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import navMenu from './components/menu.vue'
-import webTop from './components/webTop.vue'
-import activitats from './components/activitats.vue'
-import activitatPromocionada from './components/activitatPromocionada.vue'
-import activitatsDestacades from './components/activitatsDestacades.vue'
-import noticies from './components/noticies.vue'
-import serveis from './components/serveis.vue'
-import colaboradorsWebAmigues from './components/colaboradorsWebAmigues.vue'
-import peuWeb from './components/footer.vue'
+import axios from "axios";
+import navMenu from "./components/menu.vue";
+import webTop from "./components/webTop.vue";
+import activitats from "./components/activitats.vue";
+import activitatPromocionada from "./components/activitatPromocionada.vue";
+import activitatsDestacades from "./components/activitatsDestacades.vue";
+import noticies from "./components/noticies.vue";
+import serveis from "./components/serveis.vue";
+import colaboradorsWebAmigues from "./components/colaboradorsWebAmigues.vue";
+import peuWeb from "./components/footer.vue";
 
 export default {
-  name: 'app',
+  name: "app",
 
   components: {
     navMenu,
@@ -57,28 +53,31 @@ export default {
     noticies,
     serveis,
     colaboradorsWebAmigues,
-    peuWeb,
+    peuWeb
   },
 
-  mounted(){
-    axios.all ([
-      axios.get('http://localhost/api/apiActivitats.php'),
-      axios.get('http://localhost/api/apiCalendari.php')
-    ])
-    .then(axios.spread((activitatsResposta,calendariResposta)=>{
-      this.infoActivitats = activitatsResposta.data.response;
-      this.infoCalendari = calendariResposta.data.response;
-    }));
+  mounted() {
+    axios
+      .all([
+        axios.get("http://localhost/api/apiActivitats.php"),
+        axios.get("http://localhost/api/apiCalendari.php"),
+        axios.get("http://localhost/api/apiDestacades.php")
+      ])
+      .then(
+        axios.spread((activitatsResposta, calendariResposta, destacadesResposta) => {
+          this.infoActivitats = activitatsResposta.data.response;
+          this.infoCalendari = calendariResposta.data.response;
+          this.infoDestacades = destacadesResposta.data.response;
+        })
+      );
   }
-}
-
+};
 </script>
 
 <style>
-
-  .textCyan{
-    color:cyan;
-  }
+.textCyan {
+  color: cyan;
+}
 
 /*   #filters{
     background-color: #2bcbbaff;
@@ -87,5 +86,4 @@ export default {
     font-weight:900 !important;
     margin-top:-2.5rem;
   } */
-
 </style>

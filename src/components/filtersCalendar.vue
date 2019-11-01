@@ -39,7 +39,10 @@
         </b-form-select>
       </b-form>
 
-      <v-calendar is-dark is-expanded class="marginLeft" :attributes="datesAgenda" :min-date="new Date()">
+      <v-calendar 
+      is-dark 
+      is-expanded 
+      :attributes="datesAgenda">
         <div slot="day-popover" slot-scope="{ attributes }">
           <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
             <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
@@ -95,7 +98,7 @@ export default {
       this.datesAgenda.push({
         dates: {start: new Date(this.calendari.Culturals[i].dataInici), span:1},
         bar: {
-          color:"green",
+          color:"blue",
         },
         popover:{
           visibility:"hover",
@@ -110,7 +113,7 @@ export default {
       this.datesAgenda.push({
         dates: {start: new Date(this.calendari.Socials[i].dataInici), span:1},
         bar: {
-          color:"blue",
+          color:"green",
         },
         popover:{
           visibility:"hover",
@@ -142,7 +145,7 @@ export default {
     height:50px;
   }
 
-  option {
+  .option {
     font-family: Quicksand;
     font-size:1rem;
   }
@@ -152,12 +155,8 @@ export default {
   }
 
   .calendar{
-    background-color: #94b6aa;
+    /* background-color: #94b6aa; */
     text-align: center;
-  }
-
-  .marginLeft{
-    width: 200px !important;
   }
 
   #buttonFilters{
@@ -166,7 +165,7 @@ export default {
   }
   
   .activitats{
-    background-color:#b1c1d0;
+    /* background-color:#b1c1d0; */
     overflow:hidden;
   }
 

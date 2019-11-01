@@ -16,7 +16,7 @@
       </b-navbar>
 
       <b-navbar id="socialMenu" variant="darkMenu" class="d-none">
-        <b-navbar-brand href="#" fluid-grow class="ml-4 mr-auto">
+       <b-navbar-brand href="#" fluid-grow class="ml-4 mr-auto">
           <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
         <b-list-group horizontal class="ml-auto mr-4">
@@ -30,7 +30,7 @@
         </b-list-group>
       </b-navbar>
 
-      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0">
+      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0 fons">
 
       <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
@@ -128,6 +128,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+/* background */
+
+.fons{
+  background-color: #a1bd9f !important;
+}
+
 
 /* Menu Contacte i Xarxes Social */
 

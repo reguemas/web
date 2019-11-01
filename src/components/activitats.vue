@@ -5,10 +5,10 @@
         <filtersCalendar/>
       </b-col>
 
-      <b-col cols="12" md="7" xl="9" class="p-0 position-relative activitats">
-        <gallery :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]"/>
-        <gallery :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]"/>
-        <gallery :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
+      <b-col cols="12" md="7" xl="9" class="p-0 position-relative activitats pb-4">
+        <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]"/>
+        <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]"/>
+        <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
       </b-col>
     </b-row>
   </div>
@@ -33,8 +33,21 @@ export default {
       myToggle: false,
       activitatsCarousel: totesActivitats,
       keys: Object.keys(totesActivitats),
+      visibilitatGaleriaEsportiva:true,
+      visibilitatGaleriaCultural:true,
+      visibilitatGaleriaSocial:true,
     }
-  }
+  },
+
+    mounted() {
+    if (this.activitatsCarousel.Esportives==undefined) {
+      this.visibilitatGaleriaEsportiva=false;
+    } else if (this.activitatsCarousel.Culturals==undefined) {
+      this.visibilitatGaleriaCultural=false;
+    } else if (this.activitatsCarousel.Socials==undefined) {
+      this.visibilitatGaleriaSocial=false;
+    }
+  },
 }
 
 </script>
@@ -49,7 +62,7 @@ export default {
     height:50px;
   }
 
-  option {
+  .option {
     font-family: Quicksand;
     font-size:1rem;
   }
@@ -59,7 +72,6 @@ export default {
   }
 
   .calendar{
-    background-color: #94b6aa;
     text-align: center;
   }
 
@@ -69,7 +81,7 @@ export default {
   }
   
   .activitats{
-    background-color:#b1c1d0;
+    /* background-color:#b1c1d0; */
     overflow:hidden;
   }
 

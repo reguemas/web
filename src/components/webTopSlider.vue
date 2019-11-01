@@ -5,7 +5,7 @@
       v-model="slide"
       :interval="3000"
       fade
-      background="#ababab"
+      background="#a1bd9f"
       img-width="1024"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
@@ -48,7 +48,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide4_1.jpg"
+          src="slide4proporcio real.jpg"
           alt="image slot"
         >
         <h1>Faràs Nous Amics</h1>

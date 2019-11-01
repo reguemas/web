@@ -4,14 +4,16 @@
       <div class="cardTitle" ref="cardBackgroundMobile">
           <h3 class="titol">{{ activitat.title }}</h3>
           <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
-          <div class="activitatInfo">{{ activitat.dataInici }}</div>
-          <div class="activitatInfo" v-if=dificultat>Dificultat: {{ activitat.dificultat }}</div>
+          <div class="activitatInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
+          <div class="activitatInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
+          <div class="activitatInfo" v-if="activitat.dificultat!=0">Dificultat: {{ activitat.dificultat }}</div>
           <div v-if=hover class="cardInfo mt-3">
             {{ activitat.descripcio }}
           </div>
       </div>
     </a>
   </div>
+
 </template>
 
 <script>
@@ -25,14 +27,6 @@ export default {
     return {
       hover:false,
     };
-  },
-
-  created() {
-    if(this.activitat.dificultat==0) {
-      return this.dificultat=false;
-    } else {
-      return this.dificultat=true;
-    }
   },
 
   mounted() {
@@ -49,9 +43,7 @@ export default {
 
     this.$refs.urlActivitat.setAttribute("href",this.activitat.url);
     this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
-    this.$refs.urlActivitat.style.backgroundSize = "300px 300px";
-
-
+    this.$refs.urlActivitat.style.backgroundSize = "400px 400px";
   },
 
 }
