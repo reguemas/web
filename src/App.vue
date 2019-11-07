@@ -1,29 +1,30 @@
 <template>
   <div>
     <b-container fluid class="p-0">
+      
       <navMenu />
 
       <webTop />
 
       <activitats />
 
-      <activitatPromocionada />
+      <!-- <activitatPromocionada />
 
       <activitatsDestacades />
 
-      <!--  <activitatPromocionada />
+      <activitatPromocionada />
 
      <noticies />
 
       <activitatPromocionada />
 
-      <serveis /> -->
+      <serveis />
 
       <activitatPromocionada />
 
       <colaboradorsWebAmigues />
 
-      <peuWeb/>
+      <peuWeb/> -->
 
     </b-container>
   </div>

@@ -1,17 +1,16 @@
 <template>
     <b-container fluid class="p-0">
       <b-row no-gutters>
-        <b-col no-gutters cols="12" md="3" xl="2" class="portada">
-          <div id="logoBrand" class="displayNoneMobile">
-            <b-navbar-brand href="#" fluid-grow id="logoBrand" class="ml-5 d-inline">
-              <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+        <b-col no-gutters cols="12" md="3" xl="2" class="backgroundPortada">
+          <div class="displayNoneMobile">
+            <h2 id="alPoisicio" class="textCyan escripturaGran">Al</h2>
+            <b-navbar-brand href="#" fluid-grow id="logoBrand">
+              <b-img src="logosCET/logo_CET_Home.png" alt="Logo Centre Excursionista Terrassa"></b-img>
             </b-navbar-brand>
-            <h2 class="ml-4 mt-3 textCyan d-inline escripturaGran">Al</h2>
           </div>
           <div class="transperencia"></div>
           <h4 class="ml-4 textCyan bottom-row displayNoneMobile escripturaPetita">Trobaràs</h4>
         </b-col>
-
         <b-col no-gutters cols="0" md="9" xl="10" class="position-relative">
           <homeSlider/>
           <b-jumbotron header="CENTRE EXCURSIONISTA TERRASSA" lead="Vine a Coneixer-ho!" fluid class="textCyan">
@@ -40,15 +39,26 @@ export default {
 <style>
   /* fons portada */
 
-  .portada{
+  .backgroundPortada{
     background-color: #a1bd9f !important;
   }
 
   /* Logo de marca */
 
   #logoBrand{
-    margin-top:-80px !important;
+    position:absolute;
+    top:50px;
+    left:25px;
   }
+
+  /* AL posicio */
+
+  #alPoisicio{
+    position:absolute;
+    top:-90px;
+    left:40px;
+  }
+
 
   /* Jumbotron */
 
@@ -126,7 +136,7 @@ export default {
     background-color: rgba(54,54,54,0.5);
     height:330px;
     width:825px;
-    margin-top:96px;
+    margin-top:107px;
     border-radius:0% 200px 200px 0%;
     overflow:hidden;
     display:none;

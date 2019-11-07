@@ -1,46 +1,49 @@
 <template>
-  <div>
-      <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
-        <b-list-group horizontal class="mr-auto ml-4">
-          <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-          <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-3 mr-2">centre@ce-terrassa.cat</b-list-group-item>
-        </b-list-group>
+  <div class="menuBackground">
+    <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
+      <b-list-group horizontal class="mr-auto ml-4">
+        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+        <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="ml-3 mr-2">centre@ce-terrassa.cat</b-list-group-item>
+      </b-list-group>
+      <b-list-group horizontal class="ml-auto mr-4">
+        <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+      </b-list-group>
+    </b-navbar>
 
-        <b-list-group horizontal class="ml-auto mr-4">
-          <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-        </b-list-group>
-      </b-navbar>
-
-      <b-navbar id="socialMenu" variant="darkMenu" class="d-none">
-       <b-navbar-brand href="#" fluid-grow class="ml-4 mr-auto">
-          <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
-        </b-navbar-brand>
-        <b-list-group horizontal class="ml-auto mr-4">
-          <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-          <b-list-group-item class="mr-2"><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-          <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-        </b-list-group>
-      </b-navbar>
-
-      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0 fons">
+    <b-navbar id="socialMenu" variant="darkMenu" class="d-none">
+      <b-navbar-brand href="#" fluid-grow class="ml-4 mr-auto">
+        <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+      </b-navbar-brand>
+      <b-list-group horizontal class="ml-auto mr-4">
+        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+        <b-list-group-item class="mr-2"><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="#"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+      </b-list-group>
+    </b-navbar>
+    <b-row no-gutters>
+    <b-col no-gutters cols="12" xl="2" class="p-0">
+      <div class="espai"></div>
+    </b-col>
+    <b-col no-gutters cols="0" xl="10" class="p-0">
+      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0">
 
       <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
       <h2 class="my-auto textCyan displayMobile">CET</h2>
 
       <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-4">
-        <b-img src="CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+        <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
       </b-navbar-brand>
 
-      <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-end">
+      <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
         
         <b-navbar-nav class="ml-4"> 
           <b-nav-item-dropdown text="El CET" left>
@@ -91,7 +94,7 @@
           <b-nav-item class="ml-5 mr-5">
             <router-link to="#">Galeries</router-link>
           </b-nav-item>
-          <b-button size="lg" variant="success" class="mt-5 mx-auto displayMobile altaSociSocialMobile">
+          <b-button size="lg" variant="success" class="mt-4 mx-auto displayMobile altaSociSocialMobile">
             <router-link to="#">Fer-se Soci</router-link>
           </b-button>
 
@@ -107,15 +110,14 @@
             <b-list-group-item class="mt-3"><img src="../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
             <b-list-group-item class="mt-3"><img src="../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
           </b-list-group>
-  
-
         </b-navbar-nav>
-      </b-collapse> 
-
-      <b-button id="altaSoci" size="lg" variant="success" class="mr-5 d-none">
-        <router-link to="#">Fer-se Soci</router-link>
-      </b-button>
-    </b-navbar>
+        <b-button id="altaSoci" size="lg" variant="success" class="d-none">
+          <router-link to="#">Fer-se Soci</router-link>
+        </b-button>
+      </b-collapse>
+      </b-navbar>
+      </b-col>
+      </b-row>   
     <router-view/>
   </div>
 </template>
@@ -130,10 +132,9 @@ export default {
 <style scoped>
 /* background */
 
-.fons{
+.menuBackground{
   background-color: #a1bd9f !important;
 }
-
 
 /* Menu Contacte i Xarxes Social */
 
@@ -212,6 +213,16 @@ export default {
 
 /* Botó Fer-se Soci */
 
+.espai{
+  width:100%;
+}
+
+/* Botó Fer-se Soci */
+
+  #altaSoci {
+  margin-right:85px;
+}
+
 #altaSoci a{
   color:cyan;
   font-family:"QuickSand" !important;
@@ -235,6 +246,12 @@ export default {
   #altaSoci {
     margin-left: 0 !important;
     font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 864px) {
+  #altaSoci {
+    margin-right:0px;
   }
 }
 

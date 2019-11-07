@@ -15,7 +15,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide1_1.jpg"
+          src="galeriaImatgesTopWeb/slide1_1.jpg"
           alt="image slot"
         >
         <h1>Descobriràs el Nostre Entorn</h1>
@@ -26,7 +26,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide2_1.jpg"
+          src="galeriaImatgesTopWeb/slide2_1.jpg"
           alt="image slot"
         >
         <h1>Compartiràs l'Alegria del Cim</h1>
@@ -37,7 +37,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide3_1.jpg"
+          src="galeriaImatgesTopWeb/slide3_1.jpg"
           alt="image slot"
         >
         <h1>Descobriràs Nous Móns</h1>
@@ -48,7 +48,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide4proporcio real.jpg"
+          src="galeriaImatgesTopWeb/slide4_1.jpg"
           alt="image slot"
         >
         <h1>Faràs Nous Amics</h1>
@@ -59,7 +59,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="slide5_1.jpg"
+          src="galeriaImatgesTopWeb/slide5_1.jpg"
           alt="image slot"
         >
         <h1>Disfrutaràs de l'Alta Muntanya</h1>
