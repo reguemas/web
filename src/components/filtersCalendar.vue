@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- Visualitzacio nomes en mobil -->
+    <!-- Visualitzacio amb el boto filtres i agenda per a visualitzacio en mobil -->
     <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
     <div v-if=myToggle class="d-md-none">
-      <b-form v-if=myToggle class="mb-4 w-50 mx-auto">
+      <b-form class="mb-4 w-50 mx-auto">
         <!-- <label class="mr-sm-3" for="Inline-Filters">Aquí Farem</label> -->
         <b-form-select
           class="mt-3"
@@ -25,7 +25,7 @@
       <card class= "my-4 mx-auto"/>
     </div>
 
-          <!-- Visualitzacio en dues columnes -->
+          <!-- Visualitzacio en dues columnes quan no es mobil-->
 
     <div class="d-none d-md-flex flex-column">
       <b-form class="my-4 w-75 mx-auto">
@@ -40,15 +40,21 @@
       </b-form>
 
       <v-calendar 
+      ref="agenda"
       is-dark 
-      is-expanded 
+      is-expanded
       :attributes="datesAgenda">
         <div slot="day-popover" slot-scope="{ attributes }">
           <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
-            <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
+            <div class="popoverCalendari" @mouseover="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
           </v-popover-row>
         </div>
       </v-calendar>
+
+      <b-button size="lg" variant="danger" class="mt-3">Activitats Esportives</b-button>
+      <div>
+        
+      </div>
       <!-- <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4> -->
     </div>
   </div>
@@ -86,7 +92,7 @@ export default {
           color:"red",
         },
         popover:{
-          visibility:"hover",
+          visibility:"click",
           isInteractive:true,
           label:this.calendari.Esportives[i].title,
         },
@@ -101,7 +107,7 @@ export default {
           color:"blue",
         },
         popover:{
-          visibility:"hover",
+          visibility:"click",
           isInteractive:true,
           label:this.calendari.Culturals[i].title,
         },
@@ -116,7 +122,7 @@ export default {
           color:"green",
         },
         popover:{
-          visibility:"hover",
+          visibility:"click",
           isInteractive:true,
           label:this.calendari.Socials[i].title,
         },
@@ -127,8 +133,10 @@ export default {
 
   methods:{
     goToActivitat(attribute){
-      let i = attribute.key;
-      location.href=this.datesAgenda[i].url;
+/*       let i = attribute.key;
+      location.href=this.datesAgenda[i].url; */
+      console.log(this.$refs.agenda.attributes[0]);
+      console.log(attribute);
     },
   },
 }
