@@ -44,12 +44,8 @@
       is-dark 
       is-expanded
       :attributes="datesAgenda"
-      @dayclick="goToActivitat(day)">
-<!--         <div slot="day-popover" slot-scope="{ attributes }">
-          <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
-            <div class="popoverCalendari" @mouseover="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
-          </v-popover-row>
-        </div> -->
+      @dayclick="goToActivitat"
+      >
       </v-calendar>
 
 <!--       <div id="calendariTitolEsportives" class="mt-3">Activitats Esportives</div>
@@ -93,11 +89,11 @@ export default {
         bar: {
           color:"red",
         },
-/*         popover:{
+        /*popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Esportives[i].title,
-        }, */
+        },*/
         customData: {
           dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
           tipus: this.calendari.Esportives[i].tipus,
@@ -115,11 +111,11 @@ export default {
         bar: {
           color:"blue",
         },
-/*         popover:{
+        /* popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Culturals[i].title,
-        }, */
+        },*/
         url: this.calendari.Culturals[i].url,
       })
     }
@@ -130,11 +126,11 @@ export default {
         bar: {
           color:"green",
         },
-/*         popover:{
+        /*popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Socials[i].title,
-        }, */
+        },*/
         url: this.calendari.Socials[i].url,
       })
     }
@@ -143,7 +139,7 @@ export default {
   methods:{
     goToActivitat(day){
       const calendar = this.$refs.agenda;
-      console.log(calendar);
+      console.log(day);
     },
   },
 }
