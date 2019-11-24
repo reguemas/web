@@ -43,18 +43,20 @@
       ref="agenda"
       is-dark 
       is-expanded
-      :attributes="datesAgenda">
-        <div slot="day-popover" slot-scope="{ attributes }">
+      :attributes="datesAgenda"
+      @dayclick="goToActivitat(day)">
+<!--         <div slot="day-popover" slot-scope="{ attributes }">
           <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
             <div class="popoverCalendari" @mouseover="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
           </v-popover-row>
-        </div>
+        </div> -->
       </v-calendar>
 
-      <b-button size="lg" variant="danger" class="mt-3">Activitats Esportives</b-button>
-      <div>
-        
-      </div>
+<!--       <div id="calendariTitolEsportives" class="mt-3">Activitats Esportives</div>
+      <div v-for="(dataAgenda,index) in datesAgenda" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
+        <p class="mb-1 calendariSeccio">{{ dataAgenda.seccio }} - {{ dataAgenda.modalitat }}</p>
+        <p class="m-0">{{ dataAgenda.title }}</p>
+      </div> -->
       <!-- <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4> -->
     </div>
   </div>
@@ -91,12 +93,19 @@ export default {
         bar: {
           color:"red",
         },
-        popover:{
+/*         popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Esportives[i].title,
+        }, */
+        customData: {
+          dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
+          tipus: this.calendari.Esportives[i].tipus,
+          title: this.calendari.Esportives[i].title,
+          modalitat: this.calendari.Esportives[i].modalitat,
+          seccio: this.calendari.Esportives[i].seccio,
+          url: this.calendari.Esportives[i].url,
         },
-        url: this.calendari.Esportives[i].url,
       })
     }
 
@@ -106,11 +115,11 @@ export default {
         bar: {
           color:"blue",
         },
-        popover:{
+/*         popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Culturals[i].title,
-        },
+        }, */
         url: this.calendari.Culturals[i].url,
       })
     }
@@ -121,22 +130,20 @@ export default {
         bar: {
           color:"green",
         },
-        popover:{
+/*         popover:{
           visibility:"click",
           isInteractive:true,
           label:this.calendari.Socials[i].title,
-        },
+        }, */
         url: this.calendari.Socials[i].url,
       })
     }
   },
 
   methods:{
-    goToActivitat(attribute){
-/*       let i = attribute.key;
-      location.href=this.datesAgenda[i].url; */
-      console.log(this.$refs.agenda.attributes[0]);
-      console.log(attribute);
+    goToActivitat(day){
+      const calendar = this.$refs.agenda;
+      console.log(calendar);
     },
   },
 }
@@ -179,6 +186,39 @@ export default {
 
   .popoverCalendari{
     cursor: pointer;
+  }
+
+  .calendariTipusActivitatEsportives{
+    font-family: Quicksand;
+    background-color: #fbd7d7;
+    border-radius: 5px;
+  }
+
+  .calendariActivitatEsportives{
+    font-family: Quicksand;
+    font-size:1rem;
+    font-weight:700;
+    text-transform: lowercase;
+    background-color: #fbd7d7;
+    border-radius: 5px;
+  }
+
+  .calendariSeccio{
+    font-size:1.2rem;
+    font-weight:bold;
+    text-transform: uppercase;
+  }
+
+  .calendariTitle{
+    text-transform: capitalize !important;
+  }
+
+  #calendariTitolEsportives{
+    color:white;
+    font-size:1.5rem;
+    background-color:#f56565;
+    border-radius: 5px;
+    padding: 5px;
   }
 
 </style>

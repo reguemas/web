@@ -49,11 +49,11 @@ export default {
     }
   },
 
-  credted(){
+/*   created(){
     if (this.titolGaleria=="Esportives"){
       style.backgroundSize = "400px 400px";
     }
-  },
+  }, */
 
   methods:{
     visualitzacioBotons: function() {
