@@ -1,0 +1,132 @@
+{
+    "CET": [
+        {
+            "item": "Què hi Trobaràs",
+            "url": "http://ce-terrassa.cat/queoferim/"
+        },
+        {
+            "item": "Fes-te Soci",
+            "url": "http://ce-terrassa.cat/alta-soci/"
+        },
+        {
+            "item": "El Projecte",
+            "url": "http://ce-terrassa.cat/la-junta-actual/"
+        },
+        {
+            "item": "La Seu Social",
+            "url": "http://ce-terrassa.cat/inici/la-seu-social/"
+        },
+        {
+            "item": "Llicències Federatives",
+            "url": "http://ce-terrassa.cat/inici/llicencies-federatives/"
+        },
+        {
+            "item": "Històric d'Activitats",
+            "url": "http://ce-terrassa.cat/historic-dactivitats/"
+        },
+        {
+            "item": "Contacte",
+            "url": "http://ce-terrassa.cat/contacte/"
+        }
+    ],
+    "Esportives": [
+        {
+            "item": "Alta Muntanya",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        },
+        {
+            "item": "Espeleologia",
+            "url": "http://ce-terrassa.cat/espeleologia-2/"
+        },
+        {
+            "item": "Esquí",
+            "url": "http://ce-terrassa.cat/esqui-2/"
+        },
+        {
+            "item": "Senderisme",
+            "url": "http://ce-terrassa.cat/senderisme-3/"
+        },
+        {
+            "item": "Marxa Nòrdica",
+            "url": "http://ce-terrassa.cat/marxanordica/"
+        },
+        {
+            "item": "BTT",
+            "url": "http://ce-terrassa.cat/bicicletademuntanya/"
+        },
+        {
+            "item": "Entrenament i Formació",
+            "url": "http://ce-terrassa.cat/entrenamentformacio/"
+        }
+    ],
+    "Culturals": [
+        {
+            "item": "Ciències Naturals",
+            "url": "http://ce-terrassa.cat/cienciesnaturals/"
+        },
+        {
+            "item": "Cultura",
+            "url": "http://ce-terrassa.cat/cultura/"
+        },
+        {
+            "item": "Fotogràfia",
+            "url": "http://ce-terrassa.cat/fotografia-2/"
+        },
+        {
+            "item": "Exposicions",
+            "url": "http://ce-terrassa.cat/exposicions/"
+        },
+        {
+            "item": "Biblioteca i Arxiu",
+            "url": "http://ce-terrassa.cat/inici/publicacions/biblioteca-i-arxiu/"
+        },
+        {
+            "item": "Coral",
+            "url": "http://ce-terrassa.cat/coral/"
+        }
+    ],
+    "Socials": [
+        {
+            "item": "Infantil i Juvenil",
+            "url": "http://ce-terrassa.cat/infantilijuvenil/"
+        },
+        {
+            "item": "Campament Alta Muntanya",
+            "url": "http://ce-terrassa.cat/campament/"
+        },
+        {
+            "item": "Caminada Popular",
+            "url": "http://ce-terrassa.cat/caminadapopular/"
+        },
+        {
+            "item": "CET de Viatges",
+            "url": "http://ce-terrassa.cat/cet-de-viatges/"
+        },
+        {
+            "item": "Altres Activitats",
+            "url": "http://ce-terrassa.cat/altresactivitats/"
+        }
+    ],
+    "Publicacions": [
+        {
+            "item": "El Full",
+            "url": "http://ce-terrassa.cat/el-full/"
+        },
+        {
+            "item": "Arxiu",
+            "url": "http://ce-terrassa.cat/inici/publicacions/arxiu/"
+        },
+        {
+            "item": "Butlletí",
+            "url": "http://ce-terrassa.cat/inici/publicacions/el-butlleti/"
+        },
+        {
+            "item": "CET.DOC",
+            "url": "http://ce-terrassa.cat/inici/publicacions/biblioteca-i-arxiu/cet-doc/"
+        },
+        {
+            "item": "Topografia Avencs i Coves",
+            "url": "http://ce-terrassa.cat/inici/publicacions/topografies-davencs-i-coves/"
+        }
+    ]
+}

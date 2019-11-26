@@ -1,0 +1,31 @@
+﻿http://eimtdbd.uoc.edu/~gmasaguec/pra/index.html
+
+create table CLIENT
+(
+	dni char(9),
+	nom_client varchar(100),
+	cognoms varchar(100),
+	adreça varchar(100),
+	poblacio varchar(100),
+	telefon varchar(13),
+	email varchar(100),
+	primary key (dni)
+)engine = innodb;
+
+create table COMANDA
+(
+	num_comanda int auto_increment not null,
+	dataHora datetime,
+	nom_pizza varchar(100),
+	nom_ingredient varchar(100),
+	dni_client char(9),
+	primary key (num_comanda),
+	foreign key (nom_pizza) references PIZZA(nom_pizza),
+	foreign key (nom_ingredient) references INGREDIENT(nom_ingredient),
+	foreign key (dni_client) references CLIENT(dni)
+)engine = innodb;
+
+insert into client values ("45673821N","Joan","Garcia Torrent","C/Santaló, 15","Barcelona","+34673867471","joantorrent23@gmail.com");
+insert into client values ("54321897M","Jordi","Mediona Torregrossa","C/Muntaner, 153","Barcelona","+34546333221","jordimediona@hotmail.com");
+insert into client values ("37345654V","Josep","Tarrés Quintana","C/Aribau, 135","Barcelona","+34454714321","jtarres@gmail.com");
+insert into client values ("24675821O","Marc","Vilagrassa Comas","C/Sepulveda, 214","Barcelona","+34721892345","marcvilagrassa@gmail.com");

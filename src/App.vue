@@ -1,109 +1,90 @@
 <template>
   <div>
-    <navMenu/>
-
-    <b-container fluid class="p-0 mb-5">
-      <b-row class="m-0">
-        <b-col cols="2" class="p-0">
-          <h3 class="ml-5 textVerdClar">Això faràs al:</h3>
-          <div class="transperencia"></div>
-          <!-- <b-img src="CET_Esquerra-transparent-blanc.png" alt="Logo Centre Excursionista Terrassa" href="#" class="mt-0 ml-5"></b-img> -->
-        </b-col>
-        <b-col cols="10" class="p-0 position-relative">
-          <!-- <div class="p-2 bg-success text-white">2 de 3</div> -->
-          <homeSlider/>
-          <b-jumbotron header="CENTRE EXCURSIONISTA DE TERRASSA" lead="Vine a Coneixer-ho" fluid class="d-none d-lg-flex w-50">
-            <b-button variant="success" size="lg" href="#" class="p-3 my-4">Mira els Avantatges!</b-button>
-          </b-jumbotron>
-          
-        </b-col>
-      </b-row>
-    </b-container>
-
     <b-container fluid class="p-0">
-      <b-row class="m-0">
-        <b-col cols="2" class="p-0">
+      
+      <navMenu />
 
-        </b-col>
-        <b-col cols="10" class="p-0 position-relative">
-          <b-card
-            title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 20rem;"
-            class="my-5 mx-3"
-          >
-            <b-card-text>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </b-card-text>
+      <webTop />
 
-            <b-button href="#" size="lg" variant="success">Go somewhere</b-button>
-          </b-card>
-          
-        </b-col>
-      </b-row>
+      <activitats />
+
+      <!-- <activitatPromocionada />
+
+      <activitatsDestacades />
+
+      <activitatPromocionada />
+
+     <noticies />
+
+      <activitatPromocionada />
+
+      <serveis />
+
+      <activitatPromocionada />
+
+      <colaboradorsWebAmigues />
+
+      <peuWeb/> -->
+
     </b-container>
-
-    <HelloWorld/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import navMenu from './components/menu.vue'
-import homeSlider from './components/carousel.vue'
+import axios from "axios";
+import navMenu from "./components/menu.vue";
+import webTop from "./components/webTop.vue";
+import activitats from "./components/activitats.vue";
+import activitatPromocionada from "./components/activitatPromocionada.vue";
+import activitatsDestacades from "./components/activitatsDestacades.vue";
+import noticies from "./components/noticies.vue";
+import serveis from "./components/serveis.vue";
+import colaboradorsWebAmigues from "./components/colaboradorsWebAmigues.vue";
+import peuWeb from "./components/footer.vue";
 
 export default {
-  name: 'app',
+  name: "app",
 
   components: {
-    HelloWorld,
     navMenu,
-    homeSlider,
-  }
-}
+    webTop,
+    activitats,
+    activitatPromocionada,
+    activitatsDestacades,
+    noticies,
+    serveis,
+    colaboradorsWebAmigues,
+    peuWeb
+  },
 
+  mounted() {
+    axios
+      .all([
+        axios.get("http://localhost/api/apiActivitats.php"),
+        axios.get("http://localhost/api/apiCalendari.php"),
+        axios.get("http://localhost/api/apiDestacades.php")
+      ])
+      .then(
+        axios.spread((activitatsResposta, calendariResposta, destacadesResposta) => {
+          this.infoActivitats = activitatsResposta.data.response;
+          this.infoCalendari = calendariResposta.data.response;
+          this.infoDestacades = destacadesResposta.data.response;
+        })
+      );
+  }
+};
 </script>
 
 <style>
+.textCyan {
+  color: cyan;
+}
 
-  .jumbotron{
-    background-color: transparent !important;
-    position:absolute;
-    top:6%;
-    left:-11%;
-    padding-top:0;
-    color: rgb(13,189,151);
-  }
-
-  .transperencia{
-    background-color: rgba(54,54,54,0.6);
-    height:70%;
-    width:275%;
-    margin-top:15%;
-    border-radius:0% 50% 50% 0%;
-  }
-
-  .lead{
+/*   #filters{
+    background-color: #2bcbbaff;
+    line-height: 12rem;
     font-size:1.5rem !important;
-    font-weight:500 !important;
-    color:cyan;
-    letter-spacing: 2px;
-  }
-  
-  .jumbotron a:hover{
-    color:#103440;
-    font-weight:700;
-  }
-
-  .textVerdClar{
-    color:cyan;
-  }
-
-  #cards{
-    background-color:rgb(13,189,151);
-  }
-
+    font-weight:900 !important;
+    margin-top:-2.5rem;
+  } */
 </style>

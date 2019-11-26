@@ -8,7 +8,26 @@
     font-family: "QuickSand-Bold";
 }
 
+@font-face{
+    src: url("../fonts/AveriaSerifLibre-Regular.woff2");
+    font-family: "AveriaSerif";
+}
+
+@font-face{
+    src: url("../fonts/AveriaSerifLibre-Bold.woff2");
+    font-family: "AveriaSerif-Bold";
+}
+
+@font-face{
+    src: url("../fonts/AveriaSerifLibre-Bold.woff2");
+    font-family: "AveriaSerif-Bold";
+}
+
+@font-face{
+    src: url("../fonts/Lastwinter.woff");
+    font-family: "Escriptura";
+}
+
 body {
-    font-family: "QuickSand";
-    background-color: #655377;
+    font-family: "AveriaSerif";
 }
