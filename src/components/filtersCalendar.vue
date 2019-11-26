@@ -145,7 +145,6 @@ export default {
       };
       console.log(activitatsDia);
       this.diaSeleccionat = activitatsDia;
-      console.log(this.diaSeleccionat);
       return activitatsDia;
     },
   },
