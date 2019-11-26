@@ -44,18 +44,15 @@
       is-dark 
       is-expanded
       :attributes="datesAgenda"
-      @dayclick="goToActivitat(day)">
-<!--         <div slot="day-popover" slot-scope="{ attributes }">
-          <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
-            <div class="popoverCalendari" @mouseover="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
-          </v-popover-row>
-        </div> -->
+      @dayclick="crearColumnaActivitats">
       </v-calendar>
+      <div>{{ this.diaSeleccionat }}</div>
+      <div>{{ activitatsDia }}</div>
 
 <!--       <div id="calendariTitolEsportives" class="mt-3">Activitats Esportives</div>
-      <div v-for="(dataAgenda,index) in datesAgenda" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
-        <p class="mb-1 calendariSeccio">{{ dataAgenda.seccio }} - {{ dataAgenda.modalitat }}</p>
-        <p class="m-0">{{ dataAgenda.title }}</p>
+      <div v-for="(activitatsDia,index) in activitatDia" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
+        <p class="mb-1 calendariSeccio">{{ activitatsDia.seccio }} - {{ activitatsDia.modalitat }}</p>
+        <p class="m-0">{{ activitatsDia.title }}</p>
       </div> -->
       <!-- <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4> -->
     </div>
@@ -93,13 +90,7 @@ export default {
         bar: {
           color:"red",
         },
-/*         popover:{
-          visibility:"click",
-          isInteractive:true,
-          label:this.calendari.Esportives[i].title,
-        }, */
         customData: {
-          dates: {start: new Date(this.calendari.Esportives[i].dataInici), span:1},
           tipus: this.calendari.Esportives[i].tipus,
           title: this.calendari.Esportives[i].title,
           modalitat: this.calendari.Esportives[i].modalitat,
@@ -115,12 +106,13 @@ export default {
         bar: {
           color:"blue",
         },
-/*         popover:{
-          visibility:"click",
-          isInteractive:true,
-          label:this.calendari.Culturals[i].title,
-        }, */
-        url: this.calendari.Culturals[i].url,
+        customData: {
+          tipus: this.calendari.Culturals[i].tipus,
+          title: this.calendari.Culturals[i].title,
+          modalitat: this.calendari.Culturals[i].modalitat,
+          seccio: this.calendari.Culturals[i].seccio,
+          url: this.calendari.Culturals[i].url,
+        },
       })
     }
 
@@ -130,20 +122,31 @@ export default {
         bar: {
           color:"green",
         },
-/*         popover:{
-          visibility:"click",
-          isInteractive:true,
-          label:this.calendari.Socials[i].title,
-        }, */
+        customData: {
+          tipus: this.calendari.Socials[i].tipus,
+          title: this.calendari.Socials[i].title,
+          modalitat: this.calendari.Socials[i].modalitat,
+          seccio: this.calendari.Socials[i].seccio,
         url: this.calendari.Socials[i].url,
+        },
       })
     }
   },
 
   methods:{
-    goToActivitat(day){
-      const calendar = this.$refs.agenda;
-      console.log(calendar);
+    crearColumnaActivitats (day){
+      var activitatsDia = [];
+      for(let i=0; i<day.attributes.length; i++){
+        activitatsDia.push({
+          "title": day.attributes[i].customData.title,
+          "modalitat": day.attributes[i].customData.modalitat,
+          "seccio": day.attributes[i].customData.seccio,
+        });
+      };
+      console.log(activitatsDia);
+      this.diaSeleccionat = activitatsDia;
+      console.log(this.diaSeleccionat);
+      return activitatsDia;
     },
   },
 }
