@@ -1,6 +1,6 @@
 <template>
   <div class="cardBody" @mouseover = "hover=true" @mouseleave = "hover=false">
-    <a class="cardImg" ref="urlActivitat">     
+    <a class="cardImg" ref="urlActivitat" :href="this.activitat.url">     
       <div class="cardTitle" ref="cardBackgroundMobile">
           <h3 class="titol">{{ activitat.title }}</h3>
           <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
@@ -41,7 +41,6 @@ export default {
       this.$refs.cardBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
 
-    this.$refs.urlActivitat.setAttribute("href",this.activitat.url);
     this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
     this.$refs.urlActivitat.style.backgroundSize = "400px 400px";
   },

@@ -46,6 +46,7 @@
       :attributes="datesAgenda"
       @dayclick="crearColumnaActivitats">
       </v-calendar>
+      <div>{{ diaSeleccionat }}</div>
       <div>{{ this.diaSeleccionat }}</div>
       <div>{{ activitatsDia }}</div>
 
@@ -142,10 +143,11 @@ export default {
           "modalitat": day.attributes[i].customData.modalitat,
           "seccio": day.attributes[i].customData.seccio,
         });
-      };
-      console.log(activitatsDia);
+      }
       this.diaSeleccionat = activitatsDia;
-      return activitatsDia;
+      console.log(activitatsDia);
+      console.log(this.diaSeleccionat);
+      return this.diaSeleccionat;
     },
   },
 }

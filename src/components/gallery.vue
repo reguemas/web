@@ -62,6 +62,9 @@ export default {
       let numCardsVisibles = Math.floor((ampladaPantalla - 48)/316);
       let longitudGaleria = element.childNodes.length;
       let numClickFinalGaleria = Math.ceil(longitudGaleria/numCardsVisibles);
+      if (((longitudGaleria*316)+48)<ampladaPantalla){
+        numClickFinalGaleria=0;
+      }
       if (numClickFinalGaleria == 0) {
         this.controlsVisibilitat=false;
       } else {
@@ -81,7 +84,10 @@ export default {
         distanciaMoure = 316;
       }
       let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = Math.round(longitudGaleria/numCardsVisibles);
+      let numClickFinalGaleria = Math.ceil(longitudGaleria/numCardsVisibles);
+      if (((longitudGaleria*316)+48)<ampladaPantalla){
+        numClickFinalGaleria=0;
+      }
       if (numCardsVisibles==1) {
         numClickFinalGaleria--;
       }
