@@ -11,9 +11,9 @@
         <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
 
         <b-row class="p-0 mx-3 my-5 justify-content-around botonsActivitats">
-          <b-button size="lg" href="http://ce-terrassa.cat/activitats-del-cet/" class="tipusActivitats mb-4"><img src="../assets/assetsBotonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">Totes les Activitats</b-button>
-          <b-button size="lg" href="http://ce-terrassa.cat/infantilijuvenil/" class="familiaActivitats mb-4"><img src="../assets/assetsBotonsActivitats/familiaActivitats.png" class="mr-3 botonsActivitatsImg">Activitats pels Teus Fills i en Família</b-button>
-          <b-button size="lg" href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" class="wikilocActivitats mb-4 d-none d-xl-block"><img src="../assets/assetsBotonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg">Canal CET a Wikiloc</b-button>
+          <b-button size="lg" href="http://ce-terrassa.cat/activitats-del-cet/" class="tipusActivitats mb-4"><img src="../assets/botonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">Totes les Activitats</b-button>
+          <b-button size="lg" href="http://ce-terrassa.cat/infantilijuvenil/" class="familiaActivitats mb-4"><img src="../assets/botonsActivitats/familiaActivitats.png" class="mr-3 botonsActivitatsImg">Activitats pels Teus Fills i en Família</b-button>
+          <b-button size="lg" href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" class="wikilocActivitats mb-4 d-none d-xl-block"><img src="../assets/botonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg">Canal CET a Wikiloc</b-button>
         </b-row>
       </b-col>
     </b-row>

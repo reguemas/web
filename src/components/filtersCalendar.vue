@@ -49,6 +49,7 @@
       <div>{{ diaSeleccionat }}</div>
       <div>{{ this.diaSeleccionat }}</div>
       <div>{{ activitatsDia }}</div>
+      <b-button size="lg" href="http://ce-terrassa.cat/agenda/" class="botoAgenda my-4"><img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">Agenda Completa</b-button>
 
 <!--       <div id="calendariTitolEsportives" class="mt-3">Activitats Esportives</div>
       <div v-for="(activitatsDia,index) in activitatDia" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
@@ -223,6 +224,12 @@ export default {
     background-color:#f56565;
     border-radius: 5px;
     padding: 5px;
+  }
+
+  .botoAgenda {
+    text-transform: capitalize;
+    border:none !important;
+    font-size: 18px !important;
   }
 
 </style>

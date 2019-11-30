@@ -1,18 +1,18 @@
 <template>
-  <div class="cardDestacadesBody" @mouseover = "hover=true" @mouseleave = "hover=false">
-    <a class="cardDestacadesImg" ref="urlActivitat">     
-      <div class="cardDestacadesTitle" ref="cardDestacadesBackgroundMobile">
-          <div class="activitatDestacadesInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
-          <div class="activitatDestacadesInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
-          <div class="activitatDestacadesInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
-          <h3 class="titolDestacades">{{ activitat.title }}</h3>
-<!--           <div v-if=hover class="cardDestacadesInfo mt-4">
+  <div class="cardDestacadaBody" @mouseover = "hover=true" @mouseleave = "hover=false" ref="cardDestacada">
+    <a class="cardDestacadaImg" ref="urlActivitatDestacada" :href="this.activitat.url">     
+      <div class="cardDestacadaTitle" ref="cardDestacadaBackgroundMobile">
+          <h3 class="titol">{{ activitat.title }}</h3>
+          <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
+          <div class="activitatInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
+          <div class="activitatInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
+          <div class="activitatInfo" v-if="activitat.dificultat!=0">Dificultat: {{ activitat.dificultat }}</div>
+          <div v-if=hover class="cardInfo mt-3">
             {{ activitat.descripcio }}
-          </div> -->
+          </div>
       </div>
     </a>
   </div>
-
 </template>
 
 <script>
@@ -37,14 +37,25 @@ export default {
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)) {
       this.hover=true;
-      this.$refs.cardDestacadesBackgroundMobile.style.background="rgba(0,0,0,0.6)"
+      this.$refs.cardDestacadaBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
 
-    this.$refs.urlActivitat.setAttribute("href",this.activitat.url);
-    this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
-    this.$refs.urlActivitat.style.backgroundSize = "350px 250px";
+    switch (this.activitat.tipus) {
+      case "1":
+        this.$refs.cardDestacada.style.outline = "10px solid #f56565";
+        break;
+      
+      case "2":
+        this.$refs.cardDestacada.style.outline = "10px solid #48bb78";
+        break;
+      
+      case "3":
+        this.$refs.cardDestacada.style.outline = "10px solid #4299e1";
+        break;
+    }
+    this.$refs.urlActivitatDestacada.style.background = "url(" + this.activitat.imatge + ") no-repeat";
+    this.$refs.urlActivitatDestacada.style.backgroundSize = "320px 320px";
   },
-
 }
 
 </script>
@@ -52,36 +63,31 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
-  .cardDestacadesBody{
-    width: 350px;
-    height: 400px;
+  .cardDestacadaBody{
+    width: 320px;
+    height: 320px;
     overflow:hidden;
-    border: none !important;
     border-radius: 0 !important;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     text-align:center;
     display: block; 
   }
 
-  .cardDestacadesImg {
-    width: 350px;
-    height: 250px;
+  .cardDestacadaImg {
+    width: 320px;
+    height: 320px;
     text-decoration:none !important;
     display:block;
-    border-bottom: 7px solid rgb(66, 57, 38);
   }
 
-  .cardDestacadesImg :hover {
+  .cardDestacadaImg :hover {
     background: rgba(0,0,0,0.8);
     text-decoration:none !important;
   }
 
-  a :hover {
-    text-decoration:none !important;
-  }
-
-  .cardDestacadesTitle{
-    padding-top:265px;
+    .cardDestacadaTitle{
+    padding:15px;
+    padding-top:25px;
     height:100%;
     width:100%;
     background-image: linear-gradient(
@@ -92,28 +98,8 @@ export default {
     );
   }
 
-  .cardDestacadesTitle :hover {
+  .cardDestacadaTitle :hover {
     background:transparent;
-  }
-
-  .titolDestacades {
-    font-family: Quicksand;
-    color:cyan;
-    font-size:1.5rem;
-  }
-
-  .activitatDestacadesInfo{
-    font-family: Quicksand;
-    color:#d0bb57;
-    font-size:1.3rem;
-    
-  }
-
-  .cardDestacadesInfo{
-    color:cyan;
-    font-size:1.1rem;
-    height:100%;
-    margin-bottom:-150px;
   }
 
 </style>

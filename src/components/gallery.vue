@@ -3,7 +3,9 @@
     <h3 class="ml-3 mb-0 py-4">Activitats {{titolGaleria}}</h3>
     <b-row ref="mascaraGaleria" class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
       <b-list-group horizontal ref="esMou" class="esMou">
-        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(activitat,index) in activitatsCarousel"><card :activitat="activitat"/></b-list-group-item>
+        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(activitat,index) in activitatsCarousel">
+          <card :activitat="activitat"/>
+        </b-list-group-item>
       </b-list-group>
       <div v-if="controlsVisibilitat">
         <button class="botoAnterior" v-if=botoAnteriorVisibilitat @click="movimentCarousel" ref="anterior">&lsaquo;</button>
@@ -34,7 +36,6 @@ export default {
       botoSeguentVisibilitat:true,
       controlsVisibilitat:false,
     };
-
   },
 
   mounted() {
@@ -47,25 +48,23 @@ export default {
     || navigator.userAgent.match(/Windows Phone/i)) {
       this.controlsVisibilitat=true;
     }
-  },
-
-/*   created(){
-    if (this.titolGaleria=="Esportives"){
-      style.backgroundSize = "400px 400px";
+    this.element = this.$refs.esMou;
+    this.ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
+    this.longitudGaleria = this.element.childNodes.length;
+    this.numCardsVisibles = Math.floor((this.ampladaPantalla)/316);
+    this.numClickFinalGaleria = Math.floor(this.longitudGaleria/this.numCardsVisibles);
+    if (this.numCardsVisibles==1) {
+      this.numClickFinalGaleria--;
     }
-  }, */
+    if ((this.longitudGaleria*316)<this.ampladaPantalla){
+      this.numClickFinalGaleria=0;
+      this.controlsVisibilitat=false;
+    }
+  },
 
   methods:{
     visualitzacioBotons: function() {
-      let element = this.$refs.esMou;
-      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = Math.floor((ampladaPantalla - 48)/316);
-      let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = Math.ceil(longitudGaleria/numCardsVisibles);
-      if (((longitudGaleria*316)+48)<ampladaPantalla){
-        numClickFinalGaleria=0;
-      }
-      if (numClickFinalGaleria == 0) {
+      if (this.numClickFinalGaleria == 0) {
         this.controlsVisibilitat=false;
       } else {
         this.controlsVisibilitat=true;
@@ -73,27 +72,16 @@ export default {
     },
 
     movimentCarousel: function() {
-      let element = this.$refs.esMou;
-      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = Math.floor((ampladaPantalla - 48)/316);
-      if (numCardsVisibles==0){
-        numCardsVisibles++;
+      if (this.numCardsVisibles==0){
+        this.numCardsVisibles++;
       }
-      let distanciaMoure = (numCardsVisibles-1)*300;
+      let distanciaMoure = (this.numCardsVisibles)*316;
       if (distanciaMoure == 0) {
         distanciaMoure = 316;
       }
-      let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = Math.ceil(longitudGaleria/numCardsVisibles);
-      if (((longitudGaleria*316)+48)<ampladaPantalla){
-        numClickFinalGaleria=0;
-      }
-      if (numCardsVisibles==1) {
-        numClickFinalGaleria--;
-      }
       if (event.target.className==="botoAnterior") {
         this.count++;
-        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
+        this.element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
         this.botoSeguentVisibilitat=true;
         if (this.count==0) {
           this.botoAnteriorVisibilitat=false;
@@ -101,9 +89,9 @@ export default {
       }
       if (event.target.className==="botoSeguent") {
         this.count--;
-        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
+        this.element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
         this.botoAnteriorVisibilitat=true;
-        if (this.count == -numClickFinalGaleria) {
+        if (this.count == -this.numClickFinalGaleria) {
           this.botoSeguentVisibilitat=false;
         }
       }

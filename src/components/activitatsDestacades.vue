@@ -1,27 +1,32 @@
 <template>
+  <b-row no-gutters align-v="center" class="m-0 pb-4 filters justify-content-center">
     <div>
-      <b-row no-gutters align-v="center" class="m-0 pb-4 filters destacades">
-          <galleryDestacades :activitatsCarousel="activitatsCarousel.Destacades" :titolGaleria="keys[0]"/>
+      <h3 class="my-4 ml-0">Activitats {{titolGaleria}}</h3>
+      <b-row class="m-0">
+          <div class="p-0 ml-5 mb-5 activitatsDestacades" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
+            <cardDestacades :activitat="activitat"/>
+        </div>
       </b-row>
     </div>
+  </b-row>
 </template>
 
 <script>
-import galleryDestacades from './galleryDestacades.vue'
+import cardDestacades from './cardDestacades.vue'
 import totesActivitats from './json/activitatsDestacades.json'
 
 export default {
   name: 'activitatDestacades',
 
   components: {
-    galleryDestacades
+    cardDestacades,
   },
 
   data() {
     return {
       myToggle: false,
-      activitatsCarousel: totesActivitats,
-      keys: Object.keys(totesActivitats),
+      activitatsDestacades: totesActivitats.Destacades,
+      titolGaleria: Object.keys(totesActivitats)[0],
     }
   }
 }
@@ -30,8 +35,8 @@ export default {
 
 <style>
 
-  .destacades{
-    overflow:hidden;
+  .activitatsDestacades:first-child{
+    margin-left: 0 !important;
   }
 
 </style>

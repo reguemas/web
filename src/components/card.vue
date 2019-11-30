@@ -42,7 +42,7 @@ export default {
     }
 
     this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
-    this.$refs.urlActivitat.style.backgroundSize = "400px 400px";
+    this.$refs.urlActivitat.style.backgroundSize = "300px 300px";
   },
 
 }
@@ -112,7 +112,6 @@ export default {
   .cardInfo{
     color:cyan;
     font-size:1rem;
-    height:100%;
   }
 
 </style>

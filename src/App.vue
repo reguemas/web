@@ -8,13 +8,13 @@
 
       <activitats />
 
-      <!-- <activitatPromocionada />
+      <!-- <activitatPromocionada /> -->
 
       <activitatsDestacades />
 
-      <activitatPromocionada />
+      <!-- <activitatPromocionada />
 
-     <noticies />
+      <noticies />
 
       <activitatPromocionada />
 
