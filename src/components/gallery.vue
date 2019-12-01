@@ -28,7 +28,7 @@ export default {
   components: {
     card,
   },
-
+ 
   data() {
     return {
       count:0,
@@ -107,7 +107,6 @@ export default {
   .fons{
     background-color:red;
   }
-
 
   .esMou{
     transition: transform 1s ease-in-out;

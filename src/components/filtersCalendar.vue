@@ -49,7 +49,13 @@
       <div>{{ diaSeleccionat }}</div>
       <div>{{ this.diaSeleccionat }}</div>
       <div>{{ activitatsDia }}</div>
-      <b-button size="lg" href="http://ce-terrassa.cat/agenda/" class="botoAgenda my-4"><img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">Agenda Completa</b-button>
+      <b-button
+        size="lg"
+        href="http://ce-terrassa.cat/agenda/"
+        class="botoAgenda my-4">
+          <img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">
+            Agenda Completa
+      </b-button>
 
 <!--       <div id="calendariTitolEsportives" class="mt-3">Activitats Esportives</div>
       <div v-for="(activitatsDia,index) in activitatDia" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
@@ -155,9 +161,9 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
-  #filtreActivitat,#filtreMes {
+  #filtreActivitat {
     font-family: Quicksand; 
     font-size:1.2rem;
     font-weight:900;
@@ -227,9 +233,18 @@ export default {
   }
 
   .botoAgenda {
-    text-transform: capitalize;
     border:none !important;
     font-size: 18px !important;
+    display:inline-flex !important;
+    justify-content:center !important;
+    align-items: center !important;
+    background-color:#9e9f9f;
+  }
+
+  .botoAgenda:hover{
+    background-color:#6b6b6b;
+    color:#103440;
+    font-weight:700;
   }
 
 </style>
