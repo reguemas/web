@@ -33,7 +33,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
   .activitatsDestacades:first-child{
     margin-left: 0 !important;

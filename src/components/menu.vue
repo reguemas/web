@@ -49,26 +49,26 @@
 
           <b-navbar-nav class="ml-4"> 
             <b-nav-item-dropdown :text="'El '+ keys[0]" left>
-              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.CET" :key="index">{{item.item}}</b-dropdown-item>
+              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.CET" :key="index">{{ item.item }}</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown text="Activitats" left class="ml-5">
               <b-dropdown-header class="dropdown-header-label">
                 Activitats {{ keys[1] }}
               </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Esportives" :key="index">{{item.item}}</b-dropdown-item>
-              <b-dropdown-divider></b-dropdown-divider>  
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Esportives" :key="index">{{ item.item }}</b-dropdown-item>
+              <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header class="dropdown-header-label">
                 Activitats {{ keys[2] }}
               </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Culturals" :key="index">{{item.item}}</b-dropdown-item>
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Culturals" :key="index">{{ item.item }}</b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header id="dropdown-header-label">
                 Activitats {{ keys[3] }}
               </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Socials" :key="index">{{item.item}}</b-dropdown-item>
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Socials" :key="index">{{ item.item }}</b-dropdown-item>
               </b-nav-item-dropdown>
             <b-nav-item-dropdown :text="keys[4]" left class="ml-5 textCyan">
-              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Publicacions" :key="index">{{item.item}}</b-dropdown-item>
+              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.Publicacions" :key="index">{{ item.item }}</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Galeries</b-nav-item>
 

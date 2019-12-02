@@ -40,15 +40,13 @@
       </b-form>
 
       <v-calendar 
-      ref="agenda"
-      is-dark 
-      is-expanded
-      :attributes="datesAgenda"
-      @dayclick="crearColumnaActivitats">
+        ref="agenda"
+        is-dark 
+        is-expanded
+        :attributes="datesAgenda"
+        @dayclick="crearColumnaActivitats">
       </v-calendar>
       <div>{{ diaSeleccionat }}</div>
-      <div>{{ this.diaSeleccionat }}</div>
-      <div>{{ activitatsDia }}</div>
       <b-button
         size="lg"
         href="http://ce-terrassa.cat/agenda/"
@@ -88,6 +86,7 @@ export default {
         color:"teal",
       },
     }],
+    diaSeleccionat:[],
     };
   },
 
@@ -135,7 +134,7 @@ export default {
           title: this.calendari.Socials[i].title,
           modalitat: this.calendari.Socials[i].modalitat,
           seccio: this.calendari.Socials[i].seccio,
-        url: this.calendari.Socials[i].url,
+          url: this.calendari.Socials[i].url,
         },
       })
     }
@@ -152,9 +151,6 @@ export default {
         });
       }
       this.diaSeleccionat = activitatsDia;
-      console.log(activitatsDia);
-      console.log(this.diaSeleccionat);
-      return this.diaSeleccionat;
     },
   },
 }

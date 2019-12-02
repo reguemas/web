@@ -2,17 +2,22 @@
   <div
     class="cardBody cardActivitatTamany"
     @mouseover = "hover=true"
-    @mouseleave = "hover=false">
-      <a class="cardImg cardActivitatImgTamany" ref="urlActivitat" :href="this.activitat.url">     
-        <div class="cardTitle" ref="cardBackgroundMobile">
-          <h3 class="titol">{{ activitat.title }}</h3>
-          <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
-          <div class="activitatInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
-          <div class="activitatInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
-          <div class="activitatInfo" v-if="activitat.dificultat!=0">Dificultat: {{ activitat.dificultat }}</div>
-          <div v-if=hover class="cardInfo mt-3">{{ activitat.descripcio }}</div>
-        </div>
-      </a>
+    @mouseleave = "hover=false"
+  >
+    <a
+      class="cardImg cardActivitatImgTamany" 
+      :href="this.activitat.url"
+      :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'300px 300px'}"
+    >     
+      <div class="cardTitle" :class="{ mobileBackground:hover }">
+        <h3 class="titol">{{ activitat.title }}</h3>
+        <div class="activitatInfo">{{ activitat.seccio }} - {{ activitat.modalitat }}</div>
+        <div class="activitatInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
+        <div class="activitatInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
+        <div class="activitatInfo" v-if="activitat.dificultat!=0">Dificultat: {{ activitat.dificultat }}</div>
+        <div v-if=hover class="cardInfo mt-3">{{ activitat.descripcio }}</div>
+      </div>
+    </a>
   </div>
 
 </template>
@@ -39,24 +44,38 @@ export default {
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)) {
       this.hover=true;
-      this.$refs.cardBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
-
-    this.$refs.urlActivitat.style.background = "url(" + this.activitat.imatge + ") no-repeat";
-    this.$refs.urlActivitat.style.backgroundSize = "300px 300px";
   },
 
 }
 
 </script>
 
+<style scoped>
+
+  .cardActivitatTamany{
+    width: 300px;
+    height: 300px;
+  }
+
+  .cardActivitatImgTamany {
+    width: 300px;
+    height: 300px;
+  }
+
+</style>
+
 <style>
+
+  .mobileBackground{
+    background:rgba(0,0,0,0.3);
+  }
 
   .cardBody{
     overflow:hidden;
     border: none !important;
     border-radius: 0 !important;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     text-align:center;
     display: block; 
   }
@@ -71,7 +90,7 @@ export default {
     text-decoration:none !important;
   }
 
-  a :hover {
+  a:hover {
     text-decoration:none !important;
   }
 
