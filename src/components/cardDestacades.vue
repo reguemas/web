@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       hover:false,
-      tipusActivitats:["Esportiva","Cultural","Social"],
+      tipusActivitats:["Esportives","Culturals","Socials"],
     };
   },
 
@@ -58,27 +58,27 @@ export default {
 
 <style scoped>
 
-  .cardOutlineEsportiva{
+  .cardOutlineEsportives{
     outline:10px solid #f56565;
   }
 
-  .cardOutlineEsportiva:hover{
+  .cardOutlineEsportives:hover{
     outline:10px solid red;
   }
 
-  .cardOutlineCultural{
+  .cardOutlineCulturals{
     outline:10px solid #48bb78;
   }
 
-  .cardOutlineCultural:hover{
+  .cardOutlineCulturals:hover{
     outline:10px solid green;
   }
   
-  .cardOutlineSocial{
+  .cardOutlineSocials{
     outline:10px solid #4299e1;
   }
 
-  .cardOutlineSocial:hover{
+  .cardOutlineSocials:hover{
     outline:10px solid blue;
   }
 
