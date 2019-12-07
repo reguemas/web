@@ -1,14 +1,17 @@
 <template>
   <div>
     <b-row class="m-0">
-      <b-col cols="12" md="5" xl="3" class="text-center">
+      <b-col cols="12" md="5" xl="3">
         <filtersCalendar/>
       </b-col>
 
       <b-col cols="12" md="7" xl="9" class="p-0 position-relative overflow-hidden pb-4">
-        <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]"/>
-        <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]"/>
-        <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
+
+        <b-row>
+          <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]"/>
+          <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]"/>
+          <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
+        </b-row>
 
         <b-row class="p-0 mx-3 my-5 justify-content-center">
           <b-button
@@ -41,7 +44,7 @@
 <script>
 import gallery from './gallery.vue'
 import filtersCalendar from './filtersCalendar.vue'
-import totesActivitats from './json/carousel.json'
+import totesActivitats from './json/activitatsCarousels.json'
 
 
 export default {
@@ -90,10 +93,11 @@ export default {
   .btn {
     border:none !important;
     /* font-family:"QuickSand" !important; */
-    font-size: 18px !important;
+    font-size: 1.1rem !important;
     display:inline-flex !important;
     text-align:left !important;
     align-items: center !important;
+    color:cyan;
   }
 
   .tipusActivitats{

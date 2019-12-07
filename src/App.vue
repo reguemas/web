@@ -60,15 +60,15 @@ export default {
   mounted() {
     axios
       .all([
-        axios.get("http://localhost/api/apiActivitats.php"),
+        axios.get("http://localhost/api/apiActivitatsCarousels.php"),
         axios.get("http://localhost/api/apiCalendari.php"),
-        axios.get("http://localhost/api/apiDestacades.php")
+        axios.get("http://localhost/api/apiActivitatsDestacades.php")
       ])
       .then(
-        axios.spread((activitatsResposta, calendariResposta, destacadesResposta) => {
-          this.infoActivitats = activitatsResposta.data.response;
+        axios.spread((activitatsCarouselsResposta, calendariResposta, destacadesResposta) => {
+          this.infoActivitatsCarousels = activitatsCarouselsResposta.data.response;
           this.infoCalendari = calendariResposta.data.response;
-          this.infoDestacades = destacadesResposta.data.response;
+          this.infoActivitatsDestacades = activitatsDestacadesResposta.data.response;
         })
       );
   }
@@ -80,11 +80,4 @@ export default {
   color: cyan;
 }
 
-/*   #filters{
-    background-color: #2bcbbaff;
-    line-height: 12rem;
-    font-size:1.5rem !important;
-    font-weight:900 !important;
-    margin-top:-2.5rem;
-  } */
 </style>

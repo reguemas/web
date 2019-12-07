@@ -1,10 +1,9 @@
 <template>
   <div>
     <!-- Visualitzacio amb el boto filtres i agenda per a visualitzacio en mobil -->
-    <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
+<!--     <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
     <div v-if=myToggle class="d-md-none">
       <b-form class="mb-4 w-50 mx-auto">
-        <!-- <label class="mr-sm-3" for="Inline-Filters">Aquí Farem</label> -->
         <b-form-select
           class="mt-3 filtreActivitat"
           :value="null"
@@ -22,49 +21,79 @@
       </v-calendar>
       <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
       <card class= "my-4 mx-auto"/>
-    </div>
+    </div> -->
 
           <!-- Visualitzacio en dues columnes quan no es mobil-->
 
-    <div class="d-none d-md-flex flex-column">
-      <b-form class="my-4 w-75 mx-auto">
-        <b-form-select
-          class="mt-3 filtreActivitat"
-          :value="null"
-          :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
-        >
-          <option slot="first" :value="null">Busca Activitats</option>
-        </b-form-select>
-      </b-form>
+    <!-- <div class="d-none d-md-flex flex-column"> -->
+    <b-col class="m-0 px-3">
+      <b-row>
+        <b-form class="my-4">
+          <b-form-select
+            class="mt-3 filtreActivitat"
+            :value="null"
+            :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
+          >
+            <option slot="first" :value="null">Busca Activitats</option>
+          </b-form-select>
+        </b-form>
 
-      <v-calendar
-        is-dark 
-        is-expanded
-        :attributes="datesAgenda"
-        @dayclick="crearColumnaActivitats">
-      </v-calendar>
-      <div v-if="diaSeleccionat!=undefined">{{diaSeleccionat}}</div>
-      <div v-if="diaSeleccionatBuit" class="mt-3 calendariTitol" :class="'calendariTitol'+this.tipusActivitats[this.diaSeleccionat[this.keys].tipus-1]">Activitats {{ this.tipusActivitats[this.diaSeleccionat[this.keys].tipus-1] }}</div>
-        <div v-for="(diaSeleccionat,index) in diaSeleccionat" :key="index" class="mt-3 px-5 py-3 calendariActivitatEsportives">
-          <p class="mb-1 calendariSeccio">{{ diaSeleccionat.seccio }} - {{ diaSeleccionat.modalitat }}</p>
-          <p class="m-0">{{diaSeleccionat.title }}</p>
-      </div>
-      <!-- <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4> -->
-    </div>
-    <b-button
-      size="lg"
-      href="http://ce-terrassa.cat/agenda/"
-      class="botoAgenda my-4">
-        <img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">
-          Agenda Completa
-    </b-button>
-  </div>
+        <v-calendar
+          is-dark 
+          is-expanded
+          :attributes="datesAgenda"
+          @dayclick="crearColumnaActivitats"
+          class="mb-3"
+        >
+        </v-calendar>
+      </b-row>
+
+      <b-row class="activitatsDiaSeleccionat text-center">
+        <template v-if="diaSeleccionatBuit==true">
+          <div v-if="diaActualBuit==true" class="activitatDiaTipus activitatDiaSenseActivitats py-2">Avui no hi ha Activitats</div>
+        </template>
+        <template v-else>
+          <div 
+            v-for="(diaSeleccionat,index) in diaSeleccionat"
+            :key="index"
+            class="w-100"
+          >
+            <div 
+              v-if="diaSeleccionat.tipus!='mateixTipus'"
+              class="mb-2 mt-3 py-2 activitatDiaTipus"
+              :class="'activitatDiaTipus'+ diaSeleccionat.tipus"
+              >
+              Activitats {{ diaSeleccionat.tipus }}
+            </div>
+            <a :href="diaSeleccionat.url"> 
+              <div class="py-3 activitatDia" :class="'activitatDia'+ diaSeleccionat.class">           
+                <p class="mb-1 px-3 activitatDiaModalitatSeccio">{{ diaSeleccionat.seccio }} - {{ diaSeleccionat.modalitat }}</p>
+                <p class="m-0 px-3 activitatDiaTitol">{{ diaSeleccionat.title }}</p>
+              </div>
+            </a>
+          </div>
+        </template>
+      </b-row>
+
+      <b-row class="p-0 my-5">
+        <b-button
+          size="lg"
+          href="http://ce-terrassa.cat/agenda/"
+          class="botoAgenda w-100">
+            <img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">
+              Agenda Completa
+        </b-button>
+      </b-row>
+
+    </b-col>
+   </div>
 </template>
 
 <script>
 import card from './card.vue'
 
 import datesCalendari from './json/calendari.json'
+import activitatsAvui from './json/activitatsAvui.json'
 
 export default {
   name: 'filtersCalendar',
@@ -76,8 +105,10 @@ export default {
   data() {
   return {
     myToggle: false,
-    diaSeleccionatBuit:false,
+    diaSeleccionatBuit:true,
+    diaActualBuit:true,
     calendari:datesCalendari,
+    activitatsDiaActual:activitatsAvui,
     datesAgenda:[{
       dates: new Date(),
       highlight: {
@@ -111,7 +142,7 @@ export default {
       this.datesAgenda.push({
         dates: {start: new Date(this.calendari.Culturals[i].dataInici), span:1},
         bar: {
-          color:"blue",
+          color:"green",
         },
         customData: {
           tipus: this.calendari.Culturals[i].tipus,
@@ -127,7 +158,7 @@ export default {
       this.datesAgenda.push({
         dates: {start: new Date(this.calendari.Socials[i].dataInici), span:1},
         bar: {
-          color:"green",
+          color:"blue",
         },
         customData: {
           tipus: this.calendari.Socials[i].tipus,
@@ -138,26 +169,82 @@ export default {
         },
       })
     }
+
+    if (this.activitatsDiaActual.length!=0) {
+      this.diaActualBuit = false;
+      this.diaSeleccionatBuit = false;
+      let activitatsDia = [];
+      for(let i=0; i<this.activitatsDiaActual.length; i++){
+        if (i==0){
+          activitatsDia.push({
+            "tipus": this.tipusActivitats[this.activitatsDiaActual[i].tipus],
+            "title": this.activitatsDiaActual[i].title,
+            "modalitat": this.activitatsDiaActual[i].modalitat,
+            "seccio": this.activitatsDiaActual[i].seccio,
+            "url": this.activitatsDiaActual[i].url,
+            "class": this.tipusActivitats[this.activitatsDiaActual[i].tipus],
+          });
+        } else if (this.activitatsDiaActual[i].tipus!==this.activitatsDiaActual[i-1].tipus){ 
+          activitatsDia.push({
+            "tipus": this.tipusActivitats[this.activitatsDiaActual[i].tipus],
+            "title": this.activitatsDiaActual[i].title,
+            "modalitat": this.activitatsDiaActual[i].modalitat,
+            "seccio": this.activitatsDiaActual[i].seccio,
+            "url": this.activitatsDiaActual[i].url,
+            "class": this.tipusActivitats[this.activitatsDiaActual[i].tipus],
+          });
+        } else {          
+          activitatsDia.push({
+            "tipus": "mateixTipus",
+            "title": this.activitatsDiaActual[i].title,
+            "modalitat": this.activitatsDiaActual[i].modalitat,
+            "seccio": this.activitatsDiaActual[i].seccio,
+            "url": this.activitatsDiaActual[i].url,
+            "class": this.tipusActivitats[this.activitatsDiaActual[i].tipus],
+          });
+        }
+      }
+      this.diaSeleccionat = activitatsDia;
+    }
   },
 
   methods:{
     crearColumnaActivitats (day){
       let activitatsDia = [];
       for(let i=0; i<day.attributes.length; i++){
-        activitatsDia.push({
-          "tipus": day.attributes[i].customData.tipus,
-          "title": day.attributes[i].customData.title,
-          "modalitat": day.attributes[i].customData.modalitat,
-          "seccio": day.attributes[i].customData.seccio,
-        });
+        if (i==0){
+          activitatsDia.push({
+            "tipus": this.tipusActivitats[day.attributes[i].customData.tipus],
+            "title": day.attributes[i].customData.title,
+            "modalitat": day.attributes[i].customData.modalitat,
+            "seccio": day.attributes[i].customData.seccio,
+            "url": day.attributes[i].customData.url,
+            "class": this.tipusActivitats[day.attributes[i].customData.tipus],
+          });
+        } else if (day.attributes[i].customData.tipus!==day.attributes[i-1].customData.tipus){ 
+          activitatsDia.push({
+            "tipus": this.tipusActivitats[day.attributes[i].customData.tipus],
+            "title": day.attributes[i].customData.title,
+            "modalitat": day.attributes[i].customData.modalitat,
+            "seccio": day.attributes[i].customData.seccio,
+            "url": day.attributes[i].customData.url,
+            "class": this.tipusActivitats[day.attributes[i].customData.tipus],
+          });
+        } else {          
+          activitatsDia.push({
+            "tipus": "mateixTipus",
+            "title": day.attributes[i].customData.title,
+            "modalitat": day.attributes[i].customData.modalitat,
+            "seccio": day.attributes[i].customData.seccio,
+            "url": day.attributes[i].customData.url,
+            "class": this.tipusActivitats[day.attributes[i].customData.tipus],
+          });
+        }
       }
       this.diaSeleccionat = activitatsDia;
-      this.keys = Object.keys(this.diaSeleccionat);
       if (this.diaSeleccionat.lenght!=0){
-        this.diaSeleccionatBuit=true;
+        this.diaSeleccionatBuit=false;
       }
-      console.log("dia",this.diaSeleccionat);
-      console.log("key",this.keys);
     },
   },
 }
@@ -193,47 +280,74 @@ export default {
     cursor: pointer;
   }
 
-  .calendariTipusActivitatEsportives{
-    font-family: Quicksand;
-    background-color: #fbd7d7;
+  /* Llistat Activitats del dia */
+
+  /* Tipus d'Activitats del dia*/
+
+  .activitatsDiaSeleccionat{
+    max-height:740px;
+    overflow:auto;
+  }
+
+  .activitatDiaTipus{
+    color:cyan;
+    font-size:1.3rem;
     border-radius: 5px;
   }
 
-  .calendariActivitatEsportives{
-    font-family: Quicksand;
-    font-size:1rem;
-    font-weight:700;
-    text-transform: lowercase;
-    background-color: #fbd7d7;
+  .activitatDiaSenseActivitats{
+    background: #b47676;
+  }
+
+  .activitatDiaTipusEsportives{
+    background: #f56565;
+  }
+
+  .activitatDiaTipusCulturals{
+    background: #48bb78;
+  }
+  
+  .activitatDiaTipusSocials{
+    background: #4299e1;
+  }
+
+  /* Caixa de l'activitat del dia*/
+
+  .activitatDia{
+    font-family: Quicksand !important;
+    color:#545454 !important;
     border-radius: 5px;
   }
 
-  .calendariSeccio{
-    font-size:1.2rem;
+  a :hover {
+    text-decoration:none !important;
+    color:black !important;
+  }
+
+  .activitatDiaEsportives{
+    background: #fbd7d7 !important;
+  }
+
+  .activitatDiaCulturals{
+    background: #affccf;
+  }
+
+  .activitatDiaSocials{
+    background: #c9e5fc;
+  }
+
+  .activitatDiaModalitatSeccio{
+    font-size:1.1rem;
     font-weight:bold;
     text-transform: uppercase;
   }
 
-  .calendariTitol{
-    color:white;
-    font-size:1.5rem;
+  .activitatDiaTitol{
+    font-size:0.9rem;
+    font-weight:600;
+    text-transform: capitalize;
     border-radius: 5px;
-    padding: 5px;
   }
-
-  .calendariTitolEsportives{
-    background: #f56565;
-  }
-
-  .calendariTitolCulturals{
-    background: #48bb78;
-  }
-  
-  .calendariTitolSocials{
-    background: #4299e1;
-  }
-
-
 
   .botoAgenda {
     border:none !important;
@@ -242,7 +356,6 @@ export default {
     justify-content:center !important;
     align-items: center !important;
     background-color:#9e9f9f;
-    width: 100%;
   }
 
   .botoAgenda:hover{

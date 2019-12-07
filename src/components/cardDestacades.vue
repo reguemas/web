@@ -3,7 +3,7 @@
     class="cardBody cardDestacadaTamany" 
     @mouseover = "hover=true" 
     @mouseleave = "hover=false"
-    :class="'cardOutline'+this.tipusActivitats[this.activitat.tipus-1]"
+    :class="'cardOutline'+this.tipusActivitats[this.activitat.tipus]"
   >
     <a 
       class="cardImg cardDestacadaImgTamany"

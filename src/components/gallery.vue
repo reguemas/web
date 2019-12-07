@@ -119,7 +119,7 @@ export default {
   .botoAnterior{
     position: absolute;
     left:0;
-    margin-top:-300px;
+    margin-top:0px;
     border:none !important;
     color:white;
     font-size: 50px;
@@ -138,7 +138,7 @@ export default {
   .botoSeguent{
     position: absolute;
     right:0;
-    margin-top:-300px;
+    margin-top:0px;
     border:none !important;
     color:white;
     font-size: 50px;
