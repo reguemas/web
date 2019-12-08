@@ -1,0 +1,25 @@
+{
+    "Participa":
+        {
+            "titol": "participa al CET",
+            "frase1": "Una entitat viva necessita sàvia nova",
+            "llista1": "Vocals per a organitzades sortides",
+            "llista2": "Voluntaris per als esdeveniments",
+            "llista3": "Monitors secció Infantil-Juvenil",
+            "frase2": "Vols empendre noves activitats al CET",
+            "enllaç": "com puc participar",
+            "url": "#",
+            "imatge": "/activitatsPromocionada/participa.jpg"
+        },
+    "FEEC":
+        {
+            "titol": "no facis cues",
+            "frase1": "cal estar assegurat per a les activitats",
+            "frase2": "que fem a la natura",
+            "frase3": "Demana-la per internet i la podràs recollir",
+            "frase4": "a secretaria que te la tindran preparada",
+            "enllaç": "demanar targeta FEEC",
+            "url": "http://ce-terrassa.cat/inici/llicencies-federatives/",
+            "imatge": "http://ce-terrassa.cat/wp-content/uploads/2018/12/carnet2019-300x193.jpg"
+        }
+}

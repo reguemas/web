@@ -66,7 +66,7 @@
               Activitats {{ diaSeleccionat.tipus }}
             </div>
             <a :href="diaSeleccionat.url"> 
-              <div class="py-3 activitatDia" :class="'activitatDia'+ diaSeleccionat.class">           
+              <div class="py-3 mt-2 activitatDia" :class="'activitatDia'+ diaSeleccionat.class">           
                 <p class="mb-1 px-3 activitatDiaModalitatSeccio">{{ diaSeleccionat.seccio }} - {{ diaSeleccionat.modalitat }}</p>
                 <p class="m-0 px-3 activitatDiaTitol">{{ diaSeleccionat.title }}</p>
               </div>
