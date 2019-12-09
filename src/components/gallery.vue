@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>{{controlsVisibilitat}}</div>
     <h3 class="ml-3 mb-0 py-4">Activitats {{titolGaleria}}</h3>
     <b-row ref="mascaraGaleria" class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
       <b-list-group horizontal ref="esMou" class="esMou">
@@ -48,6 +49,8 @@ export default {
     || navigator.userAgent.match(/Windows Phone/i)) {
       this.controlsVisibilitat=true;
     }
+    console.log("2",navigator.userAgent);
+    console.log("1",this.controlsVisibilitat);
     this.element = this.$refs.esMou;
     this.ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
     this.longitudGaleria = this.element.childNodes.length;

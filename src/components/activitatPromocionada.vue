@@ -2,12 +2,13 @@
   <div>
     <b-row class="m-0 justify-content-center">
       <div class="d-inline-flex">
-        <img
-          slot="img"
-          class="imatgePromocionada"
-          :src="activitatPromocionada.imatge"
-          alt="Vols fer de monitor al CET"
-        >
+        <div class="imatgePromocionada">
+          <img
+            slot="img"
+            :src="activitatPromocionada.imatge"
+            alt="Vols fer de monitor al CET"
+          >
+        </div>
         <div class="promocio mx-3">
           <div class="d-block">
             <h1 class="titolPromocio mb-3 mt-0 pb-0 pt-2">{{activitatPromocionada.titol}}</h1>
@@ -16,7 +17,7 @@
               <p class="ml-3 mb-1 p-0">{{activitatPromocionada.llista2}}</p>
               <p class="ml-3 m-0 p-0">{{activitatPromocionada.llista3}}</p>
               <p class="mt-2 p-0">{{activitatPromocionada.frase2}}</p>
-            <a :href="activitatPromocionada.url" class="promocionadaEnllaç">{{activitatPromocionada.enllaç}} -></a>
+            <a v-if="activitatPromocionada.enllaç!=undefined" :href="activitatPromocionada.url" class="promocionadaEnllaç" :class="{promocionadaEnllaçMobile:isMobile}">{{activitatPromocionada.enllaç}} -></a>
           </div>
         </div>
       </div>
@@ -28,15 +29,46 @@
 
   export default {
     name: 'activitatPromocionada',
-    
+
     props:["activitatPromocionada"],
+
+    data() {
+      return {
+        isMobile:false,
+      };
+    },
+
+    mounted() {
+/*       if( navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)) {
+        this.isMobile=true;
+      } */
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log('Esto es un dispositivo móvil');
+        this.isMobile=true;
+      }
+    },
   }
-
-
 
 </script>
 
 <style>
+
+  .imatgePromocionada{
+    width:200px;
+    height:100%;
+    overflow:hidden;
+  }
+
+  .imatgePromocionada img{
+    position:relative;
+    right:100px;
+  }
 
   .promocio{
     font-family: "Quicksand";
@@ -68,6 +100,13 @@
     color:cyan;
     transition: .4s ease;
     background-color:#008cba;
+  }
+
+  .promocionadaEnllaçMobile {
+    text-transform: capitalize;
+    font-weight:bold;
+    color:cyan !important;
+    background-color:#008cba !important;
   }
 
 </style>
