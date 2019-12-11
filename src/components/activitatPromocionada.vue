@@ -6,8 +6,9 @@
           :style="{color: activitatPromocionadaEsquerra.colorFont, background: activitatPromocionadaEsquerra.colorFons}"
         >
           <div class="d-inline-flex">
-            <div class="imatgePromocionada">
+            <div class="imatgePromocionadaMascara">
               <img
+                class="imatgePromocionada"
                 slot="img"
                 :src="activitatPromocionadaEsquerra.imatge"
                 alt="Vols fer de monitor al CET"
@@ -63,8 +64,9 @@
                 </a>
               </div>
             </div>
-            <div class="imatgePromocionada">
+            <div class="imatgePromocionadaMascara">
               <img
+                class="imatgePromocionada"
                 slot="img"
                 :src="activitatPromocionadaDreta.imatge"
                 alt="Vols fer de monitor al CET"
@@ -112,11 +114,13 @@
     height:325px;
     color:#f2f5f7;
     background:#008cba;
+    align-items:flex-end;
   }
 
   .promocioDreta{
     text-align:right;
     justify-content: center;
+    align-items:flex-end;
     height:325px;
     color:#f2f5f7;
     background:#2f1a45;
@@ -142,21 +146,18 @@
     }
   }
 
-  .imatgePromocionada{
+  .imatgePromocionadaMascara{
     width:400px;
-    height:auto;
     overflow:hidden;
-    display:flex;
-    align-items:flex-end;
   }
 
-  .imatgePromocionada img{
-    width:auto;
+  .imatgePromocionada{
     height:300px;
+    width:auto;
   }
   
   @media (min-width:656px) and (max-width: 710px) {
-    .imatgePromocionada{
+    .imatgePromocionadaMascara{
       width:320px;
       height:auto;
       overflow:hidden;
@@ -179,6 +180,10 @@
       height:275px;
     }
 
+    .imatgePromocionadaMascara{
+      display:none;
+    }
+
     .imatgePromocionada{
       display:none;
     }
@@ -194,7 +199,7 @@
     display:flex;
     align-items:flex-end;
     width:280px;
-    margin-bottom:1rem;
+    margin-bottom:0.5rem;
   }
 
   .titolPromocio{
