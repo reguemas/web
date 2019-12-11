@@ -8,11 +8,14 @@
 
       <activitats />
 
-      <activitatPromocionada :activitatPromocionada="activitastPromocionades.Participa"/>
+      <activitatPromocionada
+        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
+        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
+      />
 
-      <activitatsDestacades />
+      <!-- <activitatsDestacades />
 
-      <!-- <activitatPromocionada />
+      <activitatPromocionada/>
 
       <noticies />
 
@@ -60,7 +63,7 @@ export default {
 
   data() {
     return {
-      activitastPromocionades:promocions,
+      activitatsPromocionades:promocions,
     };
   },
 

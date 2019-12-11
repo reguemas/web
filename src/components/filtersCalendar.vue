@@ -43,14 +43,16 @@
           is-expanded
           :attributes="datesAgenda"
           @dayclick="crearColumnaActivitats"
-          class="mb-3"
+          class="mb-2"
         >
         </v-calendar>
       </b-row>
 
       <b-row class="activitatsDiaSeleccionat text-center">
         <template v-if="diaSeleccionatBuit==true">
-          <div v-if="diaActualBuit==true" class="activitatDiaTipus activitatDiaSenseActivitats py-2">Avui no hi ha Activitats</div>
+          <div v-if="diaActualBuit==true"
+            class="activitatDiaTipus activitatDiaSenseActivitats py-2"
+          >Avui no hi ha Activitats</div>
         </template>
         <template v-else>
           <div 
@@ -60,13 +62,13 @@
           >
             <div 
               v-if="diaSeleccionat.tipus!='mateixTipus'"
-              class="mb-2 mt-3 py-2 activitatDiaTipus"
+              class="mt-3 py-2 activitatDiaTipus"
               :class="'activitatDiaTipus'+ diaSeleccionat.tipus"
               >
               Activitats {{ diaSeleccionat.tipus }}
             </div>
             <a :href="diaSeleccionat.url"> 
-              <div class="py-3 mt-2 activitatDia" :class="'activitatDia'+ diaSeleccionat.class">           
+              <div class="py-3 activitatDia" :class="'activitatDia'+ diaSeleccionat.class">           
                 <p class="mb-1 px-3 activitatDiaModalitatSeccio">{{ diaSeleccionat.seccio }} - {{ diaSeleccionat.modalitat }}</p>
                 <p class="m-0 px-3 activitatDiaTitol">{{ diaSeleccionat.title }}</p>
               </div>
@@ -75,7 +77,7 @@
         </template>
       </b-row>
 
-      <b-row class="p-0 my-5">
+      <b-row class="p-0 mt-3">
         <b-button
           size="lg"
           href="http://ce-terrassa.cat/agenda/"
@@ -290,9 +292,9 @@ export default {
   }
 
   .activitatDiaTipus{
-    color:cyan;
+    color:#f2f5f7;
     font-size:1.3rem;
-    border-radius: 5px;
+    
   }
 
   .activitatDiaSenseActivitats{
@@ -314,26 +316,66 @@ export default {
   /* Caixa de l'activitat del dia*/
 
   .activitatDia{
-    font-family: Quicksand !important;
-    color:#545454 !important;
-    border-radius: 5px;
+    font-family: Quicksand;
+    color:#545454;
   }
 
-  a :hover {
-    text-decoration:none !important;
-    color:black !important;
+  .activitatDia:hover{
+    text-decoration:none;
+    color:black;
+  }
+
+  .activitatDia:active{
+    text-decoration:none;
+    color:black;
   }
 
   .activitatDiaEsportives{
-    background: #fbd7d7 !important;
+    background: #ffd7d7;
+  }
+
+  .activitatDiaEsportives:hover {
+    border-left: 5px solid #fd8080;
+    background: #fcc1c1;
+    transition: .1s ease;
+  }
+
+  .activitatDiaEsportives:active {
+    border-left: 5px solid #fd8080;
+    background: #fcc1c1;
+    transition: .1s ease;
   }
 
   .activitatDiaCulturals{
-    background: #affccf;
+    background: #d6f8e4;
+  }
+
+  .activitatDiaCulturals:hover {
+    border-left: 5px solid #48bb78;
+    background: #bbecd2;
+    transition: .1s ease;
+  }
+
+  .activitatDiaCulturals:active {
+    border-left: 5px solid #48bb78;
+    background: #bbecd2;
+    transition: .1s ease;
   }
 
   .activitatDiaSocials{
     background: #c9e5fc;
+  }
+
+  .activitatDiaSocials:hover {
+    border-left: 5px solid #4299e1;
+    background: #add8fc;
+    transition: .1s ease;
+  }
+
+  .activitatDiaSocials:active {
+    border-left: 5px solid #4299e1;
+    background: #add8fc;
+    transition: .1s ease;
   }
 
   .activitatDiaModalitatSeccio{
@@ -359,9 +401,15 @@ export default {
   }
 
   .botoAgenda:hover{
-    background-color:#6b6b6b;
-    color:#103440;
-    font-weight:700;
+    background-color:#808080;
+    color:#303030;
+    font-weight:bold;
+  }
+
+  .botoAgenda:active{
+    background-color:#808080;
+    color:#303030;
+    font-weight:bold;
   }
 
 </style>
