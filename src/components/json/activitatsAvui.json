@@ -1,33 +1,92 @@
-[
-    {
-        "tipus":"0",
-        "title": "OBSERVACIÓ DE LA MIGRACIÓ D’OCELLS AL PIRINEU DE GIRONA",
-        "seccio": "Ciencies Naturals",
-        "modalitat": "Ornitologia",
-        "descripcio": "Sortida i observació de la migració d'ocells al Pirineu de Girona. Coll d'Ares i Fabert.",
-        "dificultat": "MItja",
-        "url": "http:\/\/ce-terrassa.cat\/ornitologia-%c2%b7-sortida-i-observacio-de-la-migracio-docells-al-pirineu-de-girona-coll-dares-i-fabert\/",
-        "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/07\/FMS041030-DSC_8823-Editar-150x150.jpg"
-    },
-    {
-        "tipus":"1",
-        "title": "IIIa SETMANA DE JOCS AL CARRER",
-        "seccio": "CET",
-        "modalitat": "Altres Activitats",
-        "descripcio": "Una setmana en la qual les famílies poden gaudir d’una rica proposta de jocs tradicionals d’arreu que, escampats per l’espai de la plaça Vapor Ventalló.",
-        "dificultat": "0",
-        "url": "http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/",
-        "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/joc-p2-referencia-1-150x150.jpg"
-    },
-    {
-        "tipus":"2",
-        "title": "DIADA DE GERMANOR DEL CENTRE EXCURSIONISTA DE TERRASSA 2019",
-        "seccio": "CET",
-        "modalitat": "Trobada",
-        "descripcio": "Els que estimem la nostra entitat, el Centre Excursionista de Terrassa, ens trobarem a la nostra muntanya: Sant Llorenç del Munt, al voltant d’una taula i amb les persones amb qui compartim la passió per la muntanya, el coneixement de la natura o la ",
-        "dificultat": "0",
-        "url": "http:\/\/ce-terrassa.cat\/diada-de-germanor-del-centre-excursionista-de-terrassa-2019\/",
-        "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/Diada-150x150.jpg",
-        "dataReunio": null
-    }
-]
+[{
+    "tipus":"0",
+    "title": "OBSERVACIÓ DE LA MIGRACIÓ D’OCELLS AL PIRINEU DE GIRONA",
+    "seccio": "Ciencies Naturals",
+    "modalitat": "Ornitologia",
+    "descripcio": "Sortida i observació de la migració d'ocells al Pirineu de Girona. Coll d'Ares i Fabert.",
+    "dificultat": "MItja",
+    "url": "http:\/\/ce-terrassa.cat\/ornitologia-%c2%b7-sortida-i-observacio-de-la-migracio-docells-al-pirineu-de-girona-coll-dares-i-fabert\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/07\/FMS041030-DSC_8823-Editar-150x150.jpg"
+},
+{
+    "tipus":"1",
+    "title": "IIIa SETMANA DE JOCS AL CARRER",
+    "seccio": "CET",
+    "modalitat": "Altres Activitats",
+    "descripcio": "Una setmana en la qual les famílies poden gaudir d’una rica proposta de jocs tradicionals d’arreu que, escampats per l’espai de la plaça Vapor Ventalló.",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/joc-p2-referencia-1-150x150.jpg"
+},
+{
+    "tipus":"2",
+    "title": "DIADA DE GERMANOR DEL CENTRE EXCURSIONISTA DE TERRASSA 2019",
+    "seccio": "CET",
+    "modalitat": "Trobada",
+    "descripcio": "Els que estimem la nostra entitat, el Centre Excursionista de Terrassa, ens trobarem a la nostra muntanya: Sant Llorenç del Munt, al voltant d’una taula i amb les persones amb qui compartim la passió per la muntanya, el coneixement de la natura o la ",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/diada-de-germanor-del-centre-excursionista-de-terrassa-2019\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/Diada-150x150.jpg",
+    "dataReunio": null
+},
+{
+    "tipus":"0",
+    "title": "OBSERVACIÓ DE LA MIGRACIÓ D’OCELLS AL PIRINEU DE GIRONA",
+    "seccio": "Ciencies Naturals",
+    "modalitat": "Ornitologia",
+    "descripcio": "Sortida i observació de la migració d'ocells al Pirineu de Girona. Coll d'Ares i Fabert.",
+    "dificultat": "MItja",
+    "url": "http:\/\/ce-terrassa.cat\/ornitologia-%c2%b7-sortida-i-observacio-de-la-migracio-docells-al-pirineu-de-girona-coll-dares-i-fabert\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/07\/FMS041030-DSC_8823-Editar-150x150.jpg"
+},
+{
+    "tipus":"1",
+    "title": "IIIa SETMANA DE JOCS AL CARRER",
+    "seccio": "CET",
+    "modalitat": "Altres Activitats",
+    "descripcio": "Una setmana en la qual les famílies poden gaudir d’una rica proposta de jocs tradicionals d’arreu que, escampats per l’espai de la plaça Vapor Ventalló.",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/joc-p2-referencia-1-150x150.jpg"
+},
+{
+    "tipus":"2",
+    "title": "DIADA DE GERMANOR DEL CENTRE EXCURSIONISTA DE TERRASSA 2019",
+    "seccio": "CET",
+    "modalitat": "Trobada",
+    "descripcio": "Els que estimem la nostra entitat, el Centre Excursionista de Terrassa, ens trobarem a la nostra muntanya: Sant Llorenç del Munt, al voltant d’una taula i amb les persones amb qui compartim la passió per la muntanya, el coneixement de la natura o la ",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/diada-de-germanor-del-centre-excursionista-de-terrassa-2019\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/Diada-150x150.jpg",
+    "dataReunio": null
+},{
+    "tipus":"0",
+    "title": "OBSERVACIÓ DE LA MIGRACIÓ D’OCELLS AL PIRINEU DE GIRONA",
+    "seccio": "Ciencies Naturals",
+    "modalitat": "Ornitologia",
+    "descripcio": "Sortida i observació de la migració d'ocells al Pirineu de Girona. Coll d'Ares i Fabert.",
+    "dificultat": "MItja",
+    "url": "http:\/\/ce-terrassa.cat\/ornitologia-%c2%b7-sortida-i-observacio-de-la-migracio-docells-al-pirineu-de-girona-coll-dares-i-fabert\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/07\/FMS041030-DSC_8823-Editar-150x150.jpg"
+},
+{
+    "tipus":"1",
+    "title": "IIIa SETMANA DE JOCS AL CARRER",
+    "seccio": "CET",
+    "modalitat": "Altres Activitats",
+    "descripcio": "Una setmana en la qual les famílies poden gaudir d’una rica proposta de jocs tradicionals d’arreu que, escampats per l’espai de la plaça Vapor Ventalló.",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/joc-p2-referencia-1-150x150.jpg"
+},
+{
+    "tipus":"2",
+    "title": "DIADA DE GERMANOR DEL CENTRE EXCURSIONISTA DE TERRASSA 2019",
+    "seccio": "CET",
+    "modalitat": "Trobada",
+    "descripcio": "Els que estimem la nostra entitat, el Centre Excursionista de Terrassa, ens trobarem a la nostra muntanya: Sant Llorenç del Munt, al voltant d’una taula i amb les persones amb qui compartim la passió per la muntanya, el coneixement de la natura o la ",
+    "dificultat": "0",
+    "url": "http:\/\/ce-terrassa.cat\/diada-de-germanor-del-centre-excursionista-de-terrassa-2019\/",
+    "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/Diada-150x150.jpg",
+    "dataReunio": null
+}]

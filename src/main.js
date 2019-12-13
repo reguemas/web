@@ -14,7 +14,9 @@ import './css/main.css'
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue, {
+  breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
+})
 Vue.use(PortalVue)
 Vue.use(VCalendar)
 Vue.use(VueAxios, axios)

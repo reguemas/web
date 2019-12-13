@@ -128,7 +128,7 @@ export default {
 /* background */
 
 .menuBackground{
-  background-color: #a1bd9f !important;
+  background-color: #afc8ad !important;
 }
 
 /* Menu Contacte i Xarxes Social */

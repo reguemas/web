@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h3 class="ml-3 mb-0 py-4">Activitats {{titolGaleria}}</h3>
+    <h3 class="m-0 pb-4">Activitats {{titolGaleria}}</h3>
     <b-row ref="mascaraGaleria" class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
       <b-list-group horizontal ref="esMou" class="esMou">
-        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(activitat,index) in activitatsCarousel">
+        <b-list-group-item class="p-0 carruselActivitats" :key="index" v-for="(activitat,index) in activitatsCarousel">
           <card :activitat="activitat"/>
         </b-list-group-item>
       </b-list-group>
@@ -114,6 +114,11 @@ export default {
 
   .list-group-item{
     border:none !important;
+    margin-left:1rem;
+  }
+
+  .list-group-item:first-child{
+    margin-left:0 !important;
   }
 
   .botoAnterior{

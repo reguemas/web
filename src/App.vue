@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <b-container fluid class="p-0">
+    <b-container fluid class="p-0 m-0">
       
       <navMenu />
 
@@ -8,12 +7,12 @@
 
       <activitats />
 
-      <activitatPromocionada
+ <activitatPromocionada
         :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
         :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
       />
 
-      <!-- <activitatsDestacades />
+      <!--<activitatsDestacades />
 
       <activitatPromocionada/>
 
@@ -30,7 +29,6 @@
       <peuWeb/> -->
 
     </b-container>
-  </div>
 </template>
 
 <script>
@@ -45,6 +43,7 @@ import serveis from "./components/serveis.vue";
 import colaboradorsWebAmigues from "./components/colaboradorsWebAmigues.vue";
 import peuWeb from "./components/footer.vue";
 import promocions from './components/json/promocions.json';
+import 'custom.scss';
 
 export default {
   name: "app",

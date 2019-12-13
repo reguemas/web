@@ -1,44 +1,44 @@
 <template>
-  <div>
-    <b-row class="m-0">
-      <b-col cols="12" md="5" xl="3">
-        <filtersCalendar/>
+  <b-container fluid class="m-0 p-0">
+    <b-row class="m-0 p-0">
+      <b-col cols="12" md="6" lg="5" xl="4" class="p-4 agendaFiltres">
+        <filtersCalendar class="mt-0"/>
       </b-col>
 
-      <b-col cols="12" md="7" xl="9" class="p-0 position-relative overflow-hidden pb-4">
+      <b-col cols="12" md="6" lg="7" xl="8" class="p-0 position-relative overflow-hidden">
 
-        <b-row>
-          <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]"/>
-          <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]"/>
-          <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]"/>
+        <b-row class="m-0 pl-4 carrussel">
+          <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]" class="pt-3"/>
+          <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]" class="pt-3"/>
+          <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]" class="pt-3"/>
         </b-row>
 
-        <b-row class="p-0 mx-3 my-5 justify-content-center">
+        <b-row class="m-0 py-4 justify-content-center carrussel">
           <b-button
             size="lg" 
             href="http://ce-terrassa.cat/activitats-del-cet/" 
-            class="tipusActivitats mb-4">
+            class="tipusActivitats">
               <img src="../assets/botonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">
               Totes les Activitats
             </b-button>
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/infantilijuvenil/"
-            class="familiaActivitats mx-md-5 mb-4">
+            class="familiaActivitats mx-md-5">
               <img src="../assets/botonsActivitats/familiaActivitats.png" class="mr-3 botonsActivitatsImg">
               Activitats pels Teus Fills i en Família
           </b-button>
           <b-button
             size="lg"
             href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" 
-            class="wikilocActivitats mb-4">
+            class="wikilocActivitats">
               <img src="../assets/botonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg">
               Canal CET a Wikiloc
           </b-button>
         </b-row>
       </b-col>
     </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -88,12 +88,23 @@ export default {
 
 <style scoped>
 
+  .agendaFiltres{
+    background:#3d4855;
+  }
+
+  .carrussel{
+    background:#afc8ad;
+  }
+
+  .botons{
+    background:#3d4855;
+  }
+
   /* Botons totes activitats */
 
   .btn {
     border:none !important;
-    /* font-family:"QuickSand" !important; */
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
     display:inline-flex !important;
     text-align:left !important;
     align-items: center !important;

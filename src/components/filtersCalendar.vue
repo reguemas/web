@@ -1,36 +1,17 @@
 <template>
-  <div>
+  <b-container fluid class="p-0 m-0">
     <!-- Visualitzacio amb el boto filtres i agenda per a visualitzacio en mobil -->
 <!--     <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
     <div v-if=myToggle class="d-md-none">
-      <b-form class="mb-4 w-50 mx-auto">
-        <b-form-select
-          class="mt-3 filtreActivitat"
-          :value="null"
-          :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
-        >
-          <option slot="first" :value="null">Busca Activitats</option>
-        </b-form-select>
-      </b-form>
-      <v-calendar is-dark is-expanded :attributes="datesAgenda">
-        <div slot="day-popover" slot-scope="{ attributes }">
-          <v-popover-row v-for="attribute in attributes" :key="attribute.index" :attribute="attribute">
-            <div class="popoverCalendari" @click="goToActivitat(attribute)">{{ attribute.popover.label }}</div>
-          </v-popover-row>
-        </div>
-      </v-calendar>
-      <h4 class="mt-4 mx-auto textCyan">Activitat Seleccionada</h4>
-      <card class= "my-4 mx-auto"/>
-    </div> -->
-
-          <!-- Visualitzacio en dues columnes quan no es mobil-->
+    Visualitzacio en dues columnes quan no es mobil-->
 
     <!-- <div class="d-none d-md-flex flex-column"> -->
-    <b-col class="m-0 px-3">
+    <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
+    <b-col class="m-0">
       <b-row>
-        <b-form class="my-4">
+        <b-form class="w-100">
           <b-form-select
-            class="mt-3 filtreActivitat"
+            class="filtreActivitat"
             :value="null"
             :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
           >
@@ -43,7 +24,7 @@
           is-expanded
           :attributes="datesAgenda"
           @dayclick="crearColumnaActivitats"
-          class="mb-2"
+          class="my-4"
         >
         </v-calendar>
       </b-row>
@@ -62,7 +43,7 @@
           >
             <div 
               v-if="diaSeleccionat.tipus!='mateixTipus'"
-              class="mt-3 py-2 activitatDiaTipus"
+              class="py-2 activitatDiaTipus"
               :class="'activitatDiaTipus'+ diaSeleccionat.tipus"
               >
               Activitats {{ diaSeleccionat.tipus }}
@@ -77,7 +58,7 @@
         </template>
       </b-row>
 
-      <b-row class="p-0 mt-3">
+      <b-row class="pt-4">
         <b-button
           size="lg"
           href="http://ce-terrassa.cat/agenda/"
@@ -88,11 +69,10 @@
       </b-row>
 
     </b-col>
-   </div>
+   </b-container>
 </template>
 
 <script>
-import card from './card.vue'
 
 import datesCalendari from './json/calendari.json'
 import activitatsAvui from './json/activitatsAvui.json'
@@ -100,26 +80,22 @@ import activitatsAvui from './json/activitatsAvui.json'
 export default {
   name: 'filtersCalendar',
 
-  components: {
-    card,
-  },
-
   data() {
-  return {
-    myToggle: false,
-    diaSeleccionatBuit:true,
-    diaActualBuit:true,
-    calendari:datesCalendari,
-    activitatsDiaActual:activitatsAvui,
-    datesAgenda:[{
-      dates: new Date(),
-      highlight: {
-        color:"teal",
-      },
-    }],
-    diaSeleccionat:[],
-    keys:[],
-    tipusActivitats:["Esportives","Culturals","Socials"],
+    return {
+      myToggle: false,
+      diaSeleccionatBuit:true,
+      diaActualBuit:true,
+      calendari:datesCalendari,
+      activitatsDiaActual:activitatsAvui,
+      datesAgenda:[{
+        dates: new Date(),
+        highlight: {
+          color:"teal",
+        },
+      }],
+      diaSeleccionat:[],
+      keys:[],
+      tipusActivitats:["Esportives","Culturals","Socials"],
     };
   },
 
@@ -259,8 +235,8 @@ export default {
     font-family: Quicksand; 
     font-size:1.2rem;
     font-weight:900;
-    width:200px;
-    height:50px;
+    width:100%;
+    height:49px;
   }
 
   .option {
@@ -269,8 +245,11 @@ export default {
   }
 
   .calendar{
-    /* background-color: #94b6aa; */
     text-align: center;
+  }
+
+  .vc-rounded-lg{
+    border-radius: 0 !important;
   }
 
   .activitats{
@@ -278,16 +257,12 @@ export default {
     overflow:hidden;
   }
 
-  .popoverCalendari{
-    cursor: pointer;
-  }
-
   /* Llistat Activitats del dia */
 
   /* Tipus d'Activitats del dia*/
 
   .activitatsDiaSeleccionat{
-    max-height:740px;
+    max-height:724px;
     overflow:auto;
   }
 

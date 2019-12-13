@@ -3,8 +3,8 @@
     <div>
       <h3 class="my-4 ml-0">Activitats {{titolGaleria}}</h3>
       <b-row class="m-0">
-          <div class="p-0 ml-5 mb-5 activitatsDestacades" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
-            <cardDestacades :activitat="activitat"/>
+        <div class="p-0 ml-5 mb-5 activitatsDestacades" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
+          <cardDestacades :activitat="activitat"/>
         </div>
       </b-row>
     </div>

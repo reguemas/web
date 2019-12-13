@@ -40,7 +40,7 @@ export default {
   /* fons portada */
 
   .backgroundPortada{
-    background-color: #a1bd9f !important;
+    background-color: #afc8ad !important;
   }
 
   /* Logo de marca */
