@@ -1,13 +1,22 @@
 <template>
   <b-container fluid class="m-0 p-0">
     <b-row class="m-0 p-0">
-      <b-col cols="12" md="6" lg="5" xl="4" class="p-4 agendaFiltres">
-        <filtersCalendar class="mt-0"/>
+      <b-col cols="12" md="6" lg="5" xl="3" class="p-4 agendaFiltres">
+        <b-button 
+          block 
+          :pressed.sync="myToggle"
+          size="lg"
+          variant="info"
+          class="justify-content-center"
+        >
+        Filtres i Agenda
+        </b-button>
+          <filtersCalendar class="mt-0"/>
       </b-col>
 
-      <b-col cols="12" md="6" lg="7" xl="8" class="p-0 position-relative overflow-hidden">
+      <b-col cols="12" md="6" lg="7" xl="9" class="p-0 carrussel">
 
-        <b-row class="m-0 pl-4 carrussel">
+        <b-row class="m-0 ml-4 position-relative overflow-hidden">
           <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]" class="pt-3"/>
           <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]" class="pt-3"/>
           <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]" class="pt-3"/>

@@ -6,7 +6,7 @@
     Visualitzacio en dues columnes quan no es mobil-->
 
     <!-- <div class="d-none d-md-flex flex-column"> -->
-    <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
+
     <b-col class="m-0">
       <b-row>
         <b-form class="w-100">
@@ -82,7 +82,6 @@ export default {
 
   data() {
     return {
-      myToggle: false,
       diaSeleccionatBuit:true,
       diaActualBuit:true,
       calendari:datesCalendari,
@@ -230,6 +229,11 @@ export default {
 </script>
 
 <style scoped>
+
+  .filtreAgendaBoto{
+    margin-top: 1.5rem;
+    display:flex;
+  }
 
   .filtreActivitat {
     font-family: Quicksand; 
