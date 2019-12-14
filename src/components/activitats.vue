@@ -1,20 +1,23 @@
 <template>
   <b-container fluid class="m-0 p-0">
     <b-row class="m-0 p-0">
-      <b-col cols="12" md="6" lg="5" xl="3" class="p-4 agendaFiltres">
+      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="p-4 agendaFiltres">
         <b-button 
           block 
           :pressed.sync="myToggle"
           size="lg"
           variant="info"
-          class="justify-content-center"
+          class="justify-content-center d-md-none"
         >
         Filtres i Agenda
         </b-button>
-          <filtersCalendar class="mt-0"/>
+        <!-- <div>{{myToggle}}</div> -->
+        <!-- <filtersCalendar/> -->
+        <filtersCalendar v-if="myToggle==true" class="mt-md-4"/>
+        <!-- <filtersCalendar  v-if="myToggle==true" class="mt-0 d-none"/>  -->
       </b-col>
 
-      <b-col cols="12" md="6" lg="7" xl="9" class="p-0 carrussel">
+      <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 carrussel">
 
         <b-row class="m-0 ml-4 position-relative overflow-hidden">
           <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]" class="pt-3"/>
@@ -26,21 +29,21 @@
           <b-button
             size="lg" 
             href="http://ce-terrassa.cat/activitats-del-cet/" 
-            class="tipusActivitats">
+            class="btnTipusActivitats tipusActivitats">
               <img src="../assets/botonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">
               Totes les Activitats
             </b-button>
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/infantilijuvenil/"
-            class="familiaActivitats mx-md-5">
+            class="btnTipusActivitats familiaActivitats mx-md-5">
               <img src="../assets/botonsActivitats/familiaActivitats.png" class="mr-3 botonsActivitatsImg">
               Activitats pels Teus Fills i en Família
           </b-button>
           <b-button
             size="lg"
             href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" 
-            class="wikilocActivitats">
+            class="btnTipusActivitats wikilocActivitats">
               <img src="../assets/botonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg">
               Canal CET a Wikiloc
           </b-button>
@@ -111,7 +114,7 @@ export default {
 
   /* Botons totes activitats */
 
-  .btn {
+  .btnTipusActivitats {
     border:none !important;
     font-size: 1.2rem !important;
     display:inline-flex !important;

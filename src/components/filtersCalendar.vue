@@ -1,11 +1,5 @@
 <template>
   <b-container fluid class="p-0 m-0">
-    <!-- Visualitzacio amb el boto filtres i agenda per a visualitzacio en mobil -->
-<!--     <b-button :pressed.sync="myToggle" size="lg" variant="info" class="my-4 d-md-none justify-content-center">Filtres i Agenda</b-button>
-    <div v-if=myToggle class="d-md-none">
-    Visualitzacio en dues columnes quan no es mobil-->
-
-    <!-- <div class="d-none d-md-flex flex-column"> -->
 
     <b-col class="m-0">
       <b-row>
