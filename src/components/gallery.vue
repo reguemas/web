@@ -1,8 +1,7 @@
 <template>
-  <div ref="mascaraGaleria">
-    <h3 class="m-0 pb-4">Activitats {{titolGaleria}}</h3>
+  <div>
     <b-row class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
-      <b-list-group horizontal ref="esMou" class="esMou">
+      <b-list-group horizontal ref="esMou" class="esMou pr-3">
         <b-list-group-item class="p-0 carruselActivitats" :key="index" v-for="(activitat,index) in activitatsCarousel">
           <card :activitat="activitat"/>
         </b-list-group-item>
@@ -23,7 +22,7 @@ export default {
 
   name: 'gallery',
 
-  props:["activitatsCarousel","titolGaleria"],
+  props:["activitatsCarousel","ampladaPantallaActivitat"],
 
   components: {
     card,
@@ -35,6 +34,7 @@ export default {
       botoAnteriorVisibilitat:false,
       botoSeguentVisibilitat:true,
       controlsVisibilitat:false,
+      ampladaPantallaGaleria: this.ampladaPantallaActivitat,
     };
   },
 
@@ -46,25 +46,20 @@ export default {
     || navigator.userAgent.match(/iPod/i)
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)) {
-      this.controlsVisibilitat=true;
+      this.controlsVisibilitat=false;
     }
     this.element = this.$refs.esMou;
-    this.ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
     this.longitudGaleria = this.element.childNodes.length;
-    this.numCardsVisibles = Math.floor((this.ampladaPantalla)/316);
+    this.numCardsVisibles = Math.floor((this.ampladaPantallaGaleria)/316);
     this.numClickFinalGaleria = Math.floor(this.longitudGaleria/this.numCardsVisibles);
     if (this.numCardsVisibles==1) {
       this.numClickFinalGaleria--;
     }
-    if ((this.longitudGaleria*316)<this.ampladaPantalla){
+    if ((this.longitudGaleria*316)<this.ampladaPantallaGaleria){
       this.numClickFinalGaleria=0;
       this.controlsVisibilitat=false;
     }
 
-    console.log("ampladaPantalla",this.ampladaPantalla);
-    console.log("longitudGaleria",this.longitudGaleria);
-    console.log("numCardsVisibles",this.numCardsVisibles);
-    console.log("numClickFinalGaleria",this.numClickFinalGaleria);
   },
 
   methods:{
@@ -77,6 +72,10 @@ export default {
     },
 
     movimentCarousel: function() {
+      console.log("longitudGaleria",this.longitudGaleria);
+      console.log("numCardsVisibles",this.numCardsVisibles);
+      console.log("ampladaPantallaGaleria",this.ampladaPantallaGaleria);
+      console.log(this.numClickFinalGaleria);
       if (this.numCardsVisibles==0){
         this.numCardsVisibles++;
       }

@@ -1,14 +1,12 @@
 <template>
-  <b-row no-gutters align-v="center" class="m-0 pb-4 filters justify-content-center">
-    <div>
-      <h3 class="my-4 ml-0">Activitats {{titolGaleria}}</h3>
-      <b-row class="m-0">
-        <div class="p-0 ml-5 mb-5 activitatsDestacades" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
-          <cardDestacades :activitat="activitat"/>
-        </div>
-      </b-row>
-    </div>
-  </b-row>
+  <div class="block activitatsDestacades">
+    <b-row no-gutters align-v="center" class="m-0 pb-5 justify-content-center">
+      <h2 class="py-4 text-center w-100">Activitats {{titolGaleria}}</h2>
+      <div class="p-0 mt-0 mx-4" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
+        <cardDestacades :activitat="activitat"/>
+      </div>
+    </b-row>
+  </div>
 </template>
 
 <script>
@@ -34,9 +32,12 @@ export default {
 </script>
 
 <style scoped>
+.activitatsDestacades{
+  background: #3f628d;
+}
 
-  .activitatsDestacades:first-child{
-    margin-left: 0 !important;
-  }
+h2 {
+  color:#f2f5f7;
+}
 
 </style>

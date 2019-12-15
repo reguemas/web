@@ -230,7 +230,6 @@ export default {
 @media (max-width: 1200px) {
   .altaSoci {
     margin-left: 0 !important;
-    font-size: 0.9rem !important;
   }
 }
 

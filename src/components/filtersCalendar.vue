@@ -264,10 +264,21 @@ export default {
     overflow:auto;
   }
 
+  @media (min-width: 768px) and (max-width: 991px) {
+    .activitatsDiaSeleccionat {
+      max-height:820px;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .activitatsDiaSeleccionat {
+      max-height:800px;
+    }
+  }
+
   .activitatDiaTipus{
     color:#f2f5f7;
     font-size:1.3rem;
-    
   }
 
   .activitatDiaSenseActivitats{
@@ -383,12 +394,6 @@ export default {
     background-color:#808080;
     color:#303030;
     font-weight:bold;
-  }
-
-  @media (max-width: 1199px) {
-    .botoAgenda {
-      margin-top:40px;
-    }
   }
 
 </style>

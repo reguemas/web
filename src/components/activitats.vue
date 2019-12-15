@@ -2,30 +2,77 @@
   <b-container fluid class="m-0 p-0">
     <b-row class="m-0 p-0">
       <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="p-4 agendaFiltres">
-        <b-button 
-          block 
-          :pressed.sync="myToggle"
-          size="lg"
-          variant="info"
-          class="justify-content-center d-md-none agendaFiltresButton"
-        >
-        Filtres i Agenda
-        </b-button>
+        <div class="d-flex justify-content-center">
+          <b-button 
+            :pressed.sync="myToggle"
+            size="lg"
+            variant="info"
+            class="justify-content-center d-md-none agendaFiltresButton"
+          >
+          Filtres i Agenda
+          </b-button>
+        </div>
         <filtersCalendar class="visualitzacioDesktopAgenda"/>
         <filtersCalendar v-if="myToggle==true" class="mt-4"/>
       </b-col>
 
       <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 carrussel">
 
-        <b-row class="m-0 ml-4 overflow-hidden">
-          <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]" class="pt-3"/>
-          <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]" class="pt-3"/>
-          <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]" class="pt-3"/>
+        <b-row ref="mascaraGaleria" v-if="isMobile==false" class="m-0 ml-4 overflow-hidden position-relative">
+          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <gallery
+            v-if=visibilitatGaleriaEsportiva 
+            :activitatsCarousel="activitatsCarousel.Esportives" 
+            :titolGaleria="keys[0]" 
+            :ampladaPantallaActivitat="this.ampladaPantalla" 
+            class="pt-3"
+          />
+          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <gallery 
+            v-if=visibilitatGaleriaCultural 
+            :activitatsCarousel="activitatsCarousel.Culturals" 
+            :titolGaleria="keys[1]" 
+            :ampladaPantallaActivitat="this.ampladaPantalla" 
+            class="pt-3"
+          />
+          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <gallery
+            v-if=visibilitatGaleriaSocial 
+            :activitatsCarousel="activitatsCarousel.Socials" 
+            :titolGaleria="keys[2]" 
+            :ampladaPantallaActivitat="this.ampladaPantalla" 
+            class="pt-3"
+          />
+        </b-row>
+
+        <b-row v-if="isMobile==true" class="m-0 ml-4 position-relative">
+          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+            <gallery 
+              v-if=visibilitatGaleriaEsportiva
+              :activitatsCarousel="activitatsCarousel.Esportives"
+              :ampladaPantallaActivitat="this.ampladaPantalla" 
+              class="pt-3 overflow-auto"
+            />
+          <h3 class="m-0 pt-4">Activitats {{keys[1]}}</h3>
+            <gallery 
+              v-if=visibilitatGaleriaCultural 
+              :activitatsCarousel="activitatsCarousel.Culturals"  
+              :ampladaPantallaActivitat="this.ampladaPantalla" 
+              class="pt-3 overflow-auto"
+            />
+          <h3 class="m-0 pt-4">Activitats {{keys[2]}}</h3>
+            <gallery 
+              v-if=visibilitatGaleriaSocial 
+              :activitatsCarousel="activitatsCarousel.Socials" 
+              :titolGaleria="keys[2]" 
+              :ampladaPantallaActivitat="this.ampladaPantalla"
+              class="pt-3 overflow-auto"
+            />
         </b-row>
 
         <b-row class="m-0 py-4 justify-content-center carrussel">
           <b-button
-            size="lg" 
+            size="lg"
             href="http://ce-terrassa.cat/activitats-del-cet/" 
             class="btnTipusActivitats tipusActivitats mr-xl-5">
               <img src="../assets/botonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">
@@ -73,10 +120,20 @@ export default {
       visibilitatGaleriaEsportiva:true,
       visibilitatGaleriaCultural:true,
       visibilitatGaleriaSocial:true,
+      isMobile:false,
     }
   },
 
   mounted() {
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      this.isMobile=true;
+    }
     if (this.activitatsCarousel.Esportives==undefined) {
       this.visibilitatGaleriaEsportiva=false;
     } else if (this.activitatsCarousel.Culturals==undefined) {
@@ -84,6 +141,10 @@ export default {
     } else if (this.activitatsCarousel.Socials==undefined) {
       this.visibilitatGaleriaSocial=false;
     }
+    this.ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
+    console.log(this.ampladaPantalla);
+    console.log(this.isMobile);
+
   },
 }
 
@@ -105,7 +166,7 @@ export default {
   }
 
   .agendaFiltres{
-    background:#3d4855;
+    background:#008cba;
   }
 
   .carrussel{
@@ -116,7 +177,7 @@ export default {
     background:#3d4855;
   }
 
-  /* Botons totes activitats */
+  /* Botons totes activitats en galeries */
 
   .btnTipusActivitats {
     border:none !important;
@@ -195,6 +256,13 @@ export default {
     .wikilocActivitats {
       display: none !important;
     }
+  }
+
+  /* Botons que amaga els filtres i agenda en movil */
+
+  .agendaFiltresButton{
+    width:100%;
+    max-width: 350px;
   }
 
 </style>

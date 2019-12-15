@@ -7,16 +7,19 @@
 
       <activitats />
 
- <activitatPromocionada
+      <activitatPromocionada
         :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
         :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
       />
 
-      <!--<activitatsDestacades />
+      <activitatsDestacades/>
 
-      <activitatPromocionada/>
+      <activitatPromocionada
+        :activitatPromocionadaEsquerra="activitatsPromocionades.FEEC"
+        :activitatPromocionadaDreta="activitatsPromocionades.Participa"
+      />
 
-      <noticies />
+      <!--<noticies />
 
       <activitatPromocionada />
 
