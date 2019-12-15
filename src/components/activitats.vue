@@ -7,19 +7,17 @@
           :pressed.sync="myToggle"
           size="lg"
           variant="info"
-          class="justify-content-center d-md-none"
+          class="justify-content-center d-md-none agendaFiltresButton"
         >
         Filtres i Agenda
         </b-button>
-        <!-- <div>{{myToggle}}</div> -->
-        <!-- <filtersCalendar/> -->
-        <filtersCalendar v-if="myToggle==true" class="mt-md-4"/>
-        <!-- <filtersCalendar  v-if="myToggle==true" class="mt-0 d-none"/>  -->
+        <filtersCalendar class="visualitzacioDesktopAgenda"/>
+        <filtersCalendar v-if="myToggle==true" class="mt-4"/>
       </b-col>
 
       <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 carrussel">
 
-        <b-row class="m-0 ml-4 position-relative overflow-hidden">
+        <b-row class="m-0 ml-4 overflow-hidden">
           <gallery v-if=visibilitatGaleriaEsportiva :activitatsCarousel="activitatsCarousel.Esportives" :titolGaleria="keys[0]" class="pt-3"/>
           <gallery v-if=visibilitatGaleriaCultural :activitatsCarousel="activitatsCarousel.Culturals" :titolGaleria="keys[1]" class="pt-3"/>
           <gallery v-if=visibilitatGaleriaSocial :activitatsCarousel="activitatsCarousel.Socials" :titolGaleria="keys[2]" class="pt-3"/>
@@ -29,21 +27,21 @@
           <b-button
             size="lg" 
             href="http://ce-terrassa.cat/activitats-del-cet/" 
-            class="btnTipusActivitats tipusActivitats">
+            class="btnTipusActivitats tipusActivitats mr-xl-5">
               <img src="../assets/botonsActivitats/tipusActivitats.png" class="mr-3 botonsActivitatsImg">
               Totes les Activitats
             </b-button>
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/infantilijuvenil/"
-            class="btnTipusActivitats familiaActivitats mx-md-5">
+            class="btnTipusActivitats familiaActivitats">
               <img src="../assets/botonsActivitats/familiaActivitats.png" class="mr-3 botonsActivitatsImg">
               Activitats pels Teus Fills i en Família
           </b-button>
           <b-button
             size="lg"
             href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" 
-            class="btnTipusActivitats wikilocActivitats">
+            class="btnTipusActivitats wikilocActivitats ml-xxl-5 mx-lg-4">
               <img src="../assets/botonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg">
               Canal CET a Wikiloc
           </b-button>
@@ -100,6 +98,12 @@ export default {
 
 <style scoped>
 
+  @media (max-width: 767px) {
+    .visualitzacioDesktopAgenda{
+      display:none !important;
+    }
+  }
+
   .agendaFiltres{
     background:#3d4855;
   }
@@ -118,9 +122,22 @@ export default {
     border:none !important;
     font-size: 1.2rem !important;
     display:inline-flex !important;
-    text-align:left !important;
+    text-align: left !important;
     align-items: center !important;
+    justify-content:center !important;
     color:cyan;
+  }
+
+  .btnTipusActivitats:hover {
+    border:none !important;
+    color:#103440;
+    font-weight:700;
+  }
+
+  .btnTipusActivitats:active {
+    border:none !important;
+    color:#103440;
+    font-weight:700;
   }
 
   .tipusActivitats{
@@ -129,8 +146,18 @@ export default {
 
   .tipusActivitats:hover{
     background-color:#ad7140;
-    color:#103440;
-    font-weight:700;
+  }
+
+  .tipusActivitats:active{
+    background-color:#ad7140;
+  }
+
+  @media (max-width: 1199px) {
+    .tipusActivitats {
+      margin-bottom:1.5rem;
+      margin-right:3rem;
+      margin-left:3rem;
+    }
   }
 
   .familiaActivitats{
@@ -139,8 +166,17 @@ export default {
 
   .familiaActivitats:hover{
     background-color:#768639;
-    color:#103440;
-    font-weight:700;
+  }
+
+  .familiaActivitats:active{
+    background-color:#768639;
+  }
+
+  @media (max-width: 1199px) {
+    .familiaActivitats {
+      margin-right:3rem;
+      margin-left:3rem;
+    }
   }
 
   .wikilocActivitats{
@@ -149,8 +185,16 @@ export default {
 
   .wikilocActivitats:hover{
     background-color:#6898c0;
-    color:#103440;
-    font-weight:700;
+  }
+
+  .wikilocActivitats:active{
+    background-color:#6898c0;
+  }
+
+  @media (max-width: 1428px) {
+    .wikilocActivitats {
+      display: none !important;
+    }
   }
 
 </style>

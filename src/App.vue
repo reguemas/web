@@ -43,7 +43,6 @@ import serveis from "./components/serveis.vue";
 import colaboradorsWebAmigues from "./components/colaboradorsWebAmigues.vue";
 import peuWeb from "./components/footer.vue";
 import promocions from './components/json/promocions.json';
-import './custom.scss';
 
 export default {
   name: "app",

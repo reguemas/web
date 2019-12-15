@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div ref="mascaraGaleria">
     <h3 class="m-0 pb-4">Activitats {{titolGaleria}}</h3>
-    <b-row ref="mascaraGaleria" class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
+    <b-row class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
       <b-list-group horizontal ref="esMou" class="esMou">
         <b-list-group-item class="p-0 carruselActivitats" :key="index" v-for="(activitat,index) in activitatsCarousel">
           <card :activitat="activitat"/>
@@ -60,6 +60,11 @@ export default {
       this.numClickFinalGaleria=0;
       this.controlsVisibilitat=false;
     }
+
+    console.log("ampladaPantalla",this.ampladaPantalla);
+    console.log("longitudGaleria",this.longitudGaleria);
+    console.log("numCardsVisibles",this.numCardsVisibles);
+    console.log("numClickFinalGaleria",this.numClickFinalGaleria);
   },
 
   methods:{

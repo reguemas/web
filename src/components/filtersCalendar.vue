@@ -385,4 +385,10 @@ export default {
     font-weight:bold;
   }
 
+  @media (max-width: 1199px) {
+    .botoAgenda {
+      margin-top:40px;
+    }
+  }
+
 </style>

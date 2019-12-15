@@ -9,7 +9,9 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './custom.scss'
 import './css/main.css'
+
 
 Vue.config.productionTip = false
 

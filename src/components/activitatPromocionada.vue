@@ -156,7 +156,7 @@
     width:auto;
   }
   
-  @media (min-width:656px) and (max-width: 710px) {
+  @media (min-width:656px) and (max-width: 715px) {
     .imatgePromocionadaMascara{
       width:320px;
       height:auto;
