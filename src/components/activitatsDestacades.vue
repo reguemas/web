@@ -33,11 +33,11 @@ export default {
 
 <style scoped>
 .activitatsDestacades{
-  background: #3f628d;
+  background: #d0d8d0;
 }
 
 h2 {
-  color:#f2f5f7;
+  color:#545454;
 }
 
 </style>

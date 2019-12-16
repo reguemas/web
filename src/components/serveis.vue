@@ -1,9 +1,9 @@
 <template>
     <div class="serveis">
-      <h2 class="text-center py-5">Serveis</h2>
+      <h2 class="text-center py-4">Serveis</h2>
       <b-row class="m-0 filters justify-content-center align-items-center pb-5">
         <b-list-group horizontal ref="serveis">
-          <b-list-group-item class="p-0 ml-5">
+          <b-list-group-item class="p-0 ml-0">
             <h4 class="text-center mb-5">Targetes Federatives</h4>
             <a class="serveisImg targetaFederativa" href="http://ce-terrassa.cat/inici/llicencies-federatives/"></a>
           </b-list-group-item>
@@ -35,6 +35,10 @@
 </script>
 
 <style>
+
+  .serveis{
+    background:#e1d1a0;
+  }
 
   .serveisImg {
     text-decoration:none !important;

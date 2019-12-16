@@ -3,8 +3,8 @@
     <h2 class="ml-3 my-4">Noticies</h2>
     <b-row class="m-0">
       <b-list-group horizontal ref="esMou" class="esMou">
-        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(activitat,index) in activitatsCarousel">
-          <cardNoticies :activitat="activitat"/>
+        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(noticia,index) in noticiesCarousel">
+          <cardNoticies :noticia="noticia"/>
         </b-list-group-item>
       </b-list-group>
     </b-row>
@@ -19,7 +19,7 @@ export default {
 
   name: 'galleryNoticies',
 
-  props:["activitatsCarousel"],
+  props:["noticiesCarousel"],
 
   components: {
     cardNoticies,

@@ -27,7 +27,7 @@
             :ampladaPantallaActivitat="this.ampladaPantalla" 
             class="pt-3"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <h3 class="m-0 pt-4">Activitats {{keys[1]}}</h3>
           <gallery 
             v-if=visibilitatGaleriaCultural 
             :activitatsCarousel="activitatsCarousel.Culturals" 
@@ -35,7 +35,7 @@
             :ampladaPantallaActivitat="this.ampladaPantalla" 
             class="pt-3"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <h3 class="m-0 pt-4">Activitats {{keys[2]}}</h3>
           <gallery
             v-if=visibilitatGaleriaSocial 
             :activitatsCarousel="activitatsCarousel.Socials" 
@@ -121,6 +121,7 @@ export default {
       visibilitatGaleriaCultural:true,
       visibilitatGaleriaSocial:true,
       isMobile:false,
+/*       ampladaPantalla:'', */
     }
   },
 
@@ -142,9 +143,7 @@ export default {
       this.visibilitatGaleriaSocial=false;
     }
     this.ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-    console.log(this.ampladaPantalla);
-    console.log(this.isMobile);
-
+    console.log("activitats",this.ampladaPantalla);
   },
 }
 
@@ -166,7 +165,7 @@ export default {
   }
 
   .agendaFiltres{
-    background:#008cba;
+    background:#3d4855;
   }
 
   .carrussel{

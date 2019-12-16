@@ -50,16 +50,17 @@ export default {
     }
     this.element = this.$refs.esMou;
     this.longitudGaleria = this.element.childNodes.length;
-    this.numCardsVisibles = Math.floor((this.ampladaPantallaGaleria)/316);
-    this.numClickFinalGaleria = Math.floor(this.longitudGaleria/this.numCardsVisibles);
-    if (this.numCardsVisibles==1) {
-      this.numClickFinalGaleria--;
-    }
-    if ((this.longitudGaleria*316)<this.ampladaPantallaGaleria){
-      this.numClickFinalGaleria=0;
-      this.controlsVisibilitat=false;
-    }
-
+    this.$nextTick(function () {
+      this.numCardsVisibles = Math.floor((this.ampladaPantallaGaleria)/316);
+      this.numClickFinalGaleria = Math.floor(this.longitudGaleria/this.numCardsVisibles);
+      if (this.numCardsVisibles==1) {
+        this.numClickFinalGaleria--;
+      }
+      if ((this.longitudGaleria*316)<this.ampladaPantallaGaleria){
+        this.numClickFinalGaleria=0;
+        this.controlsVisibilitat=false;
+      }
+    })
   },
 
   methods:{

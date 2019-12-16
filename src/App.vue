@@ -19,17 +19,23 @@
         :activitatPromocionadaDreta="activitatsPromocionades.Participa"
       />
 
-      <!--<noticies />
+<!--       <noticies/>
 
-      <activitatPromocionada />
+      <activitatPromocionada
+        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
+        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
+      /> -->
 
       <serveis />
 
-      <activitatPromocionada />
+      <activitatPromocionada
+        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
+        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
+      />
 
       <colaboradorsWebAmigues />
 
-      <peuWeb/> -->
+      <peuWeb/>
 
     </b-container>
 </template>

@@ -1,10 +1,10 @@
 <template>
   <div class="cardDestacadesBody" @mouseover = "hover=true" @mouseleave = "hover=false">
-    <a class="cardDestacadesImg" ref="urlActivitat">     
+    <a class="cardDestacadesImg" :href="this.noticia.url">     
       <div class="cardDestacadesTitle" ref="cardDestacadesBackgroundMobile">
-          <h3 class="titolDestacades">{{ activitat.Titular }}</h3>
+          <h3 class="titolDestacades">{{ noticia.Titular }}</h3>
           <div class="cardDestacadesInfo">
-            {{ activitat.Descripcio }}
+            {{ activitat.noticia }}
           </div>
       </div>
     </a>
@@ -15,9 +15,9 @@
 <script>
 
 export default {
-  name: 'cardDestacades',
+  name: 'cardNoticies',
 
-  props:["activitat"],
+  props:["noticia"],
 
   data() {
     return {
@@ -36,10 +36,6 @@ export default {
       this.hover=true;
       this.$refs.cardDestacadesBackgroundMobile.style.background="rgba(0,0,0,0.6)"
     }
-
-    this.$refs.urlActivitat.setAttribute("href",this.activitat.url);
-    this.$refs.urlActivitat.style.background = "url(" + this.activitat.Imatge + ") no-repeat";
-    this.$refs.urlActivitat.style.backgroundSize = "400px 400px";
   },
 
 }
