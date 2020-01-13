@@ -1,13 +1,13 @@
 <template>
   <div
-    class="cardBody cardActivitatTamany"
+    class="cardBody"
     @mouseover = "hover=true"
     @mouseleave = "hover=false"
+    :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'250px 250px'}"
   >
     <a
-      class="cardImg cardActivitatImgTamany" 
+      class="cardImg" 
       :href="this.activitat.url"
-      :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'300px 300px'}"
     >     
       <div class="cardTitle" :class="{ mobileBackground:hover }">
         <h3 class="titol">{{ activitat.title }}</h3>
@@ -19,7 +19,6 @@
       </div>
     </a>
   </div>
-
 </template>
 
 <script>
@@ -53,15 +52,26 @@ export default {
 
 <style scoped>
 
-  .cardActivitatTamany{
+/*   .cardActivitatTamany{
+    width: 250px;
+    height: 250px;
+    
+  }
+
+  .cardActivitatImgTamany {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cardActivitatImgTamany:hover {
     width: 300px;
     height: 300px;
   }
 
-  .cardActivitatImgTamany {
+  .cardActivitatTamany:hover{
     width: 300px;
     height: 300px;
-  }
+  } */
 
 </style>
 
@@ -72,17 +82,30 @@ export default {
   }
 
   .cardBody{
+    width: 250px;
+    height: 250px;
     overflow:hidden;
     border: none !important;
     border-radius: 0 !important;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     text-align:center;
-    display: block; 
+  }
+
+  .cardBody:hover{
+    width: 300px;
+    height: 300px;
   }
 
   .cardImg {
     text-decoration:none !important;
     display:block;
+    width: 250px;
+    height: 250px;
+  }
+
+    .cardBody:hover{
+    width: 300px;
+    height: 300px;
   }
 
   .cardImg :hover {
@@ -131,19 +154,3 @@ export default {
 
 </style>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-  .cardActivitatTamany{
-    width: 300px;
-    height: 300px;
-  }
-
-  .cardActivitatImgTamany{
-    width: 300px;
-    height: 300px;
-  }
-
-
-
-</style>

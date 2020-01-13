@@ -47,11 +47,12 @@
 
         <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
 
-          <b-navbar-nav class="ml-4"> 
+          <b-navbar-nav class="ml-4">
             <b-nav-item-dropdown :text="'El '+ keys[0]" left>
               <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.CET" :key="index">{{ item.item }}</b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown text="Activitats" left class="ml-5">
+              <b-dropdown-item href="http://ce-terrassa.cat/activitats-del-cet/">Activitats del CET</b-dropdown-item>
               <b-dropdown-header class="dropdown-header-label">
                 Activitats {{ keys[1] }}
               </b-dropdown-header>

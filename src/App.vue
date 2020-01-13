@@ -19,12 +19,7 @@
         :activitatPromocionadaDreta="activitatsPromocionades.Participa"
       />
 
-<!--       <noticies/>
-
-      <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
-        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
-      /> -->
+      <noticies/>
 
       <serveis />
 

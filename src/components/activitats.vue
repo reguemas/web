@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="m-0 p-0">
     <b-row class="m-0 p-0">
-      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="p-4 agendaFiltres">
+      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="p-4 carrussel">
         <div class="d-flex justify-content-center">
           <b-button
             :pressed.sync="myToggle"

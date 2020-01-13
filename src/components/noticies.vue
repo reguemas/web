@@ -1,25 +1,28 @@
 <template>
-    <div>
-      <b-row no-gutters align-v="center" class="m-0 pb-4 filters justify-content-center">
-          <galleryNoticies :noticiesCarousel="noticiesCarousel.Noticies" :titolGaleria="keys[0]"/>
-      </b-row>
-    </div>
+  <div class="block noticies">
+    <b-row no-gutters align-v="center" class="m-0 justify-content-center">
+      <h2 class="pb-3 text-center w-100">Noticies</h2>
+      <div class="py-3 mt-0 mx-4" v-for="(noticia) in noticiesGaleria" :key="noticia.index">
+        <cardNoticies :noticia="noticia"/>
+      </div>
+    </b-row>
+  </div>
 </template>
 
 <script>
-import galleryNoticies from './galleryNoticies.vue'
+import cardNoticies from './cardNoticies.vue'
 import noticies from './json/noticies.json'
 
 export default {
   name: 'noticies',
 
   components: {
-    galleryNoticies
+    cardNoticies
   },
 
   data() {
     return {
-      noticiesCarousel: noticies,
+      noticiesGaleria: noticies.Noticies,
     }
   }
 }
@@ -27,6 +30,13 @@ export default {
 </script>
 
 <style>
+  .noticies{
+    background: #d0d8d0;
+    padding-top:3rem;
+    padding-bottom:3rem;
+  }
 
-
+  h2 {
+    color:#545454;
+  }
 </style>

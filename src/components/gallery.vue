@@ -74,10 +74,6 @@ export default {
     },
 
     movimentCarousel: function() {
-      console.log("longitudGaleria", this.longitudGaleria);
-      console.log("numCardsVisibles", this.numCardsVisibles);
-      console.log("ampladaPantallaGaleria", this.ampladaPantallaGaleria);
-      console.log(this.numClickFinalGaleria);
       if (this.numCardsVisibles == 0) {
         this.numCardsVisibles++;
       }
@@ -129,9 +125,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.fons {
-  background-color: red;
-}
 
 .esMou {
   transition: transform 1s ease-in-out;
@@ -153,7 +146,7 @@ export default {
   border: none !important;
   color: white;
   font-size: 50px;
-  line-height: 300px;
+  line-height: 250px;
   text-align: center;
   width: 75px;
   padding: 0 !important;
@@ -172,7 +165,7 @@ export default {
   border: none !important;
   color: white;
   font-size: 50px;
-  line-height: 300px;
+  line-height: 250px;
   text-align: center;
   width: 75px;
   padding: 0 !important;
