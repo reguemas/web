@@ -7,7 +7,7 @@
     <a
       class="cardImg" 
       :href="this.activitat.url"
-       :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'250px 250px'}"
+      :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'300px 300px'}"
     >     
       <div class="cardTitle" :class="{ mobileBackground:hover }">
         <h3 class="titol">{{ activitat.title }}</h3>
@@ -50,31 +50,6 @@ export default {
 
 </script>
 
-<style scoped>
-
-/*   .cardActivitatTamany{
-    width: 250px;
-    height: 250px;
-    
-  }
-
-  .cardActivitatImgTamany {
-    width: 250px;
-    height: 250px;
-  }
-
-  .cardActivitatImgTamany:hover {
-    width: 300px;
-    height: 300px;
-  }
-
-  .cardActivitatTamany:hover{
-    width: 300px;
-    height: 300px;
-  } */
-
-</style>
-
 <style>
 
   .mobileBackground{
@@ -82,18 +57,18 @@ export default {
   }
 
   .cardBody{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     position:relative;
-    /*overflow:hidden;*/
     border: none !important;
     border-radius: 0 !important;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    text-align:center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
   }
-
+/* 
   .cardBody:hover{
-    z-index:10000;    
+    margin:0px 25px;
   }
 
   .cardBody:hover .cardImg{
@@ -103,19 +78,15 @@ export default {
     width: 300px;
     height: 300px;
     background-size:300px 300px !important;
-  }
+  } */
 
   .cardImg {
     text-decoration:none !important;
     display:block;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    overflow:hidden;
   }
-
-  /*.cardImg :hover {
-    background: rgba(0,0,0,0.8);
-    text-decoration:none !important;
-  }*/
 
   a:hover {
     text-decoration:none !important;
