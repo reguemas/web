@@ -1,67 +1,29 @@
 <template>
   <div>
-    <b-row class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
+    <b-row class="m-0">
       <b-list-group horizontal ref="esMou" class="esMou pr-3">
         <b-list-group-item
           class="p-0 carruselActivitats"
           :key="index"
           v-for="(activitat,index) in activitatsCarousel"
         >
-          <card :activitat="activitat" />
+          <cardMobile :activitat="activitat" />
         </b-list-group-item>
       </b-list-group>
-      <div v-if="controlsVisibilitat">
-        <button
-          class="botoAnterior"
-          v-if="botoAnteriorVisibilitat"
-          @click="movimentCarousel"
-          ref="anterior"
-        >&lsaquo;</button>
-        <button
-          class="botoSeguent"
-          v-if="botoSeguentVisibilitat"
-          @click="movimentCarousel"
-          ref="seguent"
-        >&rsaquo;</button>
-      </div>
     </b-row>
   </div>
 </template>
 
 <script>
-import card from "./card.vue";
+import cardMobile from "./cardMobile.vue";
 
 export default {
-  name: "gallery",
+  name: "galleryMobile",
 
-  props: ["activitatsCarousel", "ampladaPantallaActivitat"],
+  props: ["activitatsCarousel"],
 
   components: {
-    card
-  },
-
-  data() {
-    return {
-      count: 0,
-      botoAnteriorVisibilitat: false,
-      botoSeguentVisibilitat: true,
-      controlsVisibilitat: false,
-      ampladaPantallaGaleria: this.ampladaPantallaActivitat
-    };
-  },
-
-  mounted() {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i)
-    ) {
-      this.controlsVisibilitat = false;
-    }
+    cardMobile
   },
 
   methods: {

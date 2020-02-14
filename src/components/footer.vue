@@ -29,7 +29,7 @@
         </b-col>
         <b-col cols="12" xl="4">
           <h5 class="mb-4 mt-5">Butlletí Setmanal</h5>
-          <a class="my-4 butlleti"  href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
+          <a class="my-4 footerButlleti" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
         </b-col>
         <b-col cols="12" xl="4">
           <h5 class="mt-5 mb-4">Contacte</h5>
@@ -41,7 +41,7 @@
         </b-col>
       </b-row>
       <b-row no-gutters class="w-100">
-        <p class="mx-auto">© CENTRE EXCURSIONISTA DE TERRASSA 2020. Entitat excursionista des de 1910</p>
+        <p class="mx-auto">© CENTRE EXCURSIONISTA DE TERRASSA 2020. Entitat Excursionista des de 1910</p>
       </b-row>
     </div>
 </template>
@@ -95,14 +95,14 @@ export default {
     font-weight:900;
   }
 
-/*   .festeSoci{
+  .footerButlleti{
     display:block;
     width: 300px;
-    height: 187px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2015/01/2015-01-17-16.33.55-300x187.jpg") no-repeat;
+    height: 246px;
+    background: url("http://ce-terrassa.cat/wp-content/uploads/2018/06/banner_newsletter-blancII-300x246.png") no-repeat;
   }
 
-  .footerFeec{
+/*   .footerFeec{
     display:block;
     width: 300px;
     height: 189px;
@@ -114,7 +114,7 @@ export default {
     width: 300px;
     height: 190px;
     background: url("http://ce-terrassa.cat/wp-content/uploads/2019/12/espeleologia2020retallada-300x190.jpg") no-repeat;
-  } */  
+  } */
 
 
 </style>

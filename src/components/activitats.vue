@@ -1,7 +1,7 @@
 <template>
-  <b-container fluid class="m-0 p-0">
+  <b-container fluid class="mx-0 p-0">
     <b-row class="m-0 p-0">
-      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="p-4 carrussel">
+      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="carrussel calendariFiltresMarges">
         <div class="d-flex justify-content-center">
           <b-button
             :pressed.sync="myToggle"
@@ -17,10 +17,10 @@
       <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 carrussel">
         <b-row
           ref="mascaraGaleria"
+          class="position-relative overflow-hidden galeriaActivitats"
           v-if="isMobile==false"
-          class="m-0 ml-4 overflow-hidden position-relative"
         >
-          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <h3 class="mx-0 mt-2 mb-3 pt-4">Activitats {{keys[0]}}</h3>
           <gallery
             v-if="visibilitatGaleriaEsportiva"
             :activitatsCarousel="activitatsCarousel.Esportives"
@@ -28,7 +28,7 @@
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[1]}}</h3>
+          <h3 class="mx-0 my-3 pt-4">Activitats {{keys[1]}}</h3>
           <gallery
             v-if="visibilitatGaleriaCultural"
             :activitatsCarousel="activitatsCarousel.Culturals"
@@ -36,33 +36,33 @@
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[2]}}</h3>
+          <h3 class="mx-0 my-3 pt-4">Activitats {{keys[2]}}</h3>
           <gallery
             v-if="visibilitatGaleriaSocial"
             :activitatsCarousel="activitatsCarousel.Socials"
             :titolGaleria="keys[2]"
             :ampladaPantallaActivitat="ampladaPantalla"
-            class="pt-3"
+            class="pt-3 pb-5"
           />
         </b-row>
 
-        <b-row v-if="isMobile==true" class="m-0 ml-4 position-relative">
+        <b-row v-if="isMobile==true" class="position-relative galeriaActivitats">
           <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
-          <gallery
+          <galleryMobile
             v-if="visibilitatGaleriaEsportiva"
             :activitatsCarousel="activitatsCarousel.Esportives"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
           <h3 class="m-0 pt-4">Activitats {{keys[1]}}</h3>
-          <gallery
+          <galleryMobile
             v-if="visibilitatGaleriaCultural"
             :activitatsCarousel="activitatsCarousel.Culturals"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
           <h3 class="m-0 pt-4">Activitats {{keys[2]}}</h3>
-          <gallery
+          <galleryMobile
             v-if="visibilitatGaleriaSocial"
             :activitatsCarousel="activitatsCarousel.Socials"
             :titolGaleria="keys[2]"
@@ -71,7 +71,7 @@
           />
         </b-row>
 
-        <b-row class="m-0 py-4 justify-content-center carrussel">
+        <b-row class="m-0 pt-1 pb-5 justify-content-center carrussel">
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/activitats-del-cet/"
@@ -110,6 +110,7 @@
 
 <script>
 import gallery from "./gallery.vue";
+import galleryMobile from "./galleryMobile.vue";
 import filtersCalendar from "./filtersCalendar.vue";
 import totesActivitats from "./json/activitatsCarousels.json";
 
@@ -118,6 +119,7 @@ export default {
 
   components: {
     gallery,
+    galleryMobile,
     filtersCalendar
   },
 
@@ -144,7 +146,6 @@ export default {
   },
   watch:{
     ampladaPantalla: function (){
-      console.log(this.$refs.mascaraGaleria.offsetWidth)
       return this.$refs.mascaraGaleria.offsetWidth;
     }
   },
@@ -168,122 +169,152 @@ export default {
       this.visibilitatGaleriaSocial = false;
     }
     this.amplada = this.$refs.mascaraGaleria.offsetWidth;
-    console.log("activitats", this.$refs.mascaraGaleria.offsetWidth);
   }
 };
 </script>
 
 <style>
-.botonsActivitatsImg {
-  width: 40px;
-  height: 40px;
-}
+
+  .botonsActivitatsImg {
+    width: 40px;
+    height: 40px;
+  }
 </style>
 
 <style scoped>
-@media (max-width: 767px) {
-  .visualitzacioDesktopAgenda {
-    display: none !important;
+  @media (max-width: 767px) {
+    .visualitzacioDesktopAgenda {
+      display: none !important;
+    }
   }
-}
 
-.agendaFiltres {
-  background: #3d4855;
-}
+  .agendaFiltres {
+    background: #3d4855;
+  }
 
-.carrussel {
-  background: #afc8ad;
-}
+  .carrussel {
+    background: #afc8ad;
+  }
 
-.botons {
-  background: #3d4855;
-}
+  .botons {
+    background: #3d4855;
+  }
 
-/* Botons totes activitats en galeries */
+  /* Marges i tamany dels carrusels d'activtats i del calendari i fltres */
 
-.btnTipusActivitats {
-  border: none !important;
-  font-size: 1.2rem !important;
-  display: inline-flex !important;
-  text-align: left !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: cyan;
-}
+  .galeriaActivitats{
+    margin: 0 0 0 6.5rem;
+  }
 
-.btnTipusActivitats:hover {
-  border: none !important;
-  color: #103440;
-  font-weight: 700;
-}
+  .calendariFiltresMarges{
+    padding: 2rem 0 3rem 6.5rem;
+  }
 
-.btnTipusActivitats:active {
-  border: none !important;
-  color: #103440;
-  font-weight: 700;
-}
+  @media (max-width: 1500px) {
+    .calendariFiltresMarges{
+      padding: 1.5rem 0 3rem 3rem;
+    }
+    .galeriaActivitats {
+      margin: 0 0 3rem 3rem;
+    }
+  }
 
-.tipusActivitats {
-  background-color: #e08d4b;
-}
 
-.tipusActivitats:hover {
-  background-color: #ad7140;
-}
+  @media (max-width: 768px) {
+    .calendariFiltresMarges{
+      padding: 2rem 3rem 1rem 3rem;
+    }
+    .galeriaActivitats {
+      margin: 0 3rem;
+    }
+  }
 
-.tipusActivitats:active {
-  background-color: #ad7140;
-}
+  /* Botons totes activitats en galeries */
 
-@media (max-width: 1199px) {
+  .btnTipusActivitats {
+    border: none !important;
+    font-size: 1.2rem !important;
+    display: inline-flex !important;
+    text-align: left !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: cyan;
+  }
+
+  .btnTipusActivitats:hover {
+    border: none !important;
+    color: #103440;
+    font-weight: 700;
+  }
+
+  .btnTipusActivitats:active {
+    border: none !important;
+    color: #103440;
+    font-weight: 700;
+  }
+
   .tipusActivitats {
-    margin-bottom: 1.5rem;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    background-color: #e08d4b;
   }
-}
 
-.familiaActivitats {
-  background-color: #a6bf4e;
-}
+  .tipusActivitats:hover {
+    background-color: #ad7140;
+  }
 
-.familiaActivitats:hover {
-  background-color: #768639;
-}
+  .tipusActivitats:active {
+    background-color: #ad7140;
+  }
 
-.familiaActivitats:active {
-  background-color: #768639;
-}
+  @media (max-width: 1199px) {
+    .tipusActivitats {
+      margin-bottom: 1.5rem;
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+  }
 
-@media (max-width: 1199px) {
   .familiaActivitats {
-    margin-right: 3rem;
-    margin-left: 3rem;
+    background-color: #a6bf4e;
   }
-}
 
-.wikilocActivitats {
-  background-color: #82c1f4;
-}
+  .familiaActivitats:hover {
+    background-color: #768639;
+  }
 
-.wikilocActivitats:hover {
-  background-color: #6898c0;
-}
+  .familiaActivitats:active {
+    background-color: #768639;
+  }
 
-.wikilocActivitats:active {
-  background-color: #6898c0;
-}
+  @media (max-width: 1199px) {
+    .familiaActivitats {
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+  }
 
-@media (max-width: 1428px) {
   .wikilocActivitats {
-    display: none !important;
+    background-color: #82c1f4;
   }
-}
 
-/* Botons que amaga els filtres i agenda en movil */
+  .wikilocActivitats:hover {
+    background-color: #6898c0;
+  }
 
-.agendaFiltresButton {
-  width: 100%;
-  max-width: 350px;
-}
+  .wikilocActivitats:active {
+    background-color: #6898c0;
+  }
+
+  @media (max-width: 1428px) {
+    .wikilocActivitats {
+      display: none !important;
+    }
+  }
+
+  /* Botons que amaga els filtres i agenda en movil */
+
+  .agendaFiltresButton {
+    width: 100%;
+    max-width: 350px;
+  }
+
 </style>

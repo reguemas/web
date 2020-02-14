@@ -1,5 +1,8 @@
 <template>
-  <div class="cardNoticiaBody">
+  <div class="cardNoticiaBody" 
+    @mouseover = "hover=true"
+    @mouseleave = "hover=false"
+  >
     <a 
       class="cardNoticiaImg cardNoticiaImgTamany"
       :style="{background:'url(' + noticia.imatge + ') no-repeat', backgroundSize:'auto 350px'}"
@@ -8,7 +11,7 @@
       <div 
         class="cardNoticiaTitle"
       >
-        <h3 class="noticiaTitol">{{ noticia.titular }}</h3>
+        <h3 :class="[{noticiaTitolHover:hover}, {noticiaTitol:!hover}]">{{ noticia.titular }}</h3>
       </div>
     </a>
   </div>
@@ -43,6 +46,13 @@ export default {
     display: block; 
     width: 320px;
     height: 350px;
+    transition-delay: 1s;
+    transition: all 0.3s ease;
+  }
+
+  .cardNoticiaBody:hover{
+    margin:0px 20px;
+    transform: scale(1.2);
   }
 
   .noticiaTitol{
@@ -55,7 +65,12 @@ export default {
     font-weight:bold;
   }
 
-  .noticiaTitol:hover{
+  .noticiaTitolHover{
+    font-family: Quicksand;
+    font-size:1.3rem;
+    padding:10px;
+    margin:15px;
+    font-weight:bold;
     color:black;
     background-color: rgb(217, 217, 255);
   }

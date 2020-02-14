@@ -4,6 +4,7 @@
     @mouseover = "hover=true" 
     @mouseleave = "hover=false"
     :class="'cardOutline'+this.tipusActivitats[this.activitat.tipus]"
+    :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'320px 320px'}"
   >
     <a 
       class="cardImg cardDestacadaImgTamany"
@@ -19,7 +20,7 @@
         <div class="activitatInfo" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
         <div class="activitatInfo" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
         <div class="activitatInfo" v-if="activitat.dificultat!=0">Dificultat: {{ activitat.dificultat }}</div>
-        <div class="cardInfo mt-3">{{ activitat.descripcio }}</div>
+        <div class="cardDestacadaInfo mt-3">{{ activitat.descripcio }}</div>
       </div>
     </a>
   </div>
@@ -94,6 +95,11 @@ export default {
 
   .cardDestacadaTitle{
     padding-top:20px !important;
+  }
+
+  .cardDestacadaInfo{
+    color:cyan;
+    font-size:1rem;
   }
 
 </style>

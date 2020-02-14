@@ -52,7 +52,7 @@
         </template>
       </b-row>
 
-      <b-row class="pt-4">
+      <b-row class="pt-5 justify-content-center">
         <b-button
           size="lg"
           href="http://ce-terrassa.cat/agenda/"
@@ -260,7 +260,7 @@ export default {
   /* Tipus d'Activitats del dia*/
 
   .activitatsDiaSeleccionat{
-    max-height:724px;
+    max-height:655px;
     overflow:auto;
   }
 
@@ -382,6 +382,7 @@ export default {
     justify-content:center !important;
     align-items: center !important;
     background-color:#9e9f9f;
+    max-width:350px;
   }
 
   .botoAgenda:hover{

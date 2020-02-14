@@ -96,4 +96,8 @@ body {
   color: cyan;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 </style>

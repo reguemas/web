@@ -1,23 +1,23 @@
 <template>
     <div>
-      <b-row class="m-0">
+      <b-row class="m-0 colaboradorsWebsamigues">
         <b-col cols="12" xl="4">
-          <h2 class="my-5 text-center">Col·laboradors</h2>
+          <h2 class="m-0 mb-5 text-center">Col·laboradors</h2>
           <b-row class="mb-5 justify-content-center">
-            <a class="gravetatZero" href="https://www.gravetat-zero.com/"></a>
+            <a class="gravetatZero animacio" href="https://www.gravetat-zero.com/"></a>
           </b-row>
         </b-col>
         <b-col cols="12" xl="8">
-          <h2 class="my-5 text-center">Webs Amigues</h2>
+          <h2 class="m-0 mb-5 text-center">Webs Amigues</h2>
             <b-row class="mb-2 justify-content-center">
-              <a class="mx-4 my-4 feec" href="https://www.feec.cat/"></a>
-              <a class="mx-4 my-4 minyons" href="https://www.minyons.cat/"></a>
-              <a class="mx-4 my-4 amics" href="http://amicsdelesarts-jjmm.cat/"></a>
-              <a class="mx-4 my-4 plataformaPerLaLlengua" href="https://www.plataforma-llengua.cat/"></a>
-              <a class="mx-4 my-4 esportCatala" href="http://fcesport.cat/"></a>
+              <a class="mx-4 mt-4 feec animacio" href="https://www.feec.cat/"></a>
+              <a class="mx-4 mt-4 minyons animacio" href="https://www.minyons.cat/"></a>
+              <a class="mx-4 mt-4 amics animacio" href="http://amicsdelesarts-jjmm.cat/"></a>
+              <a class="mx-4 mt-4 plataformaPerLaLlengua animacio" href="https://www.plataforma-llengua.cat/"></a>
+              <a class="mx-4 mt-4 esportCatala animacio" href="http://fcesport.cat/"></a>
             </b-row>
-            <b-row class="mb-5 justify-content-center">
-              <a class="ml-2 parcsNaturals" href="https://parcs.diba.cat/web/santllorenc"></a>
+            <b-row class="mt-4 justify-content-center">
+              <a class="ml-2 parcsNaturals animacio" href="https://parcs.diba.cat/web/santllorenc"></a>
             </b-row>
         </b-col>
       </b-row>
@@ -34,8 +34,23 @@ export default {
 
 <style>
 
+  .colaboradorsWebsamigues{
+    padding-top:3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .colaboradors{
     background-color: #d3d3d3;
+  }
+
+  .animacio{
+    transition-delay: 1s;
+    transition: all 0.3s ease;
+  }
+
+  .animacio:hover{
+    margin:0px 20px;
+    transform: scale(1.2);
   }
 
   .gravetatZero{

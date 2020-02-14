@@ -1,7 +1,7 @@
 <template>
   <div class="block noticies">
     <b-row no-gutters align-v="center" class="m-0 justify-content-center">
-      <h2 class="pb-3 text-center w-100">Noticies</h2>
+      <h2 class="pb-4 text-center w-100">Noticies</h2>
       <div class="py-3 mt-0 mx-4" v-for="(noticia) in noticiesGaleria" :key="noticia.index">
         <cardNoticies :noticia="noticia"/>
       </div>
@@ -32,8 +32,8 @@ export default {
 <style>
   .noticies{
     background: #d0d8d0;
-    padding-top:3rem;
-    padding-bottom:3rem;
+    padding-top:3.5rem;
+    padding-bottom:3.5rem;
   }
 
   h2 {

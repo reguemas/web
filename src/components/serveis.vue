@@ -4,19 +4,19 @@
       <h2 class="text-center pb-4 w-100">Serveis</h2>
         <div class="py-4 mx-4">
           <h4 class="text-center mb-5">Targetes Federatives</h4>
-          <a class="serveisImg targetaFederativa" href="http://ce-terrassa.cat/inici/llicencies-federatives/"></a>
+          <a class="serveisImg targetaFederativa animacio" href="http://ce-terrassa.cat/inici/llicencies-federatives/"></a>
         </div>
         <div class="py-4 mx-4">
           <h4 class="text-center mb-5">Butlletí Setmanal</h4>
-          <a class="serveisImg butlletiSetmanal" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
+          <a class="serveisImg butlletiSetmanal animacio" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
         </div>
         <div class="py-4 mx-4">
           <h4 class="text-center mb-5">Portal de Tracks</h4>
-          <a class="serveisImg tracks" href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467"></a>
+          <a class="serveisImg tracks animacio" href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467"></a>
         </div>
         <div class="py-4 mx-4">
           <h4 class="text-center mb-5">Canal Telegram</h4>
-          <a class="serveisImg telegram" href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/"></a>
+          <a class="serveisImg telegram animacio" href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/"></a>
         </div>
     </b-row>
   </div>
@@ -36,8 +36,8 @@
 
   .serveis{
     background:#e1d1a0;
-    padding-top:4.5rem;
-    padding-bottom:4.5rem;
+    padding-top:3.5rem;
+    padding-bottom:3.5rem;
   }
 
   .serveisImg {
@@ -61,6 +61,11 @@
     width: 300px;
     height: 226px;
     background: url("http://ce-terrassa.cat/wp-content/uploads/2014/09/CETWikiloc-300x226.png") no-repeat;
+  }
+
+  .tracks:hover{
+    margin:0px 20px;
+    transform: scale(1.2);
   }
 
   .telegram{
