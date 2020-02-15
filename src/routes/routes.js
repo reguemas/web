@@ -1,5 +1,6 @@
 
-//import buttonCounter from '../components/button-counter.vue'
+import home from '../pagines/home.vue'
+import ferseSoci from '../pagines/ferseSoci.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -8,8 +9,8 @@
 // We'll talk about nested routes later.
 
 const routes = [
-    //{ path: '/', component: Home }
-    //{ path: '/button-counter', component: buttonCounter }
+    { path: '/', component: home },
+    { path: '/fer-seSoci', component: ferseSoci }
 ]
 
 export default routes
