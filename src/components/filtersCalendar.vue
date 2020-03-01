@@ -239,7 +239,7 @@ export default {
 
   .option {
     font-family: Quicksand;
-    font-size:1rem;
+    font-size: 1rem;
   }
 
   .calendar{
@@ -247,12 +247,12 @@ export default {
   }
 
   .vc-rounded-lg{
-    border-radius: 0 !important;
+    border-radius: 4px !important;
   }
 
   .activitats{
     /* background-color:#b1c1d0; */
-    overflow:hidden;
+    overflow: hidden;
   }
 
   /* Llistat Activitats del dia */
@@ -260,25 +260,25 @@ export default {
   /* Tipus d'Activitats del dia*/
 
   .activitatsDiaSeleccionat{
-    max-height:655px;
-    overflow:auto;
+    max-height: 655px;
+    overflow: auto;
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     .activitatsDiaSeleccionat {
-      max-height:820px;
+      max-height: 820px;
     }
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
     .activitatsDiaSeleccionat {
-      max-height:800px;
+      max-height: 800px;
     }
   }
 
   .activitatDiaTipus{
     color:#f2f5f7;
-    font-size:1.3rem;
+    font-size: 1.3rem;
   }
 
   .activitatDiaSenseActivitats{
@@ -301,7 +301,7 @@ export default {
 
   .activitatDia{
     font-family: Quicksand;
-    color:#545454;
+    color: #545454;
   }
 
   .activitatDia:hover{

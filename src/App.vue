@@ -49,16 +49,17 @@ export default {
 </script>
 
 <style>
-body {
+
+  body {
     font-family: "AveriaSerif";
-}
+  }
 
-.textCyan {
-  color: cyan;
-}
+  .textCyan {
+    color: cyan;
+  }
 
-a {
-  text-decoration: none !important;
-}
+  a {
+    text-decoration: none !important;
+  }
 
 </style>

@@ -1,6 +1,7 @@
 
 import home from '../pagines/home.vue'
 import ferseSoci from '../pagines/ferseSoci.vue'
+import avantatges from '../pagines/avantatges.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -10,7 +11,8 @@ import ferseSoci from '../pagines/ferseSoci.vue'
 
 const routes = [
     { path: '/', component: home },
-    { path: '/fer-seSoci', component: ferseSoci }
+    { path: '/fer-seSoci', component: ferseSoci },
+    { path: '/avantatges', component: avantatges }
 ]
 
 export default routes

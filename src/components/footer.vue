@@ -1,7 +1,7 @@
 <template>
-    <div class="peuPagina w-100">
-      <b-row no-gutters class="peuPaginaAmplada mx-auto">
-        <b-col cols="12" xl="4">
+    <div class="peuPagina justify-content-center">
+      <b-row no-gutters class="peuPaginaAmplada justify-content-center">
+        <b-col md="6" xl="4">
           <a href="http://ce-terrassa.cat/">
             <img src="logosCET/CENT10_esquerra_negatiu.png" alt="Logo Centre Excursionista Terrassa" class="footerLogo my-4">
           </a>
@@ -27,11 +27,11 @@
             Fer-se Soci
           </b-button>
         </b-col>
-        <b-col cols="12" xl="4">
+        <b-col md="6" xl="4">
           <h5 class="mb-4 mt-5">Butlletí Setmanal</h5>
           <a class="my-4 footerButlleti" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
         </b-col>
-        <b-col cols="12" xl="4">
+        <b-col lg="12" xl="4">
           <h5 class="mt-5 mb-4">Contacte</h5>
           <h6 class="mb-3">Ens Trobaràs de dilluns a dicvendres de 6 a 9 del vespre a:</h6>
             <p class="mb-2">Carrer Sant Llorenç, 10 - Terrassa - 08221</p>
@@ -40,8 +40,8 @@
             <p class="mb-2">Email: centre@ce-terrassa.cat</p>
         </b-col>
       </b-row>
-      <b-row no-gutters class="w-100">
-        <p class="mx-auto">© CENTRE EXCURSIONISTA DE TERRASSA 2020. Entitat Excursionista des de 1910</p>
+      <b-row no-gutters class="w-100 pt-3">
+        <p>© CENTRE EXCURSIONISTA DE TERRASSA 2020. Entitat Excursionista des de 1910</p>
       </b-row>
     </div>
 </template>
@@ -66,6 +66,12 @@ export default {
 
   .peuPaginaAmplada{
     max-width: 1024px;
+  }
+
+    @media (max-width: 1200px) {
+    .peuPaginaAmplada {
+      max-width: 768px;
+    }
   }
 
   .peuPaginaEnllaç{
@@ -101,20 +107,5 @@ export default {
     height: 246px;
     background: url("http://ce-terrassa.cat/wp-content/uploads/2018/06/banner_newsletter-blancII-300x246.png") no-repeat;
   }
-
-/*   .footerFeec{
-    display:block;
-    width: 300px;
-    height: 189px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2019/12/Carnet2020-300x189.png") no-repeat;
-  }
-
-  .footerFce{
-    display:block;
-    width: 300px;
-    height: 190px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2019/12/espeleologia2020retallada-300x190.jpg") no-repeat;
-  } */
-
 
 </style>

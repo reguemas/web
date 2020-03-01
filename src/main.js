@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './routes/routes'
 import PortalVue from 'portal-vue'
-import BootstrapVue from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import VCalendar from 'v-calendar'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -19,6 +19,7 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue, {
   breakpoints: [`xs`, 'sm', 'md', 'lg', 'xl', 'xxl']
 })
+Vue.use(IconsPlugin)
 Vue.use(PortalVue)
 Vue.use(VCalendar)
 Vue.use(VueAxios, axios)

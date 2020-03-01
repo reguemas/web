@@ -101,7 +101,7 @@ export default {
     border-bottom: 3px solid yellow;
   }
 
-    .titolHover {
+  .titolHover {
     font-family: Quicksand;
     color:cyan;
     font-size:1.2rem;

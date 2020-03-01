@@ -83,7 +83,7 @@
 //import webTop from "@/components/webTop.vue";
 
 export default {
-  name: "ferseSoci",
+  name: "avantatges",
 };
 
 </script>
