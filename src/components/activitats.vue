@@ -20,7 +20,7 @@
           class="position-relative overflow-hidden galeriaActivitats"
           v-if="isMobile==false"
         >
-          <h3 class="mx-0 mt-2 mb-3 pt-4">Activitats {{keys[0]}}</h3>
+          <h3 class="mx-0 mt-2 mb-3 pt-4 w-100">Activitats {{keys[0]}}</h3>
           <gallery
             v-if="visibilitatGaleriaEsportiva"
             :activitatsCarousel="activitatsCarousel.Esportives"
@@ -28,7 +28,7 @@
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
           />
-          <h3 class="mx-0 my-3 pt-4">Activitats {{keys[1]}}</h3>
+          <h3 class="mx-0 my-3 pt-4 w-100">Activitats {{keys[1]}}</h3>
           <gallery
             v-if="visibilitatGaleriaCultural"
             :activitatsCarousel="activitatsCarousel.Culturals"
@@ -36,7 +36,7 @@
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
           />
-          <h3 class="mx-0 my-3 pt-4">Activitats {{keys[2]}}</h3>
+          <h3 class="mx-0 my-3 pt-4 w-100">Activitats {{keys[2]}}</h3>
           <gallery
             v-if="visibilitatGaleriaSocial"
             :activitatsCarousel="activitatsCarousel.Socials"
@@ -47,21 +47,21 @@
         </b-row>
 
         <b-row v-if="isMobile==true" class="position-relative galeriaActivitats">
-          <h3 class="m-0 pt-4">Activitats {{keys[0]}}</h3>
+          <h3 class="m-0 pt-4 w-100">Activitats {{keys[0]}}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaEsportiva"
             :activitatsCarousel="activitatsCarousel.Esportives"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[1]}}</h3>
+          <h3 class="m-0 pt-4 w-100">Activitats {{keys[1]}}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaCultural"
             :activitatsCarousel="activitatsCarousel.Culturals"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
-          <h3 class="m-0 pt-4">Activitats {{keys[2]}}</h3>
+          <h3 class="m-0 pt-4 w-100">Activitats {{keys[2]}}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaSocial"
             :activitatsCarousel="activitatsCarousel.Socials"
