@@ -1,5 +1,4 @@
 <template>
-
   <b-container fluid class="p-0 m-0 fonsBlauCel">
     <div class="ferseSoci mx-auto">
       <h2 class="pt-5 px-1">Alta Soci 2020</h2>
