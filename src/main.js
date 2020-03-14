@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+import 'core-js/stable'
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
