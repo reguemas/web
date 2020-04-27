@@ -14,7 +14,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './custom.scss'
 import './css/main.css'
 
-
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)

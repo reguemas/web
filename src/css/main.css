@@ -28,6 +28,11 @@
     font-family: "Escriptura";
 }
 
+@font-face{
+    src: url("../fonts/PermanentMarker-Regular.ttf");
+    font-family:"Marker";
+}
+
 body {
     font-family: "AveriaSerif";
     color:#545454;

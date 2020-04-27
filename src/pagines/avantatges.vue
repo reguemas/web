@@ -1,121 +1,99 @@
 <template>
 
-  <b-container fluid class="p-0 m-0 fonsBlauCel">
-    <div class="ferseSoci mx-auto">
-      <h2 class="pt-5 px-1">Alta Soci 2020</h2>
-      <p class="info pt-2 px-1">Gràcies pel teu interès a fer-te soci del Centre Excursionista de Terrassa</p> 
-      <b-row cols="1" cols-lg="2" no-gutters>
-        <b-col class="animacioSoci">
-          <div class="fonsBlauGris alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20adult&Preu=89.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Adult</p>
-              <p class="descripcioSoci">Major de 30 anys</p>
-              <p class="preuSoci">89 €/any</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsVermell alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Beneficiari&Preu=47.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Beneficiari/a</p>
-              <p class="descripcioSoci">Cònjuge o Fill Menor de 18 anys de Soci Nominal</p>
-              <p class="preuSoci">47 €/any</p>
-            </a>
-          </div>
-        </b-col>
+  <b-container fluid class="p-0 m-0">
+		<b-row class="capçalera m-0 pb-5 p-0 justify-content-center">
+      <b-row class="avantatges p-0 mt-5 justify-content-around">
+        <b-img src="logosCET/CENT10_esquerra_centre.png" alt="Logo Centre Excursionista Terrassa" class="logo"></b-img>
+        <h1 class="titolAvantatges mt-4">Centre Excursionista de Terrassa</h1>
       </b-row>
-      <b-row cols="1" cols-lg="3" no-gutters>
-        <b-col class="animacioSoci">
-          <div class="fonsGroc alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20jove&Preu=65.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 16 i 35 anys</p>
-              <p class="preuSoci">65 €/any</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsBlau alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Carnet%20jove&Preu=40.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Carnet Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 16 i 35 anys amb Carnet Jove</p>
-              <p class="preuSoci">40 €/any</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsVerd alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20infantil&Preu=30.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Infantil</p>
-              <p class="descripcioSoci">Fins als 15 anys</p>
-              <p class="preuSoci">30 €/any</p>
-            </a>
-          </div>
-        </b-col>
+      <b-row class="justify-content-center mt-4">
+        <p class="subtitol w-50">
+          Descobreix la muntanya i el nostre entorn amb una de les entitats esportives, culturals, 
+          socials i concienciada amb el medi ambient més rellevants de la ciutat de Terrassa.
+        </p>
+      </b-row>	
+    </b-row>
+<!--       <b-row>
+        <h1 class="w-100">Els Nostres Valors</h1>
+        <div v-for="(valor) in valorsCET" :key="valorsCET.index">
+          <div class="cardValor">{{ valor }}</div>
+        </div>
       </b-row>
-      <b-row cols="1" cols-lg="2" no-gutters class="pb-5">
-        <b-col class="animacioSoci">
-          <div class="fonsMarro alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20Provador&Preu=10.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Provador</p>
-              <p class="descripcioSoci">Dret a una activitat</p>
-              <p class="descripcioSoci">Es pot repetir un màxim de tres cops</p>
-              <p class="descripcioSoci">Es descomptarà de la quota en fer-se soci</p>
-              <p class="preuSoci">10 €</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsTaronja alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020/#Avantatges" class="enllaçFerseSoci">
-              <p class="modalitatSoci my-auto">Avantatges per als Socis</p>
-            </a>
-          </div>
-        </b-col>
+      <b-row>
+        <h1 class="w-100">Que Hi Fem?</h1>
+        <div v-for="(tipus) in tipusActivitats" :key="tipusActivitats.index">
+          <div>{{ tipus }}</div>
+        </div>
       </b-row>
-    </div>
+      <b-row>
+        <div>Et Formaràs a la muntanya</div>
+        <div>Hi Faràs Amics per Tota la Vida</div>
+      </b-row>
+      <b-row>
+        <h1 class="w-100">Obtindràs Descomptes</h1>
+        <div v-for="(descompte) in descomptes" :key="descomptes.index">
+          <div>{{ descompte }}</div>
+        </div>
+      </b-row> -->
+    
   </b-container>
 
 </template>
 
 <script>
 
-//import webTop from "@/components/webTop.vue";
-
 export default {
   name: "avantatges",
+
+  data() {
+    return {
+      valorsCET: ["Esforç i Superació","Tots els Socis Tenen Veu","Seu Social amb Bar i Rocodrom","Integració Social","Compromís Social"],
+      tipusActivitats: ["Esportives","Socials","Culturals"],
+      descomptes:["Sial Terrassa","Camarasa Muntanya","Gravetat Zero","Malarec","La Nau Outdoor Store","Bruc Espai Salut","Look and Remember"],
+    }
+  }
 };
 
 </script>
 
 <style scooped>
 
-  .ferseSoci{
-    max-width:900px;
+  .capçalera{
+    background-color:#aaaacc;
+    height: 100%;
   }
 
-  @media (max-width: 1000px) {
-    .ferseSoci {
-      max-width:768px;
-      padding: 0 3.5rem;
-    }
+  .avantatges{
+    max-width:1024px;
   }
 
-  @media (max-width: 576px) {
-    .ferseSoci {
-      padding: 0 1.5rem;
-    }
+  .logo {
+    width:auto !important;
+    height:140px !important;
   }
 
-  .info{
-    font-family: Quicksand;
-    font-size:1.2rem;
+  .titolAvantatges{
+    text-transform: uppercase;
+    color:black;
+    width:60%;
   }
 
-  .alturaCasella{
-    height:300px;
-    border-radius:3px;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
+  .subtitol{
+    font-family:Marker;
+    font-size:1.3rem;
+    text-align:center;
+  }
+
+  .cardValor{
+    width:150px;
+    height:150px;
+    border-radius:10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    background-color:cadetblue;
+    padding:20px;
+    color:cyan;
+    text-align: center;
+    font-family: Marker;
   }
 
   .fonsVerd{
@@ -150,51 +128,5 @@ export default {
     background-color: #f8f9ff;
   }
 
-  .animacioSoci{
-    transition-delay: 1s;
-    transition: all 0.3s ease;
-  }
-
-  .animacioSoci:hover{
-    transform: scale(1.1);
-    z-index:5 !important;
-  }
-
-  .enllaçFerseSoci{
-    text-decoration: none;
-    font-family: Quicksand;
-    color: #404140!important;
-    text-align:center;
-    height:100%;
-    display:flex;
-    flex-wrap: wrap;
-    padding: 0 1rem;
-  }
-
-  .modalitatSoci{
-    font-family: "AveriaSerif";
-    font-weight:600;
-    font-size:1.5rem;
-    width:100%;
-    margin-top:2rem;
-    margin-bottom:0px;
-  }
-
-  .descripcioSoci{
-    font-size:1.2rem;
-    width:100%;
-    margin:0px;
-  }
-
-  .preuSoci{
-    font-family: "AveriaSerif";
-    font-size:2.5rem;
-    color:black;
-    align-self:flex-end;
-    width:100%;
-    padding-top:1rem;
-    margin-bottom:1.7rem;
-    border-top: 3px solid rgb(78, 78, 74);
-  }
 
 </style>
