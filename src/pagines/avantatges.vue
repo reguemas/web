@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       valorsCET: ["Esforç i Superació","Tots els Socis Tenen Veu","Seu Social amb Bar i Rocodrom","Integració Social","Compromís Social"],
-      tipusActivitats: ["Esportives","Socials","Culturals"],
+      tipusActivitats: ["Activitats Esportives","Activitats Socials","Activitats Culturals"],
       descomptes:["Sial Terrassa","Camarasa Muntanya","Gravetat Zero","Malarec","La Nau Outdoor Store","Bruc Espai Salut","Look and Remember"],
     }
   }
