@@ -1,8 +1,7 @@
 <template>
   <b-container fluid class="p-0 m-0 peuPagina">
-    <b-row class="p-0 m-0 justify-content-center">
-      <b-row class="p-0 m-0 peuPaginaAmplada justify-content-center" no-gutters cols="1" cols-md="2" cols-lg="3">
-        <b-col class="align-content-center">
+      <b-row no-gutters class="m-0 justify-content-center">
+        <div  class="pt-4 mt-0 mx-5 ampladaColumnaFooter">
           <a href="http://ce-terrassa.cat/">
             <img src="logosCET/CENT10_esquerra_negatiu.png" alt="Logo Centre Excursionista Terrassa" class="footerLogo my-4">
           </a>
@@ -27,24 +26,23 @@
           <b-button href="http://ce-terrassa.cat/alta-soci-2020/" size="lg" variant="success" class="mb-5 peuPaginaBoto">
             Fer-se Soci
           </b-button>
-        </b-col>
-        <b-col>
+        </div>
+        <div class="py-3 mt-0 mx-5 ampladaColumnaFooter">
           <h5 class="mb-4 mt-5">Butlletí Setmanal</h5>
           <a class="my-4 footerButlleti" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
-        </b-col>
-        <b-col>
+        </div>
+        <div class="py-3 mt-0 mx-5 ampladaColumnaFooter">
           <h5 class="mt-5 mb-4">Contacte</h5>
           <h6 class="mb-3">Ens Trobaràs de dilluns a dicvendres de 6 a 9 del vespre a:</h6>
           <p class="mb-2">Carrer Sant Llorenç, 10 - Terrassa - 08221</p>
           <p class="mb-2">Vallès Occidental - Catalunya.</p>
           <p class="mb-2">Telèfon: +34 93 788 30 30.</p>
           <p class="mb-2">Email: centre@ce-terrassa.cat</p>
-        </b-col>
+        </div>
       </b-row>
-      <b-row class="w-100 m-0 p-0 pt-3">
+      <b-row class="py-3 mt-0 mx-5">
         <p class="mx-auto">© CENTRE EXCURSIONISTA DE TERRASSA 2020. Entitat Excursionista des de 1910</p>
       </b-row>
-    </b-row>
   </b-container>
 </template>
 
@@ -66,20 +64,8 @@ export default {
     background-color: #272727;
   }
 
-  .peuPaginaAmplada{
-    width: 1024px;
-  }
-
-  @media (max-width: 1024px) {
-    .peuPaginaAmplada {
-      width:768px;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .peuPaginaAmplada {
-      width:250px;
-    }
+  .ampladaColumnaFooter{
+    width:250px;
   }
 
   .peuPaginaEnllaç{

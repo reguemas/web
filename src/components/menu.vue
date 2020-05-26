@@ -1,4 +1,5 @@
 <template>
+
   <div class="menuBackground">
     <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
       <b-list-group horizontal class="mr-auto ml-4">
@@ -30,12 +31,9 @@
         <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
       </b-list-group>
     </b-navbar>
-    <b-row no-gutters>
-      <b-col no-gutters cols="12" xl="2" class="p-0">
-        <div class="espai"></div>
-      </b-col>
-      <b-col no-gutters cols="0" xl="10" class="p-0">
-        <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0">
+
+    <b-row no-gutters class="justify-content-center">
+      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0 w-100">
 
         <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
 
@@ -47,7 +45,7 @@
 
         <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
 
-          <b-navbar-nav class="ml-4">
+          <b-navbar-nav class="">
             <b-nav-item-dropdown :text="'El '+ keys[0]" left>
               <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,index) in menuNavegacio.CET" :key="index">{{ item.item }}</b-dropdown-item>
             </b-nav-item-dropdown>
@@ -93,10 +91,10 @@
             Fer-se Soci
           </b-button>
         </b-collapse>
-        </b-navbar>
-      </b-col>
+      </b-navbar>
     </b-row>   
   </div>
+
 </template>
 
 <script>
@@ -129,7 +127,7 @@ export default {
 /* background */
 
 .menuBackground{
-  background-color: #afc8ad !important;
+  background-color: #485568 !important;
 }
 
 /* Menu Contacte i Xarxes Social */
