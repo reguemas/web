@@ -6,16 +6,16 @@
       <b-row cols="1" cols-lg="2" no-gutters>
         <b-col class="animacioSoci">
           <div class="fonsBlauGris alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20adult&Preu=89.00&Quantitat=1" class="enllaçFerseSoci">
+            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=8" class="enllaçFerseSoci">
               <p class="modalitatSoci">Soci Adult</p>
-              <p class="descripcioSoci">Major de 30 anys</p>
+              <p class="descripcioSoci">Major de 31 anys</p>
               <p class="preuSoci">89 €/any</p>
             </a>
           </div>
         </b-col>
         <b-col class="animacioSoci">
           <div class="fonsVermell alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Beneficiari&Preu=47.00&Quantitat=1" class="enllaçFerseSoci">
+            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=10" class="enllaçFerseSoci">
               <p class="modalitatSoci">Soci Beneficiari/a</p>
               <p class="descripcioSoci">Cònjuge o Fill Menor de 18 anys de Soci Nominal</p>
               <p class="preuSoci">47 €/any</p>
@@ -26,27 +26,27 @@
       <b-row cols="1" cols-lg="3" no-gutters>
         <b-col class="animacioSoci">
           <div class="fonsGroc alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20jove&Preu=65.00&Quantitat=1" class="enllaçFerseSoci">
+            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=11" class="enllaçFerseSoci">
               <p class="modalitatSoci">Soci Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 16 i 35 anys</p>
+              <p class="descripcioSoci">Nominal d'entre 14 i 30 anys</p>
               <p class="preuSoci">65 €/any</p>
             </a>
           </div>
         </b-col>
         <b-col class="animacioSoci">
           <div class="fonsBlau alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Carnet%20jove&Preu=40.00&Quantitat=1" class="enllaçFerseSoci">
+            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=12" class="enllaçFerseSoci">
               <p class="modalitatSoci">Soci Carnet Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 16 i 35 anys amb Carnet Jove</p>
+              <p class="descripcioSoci">Nominal d'entre 14 i 30 anys amb Carnet Jove</p>
               <p class="preuSoci">40 €/any</p>
             </a>
           </div>
         </b-col>
         <b-col class="animacioSoci">
           <div class="fonsVerd alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20infantil&Preu=30.00&Quantitat=1" class="enllaçFerseSoci">
+            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=13" class="enllaçFerseSoci">
               <p class="modalitatSoci">Soci Infantil</p>
-              <p class="descripcioSoci">Fins als 15 anys</p>
+              <p class="descripcioSoci">Fins als 13 anys</p>
               <p class="preuSoci">30 €/any</p>
             </a>
           </div>

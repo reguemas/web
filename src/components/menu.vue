@@ -113,7 +113,7 @@ export default {
   methods:{
 /* 
     stickyMenu(){
-      console.log("estic fent scroll");
+      console.log("estic fent scroll");º  0
     }
  */
   },
@@ -127,7 +127,8 @@ export default {
 /* background */
 
 .menuBackground{
-  background-color: #485568 !important;
+  background-color: rgb(31, 111, 180) !important;
+  box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.25), inset 0 -1px 5px rgba(0,0,0,.25);
 }
 
 /* Menu Contacte i Xarxes Social */

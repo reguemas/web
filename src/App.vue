@@ -1,7 +1,7 @@
 <template>
     <b-container fluid class="p-0 m-0">
       
-      <navMenu />
+      <navMenu/>
 
       <router-view></router-view>
 
@@ -22,12 +22,6 @@ export default {
   components: {
     navMenu,
     peuWeb
-  },
-
-  data() {
-    return {
-      activitatsPromocionades:promocions,
-    };
   },
 
   mounted() {
