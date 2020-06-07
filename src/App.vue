@@ -27,9 +27,9 @@ export default {
   mounted() {
     axios
       .all([
-        axios.get("http://localhost/api/apiActivitatsCarousels.php"),
-        axios.get("http://localhost/api/apiCalendari.php"),
-        axios.get("http://localhost/api/apiActivitatsDestacades.php")
+        axios.get("http://localhost/apiCET/apiActivitatsCarousels.php"),
+        axios.get("http://localhost/apiCET/apiCalendari.php"),
+        axios.get("http://localhost/apiCET/apiActivitatsDestacades.php")
       ])
       .then(
         axios.spread((activitatsCarouselsResposta, calendariResposta, activitatsDestacadesResposta) => {
