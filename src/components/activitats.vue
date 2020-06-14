@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="mx-0 p-0">
     <b-row class="m-0 p-0">
-      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="carrussel calendariFiltresMarges">
+      <b-col cols="12" md="6" lg="5" xl="4" xxl="3" class="agendaFiltresFons calendariFiltresMarges">
         <div class="d-flex justify-content-center">
           <b-button
             :pressed.sync="myToggle"
@@ -14,7 +14,7 @@
         <filtersCalendar v-if="myToggle==true" class="mt-4" />
       </b-col>
 
-      <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 carrussel">
+      <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 activtatsFons">
         <b-row
           ref="mascaraGaleria"
           class="position-relative overflow-hidden galeriaActivitats"
@@ -71,7 +71,7 @@
           />
         </b-row>
 
-        <b-row class="m-0 pt-1 pb-5 justify-content-center carrussel">
+        <b-row class="m-0 pt-1 pb-3 justify-content-start activitatsFons">
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/activitats-del-cet/"
@@ -93,14 +93,6 @@
               class="mr-3 botonsActivitatsImg"
             />
             Activitats pels Teus Fills i en Família
-          </b-button>
-          <b-button
-            size="lg"
-            href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467"
-            class="btnTipusActivitats wikilocActivitats ml-xxl-5 mx-lg-4"
-          >
-            <img src="../assets/botonsActivitats/Wikiloc.png" class="mr-3 botonsActivitatsImg" />
-            Canal CET a Wikiloc
           </b-button>
         </b-row>
       </b-col>
@@ -188,12 +180,12 @@ export default {
     }
   }
 
-  .agendaFiltres {
-    background: #3d4855;
+  .agendaFiltresFons {
+    background: #737373;
   }
 
-  .carrussel {
-    background: #afc8ad;
+  .activtatsFons {
+    background: #f7f7f7;
   }
 
   .botons {
@@ -203,11 +195,12 @@ export default {
   /* Marges i tamany dels carrusels d'activtats i del calendari i fltres */
 
   .galeriaActivitats{
-    margin: 0 0 0 6.5rem;
+    margin: 0 0 0 3.25rem;
+    color:#737373;
   }
 
   .calendariFiltresMarges{
-    padding: 2rem 0 3rem 6.5rem;
+    padding: 2rem 3.25rem 3rem 6.5rem;
   }
 
   @media (max-width: 1500px) {
@@ -218,7 +211,6 @@ export default {
       margin: 0 0 3rem 3rem;
     }
   }
-
 
   @media (max-width: 768px) {
     .calendariFiltresMarges{
@@ -238,31 +230,36 @@ export default {
     text-align: left !important;
     align-items: center !important;
     justify-content: center !important;
-    color: cyan;
+    color:#f7f7f7;
+    /* margin-bottom: 4.5rem; */
+    z-index:2;
   }
 
   .btnTipusActivitats:hover {
     border: none !important;
-    color: #103440;
     font-weight: 700;
+    color:#303030;
   }
 
   .btnTipusActivitats:active {
     border: none !important;
-    color: #103440;
     font-weight: 700;
+    color:#303030;
   }
 
   .tipusActivitats {
     background-color: #e08d4b;
+    margin-left: 3.25rem;
   }
 
   .tipusActivitats:hover {
     background-color: #ad7140;
+    color:#303030;
   }
 
   .tipusActivitats:active {
     background-color: #ad7140;
+    color:#303030;
   }
 
   @media (max-width: 1199px) {
@@ -279,10 +276,12 @@ export default {
 
   .familiaActivitats:hover {
     background-color: #768639;
+    color:#303030;
   }
 
   .familiaActivitats:active {
     background-color: #768639;
+    color:#303030;
   }
 
   @media (max-width: 1199px) {
@@ -298,10 +297,12 @@ export default {
 
   .wikilocActivitats:hover {
     background-color: #6898c0;
+    color:#303030;
   }
 
   .wikilocActivitats:active {
     background-color: #6898c0;
+    color:#303030;
   }
 
   @media (max-width: 1428px) {

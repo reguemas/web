@@ -1,5 +1,5 @@
 <template>
-  <div class="activitatsDestacades">
+  <div class="activitatsPeriodiques">
     <b-row no-gutters align-v="center" class="m-0 justify-content-center">
       <h2 class="pb-4 text-center w-100">Activitats {{titolGaleria}}</h2>
       <div class="py-4 mt-0 mx-4" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
@@ -32,14 +32,25 @@ export default {
 </script>
 
 <style scoped>
-.activitatsDestacades{
-  background: #d0d8d0;
-  padding-top:3.5rem;
-  padding-bottom:3.5rem;
-}
 
-h2 {
-  color:#545454;
-}
+  h2 {
+    color:#b2dbd4;
+  }
+
+  .activitatsPeriodiques{
+    background: #315c7f;
+    padding-bottom:3.5rem;
+    position: relative;
+    margin-top:200px;
+  }
+
+  .activitatsPeriodiques::before {
+    width: 100%;
+    height:200px;
+    content: "";
+    background-image:url('~@/assets/perfilMolaMontserrat.png');
+    position: absolute;
+    top:-200px;
+  }
 
 </style>

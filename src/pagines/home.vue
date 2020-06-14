@@ -2,14 +2,9 @@
 
     <b-container fluid class="p-0 m-0">
 
-      <webTop />
+        <webTop />
 
-      <activitats />
-
-      <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
-        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
-      />
+        <activitats />
 
       <activitatsDestacades/>
 
