@@ -17,7 +17,7 @@
       <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 activtatsFons">
         <b-row
           ref="mascaraGaleria"
-          class="position-relative overflow-hidden galeriaActivitats"
+          class="position-relative overflow-hidden galeriaActivitatsMarges"
           v-if="isMobile==false"
         >
           <h3 class="mx-0 mt-2 mb-3 pt-4 w-100">Activitats {{keys[0]}}</h3>
@@ -46,7 +46,7 @@
           />
         </b-row>
 
-        <b-row v-if="isMobile==true" class="position-relative galeriaActivitats">
+        <b-row v-if="isMobile==true" class="position-relative galeriaActivitatsMarges">
           <h3 class="m-0 pt-4 w-100">Activitats {{keys[0]}}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaEsportiva"
@@ -71,7 +71,7 @@
           />
         </b-row>
 
-        <b-row class="m-0 pt-1 pb-3 justify-content-start activitatsFons">
+        <b-row class="m-0 pt-1 justify-content-start botonsActivitatsMarges activitatsFons">
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/activitats-del-cet/"
@@ -194,18 +194,18 @@ export default {
 
   /* Marges i tamany dels carrusels d'activtats i del calendari i fltres */
 
-  .galeriaActivitats{
+  .galeriaActivitatsMarges{
     margin: 0 0 0 3.25rem;
     color:#737373;
   }
 
   .calendariFiltresMarges{
-    padding: 2rem 3.25rem 3rem 6.5rem;
+    padding: 2rem 3.25rem 5.5rem 6.5rem;
   }
 
   @media (max-width: 1500px) {
     .calendariFiltresMarges{
-      padding: 1.5rem 0 3rem 3rem;
+      padding: 1.5rem 0 5.5rem 3rem;
     }
     .galeriaActivitats {
       margin: 0 0 3rem 3rem;
@@ -214,11 +214,15 @@ export default {
 
   @media (max-width: 768px) {
     .calendariFiltresMarges{
-      padding: 2rem 3rem 1rem 3rem;
+      padding: 2rem 3rem 5.5rem 3rem;
     }
     .galeriaActivitats {
       margin: 0 3rem;
     }
+  }
+
+  .botonsActivitatsMarges{
+    padding-bottom:5.5rem;
   }
 
   /* Botons totes activitats en galeries */
@@ -231,7 +235,7 @@ export default {
     align-items: center !important;
     justify-content: center !important;
     color:#f7f7f7;
-    /* margin-bottom: 4.5rem; */
+    margin-bottom: 3.5rem;
     z-index:2;
   }
 

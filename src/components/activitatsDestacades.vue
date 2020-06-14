@@ -39,18 +39,19 @@ export default {
 
   .activitatsPeriodiques{
     background: #315c7f;
+    padding-top:3.5rem;
     padding-bottom:3.5rem;
     position: relative;
-    margin-top:200px;
   }
 
   .activitatsPeriodiques::before {
     width: 100%;
-    height:200px;
+    height:150px;
     content: "";
     background-image:url('~@/assets/perfilMolaMontserrat.png');
+    background-size:cover;
     position: absolute;
-    top:-200px;
+    top:-150px;
   }
 
 </style>
