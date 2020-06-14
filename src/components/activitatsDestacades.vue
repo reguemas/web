@@ -1,7 +1,7 @@
 <template>
   <div class="activitatsPeriodiques">
     <b-row no-gutters align-v="center" class="m-0 justify-content-center">
-      <h2 class="pb-4 text-center w-100">Activitats {{titolGaleria}}</h2>
+      <h2 class="pb-5 text-center w-100">Activitats {{titolGaleria}}</h2>
       <div class="py-4 mt-0 mx-4" v-for="(activitat) in activitatsDestacades" :key="activitat.index">
         <cardDestacades :activitat="activitat"/>
       </div>

@@ -14,7 +14,7 @@
         <filtersCalendar v-if="myToggle==true" class="mt-4" />
       </b-col>
 
-      <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 activtatsFons">
+      <b-col cols="12" md="6" lg="7" xl="8" xxl="9" class="p-0 activitatsFons">
         <b-row
           ref="mascaraGaleria"
           class="position-relative overflow-hidden galeriaActivitatsMarges"
@@ -71,7 +71,7 @@
           />
         </b-row>
 
-        <b-row class="m-0 pt-1 justify-content-start botonsActivitatsMarges activitatsFons">
+        <b-row class="m-0 pt-1 justify-content-start botonsActivitatsMarges">
           <b-button
             size="lg"
             href="http://ce-terrassa.cat/activitats-del-cet/"
@@ -184,8 +184,24 @@ export default {
     background: #737373;
   }
 
-  .activtatsFons {
+  .activitatsFons {
     background: #f7f7f7;
+    background-size:cover;
+    position:relative;
+  }
+
+  .activitatsFons::after{
+    content: "";
+    width:100%;
+    height: 100%;
+    background-image:url('~@/assets/cotesNivellMolaWeb.png');
+    background-size:cover;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
   }
 
   .botons {
@@ -197,6 +213,7 @@ export default {
   .galeriaActivitatsMarges{
     margin: 0 0 0 3.25rem;
     color:#737373;
+    z-index: 1;
   }
 
   .calendariFiltresMarges{
@@ -205,7 +222,7 @@ export default {
 
   @media (max-width: 1500px) {
     .calendariFiltresMarges{
-      padding: 1.5rem 0 5.5rem 3rem;
+      padding: 1.5rem 3.25rem 5.5rem 3rem;
     }
     .galeriaActivitats {
       margin: 0 0 3rem 3rem;
@@ -214,7 +231,7 @@ export default {
 
   @media (max-width: 768px) {
     .calendariFiltresMarges{
-      padding: 2rem 3rem 5.5rem 3rem;
+      padding: 2rem 3rem 2rem 3rem;
     }
     .galeriaActivitats {
       margin: 0 3rem;
@@ -236,7 +253,7 @@ export default {
     justify-content: center !important;
     color:#f7f7f7;
     margin-bottom: 3.5rem;
-    z-index:2;
+    z-index: 1;
   }
 
   .btnTipusActivitats:hover {
