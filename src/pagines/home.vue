@@ -2,11 +2,11 @@
 
     <b-container fluid class="p-0 m-0">
 
-        <webTop />
+      <webTop />
 
-        <activitats />
+      <activitats />
 
-      <activitatsDestacades/>
+      <activitatsPeriodiques/>
 
       <activitatPromocionada
         :activitatPromocionadaEsquerra="activitatsPromocionades.FEEC"
@@ -32,8 +32,8 @@
 
 import webTop from "@/components/webTop.vue";
 import activitats from "@/components/activitats.vue";
+import activitatsPeriodiques from "@/components/activitatsPeriodiques.vue";
 import activitatPromocionada from "@/components/activitatPromocionada.vue";
-import activitatsDestacades from "@/components/activitatsDestacades.vue";
 import noticies from "@/components/noticies.vue";
 import serveis from "@/components/serveis.vue";
 import colaboradorsWebAmigues from "@/components/colaboradorsWebAmigues.vue";
@@ -46,7 +46,7 @@ export default {
     webTop,
     activitats,
     activitatPromocionada,
-    activitatsDestacades,
+    activitatsPeriodiques,
     noticies,
     serveis,
     colaboradorsWebAmigues,

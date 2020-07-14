@@ -146,7 +146,7 @@ export default {
   border: none !important;
   color: white;
   font-size: 50px;
-  line-height: 250px;
+  line-height: 270px;
   text-align: center;
   width: 75px;
   padding: 0 !important;
@@ -165,7 +165,7 @@ export default {
   border: none !important;
   color: white;
   font-size: 50px;
-  line-height: 250px;
+  line-height: 270px;
   text-align: center;
   width: 75px;
   padding: 0 !important;
