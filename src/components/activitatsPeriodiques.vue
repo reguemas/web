@@ -3,21 +3,30 @@
     <b-row no-gutters align-v="center" class="m-0 justify-content-center">
       <h2 class="pb-5 text-center w-100">Activitats {{titolGaleria}}</h2>
       <div class="py-4 mt-0 mx-4" v-for="(activitat) in activitatsPeriodiques" :key="activitat.index">
-        <cardDestacades :activitat="activitat"/>
+        <gallery
+          v-if="visibilitatGaleriaCultural"
+          :activitatsCarousel="totesActivitats.Periòdiques"
+          :titolGaleria="keys[1]"
+          :ampladaPantallaActivitat="ampladaPantalla"
+          class="pt-3"
+        />
       </div>
     </b-row>
   </div>
 </template>
 
 <script>
-import cardDestacades from './cardPeriodiques.vue'
-import totesActivitats from './json/activitatsPeriodiques.json'
+
+  import gallery from "./gallery.vue";
+  import galleryMobile from "./galleryMobile.vue";
+  import card from './card.vue'
+  import totesActivitats from './json/activitatsPeriodiques.json'
 
 export default {
   name: 'activitatPeriodiques',
 
   components: {
-    cardDestacades,
+    card,
   },
 
   data() {

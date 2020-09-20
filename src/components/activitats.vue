@@ -101,10 +101,11 @@
 </template>
 
 <script>
-import gallery from "./gallery.vue";
-import galleryMobile from "./galleryMobile.vue";
-import filtersCalendar from "./filtersCalendar.vue";
-import totesActivitats from "./json/activitatsCarousels.json";
+
+  import gallery from "./gallery.vue";
+  import galleryMobile from "./galleryMobile.vue";
+  import filtersCalendar from "./filtersCalendar.vue";
+  import totesActivitats from "./json/activitatsCarousels.json";
 
 export default {
   name: "activitats",
