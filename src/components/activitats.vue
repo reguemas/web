@@ -21,6 +21,7 @@
           v-if="isMobile==false"
         >
           <h3 class="mx-0 mt-2 mb-3 pt-4 w-100">Activitats {{keys[0]}}</h3>
+          <span>galeria d'{{ amplada }}</span>
           <gallery
             v-if="visibilitatGaleriaEsportiva"
             :activitatsCarousel="activitatsCarousel.Esportives"
@@ -128,6 +129,7 @@ export default {
       amplada: 0
     };
   },
+
   computed: {
     ampladaPantalla: function() {
       if (this.$refs.mascaraGaleria) {
@@ -137,11 +139,13 @@ export default {
       }
     }
   },
+
   watch:{
     ampladaPantalla: function (){
       return this.$refs.mascaraGaleria.offsetWidth;
     }
   },
+
   mounted() {
     if (
       navigator.userAgent.match(/Android/i) ||

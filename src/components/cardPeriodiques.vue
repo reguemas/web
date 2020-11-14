@@ -29,7 +29,7 @@
 <script>
 
 export default {
-  name: 'cardDestacades',
+  name: 'cardPeriodiques',
 
   props:["activitat"],
 
@@ -39,36 +39,42 @@ export default {
       tipusActivitats:["Esportives","Culturals","Socials"],
     };
   },
-  computed: {
-    ampladaPantalla: function() {
-      if (this.$refs.mascaraGaleria) {
-        return this.$refs.mascaraGaleria.offsetWidth;
-      } else {
-        return this.amplada;
+
+  computed:{
+    getBorderClass: function () {
+      if ( this.activitat.destacada ) {
+        let tipusActivitatClasse = "border" + this.tipusActivitat[this.activitat.tipus].charAt(0).toUpperCase() + this.tipusActivitat[this.activitat.tipus].slice(1);
+        return tipusActivitatClasse;
       }
-    }
+    },
+    
+    getBackgroundModalitatClass: function () {
+      let modalitatBackground = "background-image:url('/assets/activitats/card/modalitat/" + this.tipusActivitat[this.activitat.tipus] + ".png') !important";
+      return modalitatBackground;
+    },
+
+    getDificultat: function () {
+      let quantaDificultat = this.activitat.dificultat * 30 + 10;
+      let dificultat = {
+        "background-image":"url('/assets/activitats/card/dificultat/" + this.activitat.modalitat + ".png') !important",
+        "width" : quantaDificultat + "px !important",
+      };
+      return dificultat;
+    },
   },
-  watch:{
-    ampladaPantalla: function (){
-      return this.$refs.mascaraGaleria.offsetWidth;
-    }
-  },
+
   mounted() {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i)
-    ) {
-      this.isMobile = true;
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      this.hover=true;
     }
-    if (this.activitatsCarousel.Esportives == undefined) {
-      this.visibilitatGaleriaEsportiva = false;} 
-    this.amplada = this.$refs.mascaraGaleria.offsetWidth;
-  },
+  }
+
 }
 
 </script>

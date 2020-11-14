@@ -1,17 +1,20 @@
 <template>
   <div class="activitatsPeriodiques">
-    <b-row no-gutters align-v="center" class="m-0 justify-content-center">
-      <h2 class="pb-5 text-center w-100">Activitats {{titolGaleria}}</h2>
-      <div class="py-4 mt-0 mx-4" v-for="(activitat) in activitatsPeriodiques" :key="activitat.index">
+    <h2 class="pb-3 text-center w-100">Activitats {{titolGaleria}}</h2>
+    <div 
+      ref="mascaraGaleria"
+      class="justify-content-center overflow-hidden mx-0 w-75"
+      v-if="isMobile==false"
+    >
+      <span>galeria d'{{ activitatsPeriodiques }}</span>
         <gallery
-          v-if="visibilitatGaleriaCultural"
-          :activitatsCarousel="totesActivitats.Periòdiques"
-          :titolGaleria="keys[1]"
+          v-if="visibilitatGaleria"
+          :activitatsCarousel="activitatsPeriodiques.Periodiques"
+          :titolGaleria="Periodiques"
           :ampladaPantallaActivitat="ampladaPantalla"
-          class="pt-3"
+          class="my-5"
         />
-      </div>
-    </b-row>
+    </div>
   </div>
 </template>
 
@@ -19,24 +22,62 @@
 
   import gallery from "./gallery.vue";
   import galleryMobile from "./galleryMobile.vue";
-  import card from './card.vue'
   import totesActivitats from './json/activitatsPeriodiques.json'
 
 export default {
   name: 'activitatPeriodiques',
 
   components: {
-    card,
+    gallery,
+    galleryMobile,
   },
 
   data() {
     return {
       myToggle: false,
-      activitatsPeriodiques: totesActivitats.Periòdiques,
+      activitatsPeriodiques: totesActivitats,
       titolGaleria: Object.keys(totesActivitats)[0],
+      visibilitatGaleria: true,
+      isMobile: false,
+      amplada: 0
     }
+  },
+
+  computed: {
+    ampladaPantalla: function() {
+      if (this.$refs.mascaraGaleria) {
+        return this.$refs.mascaraGaleria.offsetWidth;
+      } else {
+        return this.amplada;
+      }
+    }
+  },
+
+  watch:{
+    ampladaPantalla: function (){
+      console.log("Amplada Periodica",this.$refs.mascaraGaleria.offsetWidth);
+      return this.$refs.mascaraGaleria.offsetWidth;
+    }
+  },
+
+  mounted() {
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      this.isMobile = true;
+    }
+    if (this.totesActivitats.Periodiques == undefined) {
+      this.visibilitatGaleria = false;
+    }
+    this.amplada = this.$refs.mascaraGaleria.offsetWidth;
   }
-}
+};
 
 </script>
 

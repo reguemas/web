@@ -35,7 +35,7 @@ export default {
       tipusActivitat: ["esportives","culturals","socials"],
     };
   },
- 
+
   computed:{
     getBorderClass: function () {
       if ( this.activitat.destacada ) {
