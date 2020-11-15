@@ -40,7 +40,7 @@ export default {
     getBorderClass: function () {
       let tipusActivitatClasse="";
       if ( this.activitat.destacada ) {
-        let tipusActivitatClasse = "border" + this.tipusActivitat[this.activitat.tipus].charAt(0).toUpperCase() + this.tipusActivitat[this.activitat.tipus].slice(1);
+        tipusActivitatClasse = "border" + this.tipusActivitat[this.activitat.tipus].charAt(0).toUpperCase() + this.tipusActivitat[this.activitat.tipus].slice(1);
       }
       return tipusActivitatClasse;
     },
