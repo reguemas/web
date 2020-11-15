@@ -1,20 +1,19 @@
 <template>
   <div class="activitatsPeriodiques">
-    <h2 class="pb-3 text-center w-100">Activitats {{titolGaleria}}</h2>
-    <div 
+    <h2 class="pb-3 text-center w-100">Activitats {{ titolGaleria }}</h2>
+    <row 
       ref="mascaraGaleria"
-      class="justify-content-center overflow-hidden mx-0 w-75"
+      class="overflow-hidden mx-0 justify-content-center"
       v-if="isMobile==false"
     >
-      <span>galeria d'{{ activitatsPeriodiques }}</span>
-        <gallery
-          v-if="visibilitatGaleria"
-          :activitatsCarousel="activitatsPeriodiques.Periodiques"
-          :titolGaleria="Periodiques"
-          :ampladaPantallaActivitat="ampladaPantalla"
-          class="my-5"
-        />
-    </div>
+      <gallery
+        v-if="visibilitatGaleria"
+        :activitatsCarousel="activitatsPeriodiques.Periodiques"
+        :titolGaleria="Periodiques"
+        :ampladaPantallaActivitat="ampladaPantalla"
+        class="my-5"
+      />
+    </row>
   </div>
 </template>
 
@@ -45,17 +44,16 @@ export default {
 
   computed: {
     ampladaPantalla: function() {
+      let amp = this.amplada;
       if (this.$refs.mascaraGaleria) {
-        return this.$refs.mascaraGaleria.offsetWidth;
-      } else {
-        return this.amplada;
+        amp = this.$refs.mascaraGaleria
       }
+      return amp;
     }
   },
 
   watch:{
     ampladaPantalla: function (){
-      console.log("Amplada Periodica",this.$refs.mascaraGaleria.offsetWidth);
       return this.$refs.mascaraGaleria.offsetWidth;
     }
   },
@@ -72,7 +70,7 @@ export default {
     ) {
       this.isMobile = true;
     }
-    if (this.totesActivitats.Periodiques == undefined) {
+    if (this.activitatsPeriodiques.Periodiques == undefined) {
       this.visibilitatGaleria = false;
     }
     this.amplada = this.$refs.mascaraGaleria.offsetWidth;
