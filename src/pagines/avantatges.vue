@@ -18,7 +18,7 @@
     <b-row class="valors m-0 px-0 py-5 justify-content-center">
       <b-row class="avantatges p-0 justify-content-center">
         <h1 class="w-100 text-center mb-5">Els Nostres Valors</h1>
-        <div v-for="(valor) in valorsCET" :key="valorsCET.index">
+        <div v-for="(valor) in valorsCET" :key="valor.index">
           <div class="cardValor justify-content-center m-3">{{ valor }}</div>
         </div>
       </b-row>
@@ -26,7 +26,7 @@
     <b-row class="queFem m-0 py-5 px-0 justify-content-center">
       <b-row class="avantatges p-0 justify-content-center">
         <h1 class="w-100 text-center mb-5">Que Hi Fem?</h1>
-        <div v-for="(tipus) in tipusActivitats" :key="tipusActivitats.index">
+        <div v-for="(tipus) in tipusActivitats" :key="tipus.index">
           <div class="cardFem m-4">{{ tipus }}</div>
         </div>
       </b-row>
@@ -40,7 +40,7 @@
     <b-row class="queFem m-0 py-5 px-0 justify-content-center">
       <b-row class="avantatges p-0 justify-content-center">
         <h1 class="w-100 text-center mb-5">Obtindràs Descomptes</h1>
-        <div v-for="(descompte) in descomptes" :key="descomptes.index">
+        <div v-for="(descompte) in descomptes" :key="descompte.index">
           <div class="cardDescompte m-3">{{ descompte }}</div>
         </div>
       </b-row>

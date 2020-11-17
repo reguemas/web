@@ -21,7 +21,7 @@
 <script>
 
   import gallery from "./gallery.vue";
-  import galleryMobile from "./galleryMobile.vue";
+  //import galleryMobile from "./galleryMobile.vue";
   import totesActivitats from './json/activitatsPeriodiques.json'
 
 export default {
@@ -29,7 +29,7 @@ export default {
 
   components: {
     gallery,
-    galleryMobile,
+    //galleryMobile,
   },
 
   data() {
@@ -55,7 +55,6 @@ export default {
 
   watch:{
     ampladaPantalla: function (){
-      console.log("Amplada Periodica",this.$refs.mascaraGaleria.offsetWidth);
       return this.$refs.mascaraGaleria.offsetWidth;
     }
   },
