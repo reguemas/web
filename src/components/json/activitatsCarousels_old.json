@@ -1,5 +1,5 @@
 {
-  "Esportives": [
+  "esportives": [
     {
       "title": "LA BAUMA GRAN DE SANANA",
       "dataInici": "04-03",
@@ -122,7 +122,7 @@
       "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/08\/Senders-setembreCal-Jan-de-la-Llosa-150x150.jpg"
     }
   ],
-  "Culturals": [
+  "culturals": [
     {
       "title": "EXPOSICIONS · TOCATS PEL BOLET",
       "dataInici": "02-03",
@@ -168,7 +168,7 @@
       "imatge": "http:\/\/ce-terrassa.cat\/wp-content\/uploads\/2019\/07\/79concurs_fotografia_split-2-150x150.jpg"
     }
   ],
-  "Socials": [
+  "socials": [
     {
       "title": "DIADA DE GERMANOR DEL CENTRE EXCURSIONISTA DE TERRASSA 2019",
       "dataInici": "06-04",

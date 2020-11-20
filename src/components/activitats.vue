@@ -23,7 +23,7 @@
           <h3 class="mx-0 mt-2 mb-3 pt-4 w-100">Activitats {{ keys[0] }}</h3>
           <gallery
             v-if="visibilitatGaleriaEsportiva"
-            :activitatsCarousel="activitatsCarousel.Esportives"
+            :activitatsCarousel="activitatsCarousel.esportives"
             :titolGaleria="keys[0]"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
@@ -31,15 +31,15 @@
           <h3 class="mx-0 my-3 pt-4 w-100">Activitats {{ keys[1] }}</h3>
           <gallery
             v-if="visibilitatGaleriaCultural"
-            :activitatsCarousel="activitatsCarousel.Culturals"
+            :activitatsCarousel="activitatsCarousel.culturals"
             :titolGaleria="keys[1]"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3"
           />
-          <h3 class="mx-0 my-3 pt-4 w-100">Activitats {{ keys[2] }}</h3>
+          <h3 class="mx-0 my-3 pt-4 w-100" style="text-transform: capitalize;">Activitats {{ keys[2] }}</h3>
           <gallery
             v-if="visibilitatGaleriaSocial"
-            :activitatsCarousel="activitatsCarousel.Socials"
+            :activitatsCarousel="activitatsCarousel.socials"
             :titolGaleria="keys[2]"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 pb-5"
@@ -50,21 +50,21 @@
           <h3 class="m-0 pt-4 w-100">Activitats {{ keys[0] }}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaEsportiva"
-            :activitatsCarousel="activitatsCarousel.Esportives"
+            :activitatsCarousel="activitatsCarousel.esportives"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
           <h3 class="m-0 pt-4 w-100">Activitats {{ keys[1] }}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaCultural"
-            :activitatsCarousel="activitatsCarousel.Culturals"
+            :activitatsCarousel="activitatsCarousel.culturals"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
           <h3 class="m-0 pt-4 w-100">Activitats {{ keys[2] }}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaSocial"
-            :activitatsCarousel="activitatsCarousel.Socials"
+            :activitatsCarousel="activitatsCarousel.socials"
             :titolGaleria="keys[2]"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
@@ -157,11 +157,11 @@ export default {
     ) {
       this.isMobile = true;
     }
-    if (this.activitatsCarousel.Esportives == undefined) {
+    if (this.activitatsCarousel.esportives == undefined) {
       this.visibilitatGaleriaEsportiva = false;
-    } else if (this.activitatsCarousel.Culturals == undefined) {
+    } else if (this.activitatsCarousel.culturals == undefined) {
       this.visibilitatGaleriaCultural = false;
-    } else if (this.activitatsCarousel.Socials == undefined) {
+    } else if (this.activitatsCarousel.socials == undefined) {
       this.visibilitatGaleriaSocial = false;
     }
     this.amplada = this.$refs.mascaraGaleria.offsetWidth;
@@ -175,6 +175,7 @@ export default {
     width: 40px;
     height: 40px;
   }
+
 </style>
 
 <style scoped>
@@ -341,6 +342,10 @@ export default {
   .agendaFiltresButton {
     width: 100%;
     max-width: 350px;
+  }
+
+  h3 {
+    text-transform: capitalize;
   }
 
 </style>

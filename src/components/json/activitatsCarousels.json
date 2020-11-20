@@ -1,5 +1,5 @@
 {
-  "Esportives": [
+  "esportives": [
     {
       "tipus":"0",
       "title": "LA BAUMA GRAN DE SANANA",
@@ -155,7 +155,7 @@
       "destacada":true
     }
   ],
-  "Culturals": [
+  "culturals": [
     {
       "tipus":"1",
       "title": "EXPOSICIONS · TOCATS PEL BOLET",
@@ -213,7 +213,7 @@
       "destacada":true
     }
   ],
-  "Socials": [
+  "socials": [
     {
       "tipus":"2",
       "title": "DIADA DE GERMANOR 2019",

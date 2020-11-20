@@ -1,20 +1,20 @@
 <template>
-  <div class="activitatsPeriodiques">
-    <h2 class="pb-3 text-center w-100">Activitats {{titolGaleria}}</h2>
+  <b-row class="m-0 activitatsPeriodiques justify-content-center align-items-center">
+    <h2 class="text-center w-100">Activitats {{titolGaleria}}</h2>
     <div 
       ref="mascaraGaleria"
-      class="justify-content-center overflow-hidden mx-0 w-75"
+      class="justify-content-center overflow-hidden mx-0"
       v-if="isMobile==false"
     >
         <gallery
           v-if="visibilitatGaleria"
-          :activitatsCarousel="activitatsPeriodiques.Periodiques"
+          :activitatsCarousel="activitatsPeriodiques.periodiques"
           :titolGaleria="Periodiques"
           :ampladaPantallaActivitat="ampladaPantalla"
           class="my-5"
         />
     </div>
-  </div>
+  </b-row>
 </template>
 
 <script>
@@ -84,12 +84,13 @@ export default {
 
   h2 {
     color:#b2dbd4;
+    text-transform: capitalize;
   }
 
   .activitatsPeriodiques{
     background: #315c7f;
-    padding-top:3.5rem;
-    padding-bottom:3.5rem;
+    padding-top:2.5rem;
+    padding-bottom:1rem;
     position: relative;
   }
 
