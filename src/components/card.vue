@@ -91,8 +91,8 @@ export default {
   }
 
   .cardBody:hover{
-    margin: 0px 40px;
-    transform: scale(1.3);
+    margin: 0px 10px;
+    transform: scale(1.1);
   }
 
   .cardBody a:hover{

@@ -77,7 +77,7 @@ export default {
       if (this.numCardsVisibles == 0) {
         this.numCardsVisibles++;
       }
-      let distanciaMoure = this.numCardsVisibles * 230;
+      let distanciaMoure = this.numCardsVisibles * 245;
       if (distanciaMoure == 0) {
         distanciaMoure = 266;
       }

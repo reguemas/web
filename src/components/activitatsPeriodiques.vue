@@ -6,7 +6,6 @@
       class="justify-content-center overflow-hidden mx-0 w-75"
       v-if="isMobile==false"
     >
-      <span>galeria d'{{ activitatsPeriodiques }}</span>
         <gallery
           v-if="visibilitatGaleria"
           :activitatsCarousel="activitatsPeriodiques.Periodiques"
@@ -45,6 +44,7 @@ export default {
 
   computed: {
     ampladaPantalla: function() {
+      //let ampladaMascara;
       if (this.$refs.mascaraGaleria) {
         return this.$refs.mascaraGaleria.offsetWidth;
       } else {
@@ -71,7 +71,7 @@ export default {
     ) {
       this.isMobile = true;
     }
-    if (this.totesActivitats.Periodiques == undefined) {
+    if (this.activitatsPeriodiques == undefined) {
       this.visibilitatGaleria = false;
     }
     this.amplada = this.$refs.mascaraGaleria.offsetWidth;
