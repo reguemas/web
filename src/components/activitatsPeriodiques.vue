@@ -1,19 +1,21 @@
 <template>
-  <b-row class="m-0 activitatsPeriodiques justify-content-center align-items-center">
-    <h2 class="text-center w-100">Activitats {{ titolGaleria }}</h2>
-    <div 
-      ref="mascaraGaleria"
-      class="justify-content-center overflow-hidden mx-0"
-      v-if="isMobile==false"
-    >
-        <gallery
-          v-if="visibilitatGaleria"
-          :activitatsCarousel="activitatsPeriodiques"
-          :ampladaPantallaActivitat="ampladaPantalla"
-          class="my-5"
-        />
+  <div class="d-flex justify-content-center activitatsPeriodiques">
+    <div class="ampladaGaleriaPeriodiques">
+      <b-row
+        ref="mascaraGaleria"
+        class="mx-5 position-relative overflow-hidden align-items-center"
+        v-if="isMobile==false"
+      >
+        <h2 class="text-center w-100">Activitats {{ titolGaleria }}</h2>
+          <gallery
+            v-if="visibilitatGaleria"
+            :activitatsCarousel="activitatsPeriodiques"
+            :ampladaPantallaActivitat="ampladaPantalla"
+            class="my-5"
+          />
+      </b-row>
     </div>
-  </b-row>
+  </div>
 </template>
 
 <script>
@@ -101,6 +103,10 @@ export default {
     background-size:cover;
     position: absolute;
     top:-150px;
+  }
+
+  .ampladaGaleriaPeriodiques{
+    max-width:1427px;
   }
 
 </style>
