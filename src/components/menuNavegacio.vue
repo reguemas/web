@@ -95,10 +95,10 @@
 </template>
 
 <script>
-import menuPrincipal from './json/menu.json'
+import menuPrincipal from './json/menuNavegacio.json'
 
 export default {
-  name: 'menu',
+  name: 'menuNavegacio',
 
   data() {
     return {
