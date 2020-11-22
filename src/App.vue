@@ -13,8 +13,8 @@
 <script>
 
 import axios from "axios";
-import navMenu from "./components/menuNavegacio.vue";
-import peuWeb from "./components/footer.vue";
+import navMenu from "./components/generalWeb/menuNavegacio.vue";
+import peuWeb from "./components/generalWeb/footer.vue";
 
 export default {
   name: "app",

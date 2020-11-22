@@ -13,7 +13,7 @@
 
 <script>
 
-import cardNoticies from './cardNoticies.vue'
+import cardNoticies from './components/home/cardNoticies.vue'
 
 export default {
 

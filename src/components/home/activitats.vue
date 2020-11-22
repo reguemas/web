@@ -78,7 +78,7 @@
             class="btnTipusActivitats tipusActivitats mr-xl-5"
           >
             <img
-              src="../assets/botonsActivitats/tipusActivitats.png"
+              src="../../assets/botonsActivitats/tipusActivitats.png"
               class="mr-3 botonsActivitatsImg"
             />
             Totes les Activitats
@@ -89,7 +89,7 @@
             class="btnTipusActivitats familiaActivitats"
           >
             <img
-              src="../assets/botonsActivitats/familiaActivitats.png"
+              src="../../assets/botonsActivitats/familiaActivitats.png"
               class="mr-3 botonsActivitatsImg"
             />
             Activitats pels Teus Fills i en Família
@@ -102,10 +102,10 @@
 
 <script>
 
-  import gallery from "./gallery.vue";
-  import galleryMobile from "./galleryMobile.vue";
-  import filtersCalendar from "./filtersCalendar.vue";
-  import totesActivitats from "./json/activitatsCarousels.json";
+  import gallery from "@/components/home/gallery.vue";
+  import galleryMobile from "@/components/home/galleryMobile.vue";
+  import filtersCalendar from "@/components/home/filtersCalendar.vue";
+  import totesActivitats from "@/static/carousels/activitatsCarousels.json";
 
 export default {
   name: "activitats",

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import cardNoticies from './cardNoticies.vue'
-import noticies from './json/noticies.json'
+import cardNoticies from '@/components/home/cardNoticies.vue'
+import noticies from '@/static/noticies/noticies.json'
 
 export default {
   name: 'noticies',

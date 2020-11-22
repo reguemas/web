@@ -3,13 +3,13 @@
   <div class="menuBackground">
     <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
       <b-list-group horizontal class="ml-auto mr-4">
-        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-        <b-list-group-item><img src="../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
-        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../assets/social/icon-email.png" class="ml-3 mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+        <b-list-group-item><img src="../../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
+        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="ml-3 mr-2"></b-list-group-item>
+        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
       </b-list-group>
     </b-navbar>
 
@@ -18,14 +18,14 @@
         <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
       </b-navbar-brand>
       <b-list-group horizontal class="ml-auto mr-2">
-        <b-list-group-item><img src="../assets/social/icon-direccio.png" class="mx-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-        <b-list-group-item class="mr-2"><img src="../assets/social/icon-telefon.png" class="mx-2">93 788 30 30</b-list-group-item>
-        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="mx-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+        <b-list-group-item class="mr-2"><img src="../../assets/social/icon-telefon.png" class="mx-2">93 788 30 30</b-list-group-item>
+        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
       </b-list-group>
     </b-navbar>
 
@@ -71,17 +71,17 @@
             <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
 
             <b-list-group horizontal class="mx-auto mt-4 displayMobile">
-              <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
             </b-list-group>
 
             <b-list-group class="mt-3 displayMobile">
-              <b-list-group-item class="mt-3"><img src="../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-              <b-list-group-item class="mt-3"><img src="../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
+              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
             </b-list-group>
           </b-navbar-nav>
           <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="d-none altaSoci">
@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import menuPrincipal from './json/menuNavegacio.json'
+import menuPrincipal from './static/menuNavegacio/menuNavegacio.json'
 
 export default {
   name: 'menuNavegacio',

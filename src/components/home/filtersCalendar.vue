@@ -68,8 +68,8 @@
 
 <script>
 
-import datesCalendari from './json/calendari.json'
-import activitatsAvui from './json/activitatsAvui.json'
+import datesCalendari from './static/calendari/calendari.json'
+import activitatsAvui from './static/calendari/activitatsAvui.json'
 
 export default {
   name: 'filtersCalendar',

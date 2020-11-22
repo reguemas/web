@@ -20,9 +20,9 @@
 
 <script>
 
-  import gallery from "./gallery.vue";
+  import gallery from "./components/home/gallery.vue";
   //import galleryMobile from "./galleryMobile.vue";
-  import totesActivitatsPeriodiques from './json/activitatsPeriodiques.json'
+  import totesActivitatsPeriodiques from './static/carousels/activitatsPeriodiques.json'
 
 export default {
   name: 'activitatPeriodiques',

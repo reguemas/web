@@ -1,5 +1,5 @@
 {
-    "Participa":
+    "participa":
         {
             "colorFons": "#008cba",
             "colorFont": "#f2f5f7",
@@ -14,7 +14,7 @@
             "url": "#",
             "imatge": "/activitatsPromocionada/participa.jpg"
         },
-    "FEEC":
+    "feec":
         {
             "colorFons": "#3f628d",
             "colorFont": "#f2f5f7",

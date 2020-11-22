@@ -9,8 +9,8 @@
       <activitatsPeriodiques/>
 
       <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.FEEC"
-        :activitatPromocionadaDreta="activitatsPromocionades.Participa"
+        :activitatPromocionadaEsquerra="activitatsPromocionades.feec"
+        :activitatPromocionadaDreta="activitatsPromocionades.participa"
       />
 
       <noticies/>
@@ -18,8 +18,8 @@
       <serveis />
 
       <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.Participa"
-        :activitatPromocionadaDreta="activitatsPromocionades.FEEC"
+        :activitatPromocionadaEsquerra="activitatsPromocionades.participa"
+        :activitatPromocionadaDreta="activitatsPromocionades.feec"
       />
 
       <colaboradorsWebAmigues />
@@ -30,14 +30,14 @@
 
 <script>
 
-import webTop from "@/components/webTop.vue";
-import activitats from "@/components/activitats.vue";
-import activitatsPeriodiques from "@/components/activitatsPeriodiques.vue";
-import activitatPromocionada from "@/components/activitatPromocionada.vue";
-import noticies from "@/components/noticies.vue";
-import serveis from "@/components/serveis.vue";
-import colaboradorsWebAmigues from "@/components/colaboradorsWebAmigues.vue";
-import promocions from '@/components/json/promocions.json';
+import webTop from "@/components/home/webTop.vue";
+import activitats from "@/components/home/activitats.vue";
+import activitatsPeriodiques from "@/components/home/activitatsPeriodiques.vue";
+import activitatPromocionada from "@/components/home/activitatPromocionada.vue";
+import noticies from "@/components/home/noticies.vue";
+import serveis from "@/components/home/serveis.vue";
+import colaboradorsWebAmigues from "@/components/home/colaboradorsWebAmigues.vue";
+import promocions from '@/static/espaisPromocionals/promocions.json';
 
 export default {
   name: "home",

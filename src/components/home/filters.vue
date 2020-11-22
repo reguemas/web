@@ -69,9 +69,9 @@
 </template>
 
 <script>
-import card from './card.vue'
-import gallery from './gallery.vue'
-import totesActivitats from './json/carousel.json'
+import card from './components/home/card.vue'
+import gallery from './components/home/gallery.vue'
+import totesActivitats from './static/carousels/carousel.json'
 
 export default {
   name: 'activitats',
