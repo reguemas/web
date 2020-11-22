@@ -12,7 +12,7 @@
               <b-form-select
                 class="mt-3"
                 :value="null"
-                :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
+                :options="['One','Two','Three']"
                 id="filtreActivitat"
               >
                 <option slot="first" :value="null">Busca Activitats</option>
@@ -21,7 +21,7 @@
               <b-form-select
                 class="mt-3"
                 :value="null"
-                :options="{ '1': 'Gener', '2': 'Febrer', '3': 'Març', '4': 'Abril', '5': 'Maig', '6': 'Juny', '7': 'Juliol', '8': 'Agost', '9': 'Setembre', '10': 'Octubre', '11': 'Novembre', '12': 'Desembre' }"
+                :options="['Gener','Febrer','Març','Abril','Maig','Juny','Juliol','Agost','Setembre','Octubre','Novembre','Desembre']"
                 id="filtreMes"
               >
                 <option slot="first" :value="null">Quin Mes</option>
@@ -40,7 +40,7 @@
             <b-form-select
               class="mt-3"
               :value="null"
-              :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
+              :options="['One','Two','Three']"
               id="filtreActivitat"
             >
               <option slot="first" :value="null">Busca Activitats</option>
@@ -48,7 +48,7 @@
             <b-form-select
               class="mt-3"
               :value="null"
-              :options="{ '1': 'Gener', '2': 'Febrer', '3': 'Març', '4': 'Abril', '5': 'Maig', '6': 'Juny', '7': 'Juliol', '8': 'Agost', '9': 'Setembre', '10': 'Octubre', '11': 'Novembre', '12': 'Desembre' }"
+              :options="['Gener','Febrer','Març','Abril','Maig','Juny','Juliol','Agost','Setembre','Octubre','Novembre','Desembre']"
               id="filtreMes"
             >
               <option slot="first" :value="null">Quin Mes</option>

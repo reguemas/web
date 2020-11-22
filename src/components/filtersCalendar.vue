@@ -7,7 +7,7 @@
           <b-form-select
             class="filtreActivitat"
             :value="null"
-            :options="{ '1': 'One', '2': 'Two', '3': 'Three' }"
+            :options="['One','Two','Three']"
           >
             <option slot="first" :value="null">Busca Activitats</option>
           </b-form-select>

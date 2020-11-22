@@ -1,6 +1,6 @@
 <template>
   <b-row class="m-0 activitatsPeriodiques justify-content-center align-items-center">
-    <h2 class="text-center w-100">Activitats {{titolGaleria}}</h2>
+    <h2 class="text-center w-100">Activitats {{ titolGaleria }}</h2>
     <div 
       ref="mascaraGaleria"
       class="justify-content-center overflow-hidden mx-0"
@@ -8,8 +8,7 @@
     >
         <gallery
           v-if="visibilitatGaleria"
-          :activitatsCarousel="activitatsPeriodiques.periodiques"
-          :titolGaleria="Periodiques"
+          :activitatsCarousel="activitatsPeriodiques"
           :ampladaPantallaActivitat="ampladaPantalla"
           class="my-5"
         />
@@ -21,7 +20,7 @@
 
   import gallery from "./gallery.vue";
   //import galleryMobile from "./galleryMobile.vue";
-  import totesActivitats from './json/activitatsPeriodiques.json'
+  import totesActivitatsPeriodiques from './json/activitatsPeriodiques.json'
 
 export default {
   name: 'activitatPeriodiques',
@@ -34,8 +33,8 @@ export default {
   data() {
     return {
       myToggle: false,
-      activitatsPeriodiques: totesActivitats,
-      titolGaleria: Object.keys(totesActivitats)[0],
+      activitatsPeriodiques: totesActivitatsPeriodiques.periodiques,
+      titolGaleria: Object.keys(totesActivitatsPeriodiques)[0],
       visibilitatGaleria: true,
       isMobile: false,
       amplada: 0
