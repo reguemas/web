@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import card from "./components/home/card.vue";
+import card from "@/components/home/card.vue";
 
 export default {
   name: "gallery",

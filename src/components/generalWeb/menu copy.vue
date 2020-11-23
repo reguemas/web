@@ -123,7 +123,7 @@
 </template>
 
 <script>
-import menu from './static/menuNavegacio/menu.json'
+import menu from '@/static/menuNavegacio/menu.json'
 
 export default {
   name: 'menu',

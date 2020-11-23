@@ -57,7 +57,7 @@
           size="lg"
           href="http://ce-terrassa.cat/agenda/"
           class="botoAgenda w-100">
-            <img src="../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">
+            <img src="../../assets/botoAgenda/agenda.png" class="mr-3 botonsActivitatsImg">
               Agenda Completa
         </b-button>
       </b-row>
@@ -68,8 +68,8 @@
 
 <script>
 
-import datesCalendari from './static/calendari/calendari.json'
-import activitatsAvui from './static/calendari/activitatsAvui.json'
+import datesCalendari from '@/static/calendari/calendari.json'
+import activitatsAvui from '@/static/calendari/activitatsAvui.json'
 
 export default {
   name: 'filtersCalendar',

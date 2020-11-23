@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import homeSlider from './components/home/webTopSlider.vue'
+import homeSlider from '@/components/home/webTopSlider.vue'
 
 export default {
   name: 'webTop',

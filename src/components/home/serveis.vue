@@ -24,7 +24,7 @@
 
 <script>
 
-  //import serveis from './json/serveis.json'
+  //import serveis from '@/json/serveis.json'
 
   export default {
     name: 'serveis',

@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import menuPrincipal from './static/menuNavegacio/menuNavegacio.json'
+import menuPrincipal from '@/static/menuNavegacio/menuNavegacio.json'
 
 export default {
   name: 'menuNavegacio',

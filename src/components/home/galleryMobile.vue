@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import cardMobile from "./components/home/cardMobile.vue";
+import cardMobile from "@/components/home/cardMobile.vue";
 
 export default {
   name: "galleryMobile",
