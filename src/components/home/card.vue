@@ -10,12 +10,13 @@
       :href="this.activitat.url"
     >
       <div class="cardTitle" :class="[{ titleBackgroundHover:hover },{ cardTitleHover:hover }]">
-        <h2 class="modalitatActivitat backgroundModalitat" :style = "getBackgroundModalitatClass">{{activitat.modalitat}}</h2>
+        <h2 class="modalitatActivitat backgroundModalitat" :style = "getBackgroundModalitatClass">{{ activitat.modalitat }}</h2>
         <h3 :class="[{titolHover:hover}, {titol:!hover}]">{{ activitat.title }}</h3>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.vocalia===activitat.seccio">{{ activitat.seccio }}</div>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-else>{{ activitat.seccio }} - {{ activitat.vocalia }}</div>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
+        <div style = "background-image: url(/assets/activitats/card/modalitat/esportives.png) !important;">{{ activitat.title }}</div>
         <div class="dificultat" :style="getDificultat" :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dificultat!=0"></div>
         <div v-if=hover class="cardInfo">{{ activitat.descripcio }}</div>
       </div>
@@ -32,7 +33,7 @@ export default {
   data() {
     return {
       hover: false,
-      tipusActivitat: ["esportives","culturals","socials"],
+      tipusActivitat: ["esportives","culturalSocials","formacio","periodiques"],
     };
   },
 
@@ -103,15 +104,19 @@ export default {
     background: rgba(0,0,0,0.3);
   }
 
-  .borderEsportives{
+  .borderEsportives {
     border: 7px solid red !important; 
   }
 
-  .borderCulturals{
+  .borderCulturalSocials {
     border: 7px solid green !important; 
   }
 
-  .borderSocials{
+  .borderFormacio{
+    border: 7px solid rgb(141, 141, 240) !important; 
+  }
+
+  .borderPeriodiques{
     border: 7px solid rgb(141, 141, 240) !important; 
   }
 

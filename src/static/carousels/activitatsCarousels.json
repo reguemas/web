@@ -158,7 +158,7 @@
       }
     ]
   },
-  "culturalSocial": {
+  "culturalSocials": {
     "titol": "Activitats Culturals i Socials",
     "items": [
       {
@@ -338,7 +338,6 @@
       }
     ]
   },
-
   "formacio": {
     "titol": "Escola de Muntanya i Formació",
     "items": [
