@@ -6,7 +6,7 @@
 
       <activitats />
 
-      <activitatsPeriodiques/>
+      <quiSom/>
 
       <activitatPromocionada
         :activitatPromocionadaEsquerra="activitatsPromocionades.feec"
@@ -32,7 +32,7 @@
 
 import webTop from "@/components/home/webTop.vue";
 import activitats from "@/components/home/activitats.vue";
-import activitatsPeriodiques from "@/components/home/activitatsPeriodiques.vue";
+import quiSom from "@/components/home/quiSom.vue";
 import activitatPromocionada from "@/components/generalWeb/activitatPromocionada.vue";
 import noticies from "@/components/home/noticies.vue";
 import serveis from "@/components/home/serveis.vue";
@@ -46,7 +46,7 @@ export default {
     webTop,
     activitats,
     activitatPromocionada,
-    activitatsPeriodiques,
+    quiSom,
     noticies,
     serveis,
     colaboradorsWebAmigues,
