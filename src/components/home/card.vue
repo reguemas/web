@@ -16,7 +16,6 @@
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-else>{{ activitat.seccio }} - {{ activitat.vocalia }}</div>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dataInici==activitat.dataFinal">{{ activitat.dataInici }}</div>
         <div :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dataInici!=activitat.dataFinal">{{ activitat.dataInici }} al {{ activitat.dataFinal }}</div>
-        <div style = "background-image: url(/assets/activitats/card/modalitat/esportives.png) !important;">{{ activitat.title }}</div>
         <div class="dificultat" :style="getDificultat" :class="[{activitatInfoHover:hover}, {activitatInfo:!hover}]" v-if="activitat.dificultat!=0"></div>
         <div v-if=hover class="cardInfo">{{ activitat.descripcio }}</div>
       </div>
@@ -117,7 +116,7 @@ export default {
   }
 
   .borderPeriodiques{
-    border: 7px solid rgb(141, 141, 240) !important; 
+    border: 7px solid rgb(205, 205, 196) !important; 
   }
 
   .cardTitle{
@@ -202,4 +201,3 @@ export default {
   }
 
 </style>
-
