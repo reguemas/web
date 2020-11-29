@@ -52,7 +52,7 @@ export default {
 
   .cardNoticiaBody:hover{
     margin:0px 20px;
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
   .noticiaTitol{
