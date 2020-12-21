@@ -65,7 +65,7 @@ export default {
   .jumbotron{
     background-color: transparent !important;
     position:absolute;
-    top:-5%;
+    top:40px;
     left:-11%;
     padding-top:0;
     color: rgb(13,189,151);
