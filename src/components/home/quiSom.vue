@@ -63,46 +63,9 @@ export default {
 
   data() {
     return {
-      visibilitatGaleria: true,
-      isMobile: false,
-      amplada: 0
+
     }
   },
-
-  computed: {
-    ampladaPantalla: function() {
-      //let ampladaMascara;
-      if (this.$refs.mascaraGaleria) {
-        return this.$refs.mascaraGaleria.offsetWidth;
-      } else {
-        return this.amplada;
-      }
-    }
-  },
-
-  watch:{
-    ampladaPantalla: function (){
-      return this.$refs.mascaraGaleria.offsetWidth;
-    }
-  },
-
-  mounted() {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i)
-    ) {
-      this.isMobile = true;
-    }
-    if (this.activitatsPeriodiques == undefined) {
-      this.visibilitatGaleria = false;
-    }
-    this.amplada = this.$refs.mascaraGaleria.offsetWidth;
-  }
 };
 
 </script>

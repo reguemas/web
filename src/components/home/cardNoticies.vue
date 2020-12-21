@@ -44,15 +44,15 @@ export default {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     text-align:center;
     display: block; 
-    width: 320px;
-    height: 350px;
+    width: 300px;
+    height: 320px;
     transition-delay: 1s;
     transition: all 0.3s ease;
   }
 
   .cardNoticiaBody:hover{
-    margin:0px 20px;
-    transform: scale(1.05);
+    margin:0px 10px;
+    transform: scale(1.1);
   }
 
   .noticiaTitol{
@@ -87,11 +87,11 @@ export default {
 
   .cardNoticiaImgTamany {
     width: auto;
-    height: 350px;
+    height: 320px;
   }
 
   .cardNoticiaTitle{
-    padding-top:250px !important;
+    padding-top:220px !important;
   }
 
 </style>

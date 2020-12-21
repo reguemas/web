@@ -6,21 +6,18 @@
 
       <activitats />
 
-      <quiSom/>
+      <quiSom />
 
-      <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.feec"
-        :activitatPromocionadaDreta="activitatsPromocionades.participa"
-      />
+      <promocions />
 
       <noticies/>
 
-      <serveis />
-
-      <activitatPromocionada
-        :activitatPromocionadaEsquerra="activitatsPromocionades.participa"
-        :activitatPromocionadaDreta="activitatsPromocionades.feec"
+      <serveis
+        :serveiEsquerra="serveisCET.feec"
+        :serveiDreta="serveisCET.participa"
       />
+
+      <promocions />
 
       <colaboradorsWebAmigues />
 
@@ -33,11 +30,12 @@
 import webTop from "@/components/home/webTop.vue";
 import activitats from "@/components/home/activitats.vue";
 import quiSom from "@/components/home/quiSom.vue";
-import activitatPromocionada from "@/components/generalWeb/activitatPromocionada.vue";
+//import activitatPromocionada from "@/components/generalWeb/activitatPromocionada.vue";
 import noticies from "@/components/home/noticies.vue";
+import promocions from "@/components/home/promocions.vue";
 import serveis from "@/components/home/serveis.vue";
 import colaboradorsWebAmigues from "@/components/home/colaboradorsWebAmigues.vue";
-import promocions from '@/static/espaisPromocionals/promocions.json';
+import servei from '@/static/espaisPromocionals/promocions.json';
 
 export default {
   name: "home",
@@ -45,7 +43,8 @@ export default {
   components: {
     webTop,
     activitats,
-    activitatPromocionada,
+    promocions,
+    //activitatPromocionada,
     quiSom,
     noticies,
     serveis,
@@ -54,7 +53,7 @@ export default {
 
   data() {
     return {
-      activitatsPromocionades:promocions,
+      serveisCET:servei,
     };
   },
 
@@ -63,7 +62,7 @@ export default {
 
 <style>
 body {
-    font-family: "AveriaSerif";
+  font-family: "AveriaSerif";
 }
 
 .textCyan {

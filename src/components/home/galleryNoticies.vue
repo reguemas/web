@@ -1,201 +1,179 @@
 <template>
   <div>
-    <h2 class="ml-3 my-4">Noticies</h2>
-    <b-row class="m-0">
-      <b-list-group horizontal ref="esMou" class="esMou">
-        <b-list-group-item class="p-0 ml-3" :key="index" v-for="(noticia,index) in noticiesCarousel">
-          <cardNoticies :noticia="noticia"/>
+    <b-row class="m-0" @mouseover="visualitzacioBotons" @mouseleave="controlsVisibilitat=false">
+      <b-list-group horizontal ref="esMou" class="esMou pr-3">
+        <b-list-group-item
+          class="p-0 carruselActivitats"
+          :key="index"
+          v-for="(activitat,index) in activitatsCarousel"
+        >
+          <card :activitat="activitat" />
         </b-list-group-item>
       </b-list-group>
+      <div v-if="controlsVisibilitat">
+        <button
+          class="botoAnterior"
+          v-if="botoAnteriorVisibilitat"
+          @click="movimentCarousel"
+          ref="anterior"
+        >&lsaquo;</button>
+        <button
+          class="botoSeguent"
+          v-if="botoSeguentVisibilitat"
+          @click="movimentCarousel"
+          ref="seguent"
+        >&rsaquo;</button>
+      </div>
     </b-row>
   </div>
 </template>
 
 <script>
-
-import cardNoticies from '@/components/home/cardNoticies.vue'
+import card from "@/components/home/card.vue";
 
 export default {
+  name: "gallery",
 
-  name: 'galleryNoticies',
-
-  props:["noticiesCarousel"],
+  props: ["activitatsCarousel", "ampladaPantallaActivitat"],
 
   components: {
-    cardNoticies,
+    card
   },
 
   data() {
     return {
-      count:0,
-      botoAnteriorVisibilitat:false,
-      botoSeguentVisibilitat:true,
-      controlsVisibilitat:false,
+      count: 0,
+      botoAnteriorVisibilitat: false,
+      botoSeguentVisibilitat: true,
+      controlsVisibilitat: false,
+      ampladaPantallaGaleria: this.ampladaPantallaActivitat
     };
-
   },
 
   mounted() {
-    if( navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)) {
-      this.controlsVisibilitat=true;
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i)
+    ) {
+      this.controlsVisibilitat = false;
     }
   },
 
-  methods:{
+  methods: {
     visualitzacioBotons: function() {
-      let element = this.$refs.esMou;
-      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = Math.round((ampladaPantalla - 48)/316);
-      let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = Math.round(longitudGaleria/numCardsVisibles);
-      if (numClickFinalGaleria == 1) {
-        this.controlsVisibilitat=false;
+      if (this.numClickFinalGaleria == 0) {
+        this.controlsVisibilitat = false;
       } else {
-        this.controlsVisibilitat=true;
+        this.controlsVisibilitat = true;
       }
     },
 
     movimentCarousel: function() {
-      let element = this.$refs.esMou;
-      let ampladaPantalla = this.$refs.mascaraGaleria.offsetWidth;
-      let numCardsVisibles = Math.round((ampladaPantalla - 48)/316);
-      let distanciaMoure = (Math.round(numCardsVisibles)-1)*300;
+      if (this.numCardsVisibles == 0) {
+        this.numCardsVisibles++;
+      }
+      let distanciaMoure = this.numCardsVisibles * 245;
       if (distanciaMoure == 0) {
-        distanciaMoure = 316;
+        distanciaMoure = 266;
       }
-      let longitudGaleria = element.childNodes.length;
-      let numClickFinalGaleria = Math.round(longitudGaleria/numCardsVisibles);
-      if (longitudGaleria % numCardsVisibles==0 && numClickFinalGaleria==numCardsVisibles){
-        numClickFinalGaleria = numClickFinalGaleria-1;
-      }
-      if (event.target.className==="botoAnterior") {
+      if (event.target.className === "botoAnterior") {
         this.count++;
-        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
-        this.botoSeguentVisibilitat=true;
-        if (this.count==0) {
-          this.botoAnteriorVisibilitat=false;
+        this.element.style.transform =
+          "translateX(" + this.count * distanciaMoure + "px)";
+        this.botoSeguentVisibilitat = true;
+        if (this.count == 0) {
+          this.botoAnteriorVisibilitat = false;
         }
       }
-      if (event.target.className==="botoSeguent") {
+      if (event.target.className === "botoSeguent") {
         this.count--;
-        element.style.transform = "translateX("+this.count*distanciaMoure+"px)";
-        this.botoAnteriorVisibilitat=true;
-        if (this.count == -numClickFinalGaleria) {
-          this.botoSeguentVisibilitat=false;
+        this.element.style.transform =
+          "translateX(" + this.count * distanciaMoure + "px)";
+        this.botoAnteriorVisibilitat = true;
+        if (this.count == -this.numClickFinalGaleria) {
+          this.botoSeguentVisibilitat = false;
         }
       }
-    },
+    }
   },
-}
-
+  watch: {
+    ampladaPantallaActivitat: function(newAmplada, oldAmplada) {
+      if (newAmplada != oldAmplada) {
+        this.element = this.$refs.esMou;
+        this.longitudGaleria = this.element.childNodes.length;
+        this.numCardsVisibles = Math.floor(newAmplada / 250);
+        this.numClickFinalGaleria = Math.floor(
+          this.longitudGaleria / this.numCardsVisibles
+        );
+        if (this.numCardsVisibles == 1) {
+          this.numClickFinalGaleria--;
+        }
+        if (this.longitudGaleria * 266 < newAmplada) {
+          this.numClickFinalGaleria = 0;
+          this.controlsVisibilitat = false;
+        }
+      }
+    }
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 
-  .esMou{
-    transition: transform 1s ease-in-out;
-  }
+.esMou {
+  transition: transform 1s ease-in-out;
+}
 
-  .list-group-item{
-    border:none !important;
-  }
+.list-group-item {
+  border: none !important;
+  margin-left: 1rem;
+}
 
-  .botoAnterior{
-    position: absolute;
-    left:0;
-    margin-top:-300px;
-    border:none !important;
-    color:white;
-    font-size: 50px;
-    line-height: 300px;
-    text-align:center;
-    width:75px;
-    padding: 0 !important;
-    background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.6) 50%,
-      rgba(0, 0, 0, 0.0) 100%
-    );
-  }
+.list-group-item:first-child {
+  margin-left: 0 !important;
+}
 
-  .botoSeguent{
-    position: absolute;
-    right:0;
-    margin-top:-300px;
-    border:none !important;
-    color:white;
-    font-size: 50px;
-    line-height: 300px;
-    text-align:center;
-    width:75px;
-    padding: 0 !important;
-    background: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.6) 50%,
-      rgba(0, 0, 0, 0.0) 100%
-    );
-  }
+.botoAnterior {
+  position: absolute;
+  left: 0;
+  margin-top: 0px;
+  border: none !important;
+  color: white;
+  font-size: 50px;
+  line-height: 270px;
+  text-align: center;
+  width: 75px;
+  padding: 0 !important;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 
-  #primer{
-    width:300px;
-    height:300px;
-    background-color:coral;
-  }
-
-  #segon{
-    width:300px;
-    height:300px;
-    background-color:green;
-  }
-
-  #tercer{
-    width:300px;
-    height:300px;
-    background-color:blue;
-  }
-
-  #quart{
-    width:300px;
-    height:300px;
-    background-color:red;
-  }
-
-  #cinque{
-    width:300px;
-    height:300px;
-    background-color:yellowgreen;
-  }
-
-  #sise{
-    width:300px;
-    height:300px;
-    background-color:rgb(89, 94, 80);
-  }
-
-  #sete{
-    width:300px;
-    height:300px;
-    background-color:rgb(234, 248, 205);
-  }
-
-  #vuite{
-    width:300px;
-    height:300px;
-    background-color:rgb(146, 138, 146);
-  }
-/*   .content{
-    position:absolute !important;
-    height:200px !important;
-    
-  }
- */
+.botoSeguent {
+  position: absolute;
+  right: 0;
+  margin-top: 0px;
+  border: none !important;
+  color: white;
+  font-size: 50px;
+  line-height: 270px;
+  text-align: center;
+  width: 75px;
+  padding: 0 !important;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 </style>
