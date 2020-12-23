@@ -10,14 +10,14 @@
 
       <promocions />
 
-      <noticies/>
-
-<!--       <serveis
+      <serveis
         :serveiEsquerra="serveisCET.feec"
         :serveiDreta="serveisCET.participa"
       />
 
-      <promocions /> -->
+      <noticies/>
+
+      <promocions />
 
       <colaboradorsWebAmigues />
 
@@ -33,7 +33,7 @@ import quiSom from "@/components/home/quiSom.vue";
 //import activitatPromocionada from "@/components/generalWeb/activitatPromocionada.vue";
 import noticies from "@/components/home/noticies.vue";
 import promocions from "@/components/home/promocions.vue";
-//import serveis from "@/components/home/serveis.vue";
+import serveis from "@/components/home/serveis.vue";
 import colaboradorsWebAmigues from "@/components/home/colaboradorsWebAmigues.vue";
 import servei from '@/static/espaisPromocionals/promocions.json';
 
@@ -47,7 +47,7 @@ export default {
     //activitatPromocionada,
     quiSom,
     noticies,
-    //serveis,
+    serveis,
     colaboradorsWebAmigues,
   },
 

@@ -62,7 +62,7 @@
           src="galeriaImatgesTopWeb/slide5_2.jpg"
           alt="image slot"
         >
-        <h1>Disfrutaràs de l'Alta Muntanya</h1>
+        <h1>Gaudiràs de l'Alta Muntanya</h1>
       </b-carousel-slide>
 
       <!-- Slides with img slot -->

@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="p-0 m-0 fonsBlauCel">
     <div class="ferseSoci mx-auto">
-      <h2 class="pt-5 px-1">Alta Soci 2020</h2>
+      <h2 class="pt-5 px-1">Alta Soci 2021</h2>
       <p class="info pt-2 px-1">Gràcies pel teu interès a fer-te soci del Centre Excursionista de Terrassa</p> 
       <b-row cols="1" cols-lg="2" no-gutters>
         <b-col class="animacioSoci">
@@ -23,7 +23,7 @@
           </div>
         </b-col>
       </b-row>
-      <b-row cols="1" cols-lg="3" no-gutters>
+      <b-row cols="1" cols-lg="2" no-gutters>
         <b-col class="animacioSoci">
           <div class="fonsGroc alturaCasella m-1">
             <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=11" class="enllaçFerseSoci">
@@ -42,6 +42,8 @@
             </a>
           </div>
         </b-col>
+      </b-row>
+      <b-row cols="1" cols-lg="2" no-gutters class="pb-5">
         <b-col class="animacioSoci">
           <div class="fonsVerd alturaCasella m-1">
             <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=13" class="enllaçFerseSoci">
@@ -51,21 +53,8 @@
             </a>
           </div>
         </b-col>
-      </b-row>
-      <b-row cols="1" cols-lg="2" no-gutters class="pb-5">
         <b-col class="animacioSoci">
           <div class="fonsMarro alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020-%c2%b7-formulari/?Modalitat=Soci%20Provador&Preu=10.00&Quantitat=1" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Provador</p>
-              <p class="descripcioSoci">Dret a una activitat</p>
-              <p class="descripcioSoci">Es pot repetir un màxim de tres cops</p>
-              <p class="descripcioSoci">Es descomptarà de la quota en fer-se soci</p>
-              <p class="preuSoci">10 €</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsTaronja alturaCasella m-1">
             <a href="http://ce-terrassa.cat/alta-soci-2020/#Avantatges" class="enllaçFerseSoci">
               <p class="modalitatSoci my-auto">Avantatges per als Socis</p>
             </a>
@@ -78,8 +67,6 @@
 </template>
 
 <script>
-
-//import webTop from "@/components/webTop.vue";
 
 export default {
   name: "ferseSoci",

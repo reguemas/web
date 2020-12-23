@@ -1,6 +1,7 @@
 <template>
   <b-container fluid class="m-0 p-0">
     <b-row class="m-0 p-0">
+      <h2 class="w-100 text-center py-4 titolServeisBackground m-0">Serveis del CET</h2>
       <b-col class="m-0 p-0">
         <b-row class="mx-0 serveiEsquerra">
           <div class="d-inline-flex">
@@ -10,11 +11,25 @@
             <div class="serveis ml-sm-3">
               <div class="d-block w-100">
                 <h1 class="titolServeis mb-3 mt-0 pb-0 pt-2">
-                  Servei de Gestió d'Assegurances
+                  Secretaria
                 </h1>
-                  <p class="mt-2 p-0">Demana la targeta de la FEEC/Espeleo per la web i la podràs recollir a sercretaria.</p>
-                  <p class="mt-2 p-0">Amb l'App de la FEEC no necessites l'exemplar físic.</p>
-                <ul>
+                  <p class="mt-2 p-0">Tant a la Web, com a la secretaria del centre trobaràs els següents serveis:</p>
+                <ul class="llistaServeis">
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Demanar Informació -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Fer-se Soci -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Inscriure's a una activitat -&rsaquo;
+                    </a>
+                  </li>
                   <li class="mb-2">
                     <a :href="serveiEsquerra.url" class="serveisEnllaç">
                       targeta FEEC -&rsaquo;
@@ -36,23 +51,37 @@
           <div class="d-inline-flex">
             <div class="serveis mr-sm-3">
               <div class="d-block w-100">
-                <h1 
-                  class="titolServeis mb-3 mt-0 pb-0 pt-2"
-                  :style="{borderTop: '3px solid' + serveiDreta.colorLiniaEnllaç}"
-                >{{serveiDreta.titol}}</h1>
-                  <p class="mb-2 p-0">{{serveiDreta.frase1}}</p>
-                  <p class="mb-1 p-0">{{serveiDreta.llista1}}</p>
-                  <p class="mb-1 p-0">{{serveiDreta.llista2}}</p>
-                  <p class="m-0 p-0">{{serveiDreta.llista3}}</p>
-                  <p class="mt-2 p-0">{{serveiDreta.frase2}}</p>
-                <a 
-                  v-if="serveiDreta.enllaç!=undefined"
-                  :href="serveiDreta.url"
-                  class="sereveisEnllaç" 
-                  :style="{color: serveiDreta.colorLiniaEnllaç}"
-                >
-                &lsaquo;- {{serveiDreta.enllaç}}
-                </a>
+                <h1 class="titolServeis mb-3 mt-0 pb-0 pt-2">
+                  Comunica't amb el CET
+                </h1>
+                  <p class="mt-2 p-0">Estigues informat de tot el que es cou al CET</p>
+                <ul class="llistaServeis">
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Butlletí Setmanal -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Portal de Tracks -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Canal de Telegram -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Preferències de Email -&rsaquo;
+                    </a>
+                  </li>
+                </ul>
+                <h2 class="mb-3 mt-0 pb-0 pt-2">
+                  <a class="participa" :href="serveiEsquerra.url">
+                    Col·labora amb el CET -&rsaquo;
+                  </a>
+                </h2>
               </div>
             </div>
             <div class="imatgeServeisMascara">
@@ -100,12 +129,17 @@
 
 <style>
 
+  .titolServeisBackground{
+    color:#f2f5f7;
+    background:#3f628d;
+  }
+
   .serveis{
     font-family: "Quicksand";
     font-weight:700;
     display:flex;
     align-items:flex-end;
-    width:280px;
+    width:350px;
     margin-bottom:0.5rem;
   }
 
@@ -160,8 +194,9 @@
 
   .imatgeServeis{
     background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
-    height:300px;
-    width:auto;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:350px;
   }
   
   @media (min-width:656px) and (max-width: 715px) {
@@ -201,6 +236,9 @@
     }
   }
 
+  .llistaServeis{
+    list-style-type: none;
+  }
 
   .serveisEnllaç {
     text-transform: capitalize;
@@ -212,11 +250,30 @@
   .serveisEnllaç:hover {
     font-size:1.4rem !important; 
     font-weight: bold !important;
-    transition: .4s ease;
+    transition: .2s ease;
+    color:#ffcc01;
   }
 
   .serveisEnllaç:active {
     color:#545454 !important;
+    transition: .2s ease;
+  }
+
+  .participa{
+    font-size:1.4rem;
+    font-weight:bold;
+    color:cyan;
+  }
+
+    .participa:hover {
+    font-size:1.6rem !important; 
+    font-weight: bold !important;
+    transition: .2s ease;
+    color:cyan;
+  }
+
+  .participa:active {
+    color:cyan;
     transition: .4s ease;
   }
 
