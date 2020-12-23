@@ -1,95 +1,98 @@
 <template>
+  <div>
+    <div class="menuBackgroundFosc">
+      <b-navbar id="contactMenu" class="d-flex">
+        <b-list-group horizontal class="ml-auto mr-4">
+          <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+          <b-list-group-item><img src="../../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
+          <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="ml-3 mr-2"></b-list-group-item>
+          <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+        </b-list-group>
+      </b-navbar>
 
-  <div class="menuBackground">
-<!--     <b-navbar id="contactMenu" variant="darkMenu" class="d-flex">
-      <b-list-group horizontal class="ml-auto mr-4">
-        <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="ml-3 mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-        <b-list-group-item><img src="../../assets/social/icon-telefon.png" class="ml-3 mr-2">93 788 30 30</b-list-group-item>
-        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="ml-3 mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-      </b-list-group>
-    </b-navbar>
-
-    <b-navbar id="socialMenu" variant="darkMenu" class="d-none">
-      <b-navbar-brand href="http://ce-terrassa.cat/" fluid-grow class="ml-2 mr-auto">
-        <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
-      </b-navbar-brand>
-      <b-list-group horizontal class="ml-auto mr-2">
-        <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="mx-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-        <b-list-group-item class="mr-2"><img src="../../assets/social/icon-telefon.png" class="mx-2">93 788 30 30</b-list-group-item>
-        <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-        <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-      </b-list-group>
-    </b-navbar> -->
-
-    <b-row no-gutters class="justify-content-center">
-      <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0 w-100">
-
-        <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
-
-        <h2 class="my-auto textCyan displayMobile">CET</h2>
-
-        <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-4">
+      <b-navbar id="socialMenu" class="d-none">
+        <b-navbar-brand href="http://ce-terrassa.cat/" fluid-grow class="ml-2 mr-auto">
           <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
         </b-navbar-brand>
-
-        <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
-
-          <b-navbar-nav class="">
-            <b-nav-item-dropdown :text="'El '+ keys[0]" left>
-              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.CET" :key="item.index">{{ item.item }}</b-dropdown-item>
-            </b-nav-item-dropdown>
-            <b-nav-item-dropdown text="Activitats" left class="ml-5">
-              <b-dropdown-item href="http://ce-terrassa.cat/activitats-del-cet/">Activitats del CET</b-dropdown-item>
-              <b-dropdown-header class="dropdown-header-label">
-                Activitats {{ keys[1] }}
-              </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Esportives" :key="item.index">{{ item.item }}</b-dropdown-item>
-              <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-header class="dropdown-header-label">
-                Activitats {{ keys[2] }}
-              </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Culturals" :key="item.index">{{ item.item }}</b-dropdown-item>
-              <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-header id="dropdown-header-label">
-                Activitats {{ keys[3] }}
-              </b-dropdown-header>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Socials" :key="item.index">{{ item.item }}</b-dropdown-item>
-              </b-nav-item-dropdown>
-            <b-nav-item-dropdown :text="keys[4]" left class="ml-5 textCyan">
-              <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,indexPublicacions) in menuNavegacio.Publicacions" :key="indexPublicacions">{{ item.item }}</b-dropdown-item>
-            </b-nav-item-dropdown>
-            <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Galeries</b-nav-item>
-
-            <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
-
-            <b-list-group horizontal class="mx-auto mt-4 displayMobile">
-              <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-              <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-            </b-list-group>
-
-            <b-list-group class="mt-3 displayMobile">
-              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
-            </b-list-group>
-          </b-navbar-nav>
-          <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="d-none altaSoci">
-            Fer-se Soci
-          </b-button>
-        </b-collapse>
+        <b-list-group horizontal class="ml-auto mr-2">
+          <b-list-group-item><img src="../../assets/social/icon-direccio.png" class="mx-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+          <b-list-group-item class="mr-2"><img src="../../assets/social/icon-telefon.png" class="mx-2">93 788 30 30</b-list-group-item>
+          <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+          <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+        </b-list-group>
       </b-navbar>
-    </b-row>   
+    </div>
+
+    <div class="menuBackground">
+      <b-row no-gutters class="justify-content-center">
+        <b-navbar id="menuNav" small toggleable="md" type="dark" class="p-0 w-100">
+
+          <b-navbar-toggle type="dark" variant="dark" target="nav-collapse" class="my-3 ml-3"></b-navbar-toggle>
+
+          <h2 class="my-auto textCyan displayMobile">CET</h2>
+
+          <b-navbar-brand id="logoCET" href="#" fluid-grow class="mr-4">
+            <b-img src="logosCET/CET_Esquerra-transparent-blanc-xs.png" alt="Logo Centre Excursionista Terrassa"></b-img>
+          </b-navbar-brand>
+
+          <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
+
+            <b-navbar-nav class="">
+              <b-nav-item-dropdown :text="'El '+ keys[0]" left>
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.CET" :key="item.index">{{ item.item }}</b-dropdown-item>
+              </b-nav-item-dropdown>
+              <b-nav-item-dropdown text="Activitats" left class="ml-5">
+                <b-dropdown-item href="http://ce-terrassa.cat/activitats-del-cet/">Activitats del CET</b-dropdown-item>
+                <b-dropdown-header class="dropdown-header-label">
+                  Activitats {{ keys[1] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Esportives" :key="item.index">{{ item.item }}</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-header class="dropdown-header-label">
+                  Activitats {{ keys[2] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Culturals" :key="item.index">{{ item.item }}</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-header id="dropdown-header-label">
+                  Activitats {{ keys[3] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Socials" :key="item.index">{{ item.item }}</b-dropdown-item>
+                </b-nav-item-dropdown>
+              <b-nav-item-dropdown :text="keys[4]" left class="ml-5 textCyan">
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,indexPublicacions) in menuNavegacio.Publicacions" :key="indexPublicacions">{{ item.item }}</b-dropdown-item>
+              </b-nav-item-dropdown>
+              <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Galeries</b-nav-item>
+
+              <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
+
+              <b-list-group horizontal class="mx-auto mt-4 displayMobile">
+                <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+                <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+                <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+                <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+                <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+                <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+              </b-list-group>
+
+              <b-list-group class="mt-3 displayMobile">
+                <b-list-group-item class="mt-3"><img src="../../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+                <b-list-group-item class="mt-3"><img src="../../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
+              </b-list-group>
+            </b-navbar-nav>
+            <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="d-none altaSoci">
+              Fer-se Soci
+            </b-button>
+          </b-collapse>
+        </b-navbar>
+      </b-row>   
+    </div>
   </div>
 
 </template>
@@ -127,6 +130,12 @@ export default {
   background-color: rgb(31, 111, 180) !important;
   box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,.25), inset 0 -1px 5px rgba(0,0,0,.25);
 }
+
+.menuBackgroundFosc{
+  background-color: #1b4c5c !important;
+}
+
+
 
 /* Menu Contacte i Xarxes Social */
 

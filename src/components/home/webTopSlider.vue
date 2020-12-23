@@ -15,7 +15,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide1_1.jpg"
+          src="galeriaImatgesTopWeb/slide1_2.jpg"
           alt="image slot"
         >
         <h1>Descobriràs el Nostre Entorn</h1>
@@ -26,7 +26,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide2_1.jpg"
+          src="galeriaImatgesTopWeb/slide2_2.jpg"
           alt="image slot"
         >
         <h1>Compartiràs l'Alegria del Cim</h1>
@@ -37,7 +37,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide3_1.jpg"
+          src="galeriaImatgesTopWeb/slide3_2.jpg"
           alt="image slot"
         >
         <h1>Descobriràs Nous Móns</h1>
@@ -48,7 +48,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide4_1.jpg"
+          src="galeriaImatgesTopWeb/slide4_2.jpg"
           alt="image slot"
         >
         <h1>Faràs Nous Amics</h1>
@@ -59,7 +59,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide5_1.jpg"
+          src="galeriaImatgesTopWeb/slide5_2.jpg"
           alt="image slot"
         >
         <h1>Disfrutaràs de l'Alta Muntanya</h1>
@@ -113,7 +113,7 @@ export default {
   
   #carousel-1 img{
     height:400px !important;
-    width:auto !important;
+    width:100 !important;
   }
 
   @media (min-width: 768px) {
