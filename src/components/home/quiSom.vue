@@ -77,7 +77,7 @@ export default {
   }
 
   .quiSom{
-    background: #315c7f;
+    background: #1b4c5c;
     padding-top:2.5rem;
     padding-bottom:1rem;
     position: relative;
