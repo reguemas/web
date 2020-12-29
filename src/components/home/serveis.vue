@@ -6,7 +6,7 @@
         <b-row class="mx-0 serveiEsquerra">
           <div class="d-inline-flex">
             <div class="imatgeServeisMascara">
-              <div class="imatgeServeis"></div>
+              <div class="imatgeServeisEsquerra"></div>
             </div>
             <div class="serveis ml-sm-3">
               <div class="d-block w-100">
@@ -85,12 +85,7 @@
               </div>
             </div>
             <div class="imatgeServeisMascara">
-              <img
-                class="imatgeServeis"
-                slot="img"
-                :src="serveiDreta.imatge"
-                alt="Vols fer de monitor al CET"
-              >
+              <div class="imatgeServeisDreta"></div>
             </div>
           </div>
         </b-row>
@@ -139,7 +134,7 @@
     font-weight:700;
     display:flex;
     align-items:flex-end;
-    width:350px;
+    width:300px;
     margin-bottom:0.5rem;
   }
 
@@ -192,7 +187,14 @@
     overflow:hidden;
   }
 
-  .imatgeServeis{
+  .imatgeServeisDreta{
+    background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:350px;
+  }
+
+  .imatgeServeisEsquerra{
     background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
     background-size: cover;
     background-repeat:no-repeat;

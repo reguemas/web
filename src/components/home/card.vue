@@ -3,7 +3,7 @@
     class="cardBody"
     @mouseover = "hover=true"
     @mouseleave = "hover=false"
-    :class   ="getBorderClass"
+    :class ="getBorderClass"
     :style="{background:'url(' + this.activitat.imatge + ') no-repeat', backgroundSize:'300px 300px'}"
   >
     <a 

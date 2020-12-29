@@ -10,7 +10,7 @@
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       >
-      <!-- Text slides with image -->
+      <!-- Text slides with image tamany de la imatge 1586x500px -->
       <b-carousel-slide>
         <img
           slot="img"
@@ -113,13 +113,12 @@ export default {
   
   #carousel-1 img{
     height:400px !important;
-    width:100 !important;
+    width:auto !important;
   }
 
   @media (min-width: 768px) {
     #carousel-1 img {
       height:500px !important;
-      width:auto !important;
     }
   }
 
@@ -129,6 +128,5 @@ export default {
       font-size:2.2rem;
     }
   }
-
 
 </style>
