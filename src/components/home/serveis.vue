@@ -1,77 +1,282 @@
 <template>
-  <div class="serveis">
-    <b-row class="m-0 filters justify-content-center align-items-center">
-      <h2 class="text-center pb-4 w-100">Serveis</h2>
-        <div class="py-4 mx-4">
-          <h4 class="text-center mb-5">Targetes Federatives</h4>
-          <a class="serveisImg targetaFederativa animacio" href="http://ce-terrassa.cat/inici/llicencies-federatives/"></a>
-        </div>
-        <div class="py-4 mx-4">
-          <h4 class="text-center mb-5">Butlletí Setmanal</h4>
-          <a class="serveisImg butlletiSetmanal animacio" href="https://us7.list-manage.com/subscribe?u=8bfad2969c28698c29f4390ad&id=42c3ad86b5"></a>
-        </div>
-        <div class="py-4 mx-4">
-          <h4 class="text-center mb-5">Portal de Tracks</h4>
-          <a class="serveisImg tracks animacio" href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467"></a>
-        </div>
-        <div class="py-4 mx-4">
-          <h4 class="text-center mb-5">Canal Telegram</h4>
-          <a class="serveisImg telegram animacio" href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/"></a>
-        </div>
+  <b-container fluid class="m-0 p-0">
+    <b-row class="m-0 p-0">
+      <h2 class="w-100 text-center py-4 titolServeisBackground m-0">Serveis del CET</h2>
+      <b-col class="m-0 p-0">
+        <b-row class="mx-0 serveiEsquerra">
+          <div class="d-inline-flex">
+            <div class="imatgeServeisMascara">
+              <div class="imatgeServeisEsquerra"></div>
+            </div>
+            <div class="serveis ml-sm-3">
+              <div class="d-block w-100">
+                <h1 class="titolServeis mb-3 mt-0 pb-0 pt-2">
+                  Secretaria
+                </h1>
+                  <p class="mt-2 p-0">Tant a la Web, com a la secretaria del centre trobaràs els següents serveis:</p>
+                <ul class="llistaServeis">
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Demanar Informació -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Fer-se Soci -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Inscriure's a una activitat -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      targeta FEEC -&rsaquo;
+                    </a>
+                  </li>
+                  <li>
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç pt-4">
+                      targeta espeleo -&rsaquo;
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </b-row>
+      </b-col>
+      <b-col class="m-0 p-0" v-if="serveiDreta!=undefined">
+        <b-row class="mx-0 serveiDreta">
+          <div class="d-inline-flex">
+            <div class="serveis mr-sm-3">
+              <div class="d-block w-100">
+                <h1 class="titolServeis mb-3 mt-0 pb-0 pt-2">
+                  Comunica't amb el CET
+                </h1>
+                  <p class="mt-2 p-0">Estigues informat de tot el que es cou al CET</p>
+                <ul class="llistaServeis">
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Butlletí Setmanal -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Portal de Tracks -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Canal de Telegram -&rsaquo;
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a :href="serveiEsquerra.url" class="serveisEnllaç">
+                      Preferències de Email -&rsaquo;
+                    </a>
+                  </li>
+                </ul>
+                <h2 class="mb-3 mt-0 pb-0 pt-2">
+                  <a class="participa" :href="serveiEsquerra.url">
+                    Col·labora amb el CET -&rsaquo;
+                  </a>
+                </h2>
+              </div>
+            </div>
+            <div class="imatgeServeisMascara">
+              <div class="imatgeServeisDreta"></div>
+            </div>
+          </div>
+        </b-row>
+      </b-col>
     </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>
 
-  //import serveis from '@/json/serveis.json'
-
   export default {
     name: 'serveis',
+
+    props:["serveiEsquerra","serveiDreta"],
+
+    data() {
+      return {
+        isMobile:false,
+      };
+    },
+
+    mounted() {
+    if( navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+        this.isMobile=true;
+      }
+    },
   }
 
 </script>
 
 <style>
 
+  .titolServeisBackground{
+    color:#f2f5f7;
+    background:#3f628d;
+  }
+
   .serveis{
-    background:#e1d1a0;
-    padding-top:3.5rem;
-    padding-bottom:3.5rem;
+    font-family: "Quicksand";
+    font-weight:700;
+    display:flex;
+    align-items:flex-end;
+    width:300px;
+    margin-bottom:0.5rem;
   }
 
-  .serveisImg {
-    text-decoration:none !important;
-    display:block;
+  .serveiEsquerra{
+    justify-content: center;
+    height:400px;
+    color:#f2f5f7;
+    background:#008cba;
+    align-items:flex-end;
   }
 
-  .targetaFederativa{
-    width: 300px;
-    height: 193px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2018/12/carnet2019-300x193.jpg") no-repeat;
+  .serveiDreta{
+    text-align:right;
+    justify-content: center;
+    align-items:flex-end;
+    height:400px;
+    color:#f2f5f7;
+    background:#3f628d;
   }
 
-  .butlletiSetmanal{
-    width: 300px;
-    height: 222px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2014/09/newsletter_blau_rgb-e1446803652472-300x222.png") no-repeat;
+  @media (min-width:1200px) and (max-width: 1391px) {
+    .serveiEsquerra{
+      justify-content: center !important;
+    }
+    .serveiDreta{
+      justify-content: center !important;
+    }
   }
 
-  .tracks{
-    width: 300px;
-    height: 226px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2014/09/CETWikiloc-300x226.png") no-repeat;
+  .titolServeis{
+    font-size: 1.5rem;
+    font-weight:bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ffcc01;
   }
 
-  .tracks:hover{
-    margin:0px 20px;
-    transform: scale(1.2);
+    @media (min-width:616px) and (max-width: 1199px) {
+    .serveiEsquerra{
+      justify-content: start !important;
+      padding-left:25px;
+    }
+    .serveiDreta{
+      justify-content: flex-end !important;
+      padding-right:25px;
+    }
   }
 
-  .telegram{
-    width: 300px;
-    height: 300px;
-    background: url("http://ce-terrassa.cat/wp-content/uploads/2014/09/telegram_icon-icons.com_53603-300x300.png") no-repeat;
+  .imatgeServeisMascara{
+    width:400px;
+    overflow:hidden;
+  }
+
+  .imatgeServeisDreta{
+    background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:350px;
+  }
+
+  .imatgeServeisEsquerra{
+    background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:350px;
+  }
+  
+  @media (min-width:656px) and (max-width: 715px) {
+    .imatgeServeisMascara{
+      width:320px;
+      height:auto;
+      overflow:hidden;
+    }
+  }
+
+  @media (max-width:655px) {
+
+    .serveiEsquerra{
+      justify-content: center;
+      text-align:center;
+      align-items:center;
+      height:275px;
+    }
+
+    .serveiDreta{
+      justify-content: center;
+      align-items:center;
+      text-align:center;
+      height:275px;
+    }
+
+    .imatgeServeisMascara{
+      display:none;
+    }
+
+    .imatgeServeis{
+      display:none;
+    }
+
+    .titolServeis{
+      border-top: none !important;
+    }
+  }
+
+  .llistaServeis{
+    list-style-type: none;
+  }
+
+  .serveisEnllaç {
+    text-transform: capitalize;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#ffcc01;
+  }
+
+  .serveisEnllaç:hover {
+    font-size:1.4rem !important; 
+    font-weight: bold !important;
+    transition: .2s ease;
+    color:#ffcc01;
+  }
+
+  .serveisEnllaç:active {
+    color:#545454 !important;
+    transition: .2s ease;
+  }
+
+  .participa{
+    font-size:1.4rem;
+    font-weight:bold;
+    color:cyan;
+  }
+
+    .participa:hover {
+    font-size:1.6rem !important; 
+    font-weight: bold !important;
+    transition: .2s ease;
+    color:cyan;
+  }
+
+  .participa:active {
+    color:cyan;
+    transition: .4s ease;
   }
 
 </style>

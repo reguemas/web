@@ -3,7 +3,6 @@
       <b-row no-gutters>
         <b-col no-gutters cols="12" md="3" xl="2" class="backgroundPortada">
           <div class="displayNoneMobile">
-            <h2 id="alPoisicio" class="textCyan escripturaGran">Al</h2>
             <b-navbar-brand href="#" fluid-grow id="logoBrand">
               <b-img src="logosCET/logo_CET_Home.png" alt="Logo Centre Excursionista Terrassa"></b-img>
             </b-navbar-brand>
@@ -65,7 +64,7 @@ export default {
   .jumbotron{
     background-color: transparent !important;
     position:absolute;
-    top:-5%;
+    top:40px;
     left:-11%;
     padding-top:0;
     color: rgb(13,189,151);

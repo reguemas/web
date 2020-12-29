@@ -10,12 +10,12 @@
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       >
-      <!-- Text slides with image -->
+      <!-- Text slides with image tamany de la imatge 1586x500px -->
       <b-carousel-slide>
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide1_1.jpg"
+          src="galeriaImatgesTopWeb/slide1_2.jpg"
           alt="image slot"
         >
         <h1>Descobriràs el Nostre Entorn</h1>
@@ -26,7 +26,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide2_1.jpg"
+          src="galeriaImatgesTopWeb/slide2_2.jpg"
           alt="image slot"
         >
         <h1>Compartiràs l'Alegria del Cim</h1>
@@ -37,7 +37,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide3_1.jpg"
+          src="galeriaImatgesTopWeb/slide3_2.jpg"
           alt="image slot"
         >
         <h1>Descobriràs Nous Móns</h1>
@@ -48,7 +48,7 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide4_1.jpg"
+          src="galeriaImatgesTopWeb/slide4_2.jpg"
           alt="image slot"
         >
         <h1>Faràs Nous Amics</h1>
@@ -59,10 +59,10 @@
         <img
           slot="img"
           class="d-block w-100"
-          src="galeriaImatgesTopWeb/slide5_1.jpg"
+          src="galeriaImatgesTopWeb/slide5_2.jpg"
           alt="image slot"
         >
-        <h1>Disfrutaràs de l'Alta Muntanya</h1>
+        <h1>Gaudiràs de l'Alta Muntanya</h1>
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
@@ -119,7 +119,6 @@ export default {
   @media (min-width: 768px) {
     #carousel-1 img {
       height:500px !important;
-      width:auto !important;
     }
   }
 
@@ -129,6 +128,5 @@ export default {
       font-size:2.2rem;
     }
   }
-
 
 </style>

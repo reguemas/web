@@ -46,7 +46,7 @@ export default {
       botoAnteriorVisibilitat: false,
       botoSeguentVisibilitat: true,
       controlsVisibilitat: false,
-      ampladaPantallaGaleria: this.ampladaPantallaActivitat
+      ampladaPantallaGaleria: this.ampladaPantallaActivitat,
     };
   },
 
