@@ -7,7 +7,7 @@
           :key="index"
           v-for="(activitat,index) in activitatsCarousel"
         >
-          <cardMobile :activitat="activitat" />
+          <card :activitat="activitat" />
         </b-list-group-item>
       </b-list-group>
     </b-row>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import cardMobile from "@/components/home/cardMobile.vue";
+import card from "@/components/home/card.vue";
 
 export default {
   name: "galleryMobile",
@@ -23,7 +23,7 @@ export default {
   props: ["activitatsCarousel"],
 
   components: {
-    cardMobile
+    card
   },
 
   methods: {

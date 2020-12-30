@@ -14,10 +14,6 @@
 export default {
   name: 'promocions',
 
-  components: {
-    //cardNoticies
-  },
-
   data() {
     return {
       posicio:0
@@ -27,6 +23,7 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.mouImatge);
   },
+
   beforeDestroy() {
     window.removeEventListener("scroll", this.mouImatge);
   },
@@ -52,7 +49,7 @@ export default {
     width:100%;
     height: 100%;
     background-image:url('~@/assets/imatges/promocions/promocions_1.jpg');
-    background-size: 100% auto;
+    background-size: auto 500px;
     background-attachment: fixed;
     background-repeat:no-repeat;
   }
@@ -62,6 +59,13 @@ export default {
     font-size: 1.4rem;
     font-weight:bold;
     letter-spacing: 2px;
+  }
+
+  @media (max-width:768px) {
+    h2{
+      font-size:1.75rem;
+      text-align:center;
+    }
   }
 
 </style>

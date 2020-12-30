@@ -164,13 +164,6 @@
     }
   }
 
-  .titolServeis{
-    font-size: 1.5rem;
-    font-weight:bold;
-    text-transform: uppercase;
-    border-bottom: 3px solid #ffcc01;
-  }
-
     @media (min-width:616px) and (max-width: 1199px) {
     .serveiEsquerra{
       justify-content: start !important;
@@ -180,6 +173,13 @@
       justify-content: flex-end !important;
       padding-right:25px;
     }
+  }
+
+  .titolServeis{
+    font-size: 1.5rem;
+    font-weight:bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ffcc01;
   }
 
   .imatgeServeisMascara{
@@ -201,7 +201,7 @@
     height:350px;
   }
   
-  @media (min-width:656px) and (max-width: 715px) {
+  @media (min-width:675px) and (max-width: 750px) {
     .imatgeServeisMascara{
       width:320px;
       height:auto;
@@ -209,20 +209,17 @@
     }
   }
 
-  @media (max-width:655px) {
-
+  @media (max-width:674px) {
     .serveiEsquerra{
       justify-content: center;
-      text-align:center;
       align-items:center;
-      height:275px;
+      height:350px;
     }
 
     .serveiDreta{
       justify-content: center;
       align-items:center;
-      text-align:center;
-      height:275px;
+      height:375px;
     }
 
     .imatgeServeisMascara{
@@ -240,6 +237,7 @@
 
   .llistaServeis{
     list-style-type: none;
+    padding:0;
   }
 
   .serveisEnllaç {

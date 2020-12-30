@@ -22,7 +22,7 @@
           <div class="quiSomItem mx-2 mx-md-3 mx-xl-4">Els nostres valors: l'Esforç i Superació, el Companyerisme, Estimar la Natura i la Integració Social.</div>
         </div>
       </b-col>
-      <b-col v-if="mesInfo" class="px-3 px-md-5 px-lg-3 pr-xl-5 pt-4">
+      <b-col v-if="mesInfo" class="px-3 px-md-5 px-lg-3 pr-xl-5 pt-4 pt-lg-0">
         <div class="quiSomItemBorder">
           <b-avatar text="ACT" class="avatarEstils"></b-avatar>
           <div class="quiSomItem mx-2 mx-md-3 mx-xl-4">S'hi organitzen activitats durant tot l'any de totes les modalitats del muntanyisme per a tots els nivells i tota la familia.</div>
@@ -30,21 +30,23 @@
       </b-col>
     </b-row>
     <b-row cols="1" cols-lg="2" no-gutters v-if="mesInfo">
-      <b-col class="px-3 px-md-5 px-lg-3 pl-xl-5 pt-4">
+      <b-col class="px-3 px-md-5 px-lg-3 pl-xl-5 pt-4 pt-lg-0">
         <div class="quiSomItemBorder">
           <b-avatar text="SEU" class="avatarEstils"></b-avatar>
           <div class="quiSomItem mx-2 mx-md-3 mx-xl-4">Disposa d'una seu social on reunir-se amb servei de bar, sala d'exposicions i on el soci tindrà la seva veu.</div>
         </div>
       </b-col>
-      <b-col class="px-3 px-md-5 px-lg-3 pr-xl-5 pt-4">
+      <b-col class="px-3 px-md-5 px-lg-3 pr-xl-5 pt-4 pt-lg-0">
         <div class="quiSomItemBorder">
           <b-avatar text="VEU" class="avatarEstils"></b-avatar>
           <div class="quiSomItem mx-2 mx-md-3 mx-xl-4">La Veu del Soci és transcendental, per això posem a la seva disposició els canals de comunicació físics i virtuals per poder expressar-la.</div>
         </div>
       </b-col>
     </b-row>
-    <button v-if="mesInfo === false" @click="mesInfoControl" class="mesInfo mt-3">Més Info -&rsaquo;</button>
-    <button v-if="mesInfo" @click="mesInfoControl" class="mesInfo mt-3">Menys Info -&rsaquo;</button>
+    <div v-if="isMobile" class="mx-auto">
+      <button v-if="mesInfo === false" @click="mesInfoControl" class="mesInfo mt-3">Més Info -&rsaquo;</button>
+      <button v-if="mesInfo" @click="mesInfoControl" class="mesInfo mt-3">Menys Info -&rsaquo;</button>
+    </div>
   </b-row>
 </template>
 
@@ -56,12 +58,14 @@ export default {
   data() {
     return {
       mesInfo: true,
+      isMobile:false,
     };
   },
 
   mounted() {
-    if (window.outerWidth <= 992) {
+    if (window.outerWidth < 992) {
       this.mesInfo = false;
+      this.isMobile = true;
     }
   },
 
@@ -82,7 +86,7 @@ export default {
 <style scoped>
 
   h3 {
-    color:#b2dbd4;
+    color:#f2f5f7;
   }
 
   .quiSom{
@@ -152,7 +156,6 @@ export default {
     font-size: 1.3rem;
     font-weight:bold;
     color: #ffcc01;
-    margin:0 auto;
   }
 
 </style>

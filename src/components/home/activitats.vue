@@ -50,28 +50,34 @@
           />
         </b-row>
 
-        <b-row v-if="isMobile==true" class="position-relative galeriaActivitatsMarges">
-          <h3 class="m-0 pt-4 w-100">Activitats {{ keys[0] }}</h3>
+        <b-row v-if="isMobile==true" class="position-relative galeriaMobileActivitatsMarges">
+          <h3 class="m-0 pt-4 w-100">{{ activitatsCarousel.esportives.titol }}</h3>
           <galleryMobile
             v-if="visibilitatGaleriaEsportiva"
-            :activitatsCarousel="activitatsCarousel.esportives"
+            :activitatsCarousel="activitatsCarousel.esportives.items"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
-          <h3 class="m-0 pt-4 w-100">Activitats {{ keys[1] }}</h3>
+          <h3 class="m-0 pt-4 w-100">{{ activitatsCarousel.culturalSocials.titol }}</h3>
           <galleryMobile
-            v-if="visibilitatGaleriaCultural"
-            :activitatsCarousel="activitatsCarousel.culturals"
+            v-if="visibilitatGaleriaCulturalSocials"
+            :activitatsCarousel="activitatsCarousel.culturalSocials.items"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
           />
-          <h3 class="m-0 pt-4 w-100">Activitats {{ keys[2] }}</h3>
+          <h3 class="m-0 pt-4 w-100">{{ activitatsCarousel.formacio.titol }}</h3>
           <galleryMobile
-            v-if="visibilitatGaleriaSocial"
-            :activitatsCarousel="activitatsCarousel.socials"
-            :titolGaleria="keys[2]"
+            v-if="visibilitatGaleriaFormacio"
+            :activitatsCarousel="activitatsCarousel.formacio.items"
             :ampladaPantallaActivitat="ampladaPantalla"
             class="pt-3 overflow-auto"
+          />
+          <h3 class="m-0 pt-4 w-100">{{ activitatsCarousel.periodiques.titol }}</h3>
+          <galleryMobile
+            v-if="visibilitatGaleriaPeriodiques"
+            :activitatsCarousel="activitatsCarousel.periodiques.items"
+            :ampladaPantallaActivitat="ampladaPantalla"
+            class="pt-3 pb-5 overflow-auto"
           />
         </b-row>
 
@@ -150,15 +156,14 @@ export default {
   },
 
   mounted() {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i)
-    ) {
+    if (navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i))
+    {
       this.isMobile = true;
     }
     if (this.activitatsCarousel.esportives == undefined) {
@@ -223,6 +228,12 @@ export default {
 
   .galeriaActivitatsMarges{
     margin: 0 0 0 3.25rem;
+    color:#737373;
+    z-index: 1;
+  }
+
+  .galeriaMobileActivitatsMarges{
+    margin: 0 0 0 2rem;
     color:#737373;
     z-index: 1;
   }
