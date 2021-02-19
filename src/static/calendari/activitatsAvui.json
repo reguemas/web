@@ -1,1 +1,24 @@
-[{"idActivitat":"21","tipus":"1","title":"IIIa SETMANA DE JOCS AL CARRER","dataInici":"2020,3,2","dataFinal":"2019,12,6","dataReunio":null,"seccio":"CET","modalitat":"Altres Activitats","url":"http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/"},{"idActivitat":"22","tipus":"1","title":"EXPOSICIONS · TOCATS PEL BOLET","dataInici":"2020,3,2","dataFinal":"2020,3,28","dataReunio":null,"seccio":"Ciencies Naturals","modalitat":"Botànica","url":"http:\/\/ce-terrassa.cat\/exposicions-%c2%b7-tocats-pel-bolet\/"}]
+[
+  {
+    "idActivitat": "21",
+    "tipus": "1",
+    "title": "IIIa SETMANA DE JOCS AL CARRER",
+    "dataInici": "2020,3,2",
+    "dataFinal": "2019,12,6",
+    "dataReunio": null,
+    "seccio": "CET",
+    "modalitat": "Altres Activitats",
+    "url": "http:\/\/ce-terrassa.cat\/iiia-setmana-de-jocs-al-carrer\/"
+  },
+  {
+    "idActivitat": "22",
+    "tipus": "1",
+    "title": "EXPOSICIONS · TOCATS PEL BOLET",
+    "dataInici": "2020,3,2",
+    "dataFinal": "2020,3,28",
+    "dataReunio": null,
+    "seccio": "Ciencies Naturals",
+    "modalitat": "Botànica",
+    "url": "http:\/\/ce-terrassa.cat\/exposicions-%c2%b7-tocats-pel-bolet\/"
+  }
+]

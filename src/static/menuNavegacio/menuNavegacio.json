@@ -9,10 +9,6 @@
             "url": "http://ce-terrassa.cat/queoferim/"
         },
         {
-            "item": "Fes-te Soci",
-            "url": "http://ce-terrassa.cat/alta-soci/"
-        },
-        {
             "item": "El Projecte",
             "url": "http://ce-terrassa.cat/la-junta-actual/"
         },
@@ -27,10 +23,6 @@
         {
             "item": "Històric d'Activitats",
             "url": "http://ce-terrassa.cat/historic-dactivitats/"
-        },
-        {
-            "item": "Contacte",
-            "url": "http://ce-terrassa.cat/contacte/"
         }
     ],
     "Esportives": [
