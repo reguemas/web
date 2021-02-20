@@ -50,25 +50,42 @@
               </b-nav-item-dropdown>
               <b-nav-item-dropdown text="Activitats" left class="ml-5">
                 <b-dropdown-item href="http://ce-terrassa.cat/activitats-del-cet/">Activitats del CET</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-header class="dropdown-header-label">
                   Activitats {{ keys[1] }}
                 </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Esportives" :key="item.index">{{ item.item }}</b-dropdown-item>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Esportiva" :key="item.index">{{ item.item }}</b-dropdown-item>
                 <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-header class="dropdown-header-label">
-                  Activitats {{ keys[2] }}
+                  Activitats Científica-Cultural
                 </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Culturals" :key="item.index">{{ item.item }}</b-dropdown-item>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Cientifica" :key="item.index">{{ item.item }}</b-dropdown-item>
                 <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-header id="dropdown-header-label">
                   Activitats {{ keys[3] }}
                 </b-dropdown-header>
                   <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Socials" :key="item.index">{{ item.item }}</b-dropdown-item>
+              </b-nav-item-dropdown>
+              <b-nav-item-dropdown text="Escola de Muntanya" left class="ml-5">
+                <b-dropdown-header id="dropdown-header-label">
+                  Cursos {{ keys[5] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.SAM" :key="item.index">{{ item.item }}</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-header id="dropdown-header-label">
+                  Cursos {{ keys[6] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.SIS" :key="item.index">{{ item.item }}</b-dropdown-item>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-header id="dropdown-header-label">
+                  Activitats {{ keys[7] }}
+                </b-dropdown-header>
+                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Natura" :key="item.index">{{ item.item }}</b-dropdown-item>
                 </b-nav-item-dropdown>
               <b-nav-item-dropdown :text="keys[4]" left class="ml-5 textCyan">
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,indexPublicacions) in menuNavegacio.Publicacions" :key="indexPublicacions">{{ item.item }}</b-dropdown-item>
-              </b-nav-item-dropdown>
-              <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Galeries</b-nav-item>
+                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,indexProjectes) in menuNavegacio.Projectes" :key="indexProjectes">{{ item.item }}</b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Gestions</b-nav-item>
 
               <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
 

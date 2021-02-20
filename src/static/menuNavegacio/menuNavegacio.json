@@ -17,77 +17,61 @@
             "url": "http://ce-terrassa.cat/inici/la-seu-social/"
         },
         {
-            "item": "Llicències Federatives",
-            "url": "http://ce-terrassa.cat/inici/llicencies-federatives/"
+            "item": "Històric d'Activitats",
+            "url": "http://ce-terrassa.cat/historic-dactivitats/"
         },
         {
-            "item": "Històric d'Activitats",
+            "item": "Publicacions",
+            "url": "http://ce-terrassa.cat/historic-dactivitats/"
+        },
+        {
+            "item": "Galeries",
             "url": "http://ce-terrassa.cat/historic-dactivitats/"
         }
     ],
-    "Esportives": [
+    "Esportiva": [
         {
-            "item": "Alta Muntanya",
+            "item": "Secció Excursionisme",
             "url": "http://ce-terrassa.cat/alta-muntanya/"
         },
         {
-            "item": "Espeleologia",
+            "item": "Secció Alta Muntanya",
             "url": "http://ce-terrassa.cat/espeleologia-2/"
         },
         {
-            "item": "Esquí",
+            "item": "Secció Infantil i Juvenil",
             "url": "http://ce-terrassa.cat/esqui-2/"
         },
         {
-            "item": "Senderisme",
+            "item": "SIS. Espelelogia",
             "url": "http://ce-terrassa.cat/senderisme-3/"
         },
         {
-            "item": "Marxa Nòrdica",
+            "item": "Secció d'Esquí",
             "url": "http://ce-terrassa.cat/marxanordica/"
-        },
-        {
-            "item": "BTT",
-            "url": "http://ce-terrassa.cat/bicicletademuntanya/"
-        },
-        {
-            "item": "Entrenament i Formació",
-            "url": "http://ce-terrassa.cat/entrenamentformacio/"
         }
     ],
-    "Culturals": [
+    "Cientifica": [
         {
-            "item": "Ciències Naturals",
+            "item": "Secció de Cultura",
             "url": "http://ce-terrassa.cat/cienciesnaturals/"
         },
         {
-            "item": "Cultura",
+            "item": "Secció De Ciències Naturals",
             "url": "http://ce-terrassa.cat/cultura/"
         },
         {
-            "item": "Fotogràfia",
+            "item": "Secció de Fotogràfia",
             "url": "http://ce-terrassa.cat/fotografia-2/"
-        },
-        {
-            "item": "Exposicions",
-            "url": "http://ce-terrassa.cat/exposicions/"
-        },
-        {
-            "item": "Biblioteca i Arxiu",
-            "url": "http://ce-terrassa.cat/inici/publicacions/biblioteca-i-arxiu/"
-        },
-        {
-            "item": "Coral",
-            "url": "http://ce-terrassa.cat/coral/"
         }
     ],
     "Socials": [
         {
-            "item": "Infantil i Juvenil",
+            "item": "Campament Social d'Alta Muntanya",
             "url": "http://ce-terrassa.cat/infantilijuvenil/"
         },
         {
-            "item": "Campament Alta Muntanya",
+            "item": "Diada de Germnanor",
             "url": "http://ce-terrassa.cat/campament/"
         },
         {
@@ -95,34 +79,86 @@
             "url": "http://ce-terrassa.cat/caminadapopular/"
         },
         {
-            "item": "CET de Viatges",
+            "item": "Núria-Puigmal-Núria",
             "url": "http://ce-terrassa.cat/cet-de-viatges/"
         },
         {
-            "item": "Altres Activitats",
+            "item": "Vallès Drac Race",
             "url": "http://ce-terrassa.cat/altresactivitats/"
         }
     ],
-    "Publicacions": [
+    "Projectes": [
         {
-            "item": "El Full",
+            "item": "La Seu Social",
             "url": "http://ce-terrassa.cat/el-full/"
         },
         {
-            "item": "Arxiu",
+            "item": "Integració Social",
             "url": "http://ce-terrassa.cat/inici/publicacions/arxiu/"
         },
         {
-            "item": "Butlletí",
+            "item": "Activitats pels Joves",
             "url": "http://ce-terrassa.cat/inici/publicacions/el-butlleti/"
         },
         {
-            "item": "CET.DOC",
+            "item": "Refugi de Cellers",
             "url": "http://ce-terrassa.cat/inici/publicacions/biblioteca-i-arxiu/cet-doc/"
         },
         {
-            "item": "Topografia Avencs i Coves",
+            "item": "Activitats Gent Gran",
             "url": "http://ce-terrassa.cat/inici/publicacions/topografies-davencs-i-coves/"
+        },
+        {
+            "item": "Campanyes de Captació",
+            "url": "http://ce-terrassa.cat/inici/publicacions/topografies-davencs-i-coves/"
+        }
+    ],
+    "SAM": [
+        {
+            "item": "Alpinisme",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        },
+        {
+            "item": "Escalada",
+            "url": "http://ce-terrassa.cat/espeleologia-2/"
+        },
+        {
+            "item": "Esquí de Muntanya",
+            "url": "http://ce-terrassa.cat/esqui-2/"
+        },
+        {
+            "item": "Progressió en Crestes",
+            "url": "http://ce-terrassa.cat/senderisme-3/"
+        }
+    ],
+    "SIS": [
+        {
+            "item": "Curs Espeleologia",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        },
+        {
+            "item": "Curs de Barrancs",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        }
+    ],
+    "Natura": [
+        {
+            "item": "Concienciació Ecollògica",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        },
+        {
+            "item": "Ornitologia",
+            "url": "http://ce-terrassa.cat/espeleologia-2/"
+        }
+    ],
+    "Gestions": [
+        {
+            "item": "Concienciació Ecollògica",
+            "url": "http://ce-terrassa.cat/alta-muntanya/"
+        },
+        {
+            "item": "Ornitologia",
+            "url": "http://ce-terrassa.cat/espeleologia-2/"
         }
     ]
 }
