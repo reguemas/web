@@ -44,66 +44,129 @@
 
           <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
 
-            <b-navbar-nav class="">
-              <b-nav-item-dropdown :text="'El '+ keys[0]" left>
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.CET" :key="item.index">{{ item.item }}</b-dropdown-item>
-              </b-nav-item-dropdown>
-              <b-nav-item-dropdown text="Activitats" left class="ml-5">
-                <b-dropdown-item href="http://ce-terrassa.cat/activitats-del-cet/">Activitats del CET</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-header class="dropdown-header-label">
-                  Activitats {{ keys[1] }}
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Esportiva" :key="item.index">{{ item.item }}</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-header class="dropdown-header-label">
-                  Activitats Científica-Cultural
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Cientifica" :key="item.index">{{ item.item }}</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-header id="dropdown-header-label">
-                  Activitats {{ keys[3] }}
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Socials" :key="item.index">{{ item.item }}</b-dropdown-item>
-              </b-nav-item-dropdown>
-              <b-nav-item-dropdown text="Escola de Muntanya" left class="ml-5">
-                <b-dropdown-header id="dropdown-header-label">
-                  Cursos {{ keys[5] }}
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.SAM" :key="item.index">{{ item.item }}</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-header id="dropdown-header-label">
-                  Cursos {{ keys[6] }}
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.SIS" :key="item.index">{{ item.item }}</b-dropdown-item>
-                <b-dropdown-divider></b-dropdown-divider>
-                <b-dropdown-header id="dropdown-header-label">
-                  Activitats {{ keys[7] }}
-                </b-dropdown-header>
-                  <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item) in menuNavegacio.Natura" :key="item.index">{{ item.item }}</b-dropdown-item>
-                </b-nav-item-dropdown>
-              <b-nav-item-dropdown :text="keys[4]" left class="ml-5 textCyan">
-                <b-dropdown-item :href="item.url" ref=menuNavegacioCET v-for="(item,indexProjectes) in menuNavegacio.Projectes" :key="indexProjectes">{{ item.item }}</b-dropdown-item>
+          <b-navbar-nav class="">
+            <b-nav-item-dropdown :text="keysMenu[0]" left>
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexCET) in menuNavegacio.CET" 
+                :key="indexCET"
+              >
+                {{ item.item }}
+              </b-dropdown-item>
             </b-nav-item-dropdown>
-            <b-nav-item class="ml-5 mr-5" href="https://www.flickr.com/photos/ceterrassa/collections/">Gestions</b-nav-item>
-
-              <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
-
-              <b-list-group horizontal class="mx-auto mt-4 displayMobile">
-                <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
-                <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
-                <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
-                <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
-                <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
-                <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
-              </b-list-group>
-
-              <b-list-group class="mt-3 displayMobile">
-                <b-list-group-item class="mt-3"><img src="../../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
-                <b-list-group-item class="mt-3"><img src="../../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
-              </b-list-group>
-            </b-navbar-nav>
-            <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="d-none altaSoci">
+            <b-nav-item-dropdown 
+              :text="keysMenu[1]"
+              left class="ml-5"
+            >
+              <b-dropdown-header 
+                href="http://ce-terrassa.cat/activitats-del-cet/"
+              >
+                Activitats del CET
+              </b-dropdown-header>
+              <b-dropdown-divider></b-dropdown-divider>
+              <b-dropdown-header>
+                Area {{ keysArees[0] }}
+              </b-dropdown-header>
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexActivitatsEsportiva) in areaEsportiva.Seccions" 
+                :key="indexActivitatsEsportiva"
+              >
+                Secció {{ item.key_Seccio }}
+              </b-dropdown-item>
+              <b-dropdown-divider></b-dropdown-divider>
+              <b-dropdown-header>
+                Area {{ keysArees[1] }}
+              </b-dropdown-header>
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexActivitatsCientificaCultural) in areaCientificaCultural.Seccions" 
+                :key="indexActivitatsCientificaCultural"
+              >
+                Secció {{ item.key_Seccio }}
+              </b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+              <b-dropdown-header>
+                Area {{ keysArees[2] }}
+              </b-dropdown-header>
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexActivitatsFormacio) in areaFormacio.Seccions" 
+                :key="indexActivitatsFormacio"
+              >
+                {{ item.key_Seccio }}
+              </b-dropdown-item>
+            <b-dropdown-divider></b-dropdown-divider>
+              <b-dropdown-header>
+                Area {{ keysArees[3] }}
+              </b-dropdown-header>
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexActivitatSocial) in areaSocial.Seccions" 
+                :key="indexActivitatSocial"
+              >
+                {{ item.key_Seccio }}
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-nav-item-dropdown 
+              :text="keysMenu[2]"
+              left class="ml-5"
+            >
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexEMCET) in EMCET" 
+                :key="indexEMCET"
+              >
+                {{ item.item }}
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-nav-item-dropdown 
+              :text="keysMenu[3]"
+              left class="ml-5"
+            >
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexProjectes) in projectes" 
+                :key="indexProjectes"
+              >
+                {{ item.item }}
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-nav-item-dropdown 
+              :text="keysMenu[4]"
+              left class="mx-5"
+            >
+              <b-dropdown-item 
+                :href="item.url" 
+                ref=menuNavegacioCET 
+                v-for="(item,indexGestions) in gestions" 
+                :key="indexGestions"
+              >
+                {{ item.item }}
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
+            <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="altaSoci mt-4 mx-auto displayMobile">Fer-se Soci</b-button>
+            <b-list-group horizontal class="mx-auto mt-4 displayMobile">
+              <b-list-group-item href="mailto:centre@ce-terrassa.cat" target="_blank"><img src="../../assets/social/icon-email.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="http://ce-terrassa.cat/canal-de-telegram-dinformacio-de-lentitat/" target="_blank"><img src="../../assets/social/icon-telegram.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://www.facebook.com/CETerrassa/" target="_blank"><img src="../../assets/social/icon-facebook.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://www.instagram.com/ceterrassa/" target="_blank"><img src="../../assets/social/icon-instagram.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://twitter.com/ceterrassa" target="_blank"><img src="../../assets/social/icon-twitter.png" class="mr-2"></b-list-group-item>
+              <b-list-group-item href="https://ca.wikiloc.com/wikiloc/map.do?lt=41.9945&ln=2.2169&z=9&k=1&event=map&uid=2621467" target="_blank"><img src="../../assets/social/icon-wikiloc.png" class="mr-2"></b-list-group-item>
+            </b-list-group>
+            <b-list-group class="mt-3 displayMobile">
+              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-direccio.png" class="mr-2">C/Sant Llorenç, 10 - Terrassa</b-list-group-item>
+              <b-list-group-item class="mt-3"><img src="../../assets/social/icon-telefon.png" class="mr-2">93 788 30 30</b-list-group-item>
+            </b-list-group>
+          </b-navbar-nav>
+          <b-button href="http://ce-terrassa.cat/alta-soci/" size="lg" variant="success" class="d-none altaSoci">
               Fer-se Soci
             </b-button>
           </b-collapse>
@@ -123,7 +186,15 @@ export default {
   data() {
     return {
       menuNavegacio: menuPrincipal,
-      keys: Object.keys(menuPrincipal),
+      keysMenu: menuPrincipal.keys_Menu,
+      keysArees: menuPrincipal.keys_Arees,
+      areaEsportiva: menuPrincipal.Activitats.Esportiva,
+      areaCientificaCultural: menuPrincipal.Activitats.Cientifica_Cultural,
+      areaFormacio: menuPrincipal.Activitats.Formacio,
+      areaSocial: menuPrincipal.Activitats.Social,
+      EMCET: menuPrincipal.EMCET,
+      projectes: menuPrincipal.Projectes,
+      gestions: menuPrincipal.Gestions
     }
   },
 
