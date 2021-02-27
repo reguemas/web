@@ -123,7 +123,7 @@
                 v-for="(item,indexEMCET) in EMCET" 
                 :key="indexEMCET"
               >
-                {{ item.item }}
+                {{ item.key_Vocalia }}
               </b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown 
