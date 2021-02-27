@@ -45,7 +45,7 @@
           <b-collapse id="nav-collapse" is-nav class="my-4 justify-content-xl-center justify-content-lg-end justify-content-md-center">
 
           <b-navbar-nav class="">
-            <b-nav-item-dropdown :text="keysMenu[0]" left>
+            <b-nav-item-dropdown :text="menuNavegacio.keys_Menu[0]" left>
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
@@ -56,7 +56,7 @@
               </b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown 
-              :text="keysMenu[1]"
+              :text="menuNavegacio.keys_Menu[1]"
               left class="ml-5"
             >
               <b-dropdown-header 
@@ -66,87 +66,87 @@
               </b-dropdown-header>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header>
-                Area {{ keysArees[0] }}
+                Area {{ menuNavegacio.keys_Arees[0] }}
               </b-dropdown-header>
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexActivitatsEsportiva) in areaEsportiva.Seccions" 
+                v-for="(item,indexActivitatsEsportiva) in menuNavegacio.Activitats.Esportiva.Seccions" 
                 :key="indexActivitatsEsportiva"
               >
                 Secció {{ item.key_Seccio }}
               </b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header>
-                Area {{ keysArees[1] }}
+                Area {{ menuNavegacio.keys_Arees[1] }}
               </b-dropdown-header>
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexActivitatsCientificaCultural) in areaCientificaCultural.Seccions" 
+                v-for="(item,indexActivitatsCientificaCultural) in menuNavegacio.Activitats.Cientifica_Cultural.Seccions" 
                 :key="indexActivitatsCientificaCultural"
               >
                 Secció {{ item.key_Seccio }}
               </b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header>
-                Area {{ keysArees[2] }}
+                Area {{ menuNavegacio.keys_Arees[2] }}
               </b-dropdown-header>
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexActivitatsFormacio) in areaFormacio.Seccions" 
+                v-for="(item,indexActivitatsFormacio) in menuNavegacio.Activitats.Formacio.Seccions" 
                 :key="indexActivitatsFormacio"
               >
                 {{ item.key_Seccio }}
               </b-dropdown-item>
             <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-header>
-                Area {{ keysArees[3] }}
+                Area {{ menuNavegacio.keys_Arees[3] }}
               </b-dropdown-header>
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexActivitatSocial) in areaSocial.Seccions" 
+                v-for="(item,indexActivitatSocial) in menuNavegacio.Activitats.Social.Seccions"
                 :key="indexActivitatSocial"
               >
                 {{ item.key_Seccio }}
               </b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown 
-              :text="keysMenu[2]"
+              :text="menuNavegacio.keys_Menu[2]"
               left class="ml-5"
             >
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexEMCET) in EMCET" 
+                v-for="(item,indexEMCET) in menuNavegacio.EMCET" 
                 :key="indexEMCET"
               >
                 {{ item.key_Vocalia }}
               </b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown 
-              :text="keysMenu[3]"
+              :text="menuNavegacio.keys_Menu[3]"
               left class="ml-5"
             >
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexProjectes) in projectes" 
+                v-for="(item,indexProjectes) in menuNavegacio.Projectes" 
                 :key="indexProjectes"
               >
                 {{ item.item }}
               </b-dropdown-item>
             </b-nav-item-dropdown>
             <b-nav-item-dropdown 
-              :text="keysMenu[4]"
+              :text="menuNavegacio.keys_Menu[4]"
               left class="mx-5"
             >
               <b-dropdown-item 
                 :href="item.url" 
                 ref=menuNavegacioCET 
-                v-for="(item,indexGestions) in gestions" 
+                v-for="(item,indexGestions) in menuNavegacio.Gestions" 
                 :key="indexGestions"
               >
                 {{ item.item }}
@@ -185,16 +185,7 @@ export default {
 
   data() {
     return {
-      menuNavegacio: menuPrincipal,
-      keysMenu: menuPrincipal.keys_Menu,
-      keysArees: menuPrincipal.keys_Arees,
-      areaEsportiva: menuPrincipal.Activitats.Esportiva,
-      areaCientificaCultural: menuPrincipal.Activitats.Cientifica_Cultural,
-      areaFormacio: menuPrincipal.Activitats.Formacio,
-      areaSocial: menuPrincipal.Activitats.Social,
-      EMCET: menuPrincipal.EMCET,
-      projectes: menuPrincipal.Projectes,
-      gestions: menuPrincipal.Gestions
+      menuNavegacio: menuPrincipal
     }
   },
 
