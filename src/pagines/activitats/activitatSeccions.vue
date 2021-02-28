@@ -1,66 +1,19 @@
 <template>
   <b-container fluid class="p-0 m-0 fonsBlauCel">
-    <div class="ferseSoci mx-auto">
-      <h2 class="pt-5 px-1">Alta Soci 2021</h2>
-      <p class="info pt-2 px-1">Gràcies pel teu interès a fer-te soci del Centre Excursionista de Terrassa</p> 
-      <b-row cols="1" cols-lg="2" no-gutters>
-        <b-col class="animacioSoci">
-          <div class="fonsBlauGris alturaCasella m-1">
-            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=8" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Adult</p>
-              <p class="descripcioSoci">Major de 31 anys</p>
-              <p class="preuSoci">89 €/any</p>
-            </a>
+    <div class="ferseSoci mx-auto pb-5">
+      <h2 class="pt-5 text-center">Secció d'Excursionisme</h2>
+      <p class="info py-3">En aquesta secció podreu explorar nous Horitzons, recorre Senders a peu i en Bicicleta, fent Marxa... Nòrdica i petites Travessades. I és clar, Passejades pel Parc de Sant Llorenç.</p>
+        <div class="enllaçFerseSoci p-0">
+          <h-3 class="modalitatSoci fonsBlauGris casella py-2 m-0">{{ activitatsCET.Activitats.Esportiva.Seccions[0].text }}</h-3>
+          <div 
+            href="#"
+            class="modalitatSoci fonsBlauGrisClar animacioSoci casella my-1 py-2"
+            v-for="(vocalia,indexActivitatsSeccions) in activitatsCET.Activitats.Esportiva.Seccions[0].vocalia"
+            :key="indexActivitatsSeccions"
+          >
+          {{ vocalia.key_Vocalia }}
           </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsVermell alturaCasella m-1">
-            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=10" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Beneficiari/a</p>
-              <p class="descripcioSoci">Cònjuge o Fill Menor de 18 anys de Soci Nominal</p>
-              <p class="preuSoci">47 €/any</p>
-            </a>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row cols="1" cols-lg="2" no-gutters>
-        <b-col class="animacioSoci">
-          <div class="fonsGroc alturaCasella m-1">
-            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=11" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 14 i 30 anys</p>
-              <p class="preuSoci">65 €/any</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsBlau alturaCasella m-1">
-            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=12" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Carnet Jove</p>
-              <p class="descripcioSoci">Nominal d'entre 14 i 30 anys amb Carnet Jove</p>
-              <p class="preuSoci">40 €/any</p>
-            </a>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row cols="1" cols-lg="2" no-gutters class="pb-5">
-        <b-col class="animacioSoci">
-          <div class="fonsVerd alturaCasella m-1">
-            <a href="https://ceterrassa.playoffinformatica.com/Preinscripcio.php?idConfiguracioFormulariColegi=13" class="enllaçFerseSoci">
-              <p class="modalitatSoci">Soci Infantil</p>
-              <p class="descripcioSoci">Fins als 13 anys</p>
-              <p class="preuSoci">30 €/any</p>
-            </a>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsMarro alturaCasella m-1">
-            <a href="http://ce-terrassa.cat/alta-soci-2020/#Avantatges" class="enllaçFerseSoci">
-              <p class="modalitatSoci my-auto">Avantatges per als Socis</p>
-            </a>
-          </div>
-        </b-col>
-      </b-row>
+        </div>
     </div>
   </b-container>
 
@@ -68,9 +21,35 @@
 
 <script>
 
+import activitats from '@/static/menuNavegacio/menuNavegacio.json'
+
 export default {
-  name: "ferseSoci",
-};
+  name: 'activitatSeccions',
+
+  data() {
+    return {
+      activitatsCET: activitats,
+      hover:false,
+      display:[]
+    }
+  },
+
+  methods:{
+    vocaliaVisibilitat(index,length){
+        this.display.length = 0;
+        let array = new Array(length).fill(false);
+        this.display = array;
+        this.display.splice(index, 1, true);
+    },
+    vocaliaVisibilitatNone(length){
+      this.display.length = 0;
+      let array = new Array(length).fill(false);
+      this.display = array;
+    }
+  },
+
+}
+
 
 </script>
 
@@ -100,16 +79,19 @@ export default {
 
   .alturaCasella{
     height:300px;
+  }
+
+  .casella{
     border-radius:3px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
   }
 
   .fonsVerd{
-    background-color: #2af9d4;
+    background-color: #c7cade;
   }
 
   .fonsBlau{
-    background-color: #b1bbf8;
+    background-color: #c7cade;
   }
 
   .fonsVermell{
@@ -130,6 +112,10 @@ export default {
 
   .fonsBlauGris{
     background-color: #99b4c7;
+  }
+
+  .fonsBlauGrisClar{
+    background-color: #c7cade;
   }
 
   .fonsBlauCel{
@@ -154,7 +140,6 @@ export default {
     height:100%;
     display:flex;
     flex-wrap: wrap;
-    padding: 0 1rem;
   }
 
   .modalitatSoci{
@@ -170,17 +155,6 @@ export default {
     font-size:1.2rem;
     width:100%;
     margin:0px;
-  }
-
-  .preuSoci{
-    font-family: "AveriaSerif";
-    font-size:2.5rem;
-    color:black;
-    align-self:flex-end;
-    width:100%;
-    padding-top:1rem;
-    margin-bottom:1.7rem;
-    border-top: 3px solid rgb(78, 78, 74);
   }
 
 </style>
