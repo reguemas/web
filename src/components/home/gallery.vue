@@ -14,13 +14,13 @@
         <button
           class="botoAnterior"
           v-if="botoAnteriorVisibilitat"
-          @click="movimentCarousel"
+          @click="movimentCarousel($event)"
           ref="anterior"
         >&lsaquo;</button>
         <button
           class="botoSeguent"
           v-if="botoSeguentVisibilitat"
-          @click="movimentCarousel"
+          @click="movimentCarousel($event)"
           ref="seguent"
         >&rsaquo;</button>
       </div>
@@ -73,7 +73,7 @@ export default {
       }
     },
 
-    movimentCarousel: function() {
+    movimentCarousel: function(event) {
       if (this.numCardsVisibles == 0) {
         this.numCardsVisibles++;
       }
