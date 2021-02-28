@@ -1,56 +1,30 @@
 <template>
   <b-container fluid class="p-0 m-0 fonsBlauCel">
-    <div class="ferseSoci mx-auto">
+    <div class="ferseSoci mx-auto pb-5">
       <h2 class="pt-5 px-1">Activitats per Arees del Centre</h2>
       <p class="info py-3 px-1">Les activitats que es desenvolupen al CET s'organitzen amb aquestes Arees, Seccions i Vocalies. Aquí podràs trobar les activitats on participar.</p> 
-      <b-row cols="1" cols-lg="2" no-gutters>
-        <b-col class="animacioSoci">
-          <div class="fonsBlauGris alturaCasella m-1">
-            <div class="enllaçFerseSoci">
-              <p class="modalitatSoci">Area {{ activitatsCET.keys_Arees[0] }}</p>
-              <a href="#"
-                class="descripcioSoci"
-                v-for="(item,indexActivitatsEsportiva) in activitatsCET.Activitats.Esportiva.Seccions"
-                :key="indexActivitatsEsportiva">Secció {{ item.key_Seccio }}</a>
-            </div>
+      <div 
+        class="fonsBlauGris alturaCasella m-1 animacioSoci"
+        v-for="(value,key,index) in activitatsCET.Activitats"
+        :key="index"
+      >
+        <div class="enllaçFerseSoci">
+          <p class="modalitatSoci">{{ value.text }}</p>
+          <a 
+            href="#"
+            class="descripcioSoci"
+            v-for="(seccio,indexActivitatsSeccions) in value.Seccions"
+            :key="indexActivitatsSeccions"
+            @mouseover="hover=true"
+            @mouseleave="hover=false"
+          >
+          {{ seccio.text }}
+          <div v-if="hover">
+            <div v-for="(vocalia,indexActivitatsVocalia) in seccio.vocalia" :key="indexActivitatsVocalia">{{ vocalia.key_Vocalia }}</div>
           </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsVermell alturaCasella m-1">
-            <div class="enllaçFerseSoci">
-              <p class="modalitatSoci">Area {{ activitatsCET.keys_Arees[1] }}</p>
-              <a href="#"
-                class="descripcioSoci"
-                v-for="(item,indexActivitatsEsportiva) in activitatsCET.Activitats.Cientifica_Cultural.Seccions"
-                :key="indexActivitatsEsportiva">Secció {{ item.key_Seccio }}</a>
-            </div>
-          </div>
-        </b-col>
-      </b-row>
-      <b-row cols="1" cols-lg="2" no-gutters class="pb-5">
-        <b-col class="animacioSoci">
-          <div class="fonsGroc alturaCasella m-1">
-            <div class="enllaçFerseSoci">
-              <p class="modalitatSoci">Area {{ activitatsCET.keys_Arees[2] }}</p>
-              <a href="#"
-                class="descripcioSoci"
-                v-for="(item,indexActivitatsEsportiva) in activitatsCET.Activitats.Formacio.Seccions"
-                :key="indexActivitatsEsportiva">Secció {{ item.key_Seccio }}</a>
-            </div>
-          </div>
-        </b-col>
-        <b-col class="animacioSoci">
-          <div class="fonsBlau alturaCasella m-1">
-            <div class="enllaçFerseSoci">
-              <p class="modalitatSoci">Area {{ activitatsCET.keys_Arees[3] }}</p>
-              <a href="#"
-                class="descripcioSoci"
-                v-for="(item,indexActivitatsEsportiva) in activitatsCET.Activitats.Social.Seccions"
-                :key="indexActivitatsEsportiva">{{ item.key_Seccio }}</a>
-            </div>
-          </div>
-        </b-col>
-      </b-row>
+          </a>
+        </div>
+      </div>
     </div>
   </b-container>
 
@@ -65,7 +39,8 @@ export default {
 
   data() {
     return {
-      activitatsCET: activitats
+      activitatsCET: activitats,
+      hover:false
     }
   },
 

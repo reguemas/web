@@ -35,138 +35,147 @@
     {
         "Esportiva":
         {
+            "text":"Area Esportiva",
             "Seccions":
             [
                 {                        
                     "key_Seccio": "Excursionisme",
-                    "url": "http://ce-terrassa.cat/senderisme-3/"
+                    "text":"Secció d'Excursionisme",
+                    "url": "http://ce-terrassa.cat/senderisme-3/",
+                    "vocalia":[
+                        {
+                            "key_Vocalia": "Horitzons",
+                            "url": "http://ce-terrassa.cat/senderisme-3/"
+                        },
+                        {
+                            "key_Vocalia": "Senders",
+                            "url": "http://ce-terrassa.cat/senderisme-3/"
+                        },
+                        {
+                            "key_Vocalia": "BTT",
+                            "url": "http://ce-terrassa.cat/bicicletademuntanya/"
+                        },
+                        {
+                            "key_Vocalia": "Marxa Nòrdica",
+                            "url": "http://ce-terrassa.cat/marxanordica/"
+                        },
+                        {
+                            "key_Vocalia": "Travessades Familiars",
+                            "url": "http://ce-terrassa.cat/senderisme-3/"
+                        },
+                        {
+                            "key_Vocalia": "Passejades Pel Parc",
+                            "url": "http://ce-terrassa.cat/senderisme-3/"
+                        }
+                    ]
                 },
                 {                        
-                    "key_Seccio": "Alta Muntanya",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
+                    "key_Seccio": "SAM",
+                    "text":"Secció d'Alta Muntanya",
+                    "url": "http://ce-terrassa.cat/alta-muntanya/",
+                    "vocalia":
+                    [
+                        {
+                            "key_Vocalia": "Col·lectives Esquí de Muntanya",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "FEMALPÍ",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "WOALPÍ",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "CET CIMS",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        }
+                    ]
                 },
                 {                        
-                    "key_Seccio": "Infantil i Juvenil",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
+                    "key_Seccio": "Infantil",
+                    "text":"Secció Infantil i Juvenil",
+                    "url": "http://ce-terrassa.cat/alta-muntanya/",
+                    "vocalia":
+                    [
+                        {
+                            "key_Vocalia": "ConeixerMón",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "ENCETEM",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "AVANCET",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "Curset Excursionisme",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },
+                        {
+                            "key_Vocalia": "BaseCamp",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },                            
+                        {
+                            "key_Vocalia": "Casal d'Estiu",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        },                            
+                        {
+                            "key_Vocalia": "Extra Escolars",
+                            "url": "http://ce-terrassa.cat/alta-muntanya/"
+                        }
+                    ]
                 },
                 {                                               
                     "key_Seccio": "Espeleologia",
+                    "text":"Secció d'Espeleologia",
                     "url": "http://ce-terrassa.cat/espeleologia-2/"
                 },
                 {                        
-                    "key_Seccio": "Esquí",
-                    "url": "http://ce-terrassa.cat/esqui-2/"
-                }
-            ],
-            "Excursionisme":
-            [
-                {
-                    "key_Vocalia": "Horitzons",
-                    "url": "http://ce-terrassa.cat/senderisme-3/"
-                },
-                {
-                    "key_Vocalia": "Senders",
-                    "url": "http://ce-terrassa.cat/senderisme-3/"
-                },
-                {
-                    "key_Vocalia": "BTT",
-                    "url": "http://ce-terrassa.cat/bicicletademuntanya/"
-                },
-                {
-                    "key_Vocalia": "Marxa Nòrdica",
-                    "url": "http://ce-terrassa.cat/marxanordica/"
-                },
-                {
-                    "key_Vocalia": "Travessades Familiars",
-                    "url": "http://ce-terrassa.cat/senderisme-3/"
-                },
-                {
-                    "key_Vocalia": "Passejades Pel Parc",
-                    "url": "http://ce-terrassa.cat/senderisme-3/"
-                }
-            ],
-            "SAM": 
-            [
-                {
-                    "key_Vocalia": "Col·lectives Esquí de Muntanya",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "FEMALPÍ",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "WOALPÍ",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "CET CIMS",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                }
-            ],
-            "Infantil": 
-            [
-                {
-                    "key_Vocalia": "ConeixerMón",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "ENCETEM",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "AVANCET",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "Curset Excursionisme",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },
-                {
-                    "key_Vocalia": "BaseCamp",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },                            
-                {
-                    "key_Vocalia": "Casal d'Estiu",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                },                            
-                {
-                    "key_Vocalia": "ExtraEscolars",
-                    "url": "http://ce-terrassa.cat/alta-muntanya/"
-                }
-            ],
-            "Esqui": 
-            [
-                {
-                    "key_Vocalia": "Cursos",
-                    "url": "http://ce-terrassa.cat/esqui-2/"
-                },
-                {
-                    "key_Vocalia": "Sortides d'Esquí",
-                    "url": "http://ce-terrassa.cat/esqui-2/"
+                    "key_Seccio": "Esqui",
+                    "text":"Secció d'Esquí",
+                    "url": "http://ce-terrassa.cat/esqui-2/",
+                    "vocalia":
+                    [
+                        {
+                            "key_Vocalia": "Cursos",
+                            "url": "http://ce-terrassa.cat/esqui-2/"
+                        },
+                        {
+                            "key_Vocalia": "Sortides d'Esquí",
+                            "url": "http://ce-terrassa.cat/esqui-2/"
+                        }
+                    ]
                 }
             ]
         },
         "Cientifica_Cultural": 
         {
+            "text":"Area Científica i Cultural",
             "Seccions":
             [
                 {                        
                     "key_Seccio": "Cultura",
+                    "text":"Secció de Cultura",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 },
                 {                        
-                    "key_Seccio": "Ciencies Naturals",
+                    "key_Seccio": "Ciencies_Naturals",
+                    "text":"Secció de Ciencies Naturals",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 },
                 {                        
                     "key_Seccio": "Fotografia",
+                    "text":"Secció de Fotografia",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 }
             ],
             "Cultura": [
                 {                        
-                    "key_Seccio": "Cultura",
+                    "key_Vocalia": "Cultura",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -192,7 +201,7 @@
             ],
             "Ciencies_Naturals": [
                 {                        
-                    "key_Seccio": "Ornitologia",
+                    "key_Vocalia": "Ornitologia",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -202,7 +211,7 @@
             ],
             "Fotografia": [
                 {                        
-                    "key_Seccio": "Concurs de Fotografia",
+                    "key_Vocalia": "Concurs de Fotografia",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -219,30 +228,35 @@
                 }
             ]
         },
-        "Formacio": 
+        "Formacio":
         {
+            "text":"Area Formació",
             "Seccions":
             [
                 {                        
-                    "key_Seccio": "Curs Excursionisme Adults",
+                    "key_Seccio": "Curs_Excursionisme",
+                    "text":"Curs Excursionisme Adults",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 },
                 {                        
-                    "key_Seccio": "Escola de Muntanya",
+                    "key_Seccio": "Escola_Muntanya",
+                    "text":"Escola de Muntanya",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 },
                 {                        
                     "key_Seccio": "Entrenament",
+                    "text":"Entrenament",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 },
                 {                        
-                    "key_Seccio": "Formació Cultural",
+                    "key_Seccio": "Cultural",
+                    "text":"Formació Cultural",
                     "url": "http://ce-terrassa.cat/senderisme-3/"
                 }
             ],
             "Curs_Excursionisme": [
                 {                        
-                    "key_Seccio": "Escalada",
+                    "key_Vocalia": "Escalada",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -268,7 +282,7 @@
             ],
             "Escola_Muntanya": [
                 {                        
-                    "key_Seccio": "Alpinisme",
+                    "key_Vocalia": "Alpinisme",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -310,7 +324,7 @@
             ],
             "Entrenament": [
                 {                        
-                    "key_Seccio": "Kames Kids",
+                    "key_Vocalia": "Kames Kids",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -324,7 +338,7 @@
             ],
             "Cultural": [
                 {                        
-                    "key_Seccio": "CET d'English",
+                    "key_Vocalia": "CET d'English",
                     "url": "http://ce-terrassa.cat/cultura/"
                 },
                 {
@@ -339,26 +353,32 @@
         },
         "Social":
         {
+            "text":"Area Social",
             "Seccions": 
             [
                 {
-                    "key_Seccio": "Campament Social Alta Muntanya",
+                    "key_Seccio": "Campament",
+                    "text":"Campament Social Alta Muntanya",
                     "url": "http://ce-terrassa.cat/volem-recuperar-la-coral/"
                 },
                 {
-                    "key_Seccio": "Diada de Germanor",
+                    "key_Seccio": "Diada",
+                    "text":"Diada de Germanor",
                     "url": "http://ce-terrassa.cat/cultura-%c2%b7-informacio-covid-19/"
                 },
                 {
                     "key_Seccio": "Biblioteca",
+                    "text":"Biblioteca",
                     "url": "http://ce-terrassa.cat/cultura-%c2%b7-informacio-covid-19/"
                 },
                 {
                     "key_Seccio": "Arxiu",
+                    "text":"Arxiu",
                     "url": "http://ce-terrassa.cat/cultura-%c2%b7-informacio-covid-19/"
                 },
                 {
-                    "key_Seccio": "CET de Llibres",
+                    "key_Seccio": "CETLlibres",
+                    "text":"CET de Llibres",
                     "url": "http://ce-terrassa.cat/cultura-%c2%b7-informacio-covid-19/"
                 }
             ]          
@@ -366,7 +386,7 @@
     },
     "EMCET": [
         {                        
-            "key_Seccio": "Alpinisme",
+            "key_Vocalia": "Alpinisme",
             "url": "http://ce-terrassa.cat/cultura/"
         },
         {
