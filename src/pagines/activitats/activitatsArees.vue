@@ -12,10 +12,10 @@
           <h-3 class="modalitatSoci fonsBlauGris casella py-2 m-0">{{ value.text }}</h-3>
           <div 
             href="#"
-            class="modalitatSoci fonsBlauGrisClar animacioSoci casella my-1 py-2"
+            class="modalitatSoci fonsBlauGrisClar animacioSoci casella my-1 py-2 punter"
             v-for="(seccio,indexActivitatsSeccions) in value.Seccions"
             :key="indexActivitatsSeccions"
-            @mouseover="vocaliaVisibilitat(indexActivitatsSeccions,value.Seccions.length)"
+            @click.prevent="vocaliaVisibilitat(indexActivitatsSeccions,value.Seccions.length)"
             @mouseleave="vocaliaVisibilitatNone(value.Seccions.length)"
           >
           {{ seccio.text }}
@@ -170,6 +170,10 @@ export default {
     font-size:1.2rem;
     width:100%;
     margin:0px;
+  }
+
+  .punter{
+    cursor:pointer;
   }
 
 </style>
