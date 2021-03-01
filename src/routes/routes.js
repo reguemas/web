@@ -5,7 +5,7 @@ import avantatges from '../pagines/avantatges.vue'
 import activitatsArees from '../pagines/activitats/activitatsArees.vue'
 import activitatSeccions from '../pagines/activitats/activitatSeccions.vue'
 import activitatsVocalies from '../pagines/activitats/activitatsVocalies.vue'
-
+import projectes from '../pagines/projectes/projectes.vue'
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can
@@ -19,7 +19,8 @@ const routes = [
     { path: '/avantatges', component: avantatges },
     { path: '/activitatsArees', component: activitatsArees },
     { path: '/activitatSeccions', component: activitatSeccions },
-    { path: '/activitatsVocalies', component: activitatsVocalies }
+    { path: '/activitatsVocalies', component: activitatsVocalies },
+    { path: '/projectes', component: projectes }
 ]
 
 export default routes
