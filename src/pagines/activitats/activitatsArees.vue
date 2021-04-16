@@ -9,10 +9,11 @@
         :key="index"
       >
         <div class="enllaçFerseSoci p-0">
-          <h-3 class="modalitatSoci fonsBlauGris casella py-2 m-0">{{ value.text }}</h-3>
+          <h-3 class="modalitatSoci casella py-2 m-0" :class="'fons' + key">{{ value.text }}</h-3>
           <div 
             href="#"
-            class="modalitatSoci fonsBlauGrisClar animacioSoci casella my-1 py-2 punter"
+            class="modalitatSoci fonsSeccio animacioSeccio casella my-1 py-2 punter"
+            :class="'fonsSeccio' + key"
             v-for="(seccio,indexActivitatsSeccions) in value.Seccions"
             :key="indexActivitatsSeccions"
             @click.prevent="vocaliaVisibilitat(indexActivitatsSeccions,value.Seccions.length)"
@@ -101,49 +102,45 @@ export default {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.15);
   }
 
-  .fonsVerd{
-    background-color: #c7cade;
+  .fonsEsportiva{
+    background-color: #f56565;
   }
 
-  .fonsBlau{
-    background-color: #c7cade;
+  .fonsSeccioEsportiva{
+    background-color: #fcc1c1;
   }
 
-  .fonsVermell{
-    background-color: #ea5c5a;
+  .fonsCientifica_Cultural{
+    background-color: #48bb78;
   }
 
-  .fonsTaronja{
-    background-color: #ecab7b;
+  .fonsSeccioCientifica_Cultural{
+    background-color: #bbecd2;
+  }  
+
+  .fonsFormacio{
+    background-color: #4299e1;
   }
 
-  .fonsGroc{
-    background-color: #f8e28f;
+  .fonsSeccioFormacio{
+    background-color: #add8fc;
   }
 
-  .fonsMarro{
-    background-color: #c8c8ae;
+  .fonsSocial{
+    background-color: rgb(167, 167, 155);
   }
 
-  .fonsBlauGris{
-    background-color: #99b4c7;
+  .fonsSeccioSocial{
+    background-color: rgb(207, 207, 195);
   }
 
-  .fonsBlauGrisClar{
-    background-color: #c7cade;
-  }
-
-  .fonsBlauCel{
-    background-color: #f8f9ff;
-  }
-
-  .animacioSoci{
+  .animacioSeccio{
     transition-delay: 1s;
     transition: all 0.3s ease;
   }
 
-  .animacioSoci:hover{
-    transform: scale(1.1);
+  .animacioSeccio:hover{
+    transform: translateX(15px);
     z-index:5 !important;
   }
 
